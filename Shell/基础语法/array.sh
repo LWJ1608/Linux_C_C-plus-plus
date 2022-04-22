@@ -25,10 +25,10 @@ value=${arr1[0]} #把数组赋给value
 echo ${value}
 echo ${arr1[@]} #输出数组所有元素
 echo " "
-
+传递参数
 #获取数组元素个数
 length=${#arr1[@]} 
-#length=${#arr1[*]}和上面的一样 
+#length=${#arr1[*]}和上一个的一样 
 echo "${length}"
 echo " "
 
