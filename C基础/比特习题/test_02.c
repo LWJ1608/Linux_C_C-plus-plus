@@ -1,7 +1,7 @@
 /*
  * @Author: lwj
  * @Date: 2022-03-30 19:41:40
- * @LastEditTime: 2022-04-11 17:20:55
+ * @LastEditTime: 2022-04-22 16:09:06
  * @Description:写一个函数打印arr数组的内容，不使用数组下标，使用指针,arr是一个整形一维数组。
  * @FilePath: /C初级学习/比特习题/test_02.c
  */
