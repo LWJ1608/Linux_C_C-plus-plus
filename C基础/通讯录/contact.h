@@ -63,6 +63,8 @@ void putNull(Contact *C1);
 //释放堆区空间
 void pFree(Contact *C1);
 //保存通讯录信息到文件
+void saveFile(Contact *C1);
 //加载文件内容到通讯录
+
 //检测增容的问题
 #endif

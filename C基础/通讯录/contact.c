@@ -150,10 +150,17 @@ void modPerson(const Contact *C1)
         printf("不存在您输入的联系人\n");
         return;
     }
-    do
-    {
-
-    } while (1);
+    printf("请输入联系人姓名>");
+    scanf("%s", C1->data[pot].c_Name);
+    printf("请输入联系人年龄>");
+    scanf("%d", &(C1->data[pot].c_Age));
+    printf("请输入联系人性别>");
+    scanf("%s", C1->data[pot].c_Sex);
+    printf("请输入联系人电话>");
+    scanf("%s", C1->data[pot].c_Tele);
+    printf("请输入联系人地址>");
+    scanf("%s", C1->data[pot].c_Addr);
+    printf("修改成功！\n");
 }
 //销毁通讯录
 void putNull(Contact *C1)
@@ -161,15 +168,29 @@ void putNull(Contact *C1)
     C1->index = 0;
     printf("清空通讯录成功！\n");
 }
-//按姓名
+
 //保存通讯录信息到文件
+void saveFile(Contact *C1)
+{
+    FILE *pf = fopen("phoneBook.txt", "w");
+    if (pf == NULL) //判断文件是否打开成功
+    {
+        perror("fopen");
+        return;
+    }
+    int i = 0;
+    for (i = 0; i < C1; i++)
+    {
+    }
+    fclose(pf); //关闭文件
+}
 //加载文件内容到通讯录
 //释放堆区空间
 void pFree(Contact *C1)
 {
     free(C1->data);
-    C1->data=NULL;
-    C1->index=0;
-    C1->maxCapcity=0;
+    C1->data = NULL;
+    C1->index = 0;
+    C1->maxCapcity = 0;
 }
 //检测增容的问题

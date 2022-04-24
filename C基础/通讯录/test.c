@@ -52,6 +52,7 @@ int main()
             delPerson(&con);
             break;
         case MOD:
+            modPerson(&con);
             break;
         case FIND:
             searchPerson(&con);
