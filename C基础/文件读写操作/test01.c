@@ -1,7 +1,7 @@
 /*
  * @Author: lwj
  * @Date: 2022-04-24 16:58:58
- * @Description:文件读写操作
+ * @Description:fopen和fclose的使用
  */
 
 #include <stdio.h>

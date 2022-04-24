@@ -179,10 +179,16 @@ void saveFile(Contact *C1)
         return;
     }
     int i = 0;
-    for (i = 0; i < C1; i++)
+    for (i = 0; i < C1->index - 1; i++)
     {
+        fputs("C1->data[i].c_Name:", pf);
+        fputs("C1->data[i].c_Age ", pf);
+        fputs("C1->data[i].c_Sex ", pf);
+        fputs("C1->data[i].c_Tele ", pf);
+        fputs("C1->data[i].c_Addr\n", pf);
     }
     fclose(pf); //关闭文件
+    pf = NULL;
 }
 //加载文件内容到通讯录
 //释放堆区空间

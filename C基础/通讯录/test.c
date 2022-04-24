@@ -28,7 +28,7 @@ enum Input
     MOD,
     FIND,
     SORT,
-    NUM_SIZE,
+    // NUM_SIZE,
     CLEAR,
     SHOW_ALL
 };
@@ -59,8 +59,8 @@ int main()
             break;
         case SORT:
             break;
-        case NUM_SIZE:
-            break;
+        // case NUM_SIZE:
+        //     break;
         case CLEAR:
             putNull(&con);
             break;
@@ -68,6 +68,7 @@ int main()
             printPerson(&con);
             break;
         case EXIT:
+            saveFile(&con);
             pFree(&con);
             break;
         default:
