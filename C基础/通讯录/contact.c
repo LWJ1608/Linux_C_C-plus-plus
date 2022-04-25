@@ -7,15 +7,15 @@
 #include "contact.h"
 
 //初始化通讯录
-void init_con(Contact *C1)
+void initCon(Contact *C1)
 {
-    // memset(C1, 0, sizeof(C1->data));
     C1->data = (Person *)calloc(MAX, sizeof(Person)); //为通讯录开辟空间，并初始化
     C1->index = 0;                                    //记录添加人数个数
     C1->maxCapcity = MAX;                             //记录通讯录最大容量
+    readFile(C1);
 }
-//增加联系人
-void addPerson(Contact *C1)
+//检测增容的问题
+void checkFull(Contact *C1)
 {
     if (C1->index == MAX)
     {
@@ -31,6 +31,11 @@ void addPerson(Contact *C1)
         tmp = NULL;
         C1->maxCapcity = 2 * MAX;
     }
+}
+//增加联系人
+void addPerson(Contact *C1)
+{
+    checkFull(C1);
     printf("请输入联系人姓名>");
     scanf("%s", C1->data[C1->index].c_Name);
     printf("请输入联系人年龄>");
@@ -166,6 +171,7 @@ void modPerson(const Contact *C1)
 void putNull(Contact *C1)
 {
     C1->index = 0;
+
     printf("清空通讯录成功！\n");
 }
 
@@ -179,18 +185,34 @@ void saveFile(Contact *C1)
         return;
     }
     int i = 0;
-    for (i = 0; i < C1->index - 1; i++)
+    for (i = 0; i < C1->index; i++)
     {
-        fputs("C1->data[i].c_Name:", pf);
-        fputs("C1->data[i].c_Age ", pf);
-        fputs("C1->data[i].c_Sex ", pf);
-        fputs("C1->data[i].c_Tele ", pf);
-        fputs("C1->data[i].c_Addr\n", pf);
+        fwrite(C1->data + i, sizeof(Person), 1, pf);
     }
-    fclose(pf); //关闭文件
+
+    fclose(pf);
     pf = NULL;
 }
+
 //加载文件内容到通讯录
+static void readFile(Contact *C1)
+{
+    FILE *pf = fopen("phoneBook.txt", "r");
+    if (pf == NULL) //判断文件是否打开成功
+    {
+        perror("fopen");
+        return;
+    }
+    Person tmp = {0};
+    while (fread(&tmp, sizeof(Person), 1, pf))
+    {
+        checkFull(C1);
+        C1->data[C1->index] = tmp;
+        C1->index++;
+    }
+    fclose(pf);
+    pf = NULL;
+}
 //释放堆区空间
 void pFree(Contact *C1)
 {
@@ -199,4 +221,3 @@ void pFree(Contact *C1)
     C1->index = 0;
     C1->maxCapcity = 0;
 }
-//检测增容的问题
