@@ -31,10 +31,11 @@
 typedef struct Person
 {
     char c_Name[NAME]; //姓名
+    int c_Age;         //年龄
     char c_Sex[SEX];   //性别
     char c_Tele[TELE]; //电话
     char c_Addr[ADDR]; //地址
-    int c_Age;         //年龄
+
 } Person;
 
 typedef struct Contact
@@ -65,6 +66,7 @@ void pFree(Contact *C1);
 //保存通讯录信息到文件
 void saveFile(Contact *C1);
 //加载文件内容到通讯录
-
+static void readFile(Contact *C1);
 //检测增容的问题
+void checkFull(Contact *C1);
 #endif

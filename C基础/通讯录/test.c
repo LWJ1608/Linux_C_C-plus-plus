@@ -14,9 +14,9 @@ void menu()
     printf("************************************************\n");
     printf("********   1、添加联系人   2、删除联系人    ********\n");
     printf("********   3、修改联系人   4、查找联系人    ********\n");
-    printf("********   5、排序联系人   6、显示电话个数   ********\n");
-    printf("********   7、清空联系人   8、显示全部联系人 ********\n");
-    printf("********         0、退出通讯录            ********\n");
+    printf("********   5、排序联系人   6、清空联系人    ********\n");
+    printf("********        7、显示全部联系人          ********\n");
+    printf("********        0、退出通讯录              ********\n");
     printf("************************************************\n");
     printf("************************************************\n");
 }
@@ -28,14 +28,13 @@ enum Input
     MOD,
     FIND,
     SORT,
-    // NUM_SIZE,
     CLEAR,
     SHOW_ALL
 };
 int main()
 {
     Contact con;
-    init_con(&con);
+    initCon(&con);
 
     int input; //输入选择
     do
@@ -59,8 +58,6 @@ int main()
             break;
         case SORT:
             break;
-        // case NUM_SIZE:
-        //     break;
         case CLEAR:
             putNull(&con);
             break;
@@ -76,6 +73,6 @@ int main()
             break;
         }
     } while (input);
-
+    printf("已退出通讯录，欢迎下次使用!\n");
     return 0;
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: lwj
  * @Date: 2022-03-30 18:52:13
- * @LastEditTime: 2022-04-02 21:15:58
+ * @LastEditTime: 2022-04-25 19:39:56
  * @Description:求Sn= a+aa+aaa+aaaa+aaaaa的前五项和，其中a是一个数字
  * @FilePath: /C初级学习/比特习题/test_01.c
  */
