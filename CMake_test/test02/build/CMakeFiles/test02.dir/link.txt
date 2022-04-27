@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/test02.dir/商品管理.cpp.o CMakeFiles/test02.dir/src/函数定义.cpp.o -o test02 

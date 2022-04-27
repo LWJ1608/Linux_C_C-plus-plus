@@ -1,0 +1,5 @@
+/root/Linux_C_C-plus-plus/CMake_test/test01/build/CMakeFiles/edit_cache.dir
+/root/Linux_C_C-plus-plus/CMake_test/test01/build/CMakeFiles/rebuild_cache.dir
+/root/Linux_C_C-plus-plus/CMake_test/test01/build/bin/CMakeFiles/test01.dir
+/root/Linux_C_C-plus-plus/CMake_test/test01/build/bin/CMakeFiles/edit_cache.dir
+/root/Linux_C_C-plus-plus/CMake_test/test01/build/bin/CMakeFiles/rebuild_cache.dir
