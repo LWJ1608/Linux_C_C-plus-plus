@@ -1,3 +1,8 @@
+/*
+ * @Author: lwj
+ * @Date: 2022-04-28 16:04:26
+ * @Description:
+ */
 #include "Gun.h"
 #include "Soldier.h"
 
@@ -11,6 +16,8 @@ void test()
 
 int main()
 {
+    std::cout << "buuuuuuuu" << std::endl;
+    std::cout << "buuuuuuuu" << std::endl;
     test();
     return 0;
 }

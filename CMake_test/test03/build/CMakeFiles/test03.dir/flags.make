@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/root/Linux_C_C-plus-plus/CMake_test/test03/include
 
-CXX_FLAGS = -Wall -std=c++11 -O2
+CXX_FLAGS = -Wall -std=c++11 -O2 -g
 
