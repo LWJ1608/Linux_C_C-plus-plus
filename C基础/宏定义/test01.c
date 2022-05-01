@@ -27,6 +27,7 @@
 //     case //也可自己根据需要定义特殊用法
 #define DEBUG_PRINT printf(" file:%s\n line:%d\n date:%s\n time:%s\n", \
                            __FILE__, __LINE__, __DATE__, __TIME__)
+#define SQUARE(x) x *x
 
 int main()
 {
@@ -43,5 +44,11 @@ int main()
 
     printf("用法四:\n");
     DEBUG_PRINT;
+
+    printf("用法五:\n");
+    //两个结果不一样
+    printf("%d\n", SQUARE(3));     // 3*3
+    printf("%d\n", SQUARE(2 + 1)); // 2+1*2+1
+
     return 0;
 }
