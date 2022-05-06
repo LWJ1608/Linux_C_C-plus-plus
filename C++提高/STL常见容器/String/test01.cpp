@@ -21,6 +21,7 @@ using namespace std;
 
 void test01()
 {
+
     string s1; //默认构造
     const char *str = "asfasf";
     string s2(str); //有参构造
