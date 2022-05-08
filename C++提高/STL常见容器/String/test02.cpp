@@ -47,7 +47,6 @@ void test01()
     string s6;
     s6.assign(str2); //把字符串str2赋值给当前字符串
     cout << "s6 = " << s6 << endl;
-
 }
 int main()
 {
