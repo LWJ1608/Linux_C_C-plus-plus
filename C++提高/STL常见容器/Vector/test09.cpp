@@ -51,7 +51,7 @@ void test02()
     v1.resize(3);
     std::cout << "v1容器的容量为：" << v1.capacity() << std::endl;
     std::cout << "v1容器的大小为：" << v1.size() << std::endl;
-    // 巧用swap可以缩小容器的容量
+    // 巧用swap可以收缩容器的容量
     std::vector<int>(v1).swap(v1);
     // vector<int>(v1)匿名对象、没有名，创建的时候分配的容量和大小等于v1的大小，当前语句运行完后系统会马上释放它的空间
     std::cout << "v1容器的容量为：" << v1.capacity() << std::endl;

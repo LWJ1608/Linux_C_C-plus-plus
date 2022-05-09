@@ -27,7 +27,6 @@ void test01()
     v1.push_back(10); // push_back(尾插法)-向vectot容器插入数据
     v1.push_back(20);
     v1.push_back(30);
-
     //第一种遍历方式
     vector<int>::iterator itBegin = v1.begin(); //起始迭代器，指向容器第一个元素
     vector<int>::iterator itEnd = v1.end();     //结束迭代器，指向容器最后一个元素的下一个元素
@@ -49,5 +48,4 @@ int main()
 {
     test01();
     return 0;
-    
 }
