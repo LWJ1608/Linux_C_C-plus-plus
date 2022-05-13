@@ -18,12 +18,13 @@ public:
         this->_age = age;
         this->_heigh = heigh;
     }
+
 public:
     std::string _name;
     int _age;
     int _heigh;
 };
-bool comparePer(Person &P1, Person &P2)//定义排序规则
+bool comparePer(Person &P1, Person &P2) //定义排序规则
 {
     if (P1._age == P2._age)
     {
@@ -57,8 +58,8 @@ void test01()
         std::cout << "姓名： " << it->_name << " 年龄： " << it->_age
                   << " 身高： " << it->_heigh << std::endl;
     }
-    std::cout<<"----------------------------------------------"<<std::endl;
-    L.sort(comparePer);//把函数地址传入sort进行排序
+    std::cout << "----------------------------------------------" << std::endl;
+    L.sort(comparePer); //把函数地址传入sort进行排序
     for (std::list<Person>::iterator it = L.begin(); it != L.end(); it++)
     {
         std::cout << "姓名： " << it->_name << " 年龄： " << it->_age
