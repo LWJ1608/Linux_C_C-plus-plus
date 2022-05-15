@@ -2,6 +2,7 @@
 #include "stu.h"
 //#include"class.h"
 #include "teacher.h"
+
 int main()
 {
 	int p = test();
