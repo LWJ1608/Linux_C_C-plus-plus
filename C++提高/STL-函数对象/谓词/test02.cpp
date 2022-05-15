@@ -13,6 +13,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
 struct CompareNum
 {
     bool operator()(int val1, int val2) //二元谓词
