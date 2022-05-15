@@ -6,5 +6,4 @@ push(){
     git commit -m "push @$(date)"
     git push origin master
 }
-
 push
