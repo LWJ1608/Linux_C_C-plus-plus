@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 15 14:09:46 2022
+# Make data base, printed on Sun May 15 20:13:45 2022
 
 # Variables
 
@@ -25,9 +25,6 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
- 
-make: *** No rule to make target `all'.  Stop.
-
 @F = $(notdir $@)
 # default
 MAKE_VERSION := 3.82
@@ -50,7 +47,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.91 58316 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.91 58345 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
@@ -66,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-7748b430-fd7e-49d0-b414-1d57b21e5ca0.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-d5e9638c-902e-4596-96eb-d435f6d4b737.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -94,7 +91,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 17158
+XDG_SESSION_ID = 2
 # environment
 USER = root
 # makefile
@@ -112,7 +109,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.91 58316 22
+SSH_CLIENT = 223.73.72.91 58345 22
 # environment
 MAIL = /var/mail/root
 # automatic
@@ -212,11 +209,13 @@ GNUmakefile:
 
 # # of strings in strcache: 0 / lookups = 22 / hits = 22
 # # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
-# strcache used: total = 0 (178) / max = 0 / min = 8176 / avg = 0
-# strcache free: total = 0 (7998) / max = 0 / min = 8176 / avg = 0
+# strcache used: total = 0 (180) / max = 0 / min = 8176 / avg = 0
+# strcache free: total = 0 (7996) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=2/22=9%
-# Finished Make data base on Sun May 15 14:09:46 2022
+# Finished Make data base on Sun May 15 20:13:45 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
