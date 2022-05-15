@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat May 14 22:36:23 2022
+# Make data base, printed on Sun May 15 13:46:41 2022
 
 # Variables
 
@@ -47,7 +47,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.91 58301 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.91 58316 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
@@ -63,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-fcb6863d-bfea-4cf5-9885-5e6b574e4d93.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-d4e4e5d2-c263-4208-b362-89e7ba7ee85c.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -91,7 +91,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 15727
+XDG_SESSION_ID = 17158
 # environment
 USER = root
 # makefile
@@ -109,7 +109,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.91 58301 22
+SSH_CLIENT = 223.73.72.91 58316 22
 # environment
 MAIL = /var/mail/root
 # automatic
@@ -149,9 +149,9 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 64769, inode 935519): 10 files, no impossibilities.
+# . (device 64769, inode 935519): 11 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -207,14 +207,14 @@ GNUmakefile:
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 0 / lookups = 21 / hits = 21
+# # of strings in strcache: 0 / lookups = 22 / hits = 22
 # # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
-# strcache used: total = 0 (168) / max = 0 / min = 8176 / avg = 0
-# strcache free: total = 0 (8008) / max = 0 / min = 8176 / avg = 0
+# strcache used: total = 0 (178) / max = 0 / min = 8176 / avg = 0
+# strcache free: total = 0 (7998) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=2/21=10%
-# Finished Make data base on Sat May 14 22:36:23 2022
+# Load=19/8192=0%, Rehash=0, Collisions=2/22=9%
+# Finished Make data base on Sun May 15 13:46:41 2022
 
  
 make: *** No rule to make target `all'.  Stop.
