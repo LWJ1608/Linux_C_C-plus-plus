@@ -34,6 +34,7 @@ public:
         return v1 < v2;
     }
 };
+
 void test01()
 {
 }
