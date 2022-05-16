@@ -15,13 +15,16 @@
 // * `template<class T> T modulus<T>`             //取模仿函数
 // * `template<class T> T negate<T>`              //取反仿函数
 #include <iostream>
-#include <functional>
+#include <functional> //内联函数对象头文件
 
 void test01()
 {
+    std::cout << "-----加法仿函数-----" << std::endl;
+    std::plus<int> p1;
+    std::cout << p1(10, 19) << "\n";
 }
 int main()
 {
-
+    test01();
     return 0;
 }
