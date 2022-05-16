@@ -32,7 +32,7 @@ class CompareV
 public:
     bool operator()(const int v1, const int v2)
     {
-        return v1 < v2;
+        return v1 > v2;
     }
 };
 
@@ -51,9 +51,9 @@ void test01()
     sort(v1.begin(), v1.end());
     printVector(v1);
 
-    sort(v1.begin(), v1.end(), CompareV());
+    // sort(v1.begin(), v1.end(), CompareV());
     //可以不用自己实现比较对象，直接使用greater<int>()内建函数对象就可以
-    // sort(v1.begin(), v1.end(), std::greater<int>());
+    sort(v1.begin(), v1.end(), std::greater<int>());
     printVector(v1);
 }
 int main()
