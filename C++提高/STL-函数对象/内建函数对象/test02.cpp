@@ -29,7 +29,7 @@ void printVector(std::vector<int> &v)
 class CompareV
 {
 public:
-    bool operate()(const int v1, const int v2)
+    bool operator()(const int v1, const int v2)
     {
         return v1 < v2;
     }
@@ -37,6 +37,13 @@ public:
 
 void test01()
 {
+    std::vector<int> v1;
+
+    v.push_back(10);
+    v.push_back(30);
+    v.push_back(50);
+    v.push_back(40);
+    v.push_back(20);
 }
 int main()
 {
