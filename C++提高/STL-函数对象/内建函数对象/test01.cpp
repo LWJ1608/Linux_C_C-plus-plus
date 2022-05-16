@@ -34,6 +34,10 @@ void test01()
     std::cout << "\n-----取模仿函数-----" << std::endl;
     std::modulus<int> m3;
     std::cout << "m3(10, 9) = " << m3(10, 9) << std::endl;
+
+    std::cout << "\n-----取反仿函数-----" << std::endl;
+    std::negate<int> n1;
+    std::cout << "n1(10) = " << n1(10) << std::endl;
 }
 int main()
 {
