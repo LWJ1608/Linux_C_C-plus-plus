@@ -6,6 +6,7 @@
  * @Description:算术仿函数
  * @FilePath: /Linux_C_C-plus-plus/C++提高/STL-函数对象/内建函数对象/test01.cpp
  **/
+
 // * `template<class T> T plus<T>`                //加法仿函数
 // * `template<class T> T minus<T>`               //减法仿函数
 // * `template<class T> T multiplies<T>`          //乘法仿函数
