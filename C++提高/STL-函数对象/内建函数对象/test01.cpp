@@ -25,12 +25,15 @@ void test01()
 
     std::cout << "\n-----减法仿函数-----" << std::endl;
     std::minus<int> m1;//无法对非数字进行运算
-    std::cout << "m1(10, 19) = " << m1(10, 9) << std::endl;
+    std::cout << "m1(10, 9) = " << m1(10, 9) << std::endl;
 
     std::cout << "\n-----乘法仿函数-----" << std::endl;
     std::multiplies<int> m2;
-    std::cout << "m2(10, 19) = " << m2(10, 9) << std::endl;
+    std::cout << "m2(10, 9) = " << m2(10, 9) << std::endl;
 
+    std::cout << "\n-----取模仿函数-----" << std::endl;
+    std::modulus<int> m3;
+    std::cout << "m3(10, 9) = " << m3(10, 9) << std::endl;
 }
 int main()
 {
