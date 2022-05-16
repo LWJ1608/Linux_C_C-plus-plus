@@ -17,6 +17,7 @@
 #include <iostream>
 #include <functional> //内联函数对象头文件
 #include <vector>
+#include <algorithm>
 
 void printVector(std::vector<int> &v)
 {
@@ -39,11 +40,14 @@ void test01()
 {
     std::vector<int> v1;
 
-    v.push_back(10);
-    v.push_back(30);
-    v.push_back(50);
-    v.push_back(40);
-    v.push_back(20);
+    v1.push_back(10);
+    v1.push_back(30);
+    v1.push_back(50);
+    v1.push_back(40);
+    v1.push_back(20);
+
+    //如果sort算法不加传入排序规则，
+    sort(v1);
 }
 int main()
 {
