@@ -36,18 +36,18 @@ void test01()
     sort(v.begin(), v.end());
     for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
     {
-        cout << *it << " ";
+        std::cout << *it << " ";
     }
     std::cout << std::endl;
-    cout << "----------------------------" << endl;
+    std::cout << "----------------------------" << std::endl;
 
     //使用函数对象改变算法策略，排序从大到小
     sort(v.begin(), v.end(), MyCompare());
     for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
     {
-        cout << *it << " ";
+        std::cout << *it << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
 int main()
