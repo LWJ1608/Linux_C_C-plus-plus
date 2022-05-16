@@ -20,12 +20,16 @@
 void test01()
 {
     std::cout << "-----加法仿函数-----" << std::endl;
-    std::plus<int> p1;
+    std::plus<int> p1;//如果类型是string类型，则会合并两个字符串
     std::cout << "p1(10, 19) = " << p1(10, 19) << std::endl;
 
     std::cout << "\n-----减法仿函数-----" << std::endl;
-    std::minus<int> m1;
+    std::minus<int> m1;//无法对非数字进行运算
     std::cout << "m1(10, 19) = " << m1(10, 9) << std::endl;
+
+    std::cout << "\n-----乘法仿函数-----" << std::endl;
+    std::multiplies<int> m2;
+    std::cout << "m2(10, 19) = " << m2(10, 9) << std::endl;
 
 }
 int main()
