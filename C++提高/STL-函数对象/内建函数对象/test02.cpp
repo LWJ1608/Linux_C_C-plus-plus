@@ -26,6 +26,14 @@ void printVector(std::vector<int> &v)
     }
     std::cout << std::endl;
 }
+class CompareV
+{
+public:
+    bool operate()(const int v1, const int v2)
+    {
+        return v1 < v2;
+    }
+};
 void test01()
 {
 }
