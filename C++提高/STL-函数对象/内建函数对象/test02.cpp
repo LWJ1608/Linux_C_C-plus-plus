@@ -45,9 +45,9 @@ void test01()
     v1.push_back(50);
     v1.push_back(40);
     v1.push_back(20);
-
+    printVector(v1);
     //如果sort算法不加传入排序规则，
-    sort(v1);
+    // sort(v1);
 }
 int main()
 {
