@@ -21,7 +21,7 @@ void test01()
 {
     std::cout << "-----加法仿函数-----" << std::endl;
     std::plus<int> p1;
-    std::cout << p1(10, 19) << "\n";
+    std::cout << "p1(10, 19) = " << p1(10, 19) << "\n\n";
 }
 int main()
 {
