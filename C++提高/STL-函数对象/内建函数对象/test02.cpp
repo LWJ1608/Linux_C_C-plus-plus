@@ -18,11 +18,13 @@
 #include <functional> //内联函数对象头文件
 #include <vector>
 
-void printVector(const std::vector<int> &v)
+void printVector(std::vector<int> &v)
 {
     for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
     {
+        std::cout << *it << " ";
     }
+    std::cout << std::endl;
 }
 void test01()
 {
