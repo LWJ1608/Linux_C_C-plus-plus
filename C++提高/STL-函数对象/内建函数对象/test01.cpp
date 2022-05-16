@@ -22,7 +22,11 @@ void test01()
     std::cout << "-----加法仿函数-----" << std::endl;
     std::plus<int> p1;
     std::cout << "p1(10, 19) = " << p1(10, 19) << std::endl;
-    
+
+    std::cout << "-----减法仿函数-----" << std::endl;
+    std::plus<std::string> m1;
+    std::cout << "m1(10, 19) = " << m1("10", "9") << std::endl;
+
 }
 int main()
 {
