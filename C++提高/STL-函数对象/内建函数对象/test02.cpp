@@ -45,11 +45,12 @@ void test01()
     v1.push_back(50);
     v1.push_back(40);
     v1.push_back(20);
-    printVector(v1);
 
-    //如果sort算法不加传入排序规则，默认
-    sort(v1.begin(),v1.end());
+    //如果sort算法不加传入排序规则，默认升序，内部是利用less<T>实现排序
+    sort(v1.begin(), v1.end());
     printVector(v1);
+    //利用匿名对象实现
+    sort(v1.begin(), v1.end(), CompareV());
 }
 int main()
 {
