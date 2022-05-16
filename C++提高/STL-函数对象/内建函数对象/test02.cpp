@@ -46,11 +46,15 @@ void test01()
     v1.push_back(40);
     v1.push_back(20);
 
+    //降序
     //如果sort算法不加传入排序规则，默认升序，内部是利用less<T>实现排序
     sort(v1.begin(), v1.end());
     printVector(v1);
-    //利用匿名对象实现
-    sort(v1.begin(), v1.end(), CompareV());
+
+    // sort(v1.begin(), v1.end(), CompareV());
+    //可以不用自己实现比较对象，直接使用greater<int>()内建函数对象就可以
+    sort(v1.begin(), v1.end(), std::greater<int>());
+    printVector(v1);
 }
 int main()
 {
