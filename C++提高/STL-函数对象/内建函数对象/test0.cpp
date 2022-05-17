@@ -37,6 +37,7 @@ void test01()
     std::vector<bool> v2;
     v2.reserve(v.size());
     //使用到transform算法，将v容器搬运到v2中，搬运目的容器必须先开辟空间
+    transform(v.begin(), v.end(), v2.begin(), std::logical_not<bool>());
 }
 int main()
 {
