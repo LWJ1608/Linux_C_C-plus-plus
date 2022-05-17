@@ -15,6 +15,14 @@
 #include <vector>
 #include <algorithm>
 
+void printVerctor(std::vector<bool>& v)
+{
+    for (std::vector<bool>::iterator it = v.begin(); it != v.end(); it++)
+    {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+}
 void test01()
 {
     std::vector<bool> v;
@@ -23,11 +31,7 @@ void test01()
     v.push_back(true);
     v.push_back(false);
 
-    for (std::vector<bool>::iterator it = v.begin(); it != v.end(); it++)
-    {
-        std::cout << *it << " ";
-    }
-    std::cout << std::endl;
+    printVerctor(v);
 
     //逻辑非  将v容器搬运到v2中，并执行逻辑非运算
     std::vector<bool> v2;
