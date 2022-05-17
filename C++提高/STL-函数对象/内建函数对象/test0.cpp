@@ -15,7 +15,7 @@
 #include <vector>
 #include <algorithm>
 
-void printVerctor(std::vector<bool>& v)
+void printVerctor(std::vector<bool> &v)
 {
     for (std::vector<bool>::iterator it = v.begin(); it != v.end(); it++)
     {
@@ -37,6 +37,7 @@ void test01()
     std::vector<bool> v2;
     v2.reserve(v.size());
     //使用到transform算法，将v容器搬运到v2中，搬运目的容器必须先开辟空间
+    transaction_safe
 }
 int main()
 {
