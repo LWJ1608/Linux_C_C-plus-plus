@@ -11,3 +11,23 @@
 #include <functional>
 #include <vector>
 #include <algorithm>
+
+void test01()
+{
+    std::vector<bool> v;
+    v.push_back(true);
+    v.push_back(false);
+    v.push_back(true);
+    v.push_back(false);
+
+    for (std::vector<bool>::iterator it = v.begin(); it != v.end(); it++)
+    {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+}
+void main()
+{
+    test01();
+    return 0;
+}
