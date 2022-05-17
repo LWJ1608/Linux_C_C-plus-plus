@@ -25,8 +25,10 @@ void test01()
         std::cout << *it << " ";
     }
     std::cout << std::endl;
+    std::vector<bool> v2;
+    v2.reserve(v.size());
 }
-void main()
+int main()
 {
     test01();
     return 0;
