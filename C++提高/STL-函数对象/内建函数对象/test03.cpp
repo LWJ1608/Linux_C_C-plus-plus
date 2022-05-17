@@ -14,7 +14,7 @@
 #include <functional>
 #include <vector>
 #include <algorithm>
-
+using namespace std;
 void printVerctor(std::vector<bool> &v)
 {
     for (std::vector<bool>::iterator it = v.begin(); it != v.end(); it++)
