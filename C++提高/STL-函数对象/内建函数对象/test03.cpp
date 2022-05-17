@@ -36,6 +36,7 @@ void test01()
     //逻辑非  将v容器搬运到v2中，并执行逻辑非运算
     std::vector<bool> v2;
     v2.resize(v.size());
+
     //使用到transform算法，将v容器搬运到v2中，搬运目的容器必须先开辟空间
     transform(v.begin(), v.end(), v2.begin(), std::logical_not<bool>());
     printVerctor(v2);
