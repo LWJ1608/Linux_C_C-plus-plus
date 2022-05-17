@@ -28,8 +28,11 @@ void test01()
         std::cout << *it << " ";
     }
     std::cout << std::endl;
+
+    //逻辑非  将v容器搬运到v2中，并执行逻辑非运算
     std::vector<bool> v2;
     v2.reserve(v.size());
+    //使用到stransf
 }
 int main()
 {
