@@ -26,8 +26,8 @@ class Person
 public:
     Person(std::string name, int age)
     {
-        this->_name=name;
-        this->_age=age;
+        this->_name = name;
+        this->_age = age;
     }
     std::string _name;
     int _age;
@@ -35,11 +35,13 @@ public:
 void test01()
 {
     std::vector<Person> Person1;
-    Person p1("小文",33);
+    Person p1("小文", 33);
     Person p2("小五", 13);
-    Person p3("小搜",19);
+    Person p3("小搜", 19);
     Person p4("小数", 12);
-    Person p5("小串",39);
+    Person p5("小串", 39);
+
+    Person1(p1);
 }
 int main()
 {
