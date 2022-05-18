@@ -34,6 +34,12 @@ public:
 };
 void test01()
 {
+    std::vector<Person> Person1;
+    Person p1("小文",33);
+    Person p2("小五", 13);
+    Person p3("小搜",19);
+    Person p4("小数", 12);
+    Person p5("小串",39);
 }
 int main()
 {
