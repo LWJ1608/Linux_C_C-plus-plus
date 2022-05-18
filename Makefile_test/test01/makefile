@@ -1,19 +1,6 @@
-# ELF=main
-# CC=gcc -g
-# SRC=$(shell find -name "*.c")
-# objects=$(SRC:.c=.o)
-# $(ELF):$(objects) 
-# $(objects):
-
-# .PHONY:clean
-# clean:
-# 	rm -rf *.o main
- 
 ELF=main
 CC=gcc -g
-# SRC=$(shell find -name "*.c")
-VATH=class:file
-SRC=$(*.c)
+SRC=$(shell find -name "*.c")
 objects=$(SRC:.c=.o)
 $(ELF):$(objects) 
 $(objects):
@@ -21,3 +8,16 @@ $(objects):
 .PHONY:clean
 clean:
 	rm -rf *.o main
+ 
+# ELF=main
+# CC=gcc -g
+# # SRC=$(shell find -name "*.c")
+# VATH=class:file
+# SRC=$(*.c)
+# objects=$(SRC:.c=.o)
+# $(ELF):$(objects) 
+# $(objects):
+
+# .PHONY:clean
+# clean:
+# 	rm -rf *.o main
