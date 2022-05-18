@@ -12,7 +12,8 @@
 ELF=main
 CC=gcc -g
 # SRC=$(shell find -name "*.c")
-SRC=$()
+VATH=
+SRC=$(*.c)
 objects=$(SRC:.c=.o)
 $(ELF):$(objects) 
 $(objects):
