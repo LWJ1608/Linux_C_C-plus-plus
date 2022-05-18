@@ -24,7 +24,7 @@ class Transform
 public:
     int operator()(int val)
     {
-        return val;
+        return val*val;
     }
 };
 
@@ -34,7 +34,7 @@ class Myprint
 public:
     void operator()(int val)
     {
-        std::cout<<val*val<<" ";
+        std::cout<<val<<" ";
     }
 };
 void test01()
