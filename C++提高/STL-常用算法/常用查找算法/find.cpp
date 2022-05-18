@@ -26,6 +26,8 @@ class Person
 public:
     Person(std::string name, int age)
     {
+        this->_name=name;
+        this->_age=age;
     }
     std::string _name;
     int _age;
