@@ -12,3 +12,44 @@
 // end1 源容器结束迭代器
 // beg2 目标容器开始迭代器
 //_func 函数或者函数对象
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+
+
+//仿函数
+class Transform
+{
+public:
+    int operator()(int val)
+    {
+        return val;
+    }
+};
+
+//仿函数
+class Myprint
+{
+public:
+    void operator()(int val)
+    {
+        std::cout<<val<<" ";
+    }
+};
+void test01()
+{
+    std::vector<int> v1;
+    for (int i = 0; i < 5; i++)
+    {
+        v1.push_back(i);
+    }
+
+    std::for_each(v1.begin(), v1.end(), Myprint()); //传入仿函数作为参数
+    std::cout << std::endl;
+}
+int main()
+{
+    test01();
+    return 0;
+}
