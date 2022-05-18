@@ -41,7 +41,11 @@ void test01()
     Person p4("小数", 12);
     Person p5("小串", 39);
 
-    Person1(p1);
+    Person1.push_back(p1);
+    Person1.push_back(p1);
+    Person1.push_back(p1);
+    Person1.push_back(p1);
+    Person1.push_back(p1);
 }
 int main()
 {
