@@ -18,10 +18,16 @@
 #include <algorithm>
 
 //普通函数
-void printV(int val)
+void printV1(int val)
 {
     std::cout << val << " ";
 }
+
+//仿函数
+class PrintV2
+{
+public:
+};
 void test01()
 {
     std::vector<int> v1;
@@ -29,7 +35,10 @@ void test01()
     {
         v1.push_back(i);
     }
-    std::for_each(v1.begin(), v1.end(), printV); //传入普通函数名
+    std::for_each(v1.begin(), v1.end(), printV1); //传入普通函数作为参数
+    std::cout << std::endl;
+
+    std::for_each(v1.begin(), v1.end(), PrintV2()); //传入仿函数作为参数
     std::cout << std::endl;
 }
 int main()
