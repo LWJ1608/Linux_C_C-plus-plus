@@ -27,6 +27,10 @@ void printV1(int val)
 class PrintV2
 {
 public:
+    void operator()(int val)
+    {
+        std::cout<<val<<" ";
+    }
 };
 void test01()
 {
