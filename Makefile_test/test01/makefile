@@ -12,7 +12,7 @@
 ELF=main
 CC=gcc -g
 # SRC=$(shell find -name "*.c")
-VATH=
+VATH=class:file
 SRC=$(*.c)
 objects=$(SRC:.c=.o)
 $(ELF):$(objects) 
