@@ -30,9 +30,9 @@ public:
         this->_age = age;
     }
     //重载 == 让底层的find知道怎样对比Person数据类型
-    bool operator==(const Person& p)
+    bool operator==(const Person &p)
     {
-        if(p._name==this->_name && p._age==this->_age)
+        if (p._name == this->_name && p._age == this->_age)
         {
             return true;
         }
@@ -58,8 +58,16 @@ void test01()
     Person1.push_back(p3);
     Person1.push_back(p4);
     Person1.push_back(p5);
-    
-    std::vector<Person>::iterator it=std::find(Person1.begin(),Person1.end(),p2);
+
+    std::vector<Person>::iterator it = std::find(Person1.begin(), Person1.end(), p2);
+    if (it != Person1.end())
+    {
+        std::cout << "1" << std::endl;
+    }
+    else
+    {
+        std::cout << "1" << std::endl;
+    }
 }
 int main()
 {
