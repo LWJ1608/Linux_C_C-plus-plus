@@ -29,6 +29,18 @@ public:
         this->_name = name;
         this->_age = age;
     }
+    //重载 == 让底层的find知道怎样对比Person数据类型
+    bool operator==(const Person& p)
+    {
+        if(p._name==this->_name && p._age==this->_age)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     std::string _name;
     int _age;
 };
