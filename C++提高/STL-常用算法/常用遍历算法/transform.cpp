@@ -16,7 +16,7 @@
 #include <vector>
 #include <algorithm>
 
-//仿函数
+//仿函数，搬运过程对数值运算
 class Transform
 {
 public:
@@ -26,7 +26,7 @@ public:
     }
 };
 
-//仿函数
+//仿函数，为for_each算法提供遍历规则
 class Myprint
 {
 public:
