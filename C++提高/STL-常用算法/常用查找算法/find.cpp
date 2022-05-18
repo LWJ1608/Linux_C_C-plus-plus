@@ -46,8 +46,8 @@ void test01()
     Person1.push_back(p3);
     Person1.push_back(p4);
     Person1.push_back(p5);
-
-    std::find(Person1.begin(),Person1.end(),p2);
+    
+    std::vector<Person>::iterator it=std::find(Person1.begin(),Person1.end(),p2);
 }
 int main()
 {
