@@ -42,10 +42,12 @@ void test01()
     Person p5("小串", 39);
 
     Person1.push_back(p1);
-    Person1.push_back(p1);
-    Person1.push_back(p1);
-    Person1.push_back(p1);
-    Person1.push_back(p1);
+    Person1.push_back(p2);
+    Person1.push_back(p3);
+    Person1.push_back(p4);
+    Person1.push_back(p5);
+
+    std::find(Person1.begin(),Person1.end(),p2);
 }
 int main()
 {
