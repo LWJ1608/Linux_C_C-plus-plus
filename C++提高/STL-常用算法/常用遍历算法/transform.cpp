@@ -16,15 +16,13 @@
 #include <vector>
 #include <algorithm>
 
-
-
 //仿函数
 class Transform
 {
 public:
     int operator()(int val)
     {
-        return val*val;
+        return val * val;
     }
 };
 
@@ -34,7 +32,7 @@ class Myprint
 public:
     void operator()(int val)
     {
-        std::cout<<val<<" ";
+        std::cout << val << " ";
     }
 };
 void test01()
@@ -47,9 +45,12 @@ void test01()
     std::for_each(v1.begin(), v1.end(), Myprint()); //遍历容器
     std::cout << std::endl;
 
-    std::vector<int> v2;//目标容器
+    std::vector<int> v2; //目标容器
     v2.resize(v1.size());
-    std::transform(v1.begin(),v1.end(),v2.begin(),Transform());//将v1容器的值复制到v2中
+
+    //将v1容器的值复制到v2中,仿函数Transform可以在搬运过程中对数值进行运算
+    std::transform(v1.begin(), v1.end(), v2.begin(), Transform()); // trastform容器搬运
+
     std::for_each(v2.begin(), v2.end(), Myprint()); //遍历容器
     std::cout << std::endl;
 }
