@@ -24,6 +24,11 @@
 class Person
 {
 public:
+    Person(std::string name, int age)
+    {
+    }
+    std::string _name;
+    int _age;
 };
 void test01()
 {
