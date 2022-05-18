@@ -34,7 +34,7 @@ class Myprint
 public:
     void operator()(int val)
     {
-        std::cout<<val<<" ";
+        std::cout<<val*val<<" ";
     }
 };
 void test01()
@@ -44,8 +44,13 @@ void test01()
     {
         v1.push_back(i);
     }
+    std::for_each(v1.begin(), v1.end(), Myprint()); //遍历容器
+    std::cout << std::endl;
 
-    std::for_each(v1.begin(), v1.end(), Myprint()); //传入仿函数作为参数
+    std::vector<int> v2;//目标容器
+    v2.resize(v1.size());
+    std::transform(v1.begin(),v1.end(),v2.begin(),Transform());//将v1容器的值复制到v2中
+    std::for_each(v2.begin(), v2.end(), Myprint()); //遍历容器
     std::cout << std::endl;
 }
 int main()
