@@ -42,6 +42,7 @@ class Find_if_Person
 public:
     bool operator()(Person &p)
     {
+        return p._age=18;
     }
 };
 //自定义类型
