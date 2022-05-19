@@ -32,7 +32,11 @@ public:
 
 public:
     std::string _name;
-    int _age
+    int _age;
+};
+class Count_if
+{
+public:
 };
 void test01()
 {
@@ -41,6 +45,8 @@ void test01()
     {
         v1.push_back(i);
     }
+    // count_if 统计符合条件的元素个数
+    std::count_if(v1.begin(), v1.end(), )
 }
 
 int main()
