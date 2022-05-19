@@ -18,7 +18,10 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-
+//打印
+void printV(std::vector<int> &v)
+{
+}
 //内置类型的判断条件谓词
 class Find_if
 {
@@ -39,7 +42,7 @@ void test01()
     }
     for (int i = 0; i < 9; i++)
     {
-        std::cout << v1[i] << std::endl;
+        std::cout << v1[i] << " ";
     }
 }
 void test02()
