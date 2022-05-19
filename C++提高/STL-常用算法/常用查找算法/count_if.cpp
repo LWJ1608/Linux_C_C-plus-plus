@@ -45,8 +45,18 @@ public:
 };
 void test01()
 {
-    std::vector<int> v1;
+    std::vector<Person> v1;
+    Person p1("小文", 33);
+    Person p2("小五", 13);
+    Person p3("小搜", 19);
+    Person p4("小数", 12);
+    Person p5("小串", 39);
 
+    v1.push_back(p1);
+    v1.push_back(p2);
+    v1.push_back(p3);
+    v1.push_back(p4);
+    v1.push_back(p5);
     // count_if 统计符合条件的元素个数
     std::count_if(v1.begin(), v1.end(), Count_if());
 }
