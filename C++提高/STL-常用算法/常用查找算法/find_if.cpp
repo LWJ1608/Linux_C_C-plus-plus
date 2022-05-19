@@ -49,18 +49,18 @@ void test01()
 }
 void test02()
 {
-    // std::vector<Person> v1;
-    // Person p1("小文", 33);
-    // Person p2("小五", 13);
-    // Person p3("小搜", 19);
-    // Person p4("小数", 12);
-    // Person p5("小串", 39);
+    std::vector<Person> v1;
+    Person p1("小文", 33);
+    Person p2("小五", 13);
+    Person p3("小搜", 19);
+    Person p4("小数", 12);
+    Person p5("小串", 39);
 
-    // Person1.push_back(p1);
-    // Person1.push_back(p2);
-    // Person1.push_back(p3);
-    // Person1.push_back(p4);
-    // Person1.push_back(p5);
+    Person1.push_back(p1);
+    Person1.push_back(p2);
+    Person1.push_back(p3);
+    Person1.push_back(p4);
+    Person1.push_back(p5);
 }
 int main()
 {
