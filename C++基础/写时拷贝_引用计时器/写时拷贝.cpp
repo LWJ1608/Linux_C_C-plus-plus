@@ -14,8 +14,10 @@
 
 
 #include<iostream>
-#include<string.h>
+#include<string>
 #include<malloc.h>
+using namespace std;
+
 class String;
 class String_rep//这个类主要是进行数据存储的
 {
