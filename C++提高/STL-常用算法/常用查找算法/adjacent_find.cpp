@@ -27,9 +27,9 @@ void test01()
 
     //查找相邻重复元素
     std::vector<int>::iterator it = std::adjacent_find(v1.begin(),v1.end());
-    if (it == v.end())
+    if (it == v1.end())
     {
-        std::cout << "找不到!" << std::endl;
+        std::cout << "找不到重复元素!" << std::endl;
     }
     else
     {
