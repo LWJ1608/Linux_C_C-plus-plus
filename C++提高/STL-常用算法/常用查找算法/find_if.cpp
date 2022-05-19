@@ -23,6 +23,10 @@
 class Find_if
 {
 public:
+    bool findIf()(int val)
+    {
+        return val > 2;
+    }
 };
 //内置数据类型查找
 void test01()
