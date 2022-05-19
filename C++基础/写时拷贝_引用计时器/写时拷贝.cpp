@@ -37,7 +37,7 @@ public:
 	}
 	String_rep(const String_rep &s);
 	String_rep &operator=(const String_rep &s);
-	~String()
+	~String_rep()
 	{
 		delete[] data;
 		data = NULL;
@@ -68,7 +68,9 @@ private:
 	char *data;
 	int use_count;
 };
-class String //这个类主要是进行数据操作
+
+//这个类主要是进行数据操作
+class String 
 {
 public:
 	String(const char *str = "") : rep(new String_rep(str))
@@ -80,7 +82,7 @@ public:
 		rep = s.rep;
 		rep->increment();
 	}
-	String &operator=(const String &s) //赋值重载
+	String &operator=(String &s) //赋值重载
 	{
 		if (rep != s)
 		{
@@ -99,7 +101,7 @@ public:
 	{
 		return rep->print_use_count();
 	}
-	char *pirnt_data()
+	char *print_data()
 	{
 		return rep->getData();
 	}
