@@ -19,7 +19,12 @@
 #include <string>
 #include <algorithm>
 
-//数据类型查找
+//内置类型的判断条件谓词
+class Find_if
+{
+public:
+};
+//内置数据类型查找
 void test01()
 {
 }
