@@ -31,7 +31,7 @@ void test01()
     std::queue<int> q1;
     for (int i = 0; i < 8; i++)
     {
-        q1.push(i);
+        q1.push(i+1);
     }
     printQueue(q1);
 }
