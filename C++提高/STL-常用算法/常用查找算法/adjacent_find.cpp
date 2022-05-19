@@ -19,7 +19,12 @@
 #include<algorithm>
 void test01()
 {
-    
+    std::vector<int> v1;
+    for (int i = 0; i < 9; i++)
+    {
+        v1.push_back(i);
+    }
+    std::vector<int>::iterator it = std::adjacent_find(v1.begin(),v1.end());
 }
 
 int main()
