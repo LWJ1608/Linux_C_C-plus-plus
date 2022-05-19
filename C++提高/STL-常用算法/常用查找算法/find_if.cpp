@@ -21,6 +21,11 @@
 //打印
 void printV(std::vector<int> &v)
 {
+    for (int i = 0; i < 9; i++)
+    {
+        std::cout << v[i] << " ";
+    }
+    std::cout<<std::endl;
 }
 //内置类型的判断条件谓词
 class Find_if
@@ -40,10 +45,7 @@ void test01()
     {
         v1.push_back(i);
     }
-    for (int i = 0; i < 9; i++)
-    {
-        std::cout << v1[i] << " ";
-    }
+    printV(v1);
 }
 void test02()
 {
