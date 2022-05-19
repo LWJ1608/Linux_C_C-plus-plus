@@ -3,6 +3,14 @@
  * @Date: 2022-05-19 19:49:50
  * @LastEditTime: 2022-05-19 19:49:50
  * @LastEditors: lwj
- * @Description:
+ * @Description:count算法的使用
  * @FilePath: /Linux_C_C-plus-plus/C++提高/STL-常用算法/常用查找算法/count.cpp
  **/
+// **功能描述：**
+// * 统计元素个数
+// **函数原型：**
+// - `count(iterator beg, iterator end, value);  `
+// 统计元素出现次数
+// beg 开始迭代器
+// end 结束迭代器
+// value 统计的元素
