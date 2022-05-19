@@ -38,7 +38,10 @@ public:
 class Count_if
 {
 public:
-    bool oprator()()
+    bool operator()(Person &p)
+    {
+        return p._age > 3;
+    }
 };
 void test01()
 {
