@@ -36,7 +36,11 @@ public:
         return val > 2;
     }
 };
-
+//自定义类型判断条件谓词
+class Find_if_Person
+{
+public:
+};
 //自定义类型
 class Person
 {
@@ -60,6 +64,7 @@ void test01()
         v1.push_back(i);
     }
     printV(v1);
+    // find_if 找到符合条件返回它的迭代器
     std::vector<int>::iterator it = std::find_if(v1.begin(), v1.end(), Find_if());
     if (it != v1.end())
     {
@@ -84,6 +89,9 @@ void test02()
     v1.push_back(p3);
     v1.push_back(p4);
     v1.push_back(p5);
+
+    // find_if 找到符合条件返回它的迭代器
+    std::vector<int>::iterator it = std::find_if(v1.begin(), v1.end(), Find_if());
 }
 int main()
 {
