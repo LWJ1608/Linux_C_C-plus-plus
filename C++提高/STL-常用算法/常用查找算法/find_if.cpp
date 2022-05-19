@@ -40,7 +40,9 @@ public:
 class Find_if_Person
 {
 public:
-    bool
+    bool operator()(Person &p)
+    {
+    }
 };
 //自定义类型
 class Person
