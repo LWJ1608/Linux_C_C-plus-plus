@@ -34,7 +34,7 @@ void test01()
     }
     else
     {
-        std::cout << "找到了元素为:" << std::endl;
+        std::cout << "找到了元素" << std::endl;
     }
 }
 
