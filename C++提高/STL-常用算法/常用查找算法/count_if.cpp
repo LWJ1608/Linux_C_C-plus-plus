@@ -34,9 +34,11 @@ public:
     std::string _name;
     int _age;
 };
+//谓词
 class Count_if
 {
 public:
+    bool oprator()()
 };
 void test01()
 {
