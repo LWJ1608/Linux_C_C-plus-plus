@@ -19,7 +19,7 @@
 #include <string>
 #include <algorithm>
 
-//系统数据类型查
+//系统数据类型查找
 void test01()
 {
 }
