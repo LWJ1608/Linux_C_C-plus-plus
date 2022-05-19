@@ -84,7 +84,7 @@ public:
 	}
 	String &operator=(String &s) //赋值重载
 	{
-		if (rep != &s)
+		if (rep != s.rep)
 		{
 			rep->decrement();
 			rep = s.rep;
