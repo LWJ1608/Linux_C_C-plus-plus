@@ -16,3 +16,19 @@
 // value 统计的元素
 #include <iostream>
 #include <queue>
+#include<algorithm>
+
+void test01()
+{
+    std::queue<int> q1;
+    for (int i = 0; i < 8; i++)
+    {
+        q1.push(i);
+    }
+    
+}
+int main()
+{
+    test01();
+    return 0;
+}
