@@ -16,7 +16,7 @@
 // value 统计的元素
 #include <iostream>
 #include <queue>
-#include<algorithm>
+#include <algorithm>
 
 void printQueue(std::queue<int> &v)
 {
@@ -31,7 +31,7 @@ void test01()
     std::queue<int> q1;
     for (int i = 0; i < 8; i++)
     {
-        q1.push(i+1);
+        q1.
     }
     printQueue(q1);
 }
