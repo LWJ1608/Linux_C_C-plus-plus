@@ -14,3 +14,17 @@
 // beg 开始迭代器
 // end 结束迭代器
 // _Pred 函数或者谓词（返回bool类型的仿函数）
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+//系统数据类型查
+void test01()
+{
+}
+int main()
+{
+
+    return 0;
+}
