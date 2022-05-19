@@ -36,15 +36,7 @@ public:
         return val > 2;
     }
 };
-//自定义类型判断条件谓词
-class Find_if_Person
-{
-public:
-    bool operator()(Person &p)
-    {
-        return p._age == 18;
-    }
-};
+
 //自定义类型
 class Person
 {
@@ -58,6 +50,15 @@ public:
 public:
     std::string _name;
     int _age;
+};
+//自定义类型判断条件谓词
+class Find_if_Person
+{
+public:
+    bool operator()(Person &p)
+    {
+        return p._age == 18;
+    }
 };
 //内置数据类型查找
 void test01()
