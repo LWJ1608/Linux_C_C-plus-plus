@@ -6,6 +6,7 @@
  * @Description:count_if算法的使用
  * @FilePath: /Linux_C_C-plus-plus/C++提高/STL-常用算法/常用查找算法/count_if.cpp
  **/
+
 // **功能描述：**
 // * 按条件统计元素个数
 // **函数原型：**
@@ -14,3 +15,25 @@
 // beg 开始迭代器
 // end 结束迭代器
 // _Pred 谓词
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+//自定义类型
+class Person
+{
+public:
+public:
+    std::string _name;
+    int _age
+};
+void test01()
+{
+}
+
+int main()
+{
+    test01();
+    return 0;
+}
