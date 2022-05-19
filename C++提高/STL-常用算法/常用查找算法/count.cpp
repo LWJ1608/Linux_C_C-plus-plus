@@ -15,7 +15,7 @@
 // end 结束迭代器
 // value 统计的元素
 #include <iostream>
-#include<vector>
+#include <vector>
 #include <algorithm>
 
 void printV(std::vector<int> &v)
@@ -35,7 +35,7 @@ void test01()
     }
     printV(v1);
     //统计元素个数
-    std::count(v1.begin(),v1.end(),4);
+    int count = std::count(v1.begin(), v1.end(), 4);
 }
 int main()
 {
