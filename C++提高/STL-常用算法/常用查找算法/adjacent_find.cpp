@@ -24,16 +24,16 @@ void test01()
     {
         v1.push_back(i);
     }
-    
+
     //查找相邻重复元素
     std::vector<int>::iterator it = std::adjacent_find(v1.begin(),v1.end());
     if (it == v.end())
     {
-        cout << "找不到!" << endl;
+        std::cout << "找不到!" << std::endl;
     }
     else
     {
-        cout << "找到相邻重复元素为:" << *it << endl;
+        std::cout << "找到相邻重复元素为:" << *it << std::endl;
     }
 }
 
