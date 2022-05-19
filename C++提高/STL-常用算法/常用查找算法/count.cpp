@@ -27,7 +27,7 @@ void test01()
     }
     for (int i = 0; i < 9; i++)
     {
-        v.pop();
+        q1.pop();
     }
 }
 int main()
