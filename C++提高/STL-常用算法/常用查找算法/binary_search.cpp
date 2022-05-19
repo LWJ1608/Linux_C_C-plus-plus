@@ -11,7 +11,7 @@
 // **函数原型：**
 // - `bool binary_search(iterator beg, iterator end, value);
 // 查找指定的元素，查到 返回true  否则false
-// 注意: 在**无序序列中不可用**
+// 注意: 在无序序列中不可用
 // beg 开始迭代器
 // end 结束迭代器
 // value 查找的元素
@@ -27,7 +27,7 @@ void test01()
     }
 
     //查找相邻重复元素
-    bool it = std::binary_search(v1.begin(), v1.end(),2);
+    bool it = std::binary_search(v1.begin(), v1.end(), 2);
     if (it == false)
     {
         std::cout << "找不到元素!" << std::endl;
