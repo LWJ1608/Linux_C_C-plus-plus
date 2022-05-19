@@ -34,6 +34,8 @@ void test01()
         v1.push_back(i);
     }
     printV(v1);
+    //统计元素个数
+    std::count(v1.begin(),v1.end(),4);
 }
 int main()
 {
