@@ -15,3 +15,31 @@
 // beg 开始迭代器
 // end 结束迭代器
 // value 查找的元素
+#include <iostream>
+#include <vector>
+#include <algorithm>
+void test01()
+{
+    std::vector<int> v1;
+    for (int i = 0; i < 9; i++)
+    {
+        v1.push_back(i);
+    }
+
+    //查找相邻重复元素
+    std::vector<int>::iterator it = std::adjacent_find(v1.begin(), v1.end());
+    if (it == v1.end())
+    {
+        std::cout << "找不到重复元素!" << std::endl;
+    }
+    else
+    {
+        std::cout << "找到相邻重复元素为:" << *it << std::endl;
+    }
+}
+
+int main()
+{
+    test01();
+    return 0;
+}
