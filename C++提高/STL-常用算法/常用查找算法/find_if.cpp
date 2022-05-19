@@ -23,7 +23,7 @@
 class Find_if
 {
 public:
-    bool findIf()(int val)
+    bool operate()(int val)
     {
         return val > 2;
     }
