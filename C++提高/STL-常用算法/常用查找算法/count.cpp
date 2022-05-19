@@ -27,7 +27,7 @@ void test01()
     }
     for (int i = 0; i < 9; i++)
     {
-        q1.pop();
+        std::cout << q1.pop() << std::endl;
     }
 }
 int main()
