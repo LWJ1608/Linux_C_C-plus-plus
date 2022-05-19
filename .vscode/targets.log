@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 19 11:15:50 2022
+# Make data base, printed on Thu May 19 13:52:24 2022
 
 # Variables
 
@@ -47,9 +47,9 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.112 16929 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.112 55555 10.0.4.9 22
 # environment
-PATH = /root/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/0
 # environment
@@ -63,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-ab207eae-e007-4676-a30e-7a3c7c193a5c.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-c58f7f86-4599-434a-9297-e61a6076838c.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -91,7 +91,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 19142
+XDG_SESSION_ID = 19661
 # environment
 USER = root
 # makefile
@@ -109,13 +109,13 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.112 16929 22
+SSH_CLIENT = 223.73.72.112 55555 22
 # environment
 MAIL = /var/mail/root
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /root/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/helpers/browser.sh
+BROWSER = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -214,7 +214,7 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=2/22=9%
-# Finished Make data base on Thu May 19 11:15:50 2022
+# Finished Make data base on Thu May 19 13:52:24 2022
 
  
 make: *** No rule to make target `all'.  Stop.

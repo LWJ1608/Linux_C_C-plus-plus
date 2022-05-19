@@ -27,14 +27,14 @@ void test01()
     }
 
     //查找相邻重复元素
-    std::vector<int>::iterator it = std::adjacent_find(v1.begin(), v1.end());
-    if (it == v1.end())
+    bool it = std::binary_search(v1.begin(), v1.end(),2);
+    if (it == false)
     {
-        std::cout << "找不到重复元素!" << std::endl;
+        std::cout << "找不到元素!" << std::endl;
     }
     else
     {
-        std::cout << "找到相邻重复元素为:" << *it << std::endl;
+        std::cout << "找到了元素为:" << std::endl;
     }
 }
 
