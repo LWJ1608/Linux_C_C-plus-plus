@@ -21,6 +21,7 @@
 #include <algorithm>
 #include <vector>
 #include <string>
+
 class Person
 {
 public:
@@ -59,6 +60,7 @@ void test01()
     Person1.push_back(p4);
     Person1.push_back(p5);
 
+    // find 查找指定元素，找到返回指定元素的迭代器，找不到返回结束迭代器end()
     std::vector<Person>::iterator it = std::find(Person1.begin(), Person1.end(), p2);
     if (it != Person1.end())
     {
