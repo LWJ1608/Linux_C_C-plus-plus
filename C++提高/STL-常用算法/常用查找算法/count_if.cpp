@@ -58,7 +58,8 @@ void test01()
     v1.push_back(p4);
     v1.push_back(p5);
     // count_if 统计符合条件的元素个数
-    std::count_if(v1.begin(), v1.end(), Count_if());
+    int num = std::count_if(v1.begin(), v1.end(), Count_if());
+    std::cout<<"num = "<<num<<std::endl;
 }
 
 int main()
