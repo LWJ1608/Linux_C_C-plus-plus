@@ -40,6 +40,7 @@ public:
 class Find_if_Person
 {
 public:
+    bool
 };
 //自定义类型
 class Person
