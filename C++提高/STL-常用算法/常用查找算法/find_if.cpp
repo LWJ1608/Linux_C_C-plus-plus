@@ -60,6 +60,7 @@ void test01()
         v1.push_back(i);
     }
     printV(v1);
+    std::vector<int>::iterator it = std::find_if(v1)
 }
 void test02()
 {
@@ -70,11 +71,11 @@ void test02()
     Person p4("小数", 12);
     Person p5("小串", 39);
 
-    Person1.push_back(p1);
-    Person1.push_back(p2);
-    Person1.push_back(p3);
-    Person1.push_back(p4);
-    Person1.push_back(p5);
+    v1.push_back(p1);
+    v1.push_back(p2);
+    v1.push_back(p3);
+    v1.push_back(p4);
+    v1.push_back(p5);
 }
 int main()
 {
