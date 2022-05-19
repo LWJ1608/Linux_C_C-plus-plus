@@ -25,7 +25,7 @@ void printV(std::vector<int> &v)
     {
         std::cout << v[i] << " ";
     }
-    std::cout<<std::endl;
+    std::cout << std::endl;
 }
 //内置类型的判断条件谓词
 class Find_if
@@ -37,6 +37,20 @@ public:
     }
 };
 
+//自定义类型
+class Person
+{
+public:
+    Person(std::string name, int age)
+    {
+        this->_name = name;
+        this->_age = age;
+    }
+
+public:
+    std::string _name;
+    int _age;
+};
 //内置数据类型查找
 void test01()
 {
