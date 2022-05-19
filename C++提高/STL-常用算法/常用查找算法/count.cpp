@@ -18,6 +18,14 @@
 #include <queue>
 #include<algorithm>
 
+void printQueue(std::queue<int> &v)
+{
+    for (int i = 0; i < 9; i++)
+    {
+        std::cout << v.back() << " ";
+    }
+    std::cout << std::endl;
+}
 void test01()
 {
     std::queue<int> q1;
@@ -25,7 +33,7 @@ void test01()
     {
         q1.push(i);
     }
-    
+    printQueue(q1);
 }
 int main()
 {
