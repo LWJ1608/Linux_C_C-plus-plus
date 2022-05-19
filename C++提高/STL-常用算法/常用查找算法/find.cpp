@@ -62,11 +62,11 @@ void test01()
     std::vector<Person>::iterator it = std::find(Person1.begin(), Person1.end(), p2);
     if (it != Person1.end())
     {
-        std::cout << "同" << std::endl;
+        std::cout << "相等" << std::endl;
     }
     else
     {
-        std::cout << "不同" << std::endl;
+        std::cout << "不相等" << std::endl;
     }
 }
 int main()
