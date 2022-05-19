@@ -15,20 +15,25 @@
 // end 结束迭代器
 // value 统计的元素
 #include <iostream>
-#include <queue>
+#include<vector>
 #include <algorithm>
 
-void test01()
+void printV(std::vector<int> &v)
 {
-    std::queue<int> q1;
-    for (int i = 0; i < 8; i++)
-    {
-        q1.push(i);
-    }
     for (int i = 0; i < 9; i++)
     {
-        std::cout << q1.pop() << std::endl;
+        std::cout << v[i] << " ";
     }
+    std::cout << std::endl;
+}
+void test01()
+{
+    std::vector<int> v1;
+    for (int i = 0; i < 8; i++)
+    {
+        v1.push_back(i);
+    }
+    printV(v1);
 }
 int main()
 {
