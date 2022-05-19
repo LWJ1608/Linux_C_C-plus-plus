@@ -95,7 +95,7 @@ void test02()
     v1.push_back(p5);
 
     // find_if 找到符合条件返回它的迭代器
-    std::vector<int>::iterator it = std::find_if(v1.begin(), v1.end(), Find_if());
+    std::vector<Person>::iterator it = std::find_if(v1.begin(), v1.end(), Find_if_Person());
 }
 int main()
 {
