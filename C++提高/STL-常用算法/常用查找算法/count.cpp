@@ -36,6 +36,7 @@ void test01()
     printV(v1);
     //统计元素个数
     int count = std::count(v1.begin(), v1.end(), 4);
+    std::cout << "4的个数为：" << count << std::endl;
 }
 int main()
 {
