@@ -24,12 +24,23 @@
 class Person
 {
 public:
+    Person(std::string name, int age)
+    {
+        this->_name = name;
+        this->_age = age;
+    }
+
 public:
     std::string _name;
     int _age
 };
 void test01()
 {
+    std::vector<int> v1;
+    for (int i = 0; i < 5; i++)
+    {
+        v1.push_back(i);
+    }
 }
 
 int main()
