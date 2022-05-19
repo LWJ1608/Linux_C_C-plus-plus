@@ -9,15 +9,21 @@
 // **功能描述：**
 // * 查找相邻重复元素
 // **函数原型：**
-// - `adjacent_find(iterator beg, iterator end);  `
+// adjacent_find(iterator beg, iterator end);  `
 // 查找相邻重复元素,返回相邻元素的第一个位置的迭代器
 // beg 开始迭代器
 // end 结束迭代器
+
 #include <iostream>
 #include <vector>
+#include<algorithm>
+void test01()
+{
+    
+}
 
 int main()
 {
-
+    test01();
     return 0;
 }
