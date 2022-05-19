@@ -46,12 +46,9 @@ public:
 void test01()
 {
     std::vector<int> v1;
-    for (int i = 0; i < 5; i++)
-    {
-        v1.push_back(i);
-    }
+
     // count_if 统计符合条件的元素个数
-    std::count_if(v1.begin(), v1.end(), )
+    std::count_if(v1.begin(), v1.end(), Count_if());
 }
 
 int main()
