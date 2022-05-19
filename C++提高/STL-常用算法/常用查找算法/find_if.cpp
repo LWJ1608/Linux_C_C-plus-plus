@@ -60,11 +60,12 @@ void test01()
         v1.push_back(i);
     }
     printV(v1);
-    std::vector<int>::iterator it = std::find_if(v1.begin(), v1.end(), Find_if(4));
+    std::vector<int>::iterator it = std::find_if(v1.begin(), v1.end(), Find_if());
     if (it != v1.end())
     {
         std::cout << "找到符合条件的值" << std::endl;
     }
+    else
     {
         std::cout << "没找到符合条件的值" << std::endl;
     }
