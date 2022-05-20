@@ -19,13 +19,10 @@
 #include <vector>
 #include <algorithm>
 
-class CompareInt
+bool compareInt(int v1, int v2)
 {
-    bool operator()(int v1, int v2)
-    {
-        return v1 < v2;
-    }
-};
+    return v1 < v2;
+}
 
 //内置类型排序
 void test01()
