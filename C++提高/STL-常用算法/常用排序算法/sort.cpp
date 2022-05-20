@@ -23,6 +23,13 @@ void myPrint(int val)
 {
     std::cout << val << " ";
 }
+class Myprint
+{
+    bool operator()(int v1, int v2)
+    {
+        return v1 > v2;
+    }
+};
 //内置类型排序
 void test01()
 {
@@ -40,7 +47,8 @@ void test01()
     std::for_each(v1.begin(), v1.end(), myPrint);
     std::cout << std::endl;
 
-    //
+    //由大到小排序
+    std::sort()
 }
 int main()
 {
