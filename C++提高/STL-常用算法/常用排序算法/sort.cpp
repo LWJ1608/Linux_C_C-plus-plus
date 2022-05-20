@@ -17,21 +17,14 @@
 
 #include <iostream>
 #include <vector>
+#include<functional>
 #include <algorithm>
 //指定for_each的遍历规则
 void myPrint(int val)
 {
     std::cout << val << " ";
 }
-//自定义类型排序规则
-class MyPrint
-{
-public:
-    bool operator()(int v1, int v2)
-    {
-        return v1 > v2;
-    }
-};
+
 //内置类型排序
 void test01()
 {
@@ -50,7 +43,7 @@ void test01()
     std::cout << std::endl;
 
     //由大到小排序
-    std::sort(v1.begin(), v1.end(), MyPrint()); //利用谓词实现排序规则
+    std::sort(v1.begin(), v1.end(), getchar()); //利用谓词实现排序规则
     std::for_each(v1.begin(), v1.end(), myPrint);
     std::cout << std::endl;
 }
