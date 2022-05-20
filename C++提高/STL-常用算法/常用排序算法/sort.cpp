@@ -35,7 +35,8 @@ void test01()
     v1.push_back(22);
     v1.push_back(7);
     v1.push_back(3);
-    std::sort(v1.begin(),v1.end(),myPrint);
+    //默认排序，有小到大排序
+    std::sort(v1.begin(),v1.end());
 
 }
 int main()
