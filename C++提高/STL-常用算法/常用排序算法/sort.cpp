@@ -22,9 +22,8 @@
 void test01()
 {
     std::vector<int> v;
-    for (int i = 0; i < 9; i++)
-    {
-    }
+
+    v.push_back(i);
 }
 int main()
 {
