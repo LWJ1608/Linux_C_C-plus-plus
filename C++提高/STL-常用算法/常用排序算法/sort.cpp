@@ -18,12 +18,11 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+//指定for_each的遍历规则
 void myPrint(int val)
 {
-    std::cout<<val<" ";
+    std::cout << val << " ";
 }
-
 //内置类型排序
 void test01()
 {
@@ -36,8 +35,12 @@ void test01()
     v1.push_back(7);
     v1.push_back(3);
     //默认排序，有小到大排序
-    std::sort(v1.begin(),v1.end());
+    std::sort(v1.begin(), v1.end());
+    //遍历
+    std::for_each(v1.begin(), v1.end(), myPrint);
+    std::cout << std::endl;
 
+    //
 }
 int main()
 {
