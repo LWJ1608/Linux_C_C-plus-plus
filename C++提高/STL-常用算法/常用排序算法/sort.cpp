@@ -19,7 +19,7 @@
 #include <vector>
 #include <algorithm>
 
-void compareInt(int val)
+void myPrint(int val)
 {
     std::cout<<val<" ";
 }
@@ -35,7 +35,8 @@ void test01()
     v1.push_back(22);
     v1.push_back(7);
     v1.push_back(3);
-    sort(v1.begin(),v1.end(), CompareInt);
+    std::sort(v1.begin(),v1.end(),myPrint);
+
 }
 int main()
 {
