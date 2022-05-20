@@ -48,7 +48,7 @@ void test01()
     std::cout << std::endl;
 
     //由大到小排序
-    std::sort()
+    std::sort(v1.begin(),v1.end(),Myprint());//利用谓词实现排序规则
 }
 int main()
 {
