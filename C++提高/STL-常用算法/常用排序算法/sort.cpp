@@ -17,7 +17,7 @@
 
 #include <iostream>
 #include <vector>
-#include<functional>
+#include <functional>
 #include <algorithm>
 //指定for_each的遍历规则
 void myPrint(int val)
@@ -43,7 +43,7 @@ void test01()
     std::cout << std::endl;
 
     //由大到小排序
-    std::sort(v1.begin(), v1.end(), getchar()); //利用谓词实现排序规则
+    std::sort(v1.begin(), v1.end(), greater()); //利用谓词实现排序规则
     std::for_each(v1.begin(), v1.end(), myPrint);
     std::cout << std::endl;
 }
