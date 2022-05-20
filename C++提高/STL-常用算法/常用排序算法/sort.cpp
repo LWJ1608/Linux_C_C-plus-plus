@@ -23,6 +23,7 @@ void myPrint(int val)
 {
     std::cout << val << " ";
 }
+//自定义类型排序规则
 class MyPrint
 {
 public:
@@ -53,6 +54,7 @@ void test01()
     std::for_each(v1.begin(), v1.end(), myPrint);
     std::cout << std::endl;
 }
+
 int main()
 {
     test01();
