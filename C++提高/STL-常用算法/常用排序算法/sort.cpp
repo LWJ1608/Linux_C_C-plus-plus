@@ -25,7 +25,7 @@ void myPrint(int val)
 }
 class MyPrint
 {
-// public:
+public:
     bool operator()(int v1, int v2)
     {
         return v1 > v2;
@@ -50,6 +50,8 @@ void test01()
 
     //由大到小排序
     std::sort(v1.begin(), v1.end(), MyPrint()); //利用谓词实现排序规则
+    std::for_each(v1.begin(), v1.end(), myPrint);
+    std::cout << std::endl;
 }
 int main()
 {
