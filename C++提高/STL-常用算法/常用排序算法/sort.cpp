@@ -8,7 +8,7 @@
  **/
 // **功能描述：**
 // * 对容器内元素进行排序
-// **函数原型：**
+// 函数原型：
 // - `sort(iterator beg, iterator end, _Pred);  `
 // 按值查找元素，找到返回指定位置迭代器，找不到返回结束迭代器位置
 //  beg    开始迭代器
@@ -17,3 +17,13 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
+void test01()
+{
+}
+int main()
+{
+    test01();
+    return 0;
+}
