@@ -19,11 +19,22 @@
 #include <vector>
 #include <algorithm>
 
+bool compareInt(int v1, int v2)
+{
+    return v1 < v2;
+}
+//内置类型排序
 void test01()
 {
-    std::vector<int> v;
-
-    v.push_back(i);
+    std::vector<int> v1;
+    v1.push_back(3);
+    v1.push_back(1);
+    v1.push_back(4);
+    v1.push_back(33);
+    v1.push_back(22);
+    v1.push_back(7);
+    v1.push_back(3);
+    sort(v1);
 }
 int main()
 {
