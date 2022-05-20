@@ -19,9 +19,9 @@
 #include <vector>
 #include <algorithm>
 
-bool compareInt(int v1, int v2)
+void compareInt(int val)
 {
-    return v1 < v2;
+    std::cout<<val<" ";
 }
 
 //内置类型排序
@@ -35,7 +35,7 @@ void test01()
     v1.push_back(22);
     v1.push_back(7);
     v1.push_back(3);
-    sort(v1, CompareInt);
+    sort(v1.begin(),v1.end(), CompareInt);
 }
 int main()
 {
