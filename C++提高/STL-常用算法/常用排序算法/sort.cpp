@@ -19,10 +19,14 @@
 #include <vector>
 #include <algorithm>
 
-bool compareInt(int v1, int v2)
+class CompareInt
 {
-    return v1 < v2;
-}
+    bool operator()(int v1, int v2)
+    {
+        return v1 < v2;
+    }
+};
+
 //内置类型排序
 void test01()
 {
@@ -34,7 +38,7 @@ void test01()
     v1.push_back(22);
     v1.push_back(7);
     v1.push_back(3);
-    sort(v1);
+    sort(v1, CompareInt);
 }
 int main()
 {
