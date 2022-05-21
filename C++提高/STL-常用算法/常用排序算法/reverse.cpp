@@ -37,7 +37,13 @@ void test01()
     v1.push_back(7);
     v1.push_back(3);
     //遍历
-    
+    std::for_each(v1.begin(), v1.end(), PrintVector());
+    std::cout << std::endl;
+    //reverse反转
+    std::reverse(v1.begin(),v1.end());
+    //反转后
+    std::for_each(v1.begin(), v1.end(), PrintVector());
+    std::cout << std::endl;
 }
 int main()
 {
