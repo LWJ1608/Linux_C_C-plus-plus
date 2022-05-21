@@ -38,8 +38,8 @@ void test01()
     std::for_each(v1.begin(), v1.end(),printVector);
     //使用merge算法合并两个容器的时候需要先进行扩容
     v1.resize(v1.size() + v2.size());
-    std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), v1.begin());
-    std::cout << "v1容器合并后：" << std::endl;
+    // std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), v1.begin());
+    // std::cout << "v1容器合并后：" << std::endl;
 }
 int main()
 {
