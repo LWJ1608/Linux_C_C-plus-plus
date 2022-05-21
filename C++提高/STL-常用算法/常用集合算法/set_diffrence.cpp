@@ -21,6 +21,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
 class myPrint
 {
 public:
@@ -29,20 +30,37 @@ public:
         std::cout << val << " ";
     }
 };
-int main()
+
+void test01()
 {
     std::vector<int> v1;
     std::vector<int> v2;
-    std::vector<int> v3;
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < 10; i++)
     {
         v1.push_back(i);
         v2.push_back(i + 5);
     }
-    //为v3容器开辟空间
-    v3.resize(v1.size() + v2.size());
-    std::set_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), v3.begin());
-    std::for_each(v3.begin(), v3.end(), myPrint());
+
+    std::vector<int> vTarget;
+    //取两个里面较大的值给目标容器开辟空间
+    vTarget.resize(max(v1.size(), v2.size()));
+
+    //返回目标容器的最后一个元素的迭代器地址
+    std::cout << "v1与v2的差集为： " << std::endl;
+    std::vector<int>::iterator itEnd =
+        set_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), vTarget.begin());
+    std::for_each(vTarget.begin(), itEnd, myPrint());
     std::cout << std::endl;
+
+    std::cout << "v2与v1的差集为： " << std::endl;
+    itEnd = std::set_difference(v2.begin(), v2.end(), v1.begin(), v1.end(), vTarget.begin());
+    std::for_each(vTarget.begin(), itEnd, myPrint());
+    std::cout << std::endl;
+}
+
+int main()
+{
+
+    test01();
     return 0;
 }
