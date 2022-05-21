@@ -23,7 +23,7 @@
 
 void printVector(int val)
 {
-    std::cout<<val<<" ";
+    std::cout << val << " ";
 }
 void test01()
 {
@@ -35,11 +35,11 @@ void test01()
         v2.push_back(i + 8);
     }
     std::cout << "v1容器合并前：" << std::endl;
-    std::for_each(v1.begin(), v1.end(),printVector);
-    std::cout<<std::endl;
+    std::for_each(v1.begin(), v1.end(), printVector);
+    std::cout << std::endl;
     //使用merge算法合并两个容器的时候需要先进行扩容
     v1.resize(v1.size() + v2.size());
-    // std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), v1.begin());
+    std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), v1.begin());
     // std::cout << "v1容器合并后：" << std::endl;
 }
 int main()
