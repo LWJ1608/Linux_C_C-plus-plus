@@ -11,3 +11,15 @@
 // **函数原型：**
 // - `copy(iterator beg, iterator end, iterator dest);  `
 // 按值查找元素，找到返回指定位置迭代器，找不到返回结束迭代器位置
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+void test01()
+{
+}
+int main()
+{
+
+    return 0;
+}
