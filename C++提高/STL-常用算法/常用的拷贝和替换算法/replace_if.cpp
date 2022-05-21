@@ -11,11 +11,19 @@
 // **函数原型：**
 // - `replace_if(iterator beg, iterator end, _pred, newvalue);  `
 // 按条件替换元素，满足条件的替换成指定元素
-
 // beg 开始迭代器
-
 // end 结束迭代器
-
 // _pred 谓词
-
 // newvalue 替换的新元素
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+void test01()
+{
+}
+int main()
+{
+    test01();
+    return 0;
+}
