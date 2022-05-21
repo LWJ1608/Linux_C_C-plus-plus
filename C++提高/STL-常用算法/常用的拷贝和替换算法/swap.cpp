@@ -34,12 +34,18 @@ void test01()
         v1.push_back(i);
         v2.push_back(i + 8);
     }
+    std::cout << "交换前：" << std::endl;
     std::for_each(v1.begin(), v1.end(), myPrint());
-    std::cout<<std::endl;
+    std::cout << std::endl;
     std::for_each(v2.begin(), v2.end(), myPrint());
     std::cout << std::endl;
 
-    std::swap(v1,v2);
+    std::cout << "交换后：" << std::endl;
+    std::swap(v1, v2);
+    std::for_each(v1.begin(), v1.end(), myPrint());
+    std::cout << std::endl;
+    std::for_each(v2.begin(), v2.end(), myPrint());
+    std::cout << std::endl;
 }
 int main()
 {
