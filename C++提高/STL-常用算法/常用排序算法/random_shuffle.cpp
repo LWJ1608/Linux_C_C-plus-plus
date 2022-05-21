@@ -21,6 +21,10 @@
 class PrintVector
 {
 public:
+    void operator()(int val)
+    {
+        std::cout<<val<<" ";
+    }
 };
 void test01()
 {
@@ -33,10 +37,12 @@ void test01()
     v1.push_back(7);
     v1.push_back(3);
     //遍历
-    std::for_each(v1.begin(), v1.end(), );
+    std::for_each(v1.begin(), v1.end(), PrintVector());
+    std::cout<<std::endl;
+
 }
 int main()
 {
-
+    test01();
     return 0;
 }
