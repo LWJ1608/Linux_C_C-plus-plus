@@ -42,6 +42,7 @@ void test01()
     std::cout << "替换前：" << std::endl;
     for_each(v.begin(), v.end(), myPrint());
     std::cout << std::endl;
+    std::cout<<"替换后："<<std::endl;
 }
 int main()
 {
