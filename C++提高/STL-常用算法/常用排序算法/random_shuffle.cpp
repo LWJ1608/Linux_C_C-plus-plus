@@ -18,9 +18,22 @@
 #include <vector>
 #include <algorithm>
 
+class PrintVector
+{
+public:
+};
 void test01()
 {
-    
+    std::vector<int> v1;
+    v1.push_back(3);
+    v1.push_back(1);
+    v1.push_back(4);
+    v1.push_back(33);
+    v1.push_back(22);
+    v1.push_back(7);
+    v1.push_back(3);
+    //遍历
+    std::for_each(v1.begin(), v1.end(), );
 }
 int main()
 {
