@@ -14,7 +14,15 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+//仿函数
+class PrintV2
+{
+public:
+    void operator()(int val)
+    {
+        std::cout << val << " ";
+    }
+};
 void test01()
 {
     std::vector<int> v1;
@@ -22,20 +30,20 @@ void test01()
     {
         v1.push_back(i);
     }
-    std::for_each(v1.begin(), v1.end(), Myprint()); //遍历容器
+    std::for_each(v1.begin(), v1.end(), PrintV2()); //遍历容器
     std::cout << std::endl;
 
     std::vector<int> v2; //目标容器
-    v2.resize(v1.size());
+    v2.resize(v1.size());//复制前需要先进行空间分配
 
     //将v1容器的值复制到v2中,仿函数Transform可以在搬运过程中对数值进行运算
-    std::transform(v1.begin(), v1.end(), v2.begin(), Transform()); // trastform容器搬运
+    std::copy(v1.begin(), v1.end(), v2.begin());//将v1容器的元素复制到v2容器中
 
-    std::for_each(v2.begin(), v2.end(), Myprint()); //遍历容器
+    std::for_each(v2.begin(), v2.end(), PrintV2()); //遍历容器
     std::cout << std::endl;
 }
 int main()
 {
-
+    test01();
     return 0;
 }
