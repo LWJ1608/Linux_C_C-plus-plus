@@ -35,8 +35,11 @@ void test01()
         v2.push_back(i + 8);
     }
     std::for_each(v1.begin(), v1.end(), myPrint());
+    std::cout<<std::endl;
     std::for_each(v2.begin(), v2.end(), myPrint());
-    // std::swap(v1.begin(),v1.end(),v2.begin(),v2.end());
+    std::cout << std::endl;
+
+    std::swap(v1,v2);
 }
 int main()
 {
