@@ -35,14 +35,12 @@ void test01()
         v2.push_back(i + 8);
     }
 
-
     //使用merge算法合并两个容器的时候需要先进行扩容
     std::vector<int> dest;
-    dest.resize(v1.size()+v2.size());
-    v1.resize(v1.size() + v2.size());
+    dest.resize(v1.size() + v2.size());
     std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), dest.begin());
     //遍历dest容器
-    std::for_each(v1.begin(), v1.end(), printVector);
+    std::for_each(dest.begin(), dest.end(), printVector);
     std::cout << std::endl;
 }
 int main()
