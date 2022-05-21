@@ -14,3 +14,30 @@
 // beg 开始迭代器
 // end 结束迭代器
 // value 起始值
+#include <iostream>
+#include <vector>
+#include 《》
+class PrintVector
+{
+public:
+    void operator()(int val)
+    {
+        std::cout << val << " ";
+    }
+};
+void test01()
+{
+    std::vector<int> v1;
+    v1.push_back(3);
+    v1.push_back(1);
+    v1.push_back(4);
+    v1.push_back(33);
+    v1.push_back(22);
+    v1.push_back(7);
+    v1.push_back(3);
+}
+int main()
+{
+    test01();
+    return 0;
+}
