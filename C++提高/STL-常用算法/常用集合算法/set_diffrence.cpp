@@ -18,3 +18,31 @@
 // end2 容器2结束迭代器
 // dest 目标容器开始迭代器
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+class myPrint
+{
+public:
+    void operator()(int val)
+    {
+        std::cout << val << " ";
+    }
+};
+int main()
+{
+    std::vector<int> v1;
+    std::vector<int> v2;
+    std::vector<int> v3;
+    for (int i = 0; i < 9; i++)
+    {
+        v1.push_back(i);
+        v2.push_back(i + 5);
+    }
+    //为v3容器开辟空间
+    v3.resize(v1.size() + v2.size());
+    std::set_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), v3.begin());
+    std::for_each(v3.begin(), v3.end(), myPrint());
+    std::cout << std::endl;
+    return 0;
+}
