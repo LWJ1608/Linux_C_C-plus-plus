@@ -6,6 +6,14 @@
  * @Description:reverse反转算法的使用
  * @FilePath: /Linux_C_C-plus-plus/C++提高/STL-常用算法/常用排序算法/reverse.cpp
  **/
+// **功能描述：**
+// * 将容器内元素进行反转
+// **函数原型：**
+// - `reverse(iterator beg, iterator end);  `
+// 反转指定范围的元素
+// beg 开始迭代器
+// end 结束迭代器
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -31,6 +39,6 @@ void test01()
 }
 int main()
 {
-
+    test01();
     return 0;
 }
