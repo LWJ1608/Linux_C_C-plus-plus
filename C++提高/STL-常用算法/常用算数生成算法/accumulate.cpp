@@ -37,6 +37,7 @@ void test01()
     v1.push_back(3);
     //计算容器中元素值得和
     int count = std::accumulate(v1.begin(), v1.end(), 0);
+    std::cout << "计算容器中元素值得和为：" << count << std::endl;
 }
 int main()
 {
