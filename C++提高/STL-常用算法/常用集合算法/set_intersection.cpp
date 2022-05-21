@@ -39,5 +39,6 @@ int main()
         v1.push_back(i);
         v2.push_back(i + 5);
     }
-    std::set_ return 0;
+    std::set_intersection();
+    return 0;
 }
