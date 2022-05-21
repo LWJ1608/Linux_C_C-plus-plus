@@ -18,16 +18,27 @@
 // end2   容器2结束迭代器
 // dest    目标容器开始迭代器
 #include <iostream>
-// #include<vector>
-#include <set>
+#include <vector>
+#include <algorithm>
 
 void test01()
 {
-    std::set<int> s1;
-    s1.insert()
+    std::vector<int> v1;
+    std::vector<int> v2;
+    for (int i = 0; i < 9; i++)
+    {
+        v1.push_back(i);
+        v2.push_back(i + 8);
+    }
+    std::cout << "v1容器合并前：" << std::endl;
+    std::for_each(v1.begin(), v1.end());
+    //使用merge算法合并两个容器的时候需要先进行扩容
+    v1.resize(v1.size() + v2.size());
+    std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), v1);
+    std::cout << "v1容器合并后：" << std::endl;
 }
 int main()
 {
-
+    test01();
     return 0;
 }
