@@ -20,7 +20,7 @@
 
 #include <iostream>
 #include <vector>
-#include <
+#include <algorithm>
 class myPrint
 {
 public:
@@ -39,6 +39,8 @@ int main()
         v1.push_back(i);
         v2.push_back(i + 5);
     }
-    std::set_intersection();
+    //为v3容器开辟空间
+    v3.resize(v1.size()+v2.size());
+    std::set_intersection(v1.begin(),v1.end(),v2.begin(),v2.end(),);
     return 0;
 }
