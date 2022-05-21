@@ -17,6 +17,22 @@
 
 void test01()
 {
+    std::vector<int> v1;
+    for (int i = 0; i < 5; i++)
+    {
+        v1.push_back(i);
+    }
+    std::for_each(v1.begin(), v1.end(), Myprint()); //遍历容器
+    std::cout << std::endl;
+
+    std::vector<int> v2; //目标容器
+    v2.resize(v1.size());
+
+    //将v1容器的值复制到v2中,仿函数Transform可以在搬运过程中对数值进行运算
+    std::transform(v1.begin(), v1.end(), v2.begin(), Transform()); // trastform容器搬运
+
+    std::for_each(v2.begin(), v2.end(), Myprint()); //遍历容器
+    std::cout << std::endl;
 }
 int main()
 {
