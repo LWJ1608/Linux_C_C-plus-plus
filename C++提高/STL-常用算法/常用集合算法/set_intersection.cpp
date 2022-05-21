@@ -40,7 +40,9 @@ int main()
         v2.push_back(i + 5);
     }
     //为v3容器开辟空间
-    v3.resize(v1.size()+v2.size());
-    std::set_intersection(v1.begin(),v1.end(),v2.begin(),v2.end(),);
+    v3.resize(v1.size() + v2.size());
+    std::set_intersection(v1.begin(), v1.end(), v2.begin(), v2.end(), v3.begin());
+    std::for_each(v3.begin(), v3.end(), myPrint());
+    std::cout << std::endl;
     return 0;
 }
