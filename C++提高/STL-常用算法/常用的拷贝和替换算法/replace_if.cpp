@@ -18,7 +18,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-
+//谓词，定义输出格式
 class myPrint
 {
 public:
@@ -27,7 +27,15 @@ public:
         std::cout << val << " ";
     }
 };
-
+//谓词，定义替换的条件
+class Replace_if
+{
+public:
+    bool operator()(int val)
+    {
+        return val > 20;
+    }
+};
 void test01()
 {
     std::vector<int> v;
@@ -42,7 +50,10 @@ void test01()
     std::cout << "替换前：" << std::endl;
     for_each(v.begin(), v.end(), myPrint());
     std::cout << std::endl;
-    std::cout<<"替换后："<<std::endl;
+    std::cout << "替换后：" << std::endl;
+    std::replace_if(v.begin(), v.end(), Replace_if(), 88);
+    for_each(v.begin(), v.end(), myPrint());
+    std::cout << std::endl;
 }
 int main()
 {
