@@ -14,6 +14,7 @@
 // beg 开始迭代器
 // end 结束迭代器
 // value 起始值
+//需要包含numeric头文件
 #include <iostream>
 #include <vector>
 #include <numeric>
