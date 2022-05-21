@@ -7,13 +7,9 @@
  * @FilePath: /Linux_C_C-plus-plus/C++提高/STL-常用算法/常用的拷贝和替换算法/replate.cpp
  **/
 // **功能描述：**
-
 // * 将容器内指定范围的旧元素修改为新元素
-
-// 函数原型：**
-
-// - `replace(iterator beg, iterator end, oldvalue, newvalue);  `
-
+// 函数原型：
+// replace(iterator beg, iterator end, oldvalue, newvalue);  `
 // 将区间内旧元素 替换成 新元素
 #include <iostream>
 #include <algorithm>
