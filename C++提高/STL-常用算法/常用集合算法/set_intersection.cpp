@@ -20,7 +20,15 @@
 
 #include <iostream>
 #include <vector>
-
+#include <
+class myPrint
+{
+public:
+    void operator()(int val)
+    {
+        std::cout << val << " ";
+    }
+};
 int main()
 {
     std::vector<int> v1;
@@ -31,6 +39,5 @@ int main()
         v1.push_back(i);
         v2.push_back(i + 5);
     }
-
-    return 0;
+    std::set_ return 0;
 }
