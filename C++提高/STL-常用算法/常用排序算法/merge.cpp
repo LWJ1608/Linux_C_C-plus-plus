@@ -10,7 +10,6 @@
 // * 两个容器元素合并，并存储到另一容器中
 // **函数原型：**
 // - `merge(iterator beg1, iterator end1, iterator beg2, iterator end2, iterator dest);  `
-
 // 容器元素合并，并存储到另一容器中
 // 注意: 两个容器必须是**有序的**
 // beg1   容器1开始迭代器
@@ -18,3 +17,17 @@
 // beg2   容器2开始迭代器
 // end2   容器2结束迭代器
 // dest    目标容器开始迭代器
+#include <iostream>
+// #include<vector>
+#include <set>
+
+void test01()
+{
+    std::set<int> s1;
+    s1.insert()
+}
+int main()
+{
+
+    return 0;
+}
