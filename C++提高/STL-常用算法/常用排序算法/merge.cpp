@@ -24,7 +24,7 @@
 void printVector(int val)
 {
     std::cout<<val<<" ";
-};
+}
 void test01()
 {
     std::vector<int> v1;
