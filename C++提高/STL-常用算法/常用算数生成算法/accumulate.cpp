@@ -16,7 +16,7 @@
 // value 起始值
 #include <iostream>
 #include <vector>
-#include <malloc.h>
+#include <numeric>
 class PrintVector
 {
 public:
@@ -35,6 +35,8 @@ void test01()
     v1.push_back(22);
     v1.push_back(7);
     v1.push_back(3);
+    //计算容器中元素值得和
+    int count = std::accumulate(v1.begin(), v1.end(), 0);
 }
 int main()
 {
