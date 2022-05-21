@@ -21,7 +21,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+#include <
 class myPrint
 {
 public:
@@ -43,7 +43,7 @@ void test01()
 
     std::vector<int> vTarget;
     //取两个里面较大的值给目标容器开辟空间
-    vTarget.resize(max(v1.size(), v2.size()));
+    vTarget.resize(std::max(v1.size(), v2.size()));
 
     //返回目标容器的最后一个元素的迭代器地址
     std::cout << "v1与v2的差集为： " << std::endl;
