@@ -25,5 +25,12 @@ int main()
 {
     std::vector<int> v1;
     std::vector<int> v2;
+    std::vector<int> v3;
+    for (int i = 0; i < 9; i++)
+    {
+        v1.push_back(i);
+        v2.push_back(i + 5);
+    }
+
     return 0;
 }
