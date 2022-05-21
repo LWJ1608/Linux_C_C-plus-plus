@@ -33,11 +33,11 @@ void test01()
     std::for_each(v1.begin(), v1.end(), PrintV2()); //遍历容器
     std::cout << std::endl;
 
-    std::vector<int> v2; //目标容器
-    v2.resize(v1.size());//复制前需要先进行空间分配
+    std::vector<int> v2;  //目标容器
+    v2.resize(v1.size()); //复制前需要先进行空间分配
 
-    //将v1容器的值复制到v2中,仿函数Transform可以在搬运过程中对数值进行运算
-    std::copy(v1.begin(), v1.end(), v2.begin());//将v1容器的元素复制到v2容器中
+    //将v1容器的值复制到v2中
+    std::copy(v1.begin(), v1.end(), v2.begin());
 
     std::for_each(v2.begin(), v2.end(), PrintV2()); //遍历容器
     std::cout << std::endl;
