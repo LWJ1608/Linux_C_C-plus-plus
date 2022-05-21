@@ -36,7 +36,12 @@ void test01()
     v1.push_back(22);
     v1.push_back(7);
     v1.push_back(3);
-    //遍历
+    //遍历未随机排序前的容器
+    std::for_each(v1.begin(), v1.end(), PrintVector());
+    std::cout << std::endl;
+    //随机排序容器中元素
+    std::random_shuffle(v1.begin(),v1.end());
+    //遍历随机排序的容器
     std::for_each(v1.begin(), v1.end(), PrintVector());
     std::cout << std::endl;
 }
