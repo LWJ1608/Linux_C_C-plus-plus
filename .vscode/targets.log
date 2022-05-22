@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sat May 21 19:43:04 2022
+# Make data base, printed on Sun May 22 13:59:00 2022
 
 # Variables
 
@@ -48,7 +47,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.112 55741 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.112 55792 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
@@ -64,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-20c01f85-89e7-4094-a8f2-c3f4082ff156.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-680041e0-d012-4987-8633-002ac77180ee.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -92,7 +91,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 29749
+XDG_SESSION_ID = 33625
 # environment
 USER = root
 # makefile
@@ -110,7 +109,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.112 55741 22
+SSH_CLIENT = 223.73.72.112 55792 22
 # environment
 MAIL = /var/mail/root
 # automatic
@@ -140,9 +139,6 @@ HISTSIZE = 3000
 # environment
 LANG = C
 # environment
- 
-make: *** No rule to make target `all'.  Stop.
-
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
 # Load=65/1024=6%, Rehash=0, Collisions=6/84=7%
@@ -218,6 +214,8 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=2/22=9%
-# Finished Make data base on Sat May 21 19:43:04 2022
+# Finished Make data base on Sun May 22 13:59:00 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
