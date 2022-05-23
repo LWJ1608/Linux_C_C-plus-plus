@@ -16,12 +16,8 @@
 int my_strcmp(const char *arr1, const char *arr2)
 {
     assert(arr1 && arr2);
-    while (*arr1 == *arr2)
+    while (*arr1 == *arr2 && *arr1 && *arr2)
     {
-        if (*arr1 == '\0')
-        {
-            return 0;
-        }
         arr1++;
         arr2++;
     }
