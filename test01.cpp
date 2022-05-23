@@ -14,6 +14,6 @@ int main()
     int a = 10;
     int c = 9;
     const int *b = &a;
-    b =
-        return 0;
+    *b = 9;
+    return 0;
 }
