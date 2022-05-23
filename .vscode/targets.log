@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sun May 22 19:25:04 2022
+# Make data base, printed on Mon May 23 11:52:57 2022
 
 # Variables
 
@@ -48,7 +48,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.112 55776 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.112 55560 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
@@ -64,7 +64,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-397a2d55-e46d-4099-98b5-660b220e5bf6.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-fe02488d-92c8-4f2e-b454-d59797e719f9.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -87,15 +87,12 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
- 
-make: *** No rule to make target `all'.  Stop.
-
 # default
 MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 3
+XDG_SESSION_ID = 2918
 # environment
 USER = root
 # makefile
@@ -113,7 +110,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.112 55776 22
+SSH_CLIENT = 223.73.72.112 55560 22
 # environment
 MAIL = /var/mail/root
 # automatic
@@ -145,6 +142,9 @@ LANG = C
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # Load=65/1024=6%, Rehash=0, Collisions=6/84=7%
 
 # Pattern-specific Variable Values
@@ -218,6 +218,6 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=2/22=9%
-# Finished Make data base on Sun May 22 19:25:04 2022
+# Finished Make data base on Mon May 23 11:52:57 2022
 
  
