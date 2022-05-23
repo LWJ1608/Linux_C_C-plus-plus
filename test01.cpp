@@ -19,10 +19,10 @@ int main()
     std::cout << "a = " << a << std::endl;
     std::cout << "&b = " << &b << std::endl;
 
-    b = 100;
+    // b = 100;
 
-    std::cout << "a = " << a << std::endl;
-    std::cout << "b = " << b << std::endl;
+    // std::cout << "a = " << a << std::endl;
+    // std::cout << "b = " << b << std::endl;
 
     return 0;
 }
