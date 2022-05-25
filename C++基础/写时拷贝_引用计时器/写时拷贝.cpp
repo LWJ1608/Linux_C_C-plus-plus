@@ -35,8 +35,8 @@ public:
 			data[0] = 0;
 		}
 	}
-	String_rep(const String_rep &s);
-	String_rep &operator=(const String_rep &s);
+	// String_rep(const String_rep &s);
+	// String_rep &operator=(const String_rep &s);
 	~String_rep()
 	{
 		delete[] data;
@@ -70,7 +70,7 @@ private:
 };
 
 //这个类主要是进行数据操作
-class String 
+class String
 {
 public:
 	String(const char *str = "") : rep(new String_rep(str))
