@@ -11,7 +11,7 @@ template <typename Type>
 class LinkStack
 {
 private:
-    struct Node //把每个数据封装成一个结构体，
+    struct Node //把每个数据封装成一个结构体，里面包含data和next
     {
     public:
         T data;
@@ -25,8 +25,10 @@ private:
     };
     Node *top; //栈顶指针
 public:
-    LinkStack() { top = NULL; }                //构造函数
-    ~LinkStack() { clear(); }                  //析构函数
+    LinkStack() { top = NULL; } //构造函数
+    ~LinkStack() { clear(); }   //析构函数
+
+public:
     void clear();                              //清空
     void push(const T &value);                 //进栈
     int size() const;                          //返回链栈大小
