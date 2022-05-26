@@ -24,7 +24,7 @@ public:
     bool isFull() const;  //判满
     void push(Type s);    //插入元素
     size_t size() const;  //返回栈元素个数
-    Type getPop();        //返回栈顶元素
+    Type getTop();        //返回栈顶元素
     void pop();           //移除栈顶元素
 private:
     Type *base; //维护空间指针
@@ -74,7 +74,7 @@ size_t Stack<Type>::size() const
 }
 //返回栈顶元素
 template <typename Type>
-Type Stack<Type>::getPop()
+Type Stack<Type>::getTop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
     return base[top - 1];
