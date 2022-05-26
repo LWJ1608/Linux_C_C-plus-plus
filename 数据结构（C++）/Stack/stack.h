@@ -14,9 +14,8 @@ template <typename Type>
 class Stack
 {
 public:
-    Stack(size_t sz);      // size_t相当于无符号整数unsigned int
-    Stack(const Stack &t); //拷贝构造
-    Stack &operator=(const Stack<Type> &t);
+    Stack(size_t sz);                 // size_t相当于无符号整数unsigned int
+    Stack(const Stack &t);            //拷贝构造
     Stack &operator=(const Stack &t); //等号重载
     ~Stack();
 
@@ -49,7 +48,7 @@ Stack<Type>::~Stack()
 }
 //拷贝构造
 template <typename Type>
-Stack<Type>::Stack(const Stack<Type> &t)
+Stack<Type>::Stack(const Stack &t)
 {
     this->count = t.top;
     for (int i = 0; i < t.top; i++)
@@ -60,7 +59,7 @@ Stack<Type>::Stack(const Stack<Type> &t)
 }
 //等号重载
 template <typename Type>
-Stack &Stack<Type>::operator=(const Stack<Type> &t)
+Stack &Stack<Type>::operator=(const Stack &t)
 {
     this->count = s.top;
     for (int i = 0; i < s.top; i++)
