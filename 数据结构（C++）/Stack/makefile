@@ -1,2 +1,2 @@
 main:main.o
-	main.c -c main.o
+	g++ -c main.c -o main.o
