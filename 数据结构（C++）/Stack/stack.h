@@ -18,11 +18,11 @@ public:
         ~Stack();
 
 public:
-    //判空
+    bool isEmpaty(); //判空
     //判满
     //插入元素
     //返回栈顶元素
-    //
+    //去除栈顶元素
 private:
     Type *base; //维护空间指针
     int count;  //元素个数
