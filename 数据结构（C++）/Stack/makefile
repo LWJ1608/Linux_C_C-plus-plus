@@ -1,5 +1,5 @@
 main:main.o
-	g++ -c main.c 
+	g++ -c main.cpp
 
-.PHONY clean
+.PHONY : clean
 	rm -rf *.o main
