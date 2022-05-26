@@ -37,11 +37,10 @@ Stack<Type>::Stack(size_t sz = 0)
     this->top = 0;
 }
 template <typename Type>
-Stack<Type>::Stack(const Stack &t)
+~Stack<Tpye>::Stack()
 {
-    for (int i = 0; i < t.top; i++)
-    {
-    }
+    delete base;
+    base = nullptr;
 }
 template <typename Type>
 bool Stack<Type>::isEmpaty() const
