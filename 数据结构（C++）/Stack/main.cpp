@@ -11,7 +11,11 @@ using namespace std;
 
 int main(void)
 {
-    Stack<char> s(20);
+    Stack<int> s(8);
+    for (int i = 0; i < s.; i++)
+    {
+        /* code */
+    }
 
     return 0;
 }
