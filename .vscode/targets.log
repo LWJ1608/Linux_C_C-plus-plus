@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Thu May 26 10:43:14 2022
+# Make data base, printed on Thu May 26 10:47:07 2022
 
 # Variables
 
@@ -23,9 +23,6 @@ VSCODE_AGENT_FOLDER = /root/.vscode-server
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
- 
-make: *** No rule to make target `all'.  Stop.
-
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -115,7 +112,6 @@ MFLAGS = -Rrqp
 # environment
 SSH_CLIENT = 223.73.72.75 28896 22
 # environment
- 
 MAIL = /var/mail/root
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -124,6 +120,9 @@ BROWSER = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
+ 
+make: *** No rule to make target `all'.  Stop.
+
 MAKEFILES := 
 # environment
 PROMPT_COMMAND = history -a; history -a; 
@@ -146,7 +145,6 @@ LANG = C
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
- 
 # Load=65/1024=6%, Rehash=0, Collisions=6/84=7%
 
 # Pattern-specific Variable Values
@@ -178,7 +176,6 @@ all:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
@@ -211,7 +208,6 @@ GNUmakefile:
 # VPATH Search Paths
 
 # No `vpath' search paths.
- 
 
 # No general (`VPATH' variable) search path.
 
@@ -222,6 +218,6 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Thu May 26 10:43:14 2022
+# Finished Make data base on Thu May 26 10:47:07 2022
 
  
