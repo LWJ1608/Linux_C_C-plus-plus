@@ -21,8 +21,8 @@ public:
 public:
     bool isEmpaty() const; //判空
     bool isFull() const;   //判满
-    void push()            //插入元素
-        //返回栈顶元素
+    void push(Type s);     //插入元素
+    Type                   //返回栈顶元素
         //去除栈顶元素
         private : Type *base; //维护空间指针
     int count;                //空间容量
