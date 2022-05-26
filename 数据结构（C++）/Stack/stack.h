@@ -69,3 +69,9 @@ Type Stack<Type>::getPop()
 {
     return this->base[top - 1];
 }
+//移除栈顶元素
+template <typename Type>
+Type Stack<Type>::getPop()
+{
+    return this->base[top - 1];
+}
