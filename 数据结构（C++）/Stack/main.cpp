@@ -16,8 +16,7 @@ int main(void)
     {
         s1.push(i); //插入数据
     }
-    // Stack<int> s2(s1);
     cout << "s1的元素的个数：" << s1.size() << endl;
-    cout << "sadfa" << endl;
+    cout << "栈顶元素为：" << s1.getTop() << endl;
     return 0;
 }
