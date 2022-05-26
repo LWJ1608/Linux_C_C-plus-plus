@@ -20,11 +20,11 @@ public:
     ~Stack();
 
 public:
-    bool isEmpaty() const; //判空
-    bool isFull() const;   //判满
-    void push(Type s);     //插入元素
-    Type getPop();         //返回栈顶元素
-    void pop();            //移除栈顶元素
+    bool isEmpty() const; //判空
+    bool isFull() const;  //判满
+    void push(Type s);    //插入元素
+    Type getPop();        //返回栈顶元素
+    void pop();           //移除栈顶元素
 private:
     Type *base; //维护空间指针
     int count;  //空间容量
@@ -43,11 +43,11 @@ Stack<Type>::~Stack()
 {
     delete[] base;
     base = nullptr;
-    conut = top = 0;
+    count = top = 0;
 }
 //判空
 template <typename Type>
-bool Stack<Type>::isEmpaty() const
+bool Stack<Type>::isEmpty() const
 {
     return top <= 0 ? true : false;
 }
@@ -74,7 +74,7 @@ Type Stack<Type>::getPop()
 }
 //移除栈顶元素
 template <typename Type>
-Type Stack<Type>::pop()
+void Stack<Type>::pop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
     top--;
