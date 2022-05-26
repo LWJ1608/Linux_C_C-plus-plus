@@ -11,4 +11,5 @@
 template <typename Type>
 class Stack
 {
+public:
 };
