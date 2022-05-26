@@ -74,8 +74,7 @@ template <typename Type>
 void Stack<Type>::push(Type s)
 {
     assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
-    data[top] = s;
-    top++;
+    data[top++] = s;
 }
 //返回栈元素个数
 template <typename Type>
