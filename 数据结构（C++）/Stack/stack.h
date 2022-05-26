@@ -32,6 +32,8 @@ private:
 template <typename Type>
 Stack<Type>::Stack(size_t sz = 0)
 {
+    int sz = sz != 0 ? sz : DEFAULT_SIZE;
+
     this->count =
 }
 template <typename Type>
