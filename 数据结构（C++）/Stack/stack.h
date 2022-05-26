@@ -5,7 +5,7 @@
  * @Description:数据结构---栈
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/stack.cpp
  **/
-#pragma once
+#pragma once //防止头文件重复包含
 #include <iostream>
 
 #define DEFAULT_SIZE 10
@@ -55,4 +55,9 @@ template <typename Type>
 bool Stack<Type>::isFull() const
 {
     return top >= count ? true : false;
+}
+template <typename Type>
+void Stack<Type>::push(Type s)
+{
+    this->base[top] = s;
 }
