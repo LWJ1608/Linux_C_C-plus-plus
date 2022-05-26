@@ -1,5 +1,5 @@
 main:main.o
 	g++ -c main.c 
 
-.PHOEY clean
+.PHONY clean
 	rm -rf *.o main
