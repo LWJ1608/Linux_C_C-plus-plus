@@ -28,3 +28,7 @@ private:
     int count;  //元素个数
     int top;    //顶端元素的下一个位置
 };
+template <typename Type>
+bool Stack<Type>::isEmpaty()
+{
+}
