@@ -32,9 +32,14 @@ private:
 template <typename Type>
 Stack<Type>::Stack(size_t sz = 0)
 {
-    int sz = sz != 0 ? sz : DEFAULT_SIZE;
-
-    this->count =
+    int sz = sz != 0 ? sz : DEFAULT_SIZE; //判断sz是否被赋值，没有的就默认等于DEFAULT_SIZE
+    this->base = new Type[sz];            //分配空间
+    this->count = 0;
+    this->top = 0;
+}
+template <typename Type>
+Stack<Type>::Stack(const Stack &t)
+{
 }
 template <typename Type>
 bool Stack<Type>::isEmpaty() const
