@@ -39,6 +39,9 @@ Stack<Type>::Stack(size_t sz = 0)
 template <typename Type>
 Stack<Type>::Stack(const Stack &t)
 {
+    for (int i = 0; i < t.top; i++)
+    {
+    }
 }
 template <typename Type>
 bool Stack<Type>::isEmpaty() const
