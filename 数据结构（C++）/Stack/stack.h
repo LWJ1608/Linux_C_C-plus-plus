@@ -59,7 +59,7 @@ Stack<Type>::Stack(const Stack<Type> &t)
 }
 //等号重载
 template <typename Type>
-Stack &<Type>::operator=(const Stack<Type> &t)
+Stack &Stack<Type>::operator=(const Stack<Type> &t)
 {
     this->count = s.top;
     for (int i = 0; i < s.top; i++)
