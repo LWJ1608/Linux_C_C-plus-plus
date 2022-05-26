@@ -3,15 +3,15 @@
  * @Date: 2022-05-26 10:35:59
  * @LastEditTime: 2022-05-26 10:36:00
  * @Description:测试栈功能
- * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Stack/main.cpp
+ * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/SeqStack/main.cpp
  **/
 #include <iostream>
-#include "stack.h"
+#include "seqStack.h"
 using namespace std;
 
 int main(void)
 {
-    Stack<int> s1(8); //指定s1的容量为8
+    SeqStack<int> s1(8); //指定s1的容量为8
     for (int i = 0; i < 8; i++)
     {
         s1.push(i); //插入数据
