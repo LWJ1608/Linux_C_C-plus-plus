@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Thu May 26 10:36:54 2022
+# Make data base, printed on Thu May 26 10:41:45 2022
 
 # Variables
 
@@ -45,6 +45,9 @@ XDG_DATA_DIRS = /root/.local/share/flatpak/exports/share:/var/lib/flatpak/export
 VSCODE_VERBOSE_LOGGING = true
 # environment
 LESSOPEN = ||/usr/bin/lesspipe.sh %s
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # environment
 VSCODE_CWD = /root
 # environment
@@ -151,6 +154,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # Directories
 
 # . (device 64769, inode 935519): 15 files, no impossibilities.
+ 
 
 # 15 files, no impossibilities in 1 directories.
 
@@ -214,9 +218,8 @@ GNUmakefile:
 # strcache free: total = 0 (7948) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
+ 
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Thu May 26 10:36:54 2022
+# Finished Make data base on Thu May 26 10:41:45 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-
