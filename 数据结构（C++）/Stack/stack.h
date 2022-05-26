@@ -48,12 +48,13 @@ Stack<Type>::~Stack()
 }
 //拷贝构造
 template <typename Type>
-Stack<Type>::Stack(const Stack<Type>& s)
+Stack<Type>::Stack(const Stack<Type> &s)
 {
-    this->count=s.top;
+    this->count = s.top;
     for (int i = 0; i < s.top; i++)
     {
-        base[i]=s.d
+        base[i] = s.base[i];
+        top++;
     }
 }
 //判空
