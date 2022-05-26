@@ -12,10 +12,9 @@ using namespace std;
 int main(void)
 {
     Stack<int> s(8);
-    for (int i = 0; i < s.; i++)
+    for (int i = 0; i < s.size(); i++)
     {
-        /* code */
-    }
+        }
 
     return 0;
 }
