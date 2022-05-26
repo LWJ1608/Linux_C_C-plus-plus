@@ -18,5 +18,8 @@ int main(void)
     }
     cout << "s1的元素的个数：" << s1.size() << endl;
     cout << "栈顶元素为：" << s1.getTop() << endl;
+    //移除栈顶元素
+    s1.pop();
+    cout << "栈顶元素为：" << s1.getTop() << endl;
     return 0;
 }
