@@ -46,6 +46,16 @@ Stack<Type>::~Stack()
     base = nullptr;
     count = top = 0;
 }
+//拷贝构造
+template <typename Type>
+Stack<Type>::Stack(const Stack<Type>& s)
+{
+    this->count=s.top;
+    for (int i = 0; i < s.top; i++)
+    {
+        base[i]=s.d
+    }
+}
 //判空
 template <typename Type>
 bool Stack<Type>::isEmpty() const
