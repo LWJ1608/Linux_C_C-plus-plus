@@ -13,10 +13,10 @@ template <typename Type>
 class Stack
 {
 public:
-    Stack(size_t sz);                // size_t相当于无符号整数unsigned int
-    Stack(const Stack &t);           //拷贝构造
-    Stack &operator=(const Stack &t) //等号重载
-        ~Stack();
+    Stack(size_t sz);                 // size_t相当于无符号整数unsigned int
+    Stack(const Stack &t);            //拷贝构造
+    Stack &operator=(const Stack &t); //等号重载
+    ~Stack();
 
 public:
     bool isEmpaty() const; //判空
