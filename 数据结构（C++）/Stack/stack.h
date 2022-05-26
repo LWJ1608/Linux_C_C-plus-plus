@@ -12,8 +12,10 @@ template <typename Type>
 class Stack
 {
 public:
+    Stack(size_t sz);
+
 private:
-    Type *base; //
-    int count;
-    int top;
+    Type *base; //维护空间指针
+    int count;  //元素个数
+    int top;    //顶端元素的下一个位置
 };
