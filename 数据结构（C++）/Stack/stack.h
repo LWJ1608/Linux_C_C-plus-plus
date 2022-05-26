@@ -12,4 +12,6 @@ template <typename Type>
 class Stack
 {
 public:
+private:
+    int size_t sz; //
 };
