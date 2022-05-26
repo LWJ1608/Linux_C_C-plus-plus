@@ -23,6 +23,7 @@ public:
     bool isEmpty() const; //判空
     bool isFull() const;  //判满
     void push(Type s);    //插入元素
+    size_t size() const;  //返回栈元素个数
     Type getPop();        //返回栈顶元素
     void pop();           //移除栈顶元素
 private:
@@ -64,6 +65,12 @@ void Stack<Type>::push(Type s)
     assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
     base[top] = s;
     top++;
+}
+//返回栈元素个数
+template <typename Type>
+size_t Stack<Type>::size() const
+{
+    return top;
 }
 //返回栈顶元素
 template <typename Type>
