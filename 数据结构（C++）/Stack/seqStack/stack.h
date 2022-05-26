@@ -3,7 +3,7 @@
  * @Date: 2022-05-25 23:33:43
  * @LastEditTime: 2022-05-25 23:33:44
  * @Description:数据结构---栈
- * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/stack.cpp
+ * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/SeqStack.cpp
  **/
 #pragma once //防止头文件重复包含
 #include <iostream>
@@ -11,13 +11,13 @@
 
 #define DEFAULT_SIZE 10
 template <typename Type>
-class Stack
+class SeqStack
 {
 public:
-    Stack(size_t sz);                 // size_t相当于无符号整数unsigned int
-    Stack(const Stack &t);            //拷贝构造
-    Stack &operator=(const Stack &t); //等号重载
-    ~Stack();
+    SeqStack(size_t sz);                    // size_t相当于无符号整数unsigned int
+    SeqStack(const SeqStack &t);            //拷贝构造
+    SeqStack &operator=(const SeqStack &t); //等号重载
+    ~SeqStack();
 
 public:
     bool isEmpty() const; //判空
@@ -32,7 +32,7 @@ private:
     int top;    //顶端元素的下一个位置
 };
 template <typename Type>
-Stack<Type>::Stack(size_t sz = 0)
+SeqStack<Type>::SeqStack(size_t sz = 0)
 {
     this->count = sz != 0 ? sz : DEFAULT_SIZE; //判断sz是否被赋值，没有的就默认等于DEFAULT_SIZE
     this->data = new Type[count];              //分配空间
@@ -40,7 +40,7 @@ Stack<Type>::Stack(size_t sz = 0)
 }
 
 template <typename Type>
-Stack<Type>::~Stack()
+SeqStack<Type>::~SeqStack()
 {
     delete[] data;
     data = nullptr;
@@ -48,39 +48,39 @@ Stack<Type>::~Stack()
 }
 //判空
 template <typename Type>
-bool Stack<Type>::isEmpty() const
+bool SeqStack<Type>::isEmpty() const
 {
     return top <= 0 ? true : false;
 }
 //判满
 template <typename Type>
-bool Stack<Type>::isFull() const
+bool SeqStack<Type>::isFull() const
 {
     return top >= count ? true : false;
 }
 //插入元素
 template <typename Type>
-void Stack<Type>::push(Type s)
+void SeqStack<Type>::push(Type s)
 {
     assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
     data[top++] = s;
 }
 //返回栈元素个数
 template <typename Type>
-int Stack<Type>::size()
+int SeqStack<Type>::size()
 {
     return top;
 }
 //返回栈顶元素
 template <typename Type>
-Type Stack<Type>::getTop()
+Type SeqStack<Type>::getTop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
     return data[top - 1];
 }
 //移除栈顶元素
 template <typename Type>
-void Stack<Type>::pop()
+void SeqStack<Type>::pop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
     top--;
