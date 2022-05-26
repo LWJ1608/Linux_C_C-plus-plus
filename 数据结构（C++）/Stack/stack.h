@@ -22,11 +22,12 @@ public:
     bool isEmpaty() const; //判空
     bool isFull() const;   //判满
     void push(Type s);     //插入元素
-    Type                   //返回栈顶元素
-        //去除栈顶元素
-        private : Type *base; //维护空间指针
-    int count;                //空间容量
-    int top;                  //顶端元素的下一个位置
+    Type getPop();         //返回栈顶元素
+    void pop();            //去除栈顶元素
+private:
+    Type *base; //维护空间指针
+    int count;  //空间容量
+    int top;    //顶端元素的下一个位置
 };
 template <typename Type>
 Stack<Type>::Stack(size_t sz = 0)
