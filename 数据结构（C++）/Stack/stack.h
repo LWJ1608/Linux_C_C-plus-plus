@@ -79,7 +79,7 @@ void Stack<Type>::push(Type s)
 }
 //返回栈元素个数
 template <typename Type>
-size_t Stack<Type>::size() const
+int Stack<Type>::size() const
 {
     return top;
 }
