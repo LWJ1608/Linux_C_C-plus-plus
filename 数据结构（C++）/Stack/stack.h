@@ -61,7 +61,7 @@ bool Stack<Type>::isFull() const
 template <typename Type>
 void Stack<Type>::push(Type s)
 {
-    assert(top != count);
+    assert(!isFull()); //断言，如果已满程序会报错，程序终止
     this->base[top] = s;
     top++;
 }
