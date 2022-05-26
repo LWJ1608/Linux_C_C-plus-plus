@@ -11,7 +11,7 @@ template <typename Type>
 class linkStack
 {
 private:
-    struct Node
+    struct Node //
     {
     public:
         T data;
