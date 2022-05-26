@@ -57,17 +57,6 @@ Stack<Type>::Stack(const Stack &t)
         top++;
     }
 }
-//等号重载
-template <typename Type>
-Stack &Stack<Type>::operator=(const Stack &t)
-{
-    this->count = s.top;
-    for (int i = 0; i < s.top; i++)
-    {
-        base[i] = s.base[i];
-        top++;
-    }
-}
 //判空
 template <typename Type>
 bool Stack<Type>::isEmpty() const
