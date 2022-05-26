@@ -13,6 +13,10 @@
 template <typename Type>
 class SeqStack
 {
+private:
+    Type *data; //维护空间指针
+    int count;  //空间容量
+    int top;    //顶端元素的下一个位置
 public:
     SeqStack(size_t sz);                    // size_t相当于无符号整数unsigned int
     SeqStack(const SeqStack &t);            //拷贝构造
@@ -26,10 +30,6 @@ public:
     int size();           //返回栈元素个数
     Type getTop();        //返回栈顶元素
     void pop();           //移除栈顶元素
-private:
-    Type *data; //维护空间指针
-    int count;  //空间容量
-    int top;    //顶端元素的下一个位置
 };
 template <typename Type>
 SeqStack<Type>::SeqStack(size_t sz = 0)
