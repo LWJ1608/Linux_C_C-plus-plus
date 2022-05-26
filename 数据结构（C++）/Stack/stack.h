@@ -12,7 +12,11 @@ template <typename Type>
 class Stack
 {
 public:
-    Stack(size_t sz);
+    Stack(size_t sz);      // size_t相当于无符号整数unsigned int
+    Stack(const Stack &s); //拷贝构造
+    Stack operator=()
+    {
+    }
 
 private:
     Type *base; //维护空间指针
