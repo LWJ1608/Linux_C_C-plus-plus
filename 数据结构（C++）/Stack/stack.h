@@ -23,7 +23,7 @@ public:
     bool isEmpty() const; //判空
     bool isFull() const;  //判满
     void push(Type s);    //插入元素
-    size_t size() const;  //返回栈元素个数
+    int size() const;     //返回栈元素个数
     Type getTop();        //返回栈顶元素
     void pop();           //移除栈顶元素
 private:
