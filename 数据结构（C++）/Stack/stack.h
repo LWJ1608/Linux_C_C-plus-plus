@@ -32,7 +32,7 @@ private:
 template <typename Type>
 Stack<Type>::Stack(size_t sz = 0)
 {
-    this->count
+    this->count =
 }
 template <typename Type>
 bool Stack<Type>::isEmpaty() const
