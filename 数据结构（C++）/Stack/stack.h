@@ -7,6 +7,7 @@
  **/
 #pragma once //防止头文件重复包含
 #include <iostream>
+#include <assert.h>
 
 #define DEFAULT_SIZE 10
 template <typename Type>
@@ -60,6 +61,7 @@ bool Stack<Type>::isFull() const
 template <typename Type>
 void Stack<Type>::push(Type s)
 {
+    assert(top != count);
     this->base[top] = s;
     top++;
 }
