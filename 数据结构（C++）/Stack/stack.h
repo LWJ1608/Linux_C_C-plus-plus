@@ -26,15 +26,14 @@ public:
     //去除栈顶元素
 private:
     Type *base; //维护空间指针
-    int count;  //元素个数
+    int count;  //空间容量
     int top;    //顶端元素的下一个位置
 };
 template <typename Type>
 Stack<Type>::Stack(size_t sz = 0)
 {
-    int sz = sz != 0 ? sz : DEFAULT_SIZE; //判断sz是否被赋值，没有的就默认等于DEFAULT_SIZE
-    this->base = new Type[sz];            //分配空间
-    this->count = 0;
+    this->count = sz != 0 ? sz : DEFAULT_SIZE; //判断sz是否被赋值，没有的就默认等于DEFAULT_SIZE
+    this->base = new Type[count];              //分配空间
     this->top = 0;
 }
 template <typename Type>
