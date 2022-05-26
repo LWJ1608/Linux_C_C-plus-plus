@@ -8,7 +8,7 @@
 #pragma once
 
 template <typename Type>
-class linkStack
+class LinkStack
 {
 private:
     struct Node //把每个数据封装成一个结构体，
@@ -25,8 +25,8 @@ private:
     };
     Node *top; //栈顶指针
 public:
-    linkStack() { top = NULL; }                //构造函数
-    ~linkStack() { clear(); }                  //析构函数
+    LinkStack() { top = NULL; }                //构造函数
+    ~LinkStack() { clear(); }                  //析构函数
     void clear();                              //清空
     void push(const T &value);                 //进栈
     int size() const;                          //返回链栈大小
@@ -36,7 +36,7 @@ public:
 };
 
 template <typename Type>
-void linkStack<T>::push(const T &value)
+void LinkStack<T>::push(const T &value)
 {
     Node *p;
     p = new Node(value, top);
@@ -44,7 +44,7 @@ void linkStack<T>::push(const T &value)
 }
 
 template <typename Type>
-void linkStack<T>::clear()
+void LinkStack<T>::clear()
 {
     Node *p;
 
@@ -57,7 +57,7 @@ void linkStack<T>::clear()
 }
 
 template <typename Type>
-int linkStack<T>::size() const
+int LinkStack<T>::size() const
 {
     int curlength = 0;
     Node *p = top;
@@ -70,7 +70,7 @@ int linkStack<T>::size() const
 }
 
 template <typename Type>
-T linkStack<T>::pop()
+T LinkStack<T>::pop()
 {
     Node *p;
     p = top;
