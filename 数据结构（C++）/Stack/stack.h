@@ -18,7 +18,7 @@ public:
         ~Stack();
 
 public:
-    bool isEmpaty(); //判空
+    bool isEmpaty() const; //判空
     //判满
     //插入元素
     //返回栈顶元素
@@ -29,6 +29,7 @@ private:
     int top;    //顶端元素的下一个位置
 };
 template <typename Type>
-bool Stack<Type>::isEmpaty()
+bool Stack<Type>::isEmpaty() const
 {
+    return count = 0 ? true : false;
 }
