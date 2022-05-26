@@ -74,7 +74,7 @@ Type Stack<Type>::getPop()
 }
 //移除栈顶元素
 template <typename Type>
-Type Stack<Type>::getPop()
+Type Stack<Type>::pop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
     top--;
