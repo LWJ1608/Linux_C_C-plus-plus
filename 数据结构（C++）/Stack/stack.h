@@ -13,5 +13,7 @@ class Stack
 {
 public:
 private:
-    int size_t sz; //
+    Type *base; //
+    int count;
+    int top;
 };
