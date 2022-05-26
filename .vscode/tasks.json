@@ -22,14 +22,13 @@
             },
             "command": "make",
             "args": []
+        },
+        {
+            "label": "Build",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "make"
+            ]
         }
-        // {
-        //     "label": "Build",
-        //     "dependsOrder": "sequence",
-        //     "dependsOn": [
-        //         "cmake",
-        //         "make"
-        //     ]
-        // }
     ]
 }
