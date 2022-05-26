@@ -14,7 +14,7 @@ int main(void)
     Stack<int> s(8);
     for (int i = 0; i < s.size(); i++)
     {
-        }
+    }
 
     return 0;
 }
