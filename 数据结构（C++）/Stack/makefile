@@ -3,4 +3,4 @@ main:main.o
 
 .PHONY : clean
 clean:
-	rm -rf *.o 
+	rm -rf *.o main
