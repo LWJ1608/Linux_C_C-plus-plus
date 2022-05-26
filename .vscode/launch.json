@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/数据结构（C++）/Stack",
+            "program": "${workspaceFolder}/数据结构（C++）/Stack/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
