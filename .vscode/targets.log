@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Thu May 26 10:50:08 2022
+# Make data base, printed on Thu May 26 11:07:29 2022
 
 # Variables
 
@@ -21,9 +20,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 VSCODE_AGENT_FOLDER = /root/.vscode-server
 # environment
 VSCODE_LOG_NATIVE = false
- 
-make: *** No rule to make target `all'.  Stop.
-
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -67,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-55670765-edd9-4b78-af10-5a459384d846.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-79971b03-4f20-4aed-80d2-cc867857adf3.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -153,7 +149,6 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
- 
 # . (device 64769, inode 935519): 15 files, no impossibilities.
 
 # 15 files, no impossibilities in 1 directories.
@@ -199,7 +194,6 @@ makefile:
 
 # Not a target:
 GNUmakefile:
- 
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -220,6 +214,8 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Thu May 26 10:50:08 2022
+# Finished Make data base on Thu May 26 11:07:29 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
