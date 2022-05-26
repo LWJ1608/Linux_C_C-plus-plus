@@ -23,7 +23,7 @@ public:
     bool isFull() const;   //判满
     void push(Type s);     //插入元素
     Type getPop();         //返回栈顶元素
-    void pop();            //去除栈顶元素
+    void pop();            //移除栈顶元素
 private:
     Type *base; //维护空间指针
     int count;  //空间容量
