@@ -77,5 +77,5 @@ template <typename Type>
 Type Stack<Type>::getPop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
-    return dest[top - 1];
+    top--;
 }
