@@ -62,7 +62,7 @@ template <typename Type>
 void Stack<Type>::push(Type s)
 {
     assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
-    this->base[top] = s;
+    base[top] = s;
     top++;
 }
 //返回栈顶元素
@@ -70,12 +70,12 @@ template <typename Type>
 Type Stack<Type>::getPop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
-    return this->base[top - 1];
+    return base[top - 1];
 }
 //移除栈顶元素
 template <typename Type>
 Type Stack<Type>::getPop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
-    top--;
+    return dest[top - 1];
 }
