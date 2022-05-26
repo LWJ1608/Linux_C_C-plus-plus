@@ -9,3 +9,6 @@
 #include <iostream>
 
 template <typename Type>
+class Stack
+{
+};
