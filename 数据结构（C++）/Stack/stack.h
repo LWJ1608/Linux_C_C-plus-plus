@@ -56,8 +56,16 @@ bool Stack<Type>::isFull() const
 {
     return top >= count ? true : false;
 }
+//插入元素
 template <typename Type>
 void Stack<Type>::push(Type s)
 {
     this->base[top] = s;
+    top++;
+}
+//返回栈顶元素
+template <typename Type>
+Type Stack<Type>::getPop()
+{
+    return
 }
