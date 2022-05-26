@@ -11,7 +11,7 @@ template <typename Type>
 class linkStack
 {
 private:
-    struct Node //
+    struct Node //把每个数据封装成一个结构体，
     {
     public:
         T data;
