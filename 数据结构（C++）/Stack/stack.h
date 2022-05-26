@@ -8,6 +8,7 @@
 #pragma once
 #include <iostream>
 
+#define DEFAULT_SIZE 10
 template <typename Type>
 class Stack
 {
@@ -29,7 +30,12 @@ private:
     int top;    //顶端元素的下一个位置
 };
 template <typename Type>
+Stack<Type>::Stack(size_t sz = 0)
+{
+    this->count
+}
+template <typename Type>
 bool Stack<Type>::isEmpaty() const
 {
-    return count = 0 ? true : false;
+    return top <= 0 ? true : false;
 }
