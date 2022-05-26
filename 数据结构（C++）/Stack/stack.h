@@ -23,7 +23,7 @@ public:
     bool isEmpty() const; //判空
     bool isFull() const;  //判满
     void push(Type s);    //插入元素
-    int size() const;     //返回栈元素个数
+    int size();           //返回栈元素个数
     Type getTop();        //返回栈顶元素
     void pop();           //移除栈顶元素
 private:
@@ -79,7 +79,7 @@ void Stack<Type>::push(Type s)
 }
 //返回栈元素个数
 template <typename Type>
-int Stack<Type>::size() const
+int Stack<Type>::size()
 {
     return top;
 }
