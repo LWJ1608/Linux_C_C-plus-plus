@@ -36,11 +36,13 @@ Stack<Type>::Stack(size_t sz = 0)
     this->base = new Type[count];              //分配空间
     this->top = 0;
 }
+
 template <typename Type>
-~Stack<Tpye>::Stack()
+Stack<Tpye>::~Stack()
 {
-    delete base;
+    delete[] base;
     base = nullptr;
+    conut = top = 0;
 }
 template <typename Type>
 bool Stack<Type>::isEmpaty() const
