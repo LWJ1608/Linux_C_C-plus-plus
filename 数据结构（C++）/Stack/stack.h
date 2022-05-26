@@ -7,3 +7,5 @@
  **/
 #pragma once
 #include <iostream>
+
+template <typename Type>
