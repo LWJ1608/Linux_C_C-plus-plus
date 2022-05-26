@@ -38,7 +38,7 @@ Stack<Type>::Stack(size_t sz = 0)
 }
 
 template <typename Type>
-Stack<Tpye>::~Stack()
+Stack<Type>::~Stack()
 {
     delete[] base;
     base = nullptr;
