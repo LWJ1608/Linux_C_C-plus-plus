@@ -11,10 +11,12 @@ using namespace std;
 
 int main(void)
 {
-    Stack<int> s(8);
-    for (int i = 0; i < s.size(); i++)
+    Stack<int> s1(8); //指定s1的容量为8
+    for (int i = 0; i < s1.size(); i++)
     {
+        s1.push(i); //插入数据
     }
+    Stack<int> s2(s1);
 
     return 0;
 }
