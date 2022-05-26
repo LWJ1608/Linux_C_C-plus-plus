@@ -16,7 +16,7 @@ int main(void)
     {
         s1.push(i); //插入数据
     }
-    Stack<int> s2(s1);
+    // Stack<int> s2(s1);
 
     return 0;
 }
