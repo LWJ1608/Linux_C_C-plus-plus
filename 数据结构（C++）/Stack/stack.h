@@ -27,7 +27,7 @@ public:
     Type getTop();        //返回栈顶元素
     void pop();           //移除栈顶元素
 private:
-    Type *base; //维护空间指针
+    Type *data; //维护空间指针
     int count;  //空间容量
     int top;    //顶端元素的下一个位置
 };
@@ -35,15 +35,15 @@ template <typename Type>
 Stack<Type>::Stack(size_t sz = 0)
 {
     this->count = sz != 0 ? sz : DEFAULT_SIZE; //判断sz是否被赋值，没有的就默认等于DEFAULT_SIZE
-    this->base = new Type[count];              //分配空间
+    this->data = new Type[count];              //分配空间
     this->top = 0;
 }
 
 template <typename Type>
 Stack<Type>::~Stack()
 {
-    delete[] base;
-    base = nullptr;
+    delete[] data;
+    data = nullptr;
     count = top = 0;
 }
 //拷贝构造
@@ -53,7 +53,7 @@ Stack<Type>::Stack(const Stack &t)
     this->count = t.top;
     for (int i = 0; i < t.top; i++)
     {
-        base[i] = t.base[i];
+        data[i] = t.data[i];
         top++;
     }
 }
@@ -74,7 +74,7 @@ template <typename Type>
 void Stack<Type>::push(Type s)
 {
     assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
-    base[top] = s;
+    data[top] = s;
     top++;
 }
 //返回栈元素个数
@@ -88,7 +88,7 @@ template <typename Type>
 Type Stack<Type>::getTop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
-    return base[top - 1];
+    return data[top - 1];
 }
 //移除栈顶元素
 template <typename Type>
