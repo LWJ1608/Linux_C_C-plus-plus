@@ -73,5 +73,5 @@ Type Stack<Type>::getPop()
 template <typename Type>
 Type Stack<Type>::getPop()
 {
-    return this->base[top - 1];
+    top--;
 }
