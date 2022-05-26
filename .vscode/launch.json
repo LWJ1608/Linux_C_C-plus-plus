@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/CMake_test/test03/build/test03",
+            "program": "${workspaceFolder}/数据结构（C++）/Stack",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
