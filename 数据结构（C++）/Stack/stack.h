@@ -67,5 +67,5 @@ void Stack<Type>::push(Type s)
 template <typename Type>
 Type Stack<Type>::getPop()
 {
-    return
+    return this->base[top - 1];
 }
