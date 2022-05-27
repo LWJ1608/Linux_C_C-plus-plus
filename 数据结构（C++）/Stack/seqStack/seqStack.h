@@ -29,7 +29,7 @@ public:
     void push(Type s);    //插入元素
     int size() const;     //返回栈元素个数
     Type getTop() const;  //返回栈顶元素
-    void pop();           //移除栈顶元素
+    Type pop();           //移除栈顶元素
 };
 template <typename Type>
 SeqStack<Type>::SeqStack(size_t sz = 0)
@@ -80,8 +80,9 @@ Type SeqStack<Type>::getTop() const
 }
 //移除栈顶元素
 template <typename Type>
-void SeqStack<Type>::pop()
+Type SeqStack<Type>::pop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
+    Type a=base[top];
     top--;
 }
