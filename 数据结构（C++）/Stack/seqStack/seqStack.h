@@ -62,7 +62,8 @@ bool SeqStack<Type>::isFull() const
 template <typename Type>
 void SeqStack<Type>::push(Type s)
 {
-    assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
+    // assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
+    perror("push");
     data[top++] = s;
 }
 //返回栈元素个数
