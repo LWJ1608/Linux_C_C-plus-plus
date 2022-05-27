@@ -166,7 +166,6 @@ Type ListStack<Type>::pop()
 {
     Node *tmp = nullptr;
     tmp = top;
-    top--;
-    delete tmp;
-    tmp = nullptr;
+    top = top->next;
+    return tmp->data;
 }
