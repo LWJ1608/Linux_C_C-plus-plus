@@ -12,7 +12,7 @@ using namespace std;
 int main(void)
 {
     SeqStack<int> s1(8); //指定s1的容量为8
-    for (int i = 0; i < 88; i++)
+    for (int i = 0; i < 8; i++)
     {
         s1.push(i); //插入数据
     }
