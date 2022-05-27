@@ -65,7 +65,7 @@ int ListStack<Type>::size() const
     Node *tmp = nullptr;
     int count = 0;
     tmp = top;
-    while (tmp->next)
+    while (tmp)
     {
         tmp = tmp->next;
         count++;
