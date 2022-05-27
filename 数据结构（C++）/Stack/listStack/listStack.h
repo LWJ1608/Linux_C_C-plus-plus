@@ -45,8 +45,8 @@ void LinkStack<Type>::push(const Type &value)
     top = p;
 }
 
-template <typename ype>
-void LinkStack<>::clear()
+template <typename Type>
+void LinkStack<Type>::clear()
 {
     Node *p;
 
@@ -58,8 +58,8 @@ void LinkStack<>::clear()
     }
 }
 
-template <typename ype>
-int LinkStack<>::size() const
+template <typename Type>
+int LinkStack<Type>::size() const
 {
     int curlength = 0;
     Node *p = top;
@@ -71,8 +71,8 @@ int LinkStack<>::size() const
     return curlength;
 }
 
-template <typename ype>
-LinkStack<Type>::pop()
+template <typename Type>
+Type LinkStack<Type>::pop()
 {
     Node *p;
     p = top;
