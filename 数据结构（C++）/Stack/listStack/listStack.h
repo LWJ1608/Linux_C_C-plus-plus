@@ -103,12 +103,12 @@ public:
     ~ListStack(){clear()};
 
 public:
-    void clear();                                         //清空
-    bool isEmpty() const { return top->next == nullptr; } //判空
-    int size() const;                                     //返回元素个数
-    void push(const Type &elem);                          //插入数据
-    Type getTop() const;                                  //返回栈顶元素
-    Type pop();                                           //移除栈顶元素
+    void clear();                //清空
+    bool isEmpty() const;        //判空
+    int size() const;            //返回元素个数
+    void push(const Type &elem); //插入数据
+    Type getTop() const;         //返回栈顶元素
+    Type pop();                  //移除栈顶元素
 };
 
 //清空
@@ -128,4 +128,6 @@ void ListStack<Type>::clear()
 template <typename Type>
 bool ListStack<Type>::isEmpty()
 {
+
+    return top->next == nullptr;
 }
