@@ -89,8 +89,8 @@ Type ListStack<Type>::getTop() const
 template <typename Type>
 Type ListStack<Type>::pop()
 {
-    sersser
-        Node *tmp = nullptr;
+    assert(!isEmpty()); //断言，如果栈为空程序会报错，程序终止
+    Node *tmp = nullptr;
     tmp = top;
     top = top->next;
     return tmp->data;
