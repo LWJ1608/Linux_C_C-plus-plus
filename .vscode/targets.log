@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Fri May 27 19:27:08 2022
+# Make data base, printed on Fri May 27 19:30:43 2022
 
 # Variables
 
@@ -37,6 +37,9 @@ SHELL = /bin/sh
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /usr/bin/make
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # makefile
 MAKEFILE_LIST := 
 # environment
@@ -139,6 +142,7 @@ HISTSIZE = 3000
 .RECIPEPREFIX := 
 # environment
 LANG = C
+ 
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
@@ -161,6 +165,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # Files
 
 # Not a target:
+ 
 all:
 #  Command line target.
 #  Implicit rule search has been done.
@@ -199,6 +204,7 @@ GNUmakefile:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
+ 
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
@@ -214,10 +220,7 @@ GNUmakefile:
 # strcache free: total = 0 (7948) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
- 
-make: *** No rule to make target `all'.  Stop.
-
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Fri May 27 19:27:08 2022
+# Finished Make data base on Fri May 27 19:30:43 2022
 
  
