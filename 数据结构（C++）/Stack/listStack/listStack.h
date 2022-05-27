@@ -67,9 +67,10 @@ int ListStack<Type>::size() const
     tmp = top;
     while (tmp)
     {
-        tmp = tmp->next;
         count++;
+        tmp = tmp->next;
     }
+    return count;
 }
 //插入数据
 template <typename Type>
