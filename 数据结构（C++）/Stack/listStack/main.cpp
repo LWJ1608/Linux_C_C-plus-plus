@@ -11,10 +11,10 @@
 int main(void)
 {
     ListStack<int> L1;
-    for (int i = 0; i < L1.size(); i++)
+    for (int i = 0; i < 5; i++)
     {
         L1.push(i);
     }
-    std::cout<<""
+    std::cout << "栈元素个数为：" << L1.size();
     return 0;
 }
