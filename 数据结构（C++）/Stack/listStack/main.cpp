@@ -22,7 +22,7 @@ int main(void)
     std::cout << "栈清空栈元素后：" << std::endl;
     L1.clear();
     std::cout << "栈元素个数为：" << L1.size() << std::endl;
-    std::cout << "栈为空时：" << std::endl;
+    std::cout << "栈为空时出栈：" << std::endl;
     L1.pop();
     return 0;
 }
