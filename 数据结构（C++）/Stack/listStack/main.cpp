@@ -2,7 +2,7 @@
  * @Author: lwj
  * @Date: 2022-05-27 15:33:58
  * @LastEditTime: 2022-05-27 15:33:58
- * @Description:测试栈的功能
+ * @Description:测试链栈的功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Stack/listStack/main.cpp
  **/
 
