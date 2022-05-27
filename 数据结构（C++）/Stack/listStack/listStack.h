@@ -106,5 +106,9 @@ public:
     void clear(); //清空
 };
 
+//清空
 template <typename Type>
-ListStack
+void ListStack<Type>::clear()
+{
+    Node *tmp = nullptr;
+}
