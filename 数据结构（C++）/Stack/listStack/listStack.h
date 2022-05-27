@@ -145,3 +145,10 @@ int ListStack<Type>::size() const
         count++;
     }
 }
+//插入数据
+template <typename Type>
+void ListStack<Type>::push(const Type &elem)
+{
+    Node *tmp = new Node;
+    tmp->data = elem;
+}
