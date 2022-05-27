@@ -19,6 +19,7 @@ int main(void)
     std::cout << "栈顶元素为：" << L1.getTop() << std::endl;
     std::cout << "移除栈顶元素后：" << L1.pop() << std::endl;
     std::cout << "栈顶元素为：" << L1.getTop() << std::endl;
-
+    std::cout << "栈清空栈元素后：" << L1.clear() << std::endl;
+    std::cout << "栈元素个数为：" << L1.size() << std::endl;
     return 0;
 }
