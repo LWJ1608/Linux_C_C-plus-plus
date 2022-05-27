@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Fri May 27 15:33:41 2022
+# Make data base, printed on Fri May 27 16:05:55 2022
 
 # Variables
 
@@ -98,6 +99,9 @@ USER = root
 .DEFAULT_GOAL := 
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # default
 MAKE_COMMAND := make
 # default
@@ -214,8 +218,6 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Fri May 27 15:33:41 2022
+# Finished Make data base on Fri May 27 16:05:55 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-
