@@ -15,6 +15,5 @@ int main(void)
     {
         L1.push(i);
     }
-
     return 0;
 }
