@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Fri May 27 19:30:43 2022
+# Make data base, printed on Fri May 27 19:31:53 2022
 
 # Variables
 
@@ -37,9 +36,6 @@ SHELL = /bin/sh
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /usr/bin/make
- 
-make: *** No rule to make target `all'.  Stop.
-
 # makefile
 MAKEFILE_LIST := 
 # environment
@@ -142,10 +138,10 @@ HISTSIZE = 3000
 .RECIPEPREFIX := 
 # environment
 LANG = C
- 
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
+ 
 # Load=65/1024=6%, Rehash=0, Collisions=6/84=7%
 
 # Pattern-specific Variable Values
@@ -165,7 +161,6 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # Files
 
 # Not a target:
- 
 all:
 #  Command line target.
 #  Implicit rule search has been done.
@@ -204,7 +199,6 @@ GNUmakefile:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
- 
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
@@ -221,6 +215,8 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Fri May 27 19:30:43 2022
+# Finished Make data base on Fri May 27 19:31:53 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
