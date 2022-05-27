@@ -70,7 +70,7 @@ void SeqStack<Type>::push(Type &s)
 template <typename Type>
 void SeqStack<Type>::clear()
 {
-    top = 0;
+    delete[] data;
 }
 //返回栈元素个数
 template <typename Type>
