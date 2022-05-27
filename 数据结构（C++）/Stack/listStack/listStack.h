@@ -151,4 +151,6 @@ void ListStack<Type>::push(const Type &elem)
 {
     Node *tmp = new Node;
     tmp->data = elem;
+    tmp->next = top;
+    top = tmp;
 }
