@@ -66,6 +66,12 @@ void SeqStack<Type>::push(Type s)
     assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
     data[top++] = s;
 }
+//插入元素
+template <typename Type>
+void SeqStack<Type>::clear()
+{
+    top = 0;
+}
 //返回栈元素个数
 template <typename Type>
 int SeqStack<Type>::size() const
