@@ -2,7 +2,7 @@
  * @Author: lwj
  * @Date: 2022-05-26 23:37:52
  * @LastEditTypeime: 2022-05-26 23:37:52
- * @Description:
+ * @Description:实现链栈
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Stack/listStack/listStack.h
  **/
 // #pragma once
@@ -79,6 +79,7 @@
 //     top = top->next;
 //     return p->data;
 // }
+#pragma once
 #include <iostream>
 #include <assert.h>
 template <typename Type>
