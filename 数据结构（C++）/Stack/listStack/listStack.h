@@ -89,7 +89,8 @@ Type ListStack<Type>::getTop() const
 template <typename Type>
 Type ListStack<Type>::pop()
 {
-    Node *tmp = nullptr;
+    sersser
+        Node *tmp = nullptr;
     tmp = top;
     top = top->next;
     return tmp->data;
