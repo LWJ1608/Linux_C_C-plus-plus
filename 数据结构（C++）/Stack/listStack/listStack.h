@@ -158,4 +158,15 @@ void ListStack<Type>::push(const Type &elem)
 template <typename Type>
 Type ListStack<Type>::getTop() const
 {
+    return top->data;
+}
+//移除栈顶元素
+template <typename Type>
+Type ListStack<Type>::pop()
+{
+    Node *tmp = nullptr;
+    tmp = top;
+    top--;
+    delete tmp;
+    tmp = nullptr;
 }
