@@ -1,7 +1,7 @@
 /**
  * @Author: lwj
  * @Date: 2022-05-26 23:37:52
- * @LastEditTime: 2022-05-26 23:37:52
+ * @LastEditTypeime: 2022-05-26 23:37:52
  * @Description:
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Stack/listStack/listStack.h
  **/
@@ -14,9 +14,9 @@ private:
     struct Node //把每个数据封装成一个结构体，里面包含data和next
     {
     public:
-        T data;
+        Type data;
         Node *next;
-        Node(const T &value, Node *p = NULL)
+        Node(const Type &value, Node *p = NULL)
         {
             data = value;
             next = p;
@@ -29,24 +29,24 @@ public:
     ~LinkStack() { clear(); }   //析构函数
 
 public:
-    void clear();                              //清空
-    void push(const T &value);                 //进栈
-    int size() const;                          //返回链栈大小
-    bool empty() const { return top == NULL; } //判空
-    T pop();                                   //出栈
-    T getTop() const { return top->data; }     //返回栈顶元素
+    void clear();                                //清空
+    void push(const Type &value);                //进栈
+    int size() const;                            //返回链栈大小
+    bool empty() const { return top == NULL; }   //判空
+    Type pop();                                  //出栈
+    Type getTypeop() const { return top->data; } //返回栈顶元素
 };
 
 template <typename Type>
-void LinkStack<T>::push(const T &value)
+void LinkStack<Type>::push(const Type &value)
 {
     Node *p;
     p = new Node(value, top);
     top = p;
 }
 
-template <typename Type>
-void LinkStack<T>::clear()
+template <typename ype>
+void LinkStack<>::clear()
 {
     Node *p;
 
@@ -58,8 +58,8 @@ void LinkStack<T>::clear()
     }
 }
 
-template <typename Type>
-int LinkStack<T>::size() const
+template <typename ype>
+int LinkStack<>::size() const
 {
     int curlength = 0;
     Node *p = top;
@@ -71,8 +71,8 @@ int LinkStack<T>::size() const
     return curlength;
 }
 
-template <typename Type>
-T LinkStack<T>::pop()
+template <typename ype>
+LinkStack<Type>::pop()
 {
     Node *p;
     p = top;
