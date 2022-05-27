@@ -5,11 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu May 26 17:53:03 2022
+# Make data base, printed on Fri May 27 13:46:10 2022
 
 # Variables
 
@@ -50,14 +47,13 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.123 29679 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.123 29610 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/0
 # environment
 VSCODE_LOG_STACK = false
- 
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver check-symlink
 # automatic
@@ -67,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-839cd1ee-5a21-4736-aa84-28da15745b83.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-643787b9-488c-4ca9-a1a8-9ecfa0bb2570.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -95,7 +91,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 19077
+XDG_SESSION_ID = 23792
 # environment
 USER = root
 # makefile
@@ -107,14 +103,13 @@ MAKE_COMMAND := make
 # default
 .VARIABLES := 
 # automatic
- 
 *F = $(notdir $*)
 # makefile
 MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.123 29679 22
+SSH_CLIENT = 223.73.72.123 29610 22
 # environment
 MAIL = /var/mail/root
 # automatic
@@ -146,7 +141,6 @@ LANG = C
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
- 
 # Load=65/1024=6%, Rehash=0, Collisions=6/84=7%
 
 # Pattern-specific Variable Values
@@ -192,7 +186,6 @@ makefile:
 #  File has been updated.
 #  Failed to be updated.
 
- 
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
@@ -221,6 +214,8 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Thu May 26 17:53:03 2022
+# Finished Make data base on Fri May 27 13:46:10 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
