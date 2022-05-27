@@ -15,6 +15,6 @@ int main(void)
     {
         L1.push(i);
     }
-    std::cout << "栈元素个数为：" << L1.size();
+    std::cout << "栈元素个数为：" << L1.size() << std::endl;
     return 0;
 }
