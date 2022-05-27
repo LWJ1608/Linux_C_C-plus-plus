@@ -121,7 +121,7 @@ void ListStack<Type>::clear()
     while (top)
     {
         tmp = top;
-        top--;
+        top = top->next;
         delete tmp;
     }
 }
