@@ -26,7 +26,7 @@ public:
 public:
     bool isEmpty() const; //判空
     bool isFull() const;  //判满
-    void push(Type s);    //插入元素
+    void push(Type &s);   //插入元素
     void clear();         //清空
     int size() const;     //返回栈元素个数
     Type getTop() const;  //返回栈顶元素
@@ -61,7 +61,7 @@ bool SeqStack<Type>::isFull() const
 }
 //插入元素
 template <typename Type>
-void SeqStack<Type>::push(Type s)
+void SeqStack<Type>::push(Type &s)
 {
     assert(!isFull()); //断言，如果空间已满程序会报错，程序终止
     data[top++] = s;
