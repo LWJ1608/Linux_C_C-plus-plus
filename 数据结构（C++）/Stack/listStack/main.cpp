@@ -15,5 +15,6 @@ int main(void)
     {
         L1.push(i);
     }
+    std::cout<<""
     return 0;
 }
