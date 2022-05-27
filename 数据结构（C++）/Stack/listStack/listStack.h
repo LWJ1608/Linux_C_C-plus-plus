@@ -126,8 +126,21 @@ void ListStack<Type>::clear()
 }
 //判空
 template <typename Type>
-bool ListStack<Type>::isEmpty()
+bool ListStack<Type>::isEmpty() const
 {
-
     return top->next == nullptr;
+}
+//返回回元素个数,也可以在类数据成员增加一个变量记录元素个数
+//这样就不用遍历，达到用空间换时间的目的
+template <typename Type>
+int ListStack<Type>::size() const
+{
+    Node *tmp = nullptr;
+    int count = 0;
+    tmp = top;
+    while (tmp->next)
+    {
+        tmp--;
+        count++;
+    }
 }
