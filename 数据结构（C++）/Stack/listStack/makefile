@@ -1,10 +1,8 @@
-ELF=main
-CC=g++ -g
-SRC=$(shell find -name "*.cpp")
-objects=$(SRC:.c=.o)
-$(ELF):$(objects) 
-$(objects):
+main:main.o
+	g++ main.o -o main
+main.o:main.cpp
+	g++ -c main.cpp -o main.o -std=c++11
 
-.PHONY:clean
+.PHONY : clean
 clean:
-	-rm -rf *.o main
+	rm -rf *.o main
