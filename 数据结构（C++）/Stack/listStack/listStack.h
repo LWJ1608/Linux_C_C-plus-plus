@@ -141,7 +141,7 @@ int ListStack<Type>::size() const
     tmp = top;
     while (tmp->next)
     {
-        tmp--;
+        tmp = tmp->next;
         count++;
     }
 }
