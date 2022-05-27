@@ -13,9 +13,10 @@ int main(void)
     ListStack<int> L1;
     for (int i = 0; i < 5; i++)
     {
-        L1.push(i);
+        L1.push(i);//插入数据
     }
     std::cout << "栈元素个数为：" << L1.size() << std::endl;
+    std::cout << "栈顶元素为：" << L1.getTop() << std::endl;
     std::cout << "栈顶元素为：" << L1.getTop() << std::endl;
 
     return 0;
