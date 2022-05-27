@@ -83,6 +83,6 @@ template <typename Type>
 Type SeqStack<Type>::pop()
 {
     assert(!isEmpty()); //断言，如果空间为空程序会报错，程序终止
-    Type a=base[top];
-    top--;
+    Type tmp = data[top--];
+    return tmp;
 }
