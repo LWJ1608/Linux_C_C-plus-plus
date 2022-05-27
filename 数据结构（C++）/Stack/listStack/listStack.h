@@ -99,5 +99,11 @@ private:
     };
     Node *top; //栈顶指针，指向栈顶
 public:
-    ListStack<Type>::ListStack();
+    ListStack() { top = nullptr; };
+    ~ListStack(){clear()};
+
+public:
+    void clear(); //清空
 };
+
+template <typename Type>
