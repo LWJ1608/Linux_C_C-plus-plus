@@ -154,3 +154,8 @@ void ListStack<Type>::push(const Type &elem)
     tmp->next = top;
     top = tmp;
 }
+//返回栈顶元素
+template <typename Type>
+Type ListStack<Type>::getTop() const
+{
+}
