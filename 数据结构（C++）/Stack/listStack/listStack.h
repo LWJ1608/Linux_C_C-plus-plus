@@ -149,9 +149,7 @@ int ListStack<Type>::size() const
 template <typename Type>
 void ListStack<Type>::push(const Type &elem)
 {
-    Node *tmp = new Node;
-    tmp->data = elem;
-    tmp->next = top;
+    Node *tmp = new Node(elem, top);
     top = tmp;
 }
 //返回栈顶元素
