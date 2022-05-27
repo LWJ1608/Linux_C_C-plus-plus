@@ -106,9 +106,9 @@ public:
     void clear();                            //清空
     bool isEmpty() const { top == nullptr; } //判空
     int size() const;                        //返回元素个数
-    //插入数据
-    //返回栈顶元素
-    //移除栈顶元素
+    void push(const Type &elem);             //插入数据
+                                 //返回栈顶元素
+                                 //移除栈顶元素
 };
 
 //清空
