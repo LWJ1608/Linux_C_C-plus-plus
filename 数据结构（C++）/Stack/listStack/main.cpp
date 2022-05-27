@@ -10,6 +10,11 @@
 
 int main(void)
 {
+    ListStack<int> L1;
+    for (int i = 0; i < L1.size(); i++)
+    {
+        L1.push(i);
+    }
 
     return 0;
 }

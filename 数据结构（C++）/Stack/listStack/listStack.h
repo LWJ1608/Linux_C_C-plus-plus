@@ -101,7 +101,7 @@ private:
     Node *top; //栈顶指针，指向栈顶
 public:
     ListStack() { top = nullptr; };
-    ~ListStack(){clear()};
+    ~ListStack() { clear(); }
 
 public:
     void clear();                //清空
