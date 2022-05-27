@@ -6,7 +6,6 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Stack/listStack/listStack.h
  **/
 // #pragma once
-
 // template <typename Type>
 // class LinkStack
 // {
