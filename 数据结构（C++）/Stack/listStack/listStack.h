@@ -111,4 +111,11 @@ template <typename Type>
 void ListStack<Type>::clear()
 {
     Node *tmp = nullptr;
+    tmp = top;
+    while (top)
+    {
+        tmp = top;
+        top--;
+        delete tmp;
+    }
 }
