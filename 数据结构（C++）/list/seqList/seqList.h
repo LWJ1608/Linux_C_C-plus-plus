@@ -21,4 +21,5 @@ public:
     SeqList(int isSize = MAXSIZE); //构造函数
     SeqList(const SeqList &s);     //拷贝构造
     ~SeqList();                    //析构函数
+    void clear();                  //清空
 };
