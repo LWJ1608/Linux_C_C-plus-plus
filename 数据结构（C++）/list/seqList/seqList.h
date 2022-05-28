@@ -7,6 +7,7 @@
  **/
 #pragma once
 #include <iostream>
+#include <assert.h>
 
 #define MAXSIZE 10
 template <typename Type>
@@ -48,6 +49,7 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
 template <typename Type>
 void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
+    assert(!ifEmpty()); //断言
 }
 // void remove(int i);                              // 删除位置i上的元素value，若删除位置合法，表的长度减1
 // int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
