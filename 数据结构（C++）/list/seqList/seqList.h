@@ -75,11 +75,18 @@ void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 template <typename Type>
 void SeqList<Type>::traverse() const // 遍历顺序表
 {
-    for (int i = 0; i < count; i++)
+    if (isEmpty)
     {
-        std::cout << data[i] << std::endl;
+        std::cout << "数据为空！" << std::endl;
     }
-    std::cout << std::endl;
+    else
+    {
+        for (int i = 0; i < count; i++)
+        {
+            std::cout << data[i] << std::endl;
+        }
+        std::cout << std::endl;
+    }
 }
 // void inverse();                                  // 逆置顺序表
 // bool Union(seqList<Type> &B);
