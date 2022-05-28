@@ -135,7 +135,7 @@ void SeqList<Type>::inverse() // 逆置顺序表
     for (int i = 0; i < count / 2; i++)
     {
         tmp = data[i];
-        data[i] = data[count - 1 - i];
+        data[i] = data[count - i - 1];
         data[count - i - 1] = tmp;
     }
 }
