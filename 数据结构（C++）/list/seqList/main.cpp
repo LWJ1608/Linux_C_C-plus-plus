@@ -24,8 +24,8 @@ void testSeqList()
     cout << "测试返回表大小函数size（）：" << s1.size() << endl;
 
     cout << "拷贝构造函数测试：" << endl;
-    s2 = s1;
-    s2.traverse();
+    SeqList<int>s3(s1);
+    s3.traverse();
 
     // cout << "表满扩大容量函数resize():" << endl;
     // cout << "未扩大表时的容量：" << s1.size() << endl;
