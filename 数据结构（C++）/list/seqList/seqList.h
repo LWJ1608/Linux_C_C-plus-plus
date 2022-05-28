@@ -99,6 +99,7 @@ void SeqList<Type>::resize() // 扩容
     delete[] data;
     data = tmp;
     tmp = nullptr;
+    maxSize = 2 * maxSize;
 }
 // void inverse();                                  // 逆置顺序表
 // bool Union(seqList<Type> &B);
