@@ -18,5 +18,6 @@ private:
     int maxSize;   //数组容量
     void resize(); //扩容，因为只在当前文件中使用，所以放在私有成员中
 public:
-    SeqList(int isSize = MAXSIZE);
+    SeqList(int isSize = MAXSIZE); //构造函数
+    SeqList(const SeqList &s);     //拷贝构造
 };
