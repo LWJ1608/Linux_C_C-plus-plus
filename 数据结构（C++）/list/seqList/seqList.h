@@ -142,4 +142,22 @@ void SeqList<Type>::inverse() // 逆置顺序表
 template <typename Type>
 bool SeqList<Type>::Union(SeqList<Type> &B) //合并两个表
 {
+    int m, n, k, i, j;
+    m = this->curLength;  // 当前对象为线性表A
+    n = B.curLength;      // m，n分别为线性表A和B的长度
+    k = m + n - 1;        // k为结果线性表的工作指针（下标）
+    i = m - 1, j = n - 1; // i，j分别为线性表A和B的工作指针（下标）
+    if (m + n > this->maxSize)
+    {             // 判断A表空间是否足够大
+        resize(); // 空间不够，扩大表空间
+    }
+    while (i >= 0 && j >= 0) // 合并顺序表，直到一个表为空
+        if (data[i] >= B.data[j])
+            data[k--] = data[i--];
+        else
+            data[k--] = B.data[j--]; // 默认当前对象，this指针可省略
+    while (j >= 0)                   // 将B表的剩余元素复制到A表
+        data[k--] = B.data[j--];
+    curLength = m + n; // 修改A表长度
+    return true;
 }
