@@ -12,7 +12,7 @@ void testSeqList()
 {
     SeqList<int> s1;
     SeqList<int> s2;
-    
+
     cout << "insert插入测试：" << endl;
     for (int i = 0; i < 10; i++)
     {
@@ -48,9 +48,9 @@ void testSeqList()
     // s1.inverse();
     // s1.traverse();
 
-    cout << "测试s2表插入s1表：" << endl;
-    s1.Union(s2);
-    s1.traverse();
+    // cout << "测试s2表插入s1表：" << endl;
+    // s1.Union(s2);
+    // s1.traverse();
 }
 int main()
 {
