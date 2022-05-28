@@ -143,8 +143,8 @@ template <typename Type>
 bool SeqList<Type>::Union(SeqList<Type> &B) //合并两个表
 {
     int m, n, k, i, j;
-    m = this->curLength;  // 当前对象为线性表A
-    n = B.curLength;      // m，n分别为线性表A和B的长度
+    m = this->count;      // 当前对象为线性表A
+    n = B.count;          // m，n分别为线性表A和B的长度
     k = m + n - 1;        // k为结果线性表的工作指针（下标）
     i = m - 1, j = n - 1; // i，j分别为线性表A和B的工作指针（下标）
     if (m + n > this->maxSize)
@@ -158,6 +158,6 @@ bool SeqList<Type>::Union(SeqList<Type> &B) //合并两个表
             data[k--] = B.data[j--]; // 默认当前对象，this指针可省略
     while (j >= 0)                   // 将B表的剩余元素复制到A表
         data[k--] = B.data[j--];
-    curLength = m + n; // 修改A表长度
+    count = m + n; // 修改A表长度
     return true;
 }
