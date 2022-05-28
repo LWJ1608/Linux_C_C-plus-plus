@@ -27,7 +27,7 @@ public:
     int size() const { return count; }               // 返回顺序表的当前存储元素的个数
     void insert(int i, const Type &value);           // 在位置i上插入一个元素value，表的长度增1
     void remove(int i);                              // 删除位置i上的元素value，若删除位置合法，表的长度减1
-    // int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
+    int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
     // T visit(int i) const;                            // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
     void resize();         // 扩容
     void traverse() const; // 遍历顺序表
@@ -72,7 +72,7 @@ void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 template <typename Type>
 void SeqList<Type>::remove(int i) // 删除位置i上的元素value，若删除位置合法，表的长度减1
 {
-    assert(!isEmpty());          //断言.满了不能放
+    assert(!isEmpty());          //断言
     assert(i > 0 || i <= count); // i只能在[0~count]
     for (int j = i; j <= count - 1; j--)
     {
@@ -80,7 +80,14 @@ void SeqList<Type>::remove(int i) // 删除位置i上的元素value，若删除�
     }
     count--; //表长减一
 }
-// int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
+template <typename Type>
+int SeqList<Type>::search(const Type &value) const // 查找值为value的元素第一次出现的位序
+{
+    for (int i = 0; i < count; i++)
+        if (value == data[i])
+            return i;
+    return -1; // 查找失败返回-1
+}
 // T visit(int i) const;                            // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
 template <typename Type>
 void SeqList<Type>::traverse() const // 遍历顺序表
