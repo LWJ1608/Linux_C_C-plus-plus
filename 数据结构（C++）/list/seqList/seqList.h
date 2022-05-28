@@ -8,7 +8,9 @@
 #pragma once
 #include <iostream>
 
+template <typename Type>
 class SeqList
 {
 private:
+    Type *data; //
 };
