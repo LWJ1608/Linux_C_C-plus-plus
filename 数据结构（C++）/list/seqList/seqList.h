@@ -37,10 +37,18 @@ public:
 template <typename Type>
 SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
 {
+    this->maxSize = isSize;
+    count = 0;
+    data = new
 }
+
 // SeqList(const SeqList &s);                       // 拷贝构造
 // ~SeqList();                                      // 析构函数
 // void insert(int i, const Type &value);           // 在位置i上插入一个元素value，表的长度增1
+template <typename Type>
+SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
+{
+}
 // void remove(int i);                              // 删除位置i上的元素value，若删除位置合法，表的长度减1
 // int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
 // T visit(int i) const;                            // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
