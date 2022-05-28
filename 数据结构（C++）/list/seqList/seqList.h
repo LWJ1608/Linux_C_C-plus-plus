@@ -38,6 +38,7 @@ public:
 template <typename Type>
 SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
 {
+    assert(isSize > 0); // isSize不能小于0
     this->maxSize = isSize;
     count = 0;
     data = new Tyep[maxSize]; //在堆区创建一个大小为maxSize的数组
@@ -46,6 +47,10 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
 template <typename Type>
 SeqList<Type>::SeqList(const SeqList &s) // 拷贝构造
 {
+    maxSize = s.count; // s有多少个元素就开辟多少空间
+    for (int i = 0; i < s.count; i++)
+    {
+    }
 }
 
 template <typename Type>
