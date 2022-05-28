@@ -23,7 +23,7 @@ void testSeqList()
 
     cout << "测试返回表大小函数size（）：" << s1.size() << endl;
 
-    cout << "拷贝构造函数测试：" << endl;
+    // cout << "拷贝构造函数测试：" << endl;
     // s2 = s1;
     // s2.traverse();
 
