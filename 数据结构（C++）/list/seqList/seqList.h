@@ -12,5 +12,7 @@ template <typename Type>
 class SeqList
 {
 private:
-    Type *data; //
+    Type *data; //维护存储数据的指针
+    int count;  //记录元素个数
+    int max
 };
