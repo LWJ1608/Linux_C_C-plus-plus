@@ -76,9 +76,9 @@ void SeqList<Type>::remove(int i) // 删除位置i上的元素value，若删除�
     assert(i > 0 || i <= count); // i只能在[0~count]
     for (int j = i; j <= count - 1; j--)
     {
-        data[j] = data[j + 1];
+        data[j] = data[j + 1]; //直接用后面一个数据覆盖所要删除的数据
     }
-    count--; //表长加一
+    count--; //表长减一
 }
 // int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
 // T visit(int i) const;                            // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
