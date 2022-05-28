@@ -41,10 +41,10 @@ void testSeqList()
     s1.traverse();
 
     cout << "测试删除元素函数remove()：" << endl;
-    s1.remove(s1.size());
+    s1.remove(s1.size());//删除最后一个元素
     s1.traverse();
 
-    // cout << "测试visit()功能：" << s1.visit(5) << endl;
+    cout << "测试visit()功能：" << s1.visit(5) << endl;
 
     // cout << "测试查找value元素功能：" << s1.search(4)<<" "<<s1.search(99)<< endl;
 
