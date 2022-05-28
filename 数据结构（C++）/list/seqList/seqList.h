@@ -39,7 +39,7 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
 {
     this->maxSize = isSize;
     count = 0;
-    data = new
+    data = new Tyep[maxSize];
 }
 
 // SeqList(const SeqList &s);                       // 拷贝构造
