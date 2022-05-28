@@ -24,15 +24,19 @@ void testSeqList()
     cout << "测试返回表大小函数size（）：" << s1.size() << endl;
 
     cout << "拷贝构造函数测试：" << endl;
-    SeqList<int>s3(s1);
+    SeqList<int> s3(s1);
     s3.traverse();
 
-    // cout << "表满扩大容量函数resize():" << endl;
-    // cout << "未扩大表时的容量：" << s1.size() << endl;
-    // for (int i = 0; i < 10; i++)
-    //{
-    //	s1.insert(0, 88);
-    // }
+    cout << "表满扩大容量函数resize():" << endl;
+    cout << "未扩大表时的容量：" << s1.size() << endl;
+    for (int i = 0; i < 10; i++)
+    {
+        if (s1.isFull())
+        {
+            s1.resize();
+        }
+        s1.insert(0, 88);
+    }
     // cout << "扩大表后容量为：" << s1.size() << endl;
     // s1.traverse();
 
