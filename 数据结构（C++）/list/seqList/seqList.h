@@ -75,7 +75,7 @@ void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 template <typename Type>
 void SeqList<Type>::traverse() const // 遍历顺序表
 {
-    if (isEmpty)
+    if (isEmpty == nullptr)
     {
         std::cout << "数据为空！" << std::endl;
     }
