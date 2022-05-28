@@ -36,7 +36,7 @@ public:
 };
 
 template <typename Type>
-SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
+SeqList<Type>::SeqList(int isSize) // 构造函数
 {
     assert(isSize > 0); // isSize不能小于0
     this->maxSize = isSize;
