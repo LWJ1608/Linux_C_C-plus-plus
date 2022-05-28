@@ -153,11 +153,17 @@ bool SeqList<Type>::Union(SeqList<Type> &B) //合并两个表
     }
     while (i >= 0 && j >= 0) // 合并顺序表，直到一个表为空
         if (data[i] >= B.data[j])
+        {
             data[k--] = data[i--];
+        }
         else
+        {
             data[k--] = B.data[j--]; // 默认当前对象，this指针可省略
-    while (j >= 0)                   // 将B表的剩余元素复制到A表
+        }
+    while (j >= 0) // 将B表的剩余元素复制到A表
+    {
         data[k--] = B.data[j--];
+    }
     count = m + n; // 修改A表长度
     return true;
 }
