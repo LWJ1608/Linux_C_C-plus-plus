@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sat May 28 17:09:39 2022
+# Make data base, printed on Sat May 28 19:51:32 2022
 
 # Variables
 
@@ -48,7 +47,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.123 29482 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.123 29573 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
@@ -64,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-4a0402e8-e29b-409c-8441-a4ea7bc42186.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-a2b7a258-bb8e-4978-8cd8-402ebd98a2a8.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -76,7 +75,7 @@ HOME = /root
 # environment
 LOGNAME = root
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 +F = $(notdir $+)
 # environment
@@ -92,7 +91,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 28612
+XDG_SESSION_ID = 30210
 # environment
 USER = root
 # makefile
@@ -110,16 +109,13 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.123 29482 22
+SSH_CLIENT = 223.73.72.123 29573 22
 # environment
 MAIL = /var/mail/root
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
 BROWSER = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/helpers/browser.sh
- 
-make: *** No rule to make target `all'.  Stop.
-
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -218,6 +214,8 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Sat May 28 17:09:39 2022
+# Finished Make data base on Sat May 28 19:51:32 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
