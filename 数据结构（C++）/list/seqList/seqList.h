@@ -43,8 +43,10 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
     data = new Tyep[maxSize]; //在堆区创建一个大小为maxSize的数组
 }
 
-// template <typename Type>
-// SeqList(const SeqList &s);                       // 拷贝构造
+template <typename Type>
+SeqList<Type>::SeqList(const SeqList &s) // 拷贝构造
+{
+}
 
 template <typename Type>
 void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
