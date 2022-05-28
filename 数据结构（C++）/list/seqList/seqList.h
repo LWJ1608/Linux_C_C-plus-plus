@@ -88,8 +88,17 @@ void SeqList<Type>::traverse() const // 遍历顺序表
         std::cout << std::endl;
     }
 }
-
-void resize(); // 扩容
-
+template <typename Type>
+void SeqList<Type>::resize() // 扩容
+{
+    Type *tmp = new Type[2 * maxSize];
+    for (int i = 0; i < count; i++)
+    {
+        tmp[i] = data[i];
+    }
+    delete[] data;
+    data = tmp;
+    tmp = nullptr;
+}
 // void inverse();                                  // 逆置顺序表
 // bool Union(seqList<Type> &B);
