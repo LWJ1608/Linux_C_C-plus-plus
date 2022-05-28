@@ -18,8 +18,9 @@ private:
     int count;   // 记录元素个数
     int maxSize; // 数组容量
 public:
-    SeqList(int isSize = MAXSIZE);                   // 构造函数
-    SeqList(const SeqList &s);                       // 拷贝构造
+    SeqList(int isSize = MAXSIZE); // 构造函数
+    SeqList(const SeqList &s);     // 拷贝构造
+
     ~SeqList() { delete data[]; }                    // 析构函数
     void clear() { count = 0; }                      // 清空表，只需修改count
     bool isEmpty() const { return count == 0; }      // 判空
@@ -47,9 +48,12 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
 template <typename Type>
 SeqList<Type>::SeqList(const SeqList &s) // 拷贝构造
 {
-    maxSize = s.count; // s有多少个元素就开辟多少空间
+    maxSize = s.maxSize; // 也可以s有多少个元素就开辟多少空间
+    count = s.count;
+    data = new Type[maxSize];
     for (int i = 0; i < s.count; i++)
     {
+        data[i] = s.data[i];
     }
 }
 
