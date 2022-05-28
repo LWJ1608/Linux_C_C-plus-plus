@@ -20,7 +20,7 @@ private:
 public:
     SeqList(int isSize = MAXSIZE);                   // 构造函数
     SeqList(const SeqList &s);                       // 拷贝构造
-    ~SeqList();                                      // 析构函数
+    ~SeqList() { delete data[]; }                    // 析构函数
     void clear() { count = 0; }                      // 清空表，只需修改count
     bool isEmpty() const { return count == 0; }      // 判空
     bool isFull() const { return count == maxSize; } // 判满
@@ -43,11 +43,9 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
     data = new Tyep[maxSize]; //在堆区创建一个大小为maxSize的数组
 }
 
+// template <typename Type>
 // SeqList(const SeqList &s);                       // 拷贝构造
-template <typename Type>
-SeqList<type>::~SeqList() // 析构函数
-{
-}
+
 template <typename Type>
 void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
