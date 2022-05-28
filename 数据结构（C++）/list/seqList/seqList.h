@@ -140,6 +140,6 @@ void SeqList<Type>::inverse() // 逆置顺序表
     }
 }
 template <typename Type>
-bool SeqList<Type>::Union(seqList<Type> &B) //合并两个表
+bool SeqList<Type>::Union(SeqList<Type> &B) //合并两个表
 {
 }
