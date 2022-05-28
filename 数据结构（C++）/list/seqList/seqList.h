@@ -29,7 +29,7 @@ public:
     // void remove(int i);                              // 删除位置i上的元素value，若删除位置合法，表的长度减1
     // int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
     // T visit(int i) const;                            // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
-    // void resize();                                   // 扩容
+    void resize();         // 扩容
     void traverse() const; // 遍历顺序表
     // void inverse();                                  // 逆置顺序表
     // bool Union(seqList<Type> &B);                     //合并两个表
@@ -88,5 +88,8 @@ void SeqList<Type>::traverse() const // 遍历顺序表
         std::cout << std::endl;
     }
 }
+
+void resize(); // 扩容
+
 // void inverse();                                  // 逆置顺序表
 // bool Union(seqList<Type> &B);
