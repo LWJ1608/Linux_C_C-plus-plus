@@ -7,6 +7,7 @@
  **/
 #include "seqList.h"
 
+using namespace std;
 void testSeqList()
 {
     seqList<int> s1;
