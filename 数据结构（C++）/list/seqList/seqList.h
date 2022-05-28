@@ -44,16 +44,22 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
 }
 
 // SeqList(const SeqList &s);                       // 拷贝构造
-// ~SeqList();                                      // 析构函数
-
+template <typename Type>
+SeqList<type>::~SeqList() // 析构函数
+{
+}
 template <typename Type>
 void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
-    assert(!isEmpty()); //断言
-    if (i > count - 1)
+    assert(!isFull());          //断言.满了不能放
+    assert(i < 0 || i > count); // i只能在[0~count]
+    //在i处插入数据，i及其后面的元素向后移动一位
+    for (int j = count; j < count - i; j--)
     {
+        data[j] = data[j - 1];
     }
-    for (int i = 0; i <)
+    data[i] = value;
+    count++; //表长加一
 }
 // void remove(int i);                              // 删除位置i上的元素value，若删除位置合法，表的长度减1
 // int search(const Type &value) const;             // 查找值为value的元素第一次出现的位序
