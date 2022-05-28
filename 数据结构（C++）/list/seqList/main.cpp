@@ -10,9 +10,9 @@ using namespace std;
 
 void testSeqList()
 {
-    seqList<int> s1;
-    seqList<int> s2;
-
+    SeqList<int> s1;
+    SeqList<int> s2;
+    
     cout << "insert插入测试：" << endl;
     for (int i = 0; i < 10; i++)
     {
