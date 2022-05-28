@@ -19,7 +19,7 @@ void testSeqList()
         s1.insert(i, i);
         s2.insert(i, 99);
     }
-    s1.traverse();
+    s2.traverse();
 
     cout << "测试返回表大小函数size（）：" << s1.size() << endl;
 
