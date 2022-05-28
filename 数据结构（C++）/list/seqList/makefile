@@ -1,7 +1,7 @@
 main:main.o
 	g++ main.o -o main
 main.o:main.cpp
-	g++ -c main.cpp -o main.o -std=c++11
+	g++ -c main.cpp -o main.o -std=c++11 -g
 
 .PHONY : clean
 clean:
