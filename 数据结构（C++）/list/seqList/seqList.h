@@ -57,7 +57,7 @@ SeqList<Type>::SeqList(const SeqList &s) // 拷贝构造
     }
 }
 template <typename Type>
-SeqList &SeqList<type>::operator=(const SeqList &s) //等号重载
+SeqList &SeqList<SeqLista &>::operator=(const SeqList &s) //等号重载
 {
 }
 template <typename Type>
