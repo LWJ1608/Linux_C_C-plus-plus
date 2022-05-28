@@ -40,9 +40,9 @@ void testSeqList()
     cout << "扩大表后容量为：" << s1.size() << endl;
     s1.traverse();
 
-    // cout << "测试删除元素函数remove()：" << endl;
-    // s1.remove(s1.size());
-    // s1.traverse();
+    cout << "测试删除元素函数remove()：" << endl;
+    s1.remove(s1.size());
+    s1.traverse();
 
     // cout << "测试visit()功能：" << s1.visit(5) << endl;
 
