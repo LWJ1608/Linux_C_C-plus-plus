@@ -6,8 +6,8 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/main.cpp
  **/
 #include "seqList.h"
-
 using namespace std;
+
 void testSeqList()
 {
     seqList<int> s1;
