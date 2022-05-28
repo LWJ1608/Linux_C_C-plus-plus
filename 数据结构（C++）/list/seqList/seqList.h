@@ -127,17 +127,16 @@ void SeqList<Type>::resize() // 扩容
 template <typename Type>
 void SeqList<Type>::inverse() // 逆置顺序表
 {
-    if(isEmpty())
+    if (isEmpty())
     {
         return;
     }
     Type tmp;
-    for (int i = 0; i < count/2; i++)
+    for (int i = 0; i < count / 2; i++)
     {
-        tmp=data[i];
-        data[i]=data[count-1];
-        data[count--]=tmp;
+        tmp = data[i];
+        data[i] = data[count - 1 - i];
+        data[count - i - 1] = tmp;
     }
-    
 }
 // bool Union(seqList<Type> &B);
