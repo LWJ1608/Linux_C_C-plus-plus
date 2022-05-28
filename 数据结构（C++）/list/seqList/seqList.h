@@ -18,9 +18,9 @@ private:
     int count;   // 记录元素个数
     int maxSize; // 数组容量
 public:
-    SeqList(int isSize = MAXSIZE); // 构造函数
-    SeqList(const SeqList &s);     // 拷贝构造
-
+    SeqList(int isSize = MAXSIZE);                   // 构造函数
+    SeqList(const SeqList &s);                       // 拷贝构造
+    SeqList &operator=(const SeqList &s);            //等号重载
     ~SeqList() { delete data[]; }                    // 析构函数
     void clear() { count = 0; }                      // 清空表，只需修改count
     bool isEmpty() const { return count == 0; }      // 判空
@@ -56,7 +56,10 @@ SeqList<Type>::SeqList(const SeqList &s) // 拷贝构造
         data[i] = s.data[i];
     }
 }
-
+template <typename Type>
+SeqList &SeqList<type>::operator=(const SeqList &s) //等号重载
+{
+}
 template <typename Type>
 void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
