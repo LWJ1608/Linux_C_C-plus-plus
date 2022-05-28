@@ -72,8 +72,8 @@ void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 template <typename Type>
 void SeqList<Type>::remove(int i) // 删除位置i上的元素value，若删除位置合法，表的长度减1
 {
-    assert(!isEmpty());          //断言
-    assert(i > 0 || i <= count); // i只能在[0~count]
+    assert(!isEmpty());              //断言
+    assert(i > 0 || i <= count - 1); // i只能在[0~count]
     for (int j = i; j <= count - 1; j--)
     {
         data[j] = data[j + 1]; //直接用后面一个数据覆盖所要删除的数据
@@ -91,6 +91,9 @@ int SeqList<Type>::search(const Type &value) const // 查找值为value的元素
 template <typename Type>
 T SeqList<Type>::visit(int i) const // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
 {
+    assert(!isEmpty());              //断言
+    assert(i > 0 || i <= count - 1); // i只能在[0~count-1]
+    return data[i];
 }
 template <typename Type>
 void SeqList<Type>::traverse() const // 遍历顺序表

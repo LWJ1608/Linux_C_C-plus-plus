@@ -46,7 +46,7 @@ void testSeqList()
 
     cout << "测试visit()功能：" << s1.visit(5) << endl;
 
-    // cout << "测试查找value元素功能：" << s1.search(4)<<" "<<s1.search(99)<< endl;
+    cout << "测试查找value元素功能：" << s1.search(4)<<" "<<s1.search(99)<< endl;
 
     // cout << "测试逆置功能：" << endl;
     // s1.inverse();
