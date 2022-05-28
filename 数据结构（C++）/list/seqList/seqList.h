@@ -62,7 +62,7 @@ void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
     assert(!isFull());           //断言.满了不能放
     assert(i > 0 || i <= count); // i只能在[0~count]
     //在i处插入数据，i及其后面的元素向后移动一位
-    for (int j = count; j < count - i; j--)
+    for (int j = count; j > i; j--)
     {
         data[j] = data[j - 1];
     }
