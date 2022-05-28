@@ -32,7 +32,7 @@ public:
     void resize();                                   // 扩容
     void traverse() const;                           // 遍历顺序表
     void inverse();                                  // 逆置顺序表
-    // bool Union(seqList<Type> &B);                     //合并两个表
+    bool Union(SeqList<Type> &B);                    //合并两个表
 };
 
 template <typename Type>
@@ -139,4 +139,7 @@ void SeqList<Type>::inverse() // 逆置顺序表
         data[count - i - 1] = tmp;
     }
 }
-// bool Union(seqList<Type> &B);
+template <typename Type>
+bool SeqList<Type>::Union(seqList<Type> &B) //合并两个表
+{
+}
