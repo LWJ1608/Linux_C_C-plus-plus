@@ -41,7 +41,7 @@ SeqList<Type>::SeqList(int isSize = MAXSIZE) // 构造函数
     assert(isSize > 0); // isSize不能小于0
     this->maxSize = isSize;
     count = 0;
-    data = new Tyep[maxSize]; //在堆区创建一个大小为maxSize的数组
+    data = new Type[maxSize]; //在堆区创建一个大小为maxSize的数组
 }
 
 template <typename Type>
