@@ -5,3 +5,10 @@
  * @Description:数据结构---顺序表
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/seqList/seqList.h
  **/
+#pragma once
+#include <iostream>
+
+class SeqList
+{
+private:
+};
