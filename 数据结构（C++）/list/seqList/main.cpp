@@ -1,20 +1,5 @@
 /**
  * @Author: lwj
- * @Date: 2022-05-29 15:25:34
- * @LastEditTime: 2022-05-29 15:25:51
- * @Description:
- * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/seqList/main.cpp
- **/
-/**
- * @Author: lwj
- * @Date: 2022-05-29 15:25:29
- * @LastEditTime: 2022-05-29 15:25:33
- * @Description:
- * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/seqList/main.cpp
- **/
-
-/**
- * @Author: lwj
  * @Date: 2022-05-28 13:04:14
  * @LastEditTime: 2022-05-28 13:04:14
  * @Description:测试顺序表
