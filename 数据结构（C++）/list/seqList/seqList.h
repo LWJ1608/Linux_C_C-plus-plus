@@ -136,7 +136,7 @@ void SeqList<Type>::inverse() // 逆置顺序表
     }
 }
 template <typename Type>
-bool SeqList<Type>::Union(SeqList<Type> &B) //合并两个表
+bool SeqList<Type>::Union(SeqList<Type> &B) //把B表合并到A表，如果A表
 {
     int m, n, k, i, j;
     m = this->count;              // 当前对象为线性表A
