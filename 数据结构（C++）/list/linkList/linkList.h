@@ -40,7 +40,7 @@ public:
     void remove(int i);                    // 删除位置i上的元素value，若删除位置合法，表的长度减1
     int search(const Type &value) const;   // 查找值为value的元素第一次出现的位序
     Type visit(int i) const;               // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
-    // void traverse() const;                            // 遍历单链表
+    void traverse() const;                            // 遍历单链表
     // void headCreate();                                // “头插法”创建单链表
     // void tailCreate();                                // “尾插法”创建单链表
     // void inverse();                                   // 逆置单链表
@@ -168,7 +168,18 @@ Type LinkList<Type>::visit(int i) const // 访问位序为i的元素值，“位
     }
     return p->data;
 }
-// void traverse() const;                            // 遍历单链表
+template <typename Type>
+void LinkList<Type>::traverse() const                            // 遍历单链表
+{
+    Node *p = head->next; 
+	std::cout << "traverse:" ; 
+	while (p != NULL)
+     {  
+		cout << p->data <<"  "; 
+		p = p->next; 
+	} 
+	std::cout << std::endl; 
+}
 // void headCreate();                                // “头插法”创建单链表
 // void tailCreate();                                // “尾插法”创建单链表
 // void inverse();                                   // 逆置单链表
