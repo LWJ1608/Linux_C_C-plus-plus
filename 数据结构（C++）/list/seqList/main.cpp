@@ -1,5 +1,20 @@
 /**
  * @Author: lwj
+ * @Date: 2022-05-29 15:25:34
+ * @LastEditTime: 2022-05-29 15:25:51
+ * @Description:
+ * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/seqList/main.cpp
+ **/
+/**
+ * @Author: lwj
+ * @Date: 2022-05-29 15:25:29
+ * @LastEditTime: 2022-05-29 15:25:33
+ * @Description:
+ * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/seqList/main.cpp
+ **/
+
+/**
+ * @Author: lwj
  * @Date: 2022-05-28 13:04:14
  * @LastEditTime: 2022-05-28 13:04:14
  * @Description:测试顺序表
@@ -41,13 +56,13 @@ void testSeqList()
     s1.traverse();
 
     cout << "测试删除元素函数remove()：" << endl;
-    s1.remove(s1.size());//删除最后一个元素
+    s1.remove(s1.size()); //删除最后一个元素
     s1.traverse();
 
     cout << "测试visit()功能：" << s1.visit(5) << endl;
 
-    cout << "测试查找value元素功能：" << s1.search(4)<<" "
-                                   <<s1.search(99)<< endl;
+    cout << "测试查找value元素功能：" << s1.search(4) << " "
+         << s1.search(99) << endl;
 
     cout << "测试逆置功能：" << endl;
     s1.inverse();
