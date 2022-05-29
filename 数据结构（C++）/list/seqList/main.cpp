@@ -54,7 +54,7 @@ void testSeqList()
     s1.traverse();
 
     cout << "测试s2表插入s1表：" << endl;
-    // s1.Union(s3);
+    s1.Union(s3);
     s2.traverse();
 }
 int main()
