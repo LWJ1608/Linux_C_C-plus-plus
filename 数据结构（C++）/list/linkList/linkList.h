@@ -105,7 +105,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
-    if (i < 0 || i > count - 1)
+    if (i < 0 || i > count)
     {
         std::cout << "位置错误！" << std::endl;
         return;
