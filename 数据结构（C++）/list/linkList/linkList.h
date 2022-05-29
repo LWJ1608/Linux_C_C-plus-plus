@@ -14,13 +14,13 @@ private:
     struct Node
     {
     public:
-        Type data;              //数据域,所要的存储的数据
-        Node *next;             //指针域
-        Node(Node *p = nullptr) //主要用于创建Node类型的指针
+        Type data;           //数据域,所要的存储的数据
+        Node *next;          //指针域
+        Node(Node *p = NULL) //主要用于创建Node类型的指针
         {
             next = p;
         }
-        Node(const Type &value, Node *p = nullptr) //用储存数据的结点
+        Node(const Type &value, Node *p = NULL) //用储存数据的结点
         {
             data = value;
             next = p;
@@ -63,21 +63,21 @@ template <typename Type>
 void LinkList<Type>::clear() // 将单链表清空，使之成为空表
 {
     Node *p = head->next; // head->next指向首元结点结点，
-    Node *tmp = nullptr;
+    Node *tmp = NULL;
     while (p)
     {
         tmp = p;
         p = p->next;
         delete tmp;
     }
-    head->next = nullptr; //头结点指向空指针
+    head->next = NULL; //头结点指向空指针
     head = tail;
     count = 0;
 }
 template <typename Type>
 bool LinkList<Type>::isEmpty() const // 判空
 {
-    return head->next == nullptr;
+    return head->next == NULL;
 }
 // template <typename Type>
 // int LinkList<Type>::size() const // 返回单链表的当前实际长度
@@ -90,7 +90,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
     // i的范围[-1 ~count], -1是头结点的位置
     if (i < -1 || i > count - 1)
     {
-        return nullptr;
+        return NULL;
     }
     Node *tmp = head;
     int num = 0;
@@ -136,7 +136,7 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 //     if (p == tail)
 //     { // 待删结点为尾结点，则修改尾指针
 //         tail = pre;
-//         pre->next = nullptr;
+//         pre->next = NULL;
 //         delete p;
 //     }
 //     else
@@ -151,12 +151,12 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 // {
 //     Node *p = head->next;
 //     int num = 0; // 首元结点的位序为0
-//     while (p != nullptr && p->data != value)
+//     while (p != NULL && p->data != value)
 //     {
 //         p = p->next;
 //         num++;
 //     }
-//     if (p == nullptr)
+//     if (p == NULL)
 //     {
 //         return -1; // 查找失败返回-1，这里-1并非头节点
 //     }
