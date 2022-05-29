@@ -27,6 +27,8 @@ private:
             next = p;
         }
     };
+    Node *head; //头指针，指向表头
+    Node *tail; //尾指针，指向表尾
 
 public:
 };
