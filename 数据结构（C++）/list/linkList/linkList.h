@@ -35,7 +35,7 @@ public:
     ~LinkList();          // 析构函数
     void clear();         // 将单链表清空，使之成为空表
     bool isEmpty() const; // 判空
-    // int size() const { return curLength; };           // 返回单链表的当前实际长度
+    int size() const;     // 返回单链表的当前实际长度
     // void insert(int i, const elemType &value);        // 在位置i上插入一个元素value，表的长度增1
     // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
     // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
