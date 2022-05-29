@@ -155,7 +155,7 @@ bool SeqList<Type>::Union(SeqList<Type> &B)
     {
         if (data[i] >= B.data[j]) //如果A的元素大于B的元素时
         {
-            data[k--] = data[i--]; //相当于A表的元素不动
+            data[k--] = data[i--]; // A表下标为k元素等于下标为i的元素
         }
         else
         {
