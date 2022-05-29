@@ -70,6 +70,9 @@ void LinkList<Type>::clear() // 将单链表清空，使之成为空表
         p = p->next;
         delete tmp;
     }
+    head->next = nullptr; //头结点指向空指针
+    head = tail;
+    count = 0;
 }
 // bool empty() const { return head->next == NULL; } // 判空
 // int size() const { return curLength; };           // 返回单链表的当前实际长度
