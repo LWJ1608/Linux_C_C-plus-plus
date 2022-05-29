@@ -121,7 +121,7 @@ void LinkList<Type>::remove(int i)
     if (p == tail)
     { // 待删结点为尾结点，则修改尾指针
         tail = pre;
-        pre->next = NULL;
+        pre->next = nullptr;
         delete p;
     }
     else
@@ -134,7 +134,17 @@ void LinkList<Type>::remove(int i)
 template <typename Type>
 int LinkList<Type>::search(const Type &value) const // 查找值为value的元素第一次出现的位序
 {
-    assert(i >= 0 && i <= count);
+    Node *p = head->next;
+    int count = 0; // 首元结点的位序为0
+    while (p != nullptr && p->data != value)
+    {
+        p = p->next;
+        count++;
+    }
+    if (p == nullptr)
+        return -1; // 查找失败返回-1，这里-1并非头节点
+    else
+        return count;
 }
 // Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
 // void traverse() const;                            // 遍历单链表
