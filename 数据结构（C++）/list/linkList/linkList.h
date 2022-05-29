@@ -111,7 +111,6 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
     {
         tail = q; // 插入点在表尾，插入结点成为新的尾结点
     }
-
     count++;
 }
 
