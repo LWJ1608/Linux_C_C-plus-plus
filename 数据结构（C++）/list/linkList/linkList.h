@@ -63,7 +63,11 @@ template <typename Type>
 void LinkList<Type>::clear() // 将单链表清空，使之成为空表
 {
     Node *tmp = head->next; // head->next指向第一个存储数据的结点，
-    while ()
+    while (tmp)
+    {
+        delete head;
+        head = head->next;
+    }
 }
 // bool empty() const { return head->next == NULL; } // 判空
 // int size() const { return curLength; };           // 返回单链表的当前实际长度
