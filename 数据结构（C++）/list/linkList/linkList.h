@@ -14,14 +14,14 @@ private:
     struct Node
     {
     public:
-        Tpye data;  //数据域
-        Node *next; //指针域
-        int count;  //记录元素个数
-        Node(Node *p = nullptr)
+        Tpye data;              //数据域,所要的存储的数据
+        Node *next;             //指针域
+        int count;              //记录元素个数
+        Node(Node *p = nullptr) //用于创建Node类型的指针
         {
-            next = p;
+            next = p; //
         }
-        Node(const Tyoe &value, Node *p = nullptr)
+        Node(const Tyoe &value, Node *p = nullptr) //
         {
         }
     };
