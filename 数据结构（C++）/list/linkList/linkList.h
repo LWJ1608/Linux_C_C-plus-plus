@@ -135,17 +135,20 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
     // count++;
     Node *p, *q;
 
-    if (i < 0 || i > curLength) // 合法的插入位置为[0..n]
-        throw outOfRange();     // 插入位置非法，抛出异常
+    if (i < 0 || i > count) // 合法的插入位置为[0..n]
+                            // {
+        std::cout << "位置错误！" << std::endl;
+    return;
+}
 
-    p = getPosition(i - 1); // p是位序为i的结点的前驱
-    q = new Node(value, p->next);
-    p->next = q;
+p = getIndex(i - 1); // p是位序为i的结点的前驱
+q = new Node(value, p->next);
+p->next = q;
 
-    if (p == tail)
-        tail = q; // 插入点在表尾，插入结点成为新的尾结点
+if (p == tail)
+    tail = q; // 插入点在表尾，插入结点成为新的尾结点
 
-    curLength++;
+count++;
 }
 
 // template <typename Type>
