@@ -107,7 +107,9 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
     p->next = q;
 
     if (p == tail)
+    {
         tail = q; // 插入点在表尾，插入结点成为新的尾结点
+    }
 
     count++;
 }
@@ -169,4 +171,4 @@ Type LinkList<Type>::visit(int i) const // 访问位序为i的元素值，“位
 // void tailCreate();                                // “尾插法”创建单链表
 // void inverse();                                   // 逆置单链表
 // int prior(const elemType &value) const;           // 查找值为value的元素的前驱
-// linkList *Union(linkList<elemType> *lb);          //合并两个表
+// LinkList *Union(linkList<elemType> *lb);          // 合并两个表
