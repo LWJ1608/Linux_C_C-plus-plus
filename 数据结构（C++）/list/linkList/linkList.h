@@ -45,7 +45,7 @@ public:
     // void tailCreate();                                // “尾插法”创建单链表
     // void inverse();                                   // 逆置单链表
     // int prior(const Type &value) const;           // 查找值为value的元素的前驱
-    // linkList *Union(linkList<Type> *lb);          //合并两个表
+    // LinkList *Union(linkList<Type> *lb);          //合并两个表
 };
 template <typename Type>
 LinkList<Type>::LinkList() // 构造函数
