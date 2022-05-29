@@ -7,12 +7,18 @@
 #include <iostream>
 #include <assert.h>
 
+template <typename Type>
 class LinkList
 {
 private:
     struct Node
     {
     public:
+        Tpye data;  //数据域
+        Node *next; //指针域
+        int count;  //记录元素个数
+        Node() { Node = nullptr; }
+        Node(const Tyoe &value, const Node *)
     };
 
 public:
