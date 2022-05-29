@@ -131,7 +131,10 @@ void LinkList<Type>::remove(int i)
     }
     count--;
 }
-// int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
+template <typename Type>
+int LinkList<Type>::search(const elemType &value) const // 查找值为value的元素第一次出现的位序
+{
+}
 // Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
 // void traverse() const;                            // 遍历单链表
 // void headCreate();                                // “头插法”创建单链表
