@@ -51,7 +51,7 @@ template <typename Type>
 LinkList<Type>::LinkList() // 构造函数
 {
     int count = 0;
-    head = tail = nullptr;
+    head = tail = new Node(); //创建有头结点的空表
 }
 // ~linkList();                                      // 析构函数
 // void clear();                                     // 将单链表清空，使之成为空表
