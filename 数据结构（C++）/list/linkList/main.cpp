@@ -12,7 +12,7 @@ void testlinkList()
     LinkList<int> L1;
     LinkList<int> L2;
 
-    cout << "插入测试：" << endl;
+    std::cout << "插入测试：" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         L1.insert(1, 3);
