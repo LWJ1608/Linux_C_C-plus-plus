@@ -138,7 +138,7 @@ void SeqList<Type>::inverse() // 逆置顺序表
 
 //把B表合并到A表，如果A表的元素递增有序排列，插入B表后还保持递增的次序
 template <typename Type>
-bool SeqList<Type>::Union(SeqList<Type> &B) 
+bool SeqList<Type>::Union(SeqList<Type> &B)
 {
     int m, n, k, i, j;
     m = this->count;              // 当前对象为线性表A
@@ -150,6 +150,7 @@ bool SeqList<Type>::Union(SeqList<Type> &B)
         resize();
     }
     while (i >= 0 && j >= 0) // 合并顺序表，直到一个表为空
+    {
         if (data[i] >= B.data[j])
         {
             data[k--] = data[i--];
@@ -158,6 +159,7 @@ bool SeqList<Type>::Union(SeqList<Type> &B)
         {
             data[k--] = B.data[j--]; // 默认当前对象，this指针可省略
         }
+    }
     while (j >= 0) // 将B表的剩余元素复制到A表
     {
         data[k--] = B.data[j--];
