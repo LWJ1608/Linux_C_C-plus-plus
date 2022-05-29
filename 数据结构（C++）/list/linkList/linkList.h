@@ -88,39 +88,64 @@ template <typename Type>
 typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 {
     // i的范围[-1~count],-1是头结点的位置
-    if (i < -1 || i > count - 1)
-    {
-        return nullptr;
-    }
-    Node *tmp = head;
+    // if (i < -1 || i > count - 1)
+    // {
+    //     return nullptr;
+    // }
+    // Node *tmp = head;
+    // int num = 0;
+    // while (num <= i)
+    // {
+    //     tmp = tmp->next;
+    //     num++;
+    // }
+    // return tmp;
+    Node *p = head;
     int num = 0;
+
+    if (i < -1 || i > count - 1) // // getPosition可查找位置为[-1..n-1],若i为-1则定位到头结点,若i为0则定位到首元结点
+        return NULL;             // 当i非法时返回NULL
+
     while (num <= i)
     {
-        tmp = tmp->next;
+        p = p->next;
         num++;
     }
-    return tmp;
+    return p;
 }
 
 template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
-    if (i < 0 || i > count)
-    {
-        std::cout << "位置错误！" << std::endl;
-        return;
-    }
+    // if (i < 0 || i > count)
+    // {
+    //     std::cout << "位置错误！" << std::endl;
+    //     return;
+    // }
 
+    // Node *p, *q;
+    // p = getIndex(i - 1); // p是位序为i的结点的前驱
+    // q = new Node(value, p->next);
+    // p->next = q;
+
+    // if (p == tail)
+    // {
+    //     tail = q; // 插入点在表尾，插入结点成为新的尾结点
+    // }
+    // count++;
     Node *p, *q;
-    p = getIndex(i - 1); // p是位序为i的结点的前驱
+
+    if (i < 0 || i > curLength) // 合法的插入位置为[0..n]
+        throw outOfRange();     // 插入位置非法，抛出异常
+
+    p = getPosition(i - 1); // p是位序为i的结点的前驱
     q = new Node(value, p->next);
     p->next = q;
 
     if (p == tail)
-    {
         tail = q; // 插入点在表尾，插入结点成为新的尾结点
-    }
-    count++;
+
+    curLength++;
 }
 
 // template <typename Type>
