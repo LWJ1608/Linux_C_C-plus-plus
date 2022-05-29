@@ -55,10 +55,10 @@ void testSeqList()
 
     cout << "测试s3表插入s2表：" << endl;
     s2.clear();
-    s2.insert(0, 9);
-    s2.insert(0, 1);
-    s2.insert(0, 4);
-    s2.insert(0, 2);
+    for (int i = 0; i < 10; i++)
+    {
+        s2.insert(i, i+4);
+    }
     s2.Union(s3);
     s2.traverse();
 }
