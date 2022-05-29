@@ -51,10 +51,18 @@ template <typename Type>
 LinkList<Type>::LinkList() // 构造函数
 {
     int count = 0;
-    head = tail = new Node(); //创建有头结点的空表
+    head = tail = new Node(); //创建有头结点的空表，头结点不放数据
 }
-// ~linkList();                                      // 析构函数
-// void clear();                                     // 将单链表清空，使之成为空表
+template <typename Type>
+LinkList<Type>::~LinkList() // 析构函数
+{
+    clear();
+    delete head; // head指向头结点，释放头结点的空间
+}
+template <typename Type>
+void LinkList<Type>::clear() // 将单链表清空，使之成为空表
+{
+}
 // bool empty() const { return head->next == NULL; } // 判空
 // int size() const { return curLength; };           // 返回单链表的当前实际长度
 // void insert(int i, const elemType &value);        // 在位置i上插入一个元素value，表的长度增1
