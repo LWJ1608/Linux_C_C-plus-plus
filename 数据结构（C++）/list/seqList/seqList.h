@@ -150,6 +150,7 @@ bool SeqList<Type>::Union(SeqList<Type> &B)
     {
         resize();
     }
+    //下面的操作就是不排序
     while (i >= 0 && j >= 0) // 合并顺序表，直到一个表为空
     {
         if (data[i] >= B.data[j])
