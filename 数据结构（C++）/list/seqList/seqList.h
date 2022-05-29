@@ -41,7 +41,7 @@ SeqList<Type>::SeqList(int isSize) // 构造函数
 {
     if (isSize < 0)
     {
-        return;
+        std::cout << "容量大小错误！" << std::endl;
     }
     this->maxSize = isSize;
     count = 0;
