@@ -90,7 +90,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
     // i的范围[-1~count],-1是头结点的位置
     if (i < -1 || i > count - 1)
     {
-        return false;
+        return nullptr;
     }
     Node *tmp = head;
     int num = 0;
