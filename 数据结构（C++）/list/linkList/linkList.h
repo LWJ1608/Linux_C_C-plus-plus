@@ -26,8 +26,9 @@ private:
             next = p;
         }
     };
-    Node *head; //头指针，指向表头
-    Node *tail; //尾指针，指向表尾
-    int count;  //记录元素个数
+    Node *head;                     //头指针，指向表头
+    Node *tail;                     //尾指针，指向表尾
+    int count;                      //记录元素个数
+    Node *getPosition(int i) const; // 返回指向单链表中第i个元素的指针,因为只在当前文件使用，所以放在私有中
 public:
 };
