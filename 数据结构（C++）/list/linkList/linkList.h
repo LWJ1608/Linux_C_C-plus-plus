@@ -101,21 +101,22 @@ template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
     assert(i >= 0 && i <= count);
-    p = getPosition(i - 1); // p是位序为i的结点的前驱
+    Node *p, *q;
+    p = getIndex(i - 1); // p是位序为i的结点的前驱
     q = new Node(value, p->next);
     p->next = q;
 
     if (p == tail)
         tail = q; // 插入点在表尾，插入结点成为新的尾结点
 
-    curLength++;
+    count++;
 }
-// void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
-// int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
-// Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
-// void traverse() const;                            // 遍历单链表
-// void headCreate();                                // “头插法”创建单链表
-// void tailCreate();                                // “尾插法”创建单链表
-// void inverse();                                   // 逆置单链表
-// int prior(const elemType &value) const;           // 查找值为value的元素的前驱
-// linkList *Union(linkList<elemType> *lb);          //合并两个表
+void remove(int i); // 删除位置i上的元素value，若删除位置合法，表的长度减1
+                    // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
+                    // Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
+                    // void traverse() const;                            // 遍历单链表
+                    // void headCreate();                                // “头插法”创建单链表
+                    // void tailCreate();                                // “尾插法”创建单链表
+                    // void inverse();                                   // 逆置单链表
+                    // int prior(const elemType &value) const;           // 查找值为value的元素的前驱
+                    // linkList *Union(linkList<elemType> *lb);          //合并两个表
