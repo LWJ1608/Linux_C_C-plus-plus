@@ -16,8 +16,8 @@ void testlinkList()
     cout << "插入测试：" << endl;
     for (int i = 0; i < 4; i++)
     {
-        L1.insert(i, i);
-        L2.insert(i, i);
+        L1.insert(1, 3);
+        L2.insert(1, 3);
     }
 
     // cout << "测试插入操作：" << endl;
