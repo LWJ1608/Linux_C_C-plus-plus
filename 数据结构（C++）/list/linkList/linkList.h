@@ -111,7 +111,8 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
         return;
     }
 
-    Node *p, *q;
+    Node *p = nullptr;
+    Node *q = nullptr;
     p = getIndex(i - 1); // p是位序为i的结点的前驱
     q = new Node(value, p->next);
     p->next = q;
