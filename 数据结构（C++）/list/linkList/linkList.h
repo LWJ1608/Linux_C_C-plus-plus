@@ -75,18 +75,24 @@ void LinkList<Type>::clear() // 将单链表清空，使之成为空表
     count = 0;
 }
 template <typename Type>
-bool LinkList<Type>::isEmpty() const
+bool LinkList<Type>::isEmpty() const // 判空
 {
     return head->next == NULL;
-} // 判空
-  // int size() const { return curLength; };           // 返回单链表的当前实际长度
-  // void insert(int i, const elemType &value);        // 在位置i上插入一个元素value，表的长度增1
-  // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
-  // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
-  // Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
-  // void traverse() const;                            // 遍历单链表
-  // void headCreate();                                // “头插法”创建单链表
-  // void tailCreate();                                // “尾插法”创建单链表
-  // void inverse();                                   // 逆置单链表
-  // int prior(const elemType &value) const;           // 查找值为value的元素的前驱
-  // linkList *Union(linkList<elemType> *lb);          //合并两个表
+}
+template <typename Type>
+
+int LinkList<Type>::size() const // 返回单链表的当前实际长度
+{
+    return curLength;
+}
+
+// void insert(int i, const elemType &value);        // 在位置i上插入一个元素value，表的长度增1
+// void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
+// int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
+// Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
+// void traverse() const;                            // 遍历单链表
+// void headCreate();                                // “头插法”创建单链表
+// void tailCreate();                                // “尾插法”创建单链表
+// void inverse();                                   // 逆置单链表
+// int prior(const elemType &value) const;           // 查找值为value的元素的前驱
+// linkList *Union(linkList<elemType> *lb);          //合并两个表
