@@ -82,7 +82,7 @@ bool LinkList<Type>::isEmpty() const // 判空
 template <typename Type>
 int LinkList<Type>::size() const // 返回单链表的当前实际长度
 {
-    return curLength;
+    return count;
 }
 template <typename Type>
 typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
