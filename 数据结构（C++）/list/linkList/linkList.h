@@ -6,6 +6,7 @@
  **/
 #include <iostream>
 #include <assert.h>
+using namespace std;
 
 template <typename Type>
 class LinkList

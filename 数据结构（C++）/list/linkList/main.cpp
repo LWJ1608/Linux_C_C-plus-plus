@@ -7,7 +7,6 @@
 #include <iostream>
 #include "linkList.h"
 
-using namespace std;
 void testlinkList()
 {
     LinkList<int> L1;
