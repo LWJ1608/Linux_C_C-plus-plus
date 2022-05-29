@@ -77,7 +77,11 @@ void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 template <typename Type>
 void SeqList<Type>::remove(int i) // 删除位置i上的元素value，若删除位置合法，表的长度减1
 {
-    assert(!isEmpty());              //断言
+    if (isEmpty())
+    {
+        std::cout << "为空！" << std::endl;
+        return;
+    }
     assert(i > 0 && i <= count - 1); // i只能在[0~count]
     for (int j = i; j <= count - 1; j--)
     {
