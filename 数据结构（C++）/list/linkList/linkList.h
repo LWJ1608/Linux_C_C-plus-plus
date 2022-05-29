@@ -85,7 +85,7 @@ int LinkList<Type>::size() const // 返回单链表的当前实际长度
     return curLength;
 }
 template <typename Type>
-Node *LinkList<Type>::getline(int i)
+typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 {
     assert(i >= 0 || i < count);
 }
