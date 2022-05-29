@@ -111,12 +111,12 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 
     count++;
 }
-template <class elemType>
+template <typename Type>
 void LinkList<Type>::remove(int i)
 {
-
+    assert(i >= 0 && i <= count);
     Node *pre, *p;
-    pre = getPosition(i - 1);
+    pre = getIndex(i - 1);
     p = pre->next; // p是真正待删结点
     if (p == tail)
     { // 待删结点为尾结点，则修改尾指针
@@ -129,7 +129,7 @@ void LinkList<Type>::remove(int i)
         pre->next = p->next;
         delete p;
     }
-    curLength--;
+    count--;
 }
 // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
 // Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
