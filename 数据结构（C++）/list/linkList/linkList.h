@@ -31,9 +31,9 @@ private:
     int count;                      //记录元素个数
     Node *getPosition(int i) const; // 返回指向单链表中第i个元素的指针,因为只在当前文件使用，所以放在私有中
 public:
-    LinkList();  // 构造函数
-    ~LinkList(); // 析构函数
-    // void clear();                                     // 将单链表清空，使之成为空表
+    LinkList();   // 构造函数
+    ~LinkList();  // 析构函数
+    void clear(); // 将单链表清空，使之成为空表
     // bool isEmpty() const { return head->next == NULL; } // 判空
     // int size() const { return curLength; };           // 返回单链表的当前实际长度
     // void insert(int i, const elemType &value);        // 在位置i上插入一个元素value，表的长度增1
@@ -57,11 +57,13 @@ template <typename Type>
 LinkList<Type>::~LinkList() // 析构函数
 {
     clear();
-    delete head; // head指向头结点，释放头结点的空间
+    delete head; // clear()后还剩下头结点，head指向头结点，释放头结点的空间
 }
 template <typename Type>
 void LinkList<Type>::clear() // 将单链表清空，使之成为空表
 {
+    Node *tmp = head->next; // head->next指向第一个存储数据的结点，
+    while ()
 }
 // bool empty() const { return head->next == NULL; } // 判空
 // int size() const { return curLength; };           // 返回单链表的当前实际长度
