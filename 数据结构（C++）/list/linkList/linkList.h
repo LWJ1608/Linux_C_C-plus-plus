@@ -87,7 +87,7 @@ int LinkList<Type>::size() const // 返回单链表的当前实际长度
 template <typename Type>
 typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 {
-    assert(i >= 0 && i < count);
+    assert(i >= -1 && i < count); // i的范围[-1~count],-1是头结点的位置
     Node *tmp = head;
     int num = 0;
     while (num <= i)
