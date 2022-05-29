@@ -20,9 +20,9 @@ void testlinkList()
         L2.insert(i, i);
     }
 
-    cout << "测试插入操作：" << endl;
-    L1.insert(2, 99);
-    // L1.traverse();
+    // cout << "测试插入操作：" << endl;
+    // L1.insert(2, 99);
+    // // L1.traverse();
 
     // cout << "测试判空和返回单链表大小：" << endl;
     // if (L1.isEmpty())
