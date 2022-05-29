@@ -125,7 +125,10 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 template <typename Type>
 void LinkList<Type>::remove(int i)
 {
-    assert(i >= 0 && i <= count);
+    if (i < 0 || i > curLength - 1)
+    {
+        std::cout << "位置错误！" << std::endl;
+    }
     Node *pre, *p;
     pre = getIndex(i - 1);
     p = pre->next; // p是真正待删结点
