@@ -20,7 +20,7 @@ private:
         {
             next = p;
         }
-        Node(const Type value, Node *p = nullptr) //用储存数据的结点
+        Node(const Type &value, Node *p = nullptr) //用储存数据的结点
         {
             data = value;
             next = p;
