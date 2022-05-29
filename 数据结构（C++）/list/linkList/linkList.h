@@ -85,8 +85,8 @@ int LinkList<Type>::size() const // 返回单链表的当前实际长度
 {
     return curLength;
 }
-template <typename Type>
-void insert(int i, const elemType &value) // 在位置i上插入一个元素value，表的长度增1
+Node *template <typename Type>
+void insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
 }
 // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
