@@ -85,9 +85,9 @@ int LinkList<Type>::size() const // 返回单链表的当前实际长度
     return curLength;
 }
 template <typename Type>
-Node *getline(int i)
+Node *LinkList<Type>::getline(int i)
 {
-    assert(i >= 0 || i <=)
+    assert(i >= 0 || i < count);
 }
 template <typename Type>
 void insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
