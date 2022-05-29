@@ -23,6 +23,8 @@ private:
         }
         Node(const Tyoe &value, Node *p = nullptr) //用储存数据的结点
         {
+            data = value;
+            next = p;
         }
     };
 
