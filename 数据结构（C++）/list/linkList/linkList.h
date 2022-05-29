@@ -37,7 +37,7 @@ public:
     bool isEmpty() const;                  // 判空
     int size() const;                      // 返回单链表的当前实际长度
     void insert(int i, const Type &value); // 在位置i上插入一个元素value，表的长度增1
-    // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
+    void remove(int i);                    // 删除位置i上的元素value，若删除位置合法，表的长度减1
     // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
     // elemType visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
     // void traverse() const;                            // 遍历单链表
@@ -111,12 +111,31 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 
     count++;
 }
-void remove(int i); // 删除位置i上的元素value，若删除位置合法，表的长度减1
-                    // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
-                    // Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
-                    // void traverse() const;                            // 遍历单链表
-                    // void headCreate();                                // “头插法”创建单链表
-                    // void tailCreate();                                // “尾插法”创建单链表
-                    // void inverse();                                   // 逆置单链表
-                    // int prior(const elemType &value) const;           // 查找值为value的元素的前驱
-                    // linkList *Union(linkList<elemType> *lb);          //合并两个表
+template <class elemType>
+void LinkList<Type>::remove(int i)
+{
+
+    Node *pre, *p;
+    pre = getPosition(i - 1);
+    p = pre->next; // p是真正待删结点
+    if (p == tail)
+    { // 待删结点为尾结点，则修改尾指针
+        tail = pre;
+        pre->next = NULL;
+        delete p;
+    }
+    else
+    { // 删除结点p 并修改指针
+        pre->next = p->next;
+        delete p;
+    }
+    curLength--;
+}
+// int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
+// Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
+// void traverse() const;                            // 遍历单链表
+// void headCreate();                                // “头插法”创建单链表
+// void tailCreate();                                // “尾插法”创建单链表
+// void inverse();                                   // 逆置单链表
+// int prior(const elemType &value) const;           // 查找值为value的元素的前驱
+// linkList *Union(linkList<elemType> *lb);          //合并两个表
