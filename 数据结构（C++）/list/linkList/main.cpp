@@ -4,8 +4,8 @@
  * @Description:测试单链表
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/linkList/main.cpp
  **/
-#include<iostream>
-#include"linkList.h"
+#include <iostream>
+#include "linkList.h"
 
 using namespace std;
 void testlinkList()
