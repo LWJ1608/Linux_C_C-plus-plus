@@ -85,8 +85,10 @@ int LinkList<Type>::size() const // 返回单链表的当前实际长度
 {
     return curLength;
 }
-
-// void insert(int i, const elemType &value);        // 在位置i上插入一个元素value，表的长度增1
+template <typename Type>
+void insert(int i, const elemType &value) // 在位置i上插入一个元素value，表的长度增1
+{
+}
 // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
 // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
 // Type visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
