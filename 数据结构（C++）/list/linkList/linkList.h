@@ -16,7 +16,6 @@ private:
     public:
         Tpye data;              //数据域,所要的存储的数据
         Node *next;             //指针域
-        int count;              //记录元素个数
         Node(Node *p = nullptr) //用于创建Node类型的指针
         {
             next = p;
@@ -29,6 +28,6 @@ private:
     };
     Node *head; //头指针，指向表头
     Node *tail; //尾指针，指向表尾
-
+    int count;  //记录元素个数
 public:
 };
