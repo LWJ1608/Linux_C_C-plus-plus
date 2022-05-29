@@ -107,6 +107,7 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 {
     if (i < 0 || i > curLength - 1)
     {
+        std::cout << "位置错误！" << std::endl;
     }
 
     Node *p, *q;
