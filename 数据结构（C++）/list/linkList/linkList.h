@@ -31,16 +31,16 @@ private:
     int count;                   //记录元素个数
     Node *getIndex(int i) const; // 返回指向单链表中第i个元素的指针,因为只在当前文件使用，所以放在私有中
 public:
-    LinkList();                            // 构造函数
-    ~LinkList();                           // 析构函数
-    void clear();                          // 将单链表清空，使之成为空表
-    bool isEmpty() const;                  // 判空
-    int size() const;                      // 返回单链表的当前实际长度
+    LinkList();           // 构造函数
+    ~LinkList();          // 析构函数
+    void clear();         // 将单链表清空，使之成为空表
+    bool isEmpty() const; // 判空
+    // int size() const;                      // 返回单链表的当前实际长度
     void insert(int i, const Type &value); // 在位置i上插入一个元素value，表的长度增1
-    void remove(int i);                    // 删除位置i上的元素value，若删除位置合法，表的长度减1
-    int search(const Type &value) const;   // 查找值为value的元素第一次出现的位序
-    Type visit(int i) const;               // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
-    void traverse() const;                 // 遍历单链表
+    // void remove(int i);                    // 删除位置i上的元素value，若删除位置合法，表的长度减1
+    // int search(const Type &value) const;   // 查找值为value的元素第一次出现的位序
+    // Type visit(int i) const;               // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
+    // void traverse() const;                 // 遍历单链表
     // void headCreate();                                // “头插法”创建单链表
     // void tailCreate();                                // “尾插法”创建单链表
     // void inverse();                                   // 逆置单链表
@@ -79,11 +79,11 @@ bool LinkList<Type>::isEmpty() const // 判空
 {
     return head->next == nullptr;
 }
-template <typename Type>
-int LinkList<Type>::size() const // 返回单链表的当前实际长度
-{
-    return count;
-}
+// template <typename Type>
+// int LinkList<Type>::size() const // 返回单链表的当前实际长度
+// {
+//     return count;
+// }
 template <typename Type>
 typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 {
@@ -105,11 +105,11 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
-    // if (i < 0 || i > count)
-    // {
-    //     std::cout << "位置错误！" << std::endl;
-    //     return;
-    // }
+    if (i < 0 || i > count)
+    {
+        std::cout << "位置错误！" << std::endl;
+        return;
+    }
 
     Node *p, *q;
     p = getIndex(i - 1); // p是位序为i的结点的前驱
@@ -123,76 +123,76 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
     count++;
 }
 
-template <typename Type>
-void LinkList<Type>::remove(int i)
-{
-    if (i < 0 || i > count - 1)
-    {
-        std::cout << "位置错误！" << std::endl;
-    }
-    Node *pre, *p;
-    pre = getIndex(i - 1);
-    p = pre->next; // p是真正待删结点
-    if (p == tail)
-    { // 待删结点为尾结点，则修改尾指针
-        tail = pre;
-        pre->next = nullptr;
-        delete p;
-    }
-    else
-    { // 删除结点p 并修改指针
-        pre->next = p->next;
-        delete p;
-    }
-    count--;
-}
-template <typename Type>
-int LinkList<Type>::search(const Type &value) const // 查找值为value的元素第一次出现的位序
-{
-    Node *p = head->next;
-    int num = 0; // 首元结点的位序为0
-    while (p != nullptr && p->data != value)
-    {
-        p = p->next;
-        num++;
-    }
-    if (p == nullptr)
-    {
-        return -1; // 查找失败返回-1，这里-1并非头节点
-    }
-    else
-    {
-        return num;
-    }
-}
-template <typename Type>
-Type LinkList<Type>::visit(int i) const // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
-{
-    if (i < 0 || i > count - 1)
-    {
-        std::cout << "位置错误！" << std::endl;
-    }
-    Node *p = head->next;
-    int num = 0; // 首元结点位序为0
-    while (num < i)
-    {
-        p = p->next;
-        num++;
-    }
-    return p->data;
-}
-template <typename Type>
-void LinkList<Type>::traverse() const // 遍历单链表
-{
-    Node *p = head->next;
-    std::cout << "traverse:";
-    while (p != NULL)
-    {
-        std::cout << p->data << "  ";
-        p = p->next;
-    }
-    std::cout << std::endl;
-}
+// template <typename Type>
+// void LinkList<Type>::remove(int i)
+// {
+//     if (i < 0 || i > count - 1)
+//     {
+//         std::cout << "位置错误！" << std::endl;
+//     }
+//     Node *pre, *p;
+//     pre = getIndex(i - 1);
+//     p = pre->next; // p是真正待删结点
+//     if (p == tail)
+//     { // 待删结点为尾结点，则修改尾指针
+//         tail = pre;
+//         pre->next = nullptr;
+//         delete p;
+//     }
+//     else
+//     { // 删除结点p 并修改指针
+//         pre->next = p->next;
+//         delete p;
+//     }
+//     count--;
+// }
+// template <typename Type>
+// int LinkList<Type>::search(const Type &value) const // 查找值为value的元素第一次出现的位序
+// {
+//     Node *p = head->next;
+//     int num = 0; // 首元结点的位序为0
+//     while (p != nullptr && p->data != value)
+//     {
+//         p = p->next;
+//         num++;
+//     }
+//     if (p == nullptr)
+//     {
+//         return -1; // 查找失败返回-1，这里-1并非头节点
+//     }
+//     else
+//     {
+//         return num;
+//     }
+// }
+// template <typename Type>
+// Type LinkList<Type>::visit(int i) const // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
+// {
+//     if (i < 0 || i > count - 1)
+//     {
+//         std::cout << "位置错误！" << std::endl;
+//     }
+//     Node *p = head->next;
+//     int num = 0; // 首元结点位序为0
+//     while (num < i)
+//     {
+//         p = p->next;
+//         num++;
+//     }
+//     return p->data;
+// }
+// template <typename Type>
+// void LinkList<Type>::traverse() const // 遍历单链表
+// {
+//     Node *p = head->next;
+//     std::cout << "traverse:";
+//     while (p != NULL)
+//     {
+//         std::cout << p->data << "  ";
+//         p = p->next;
+//     }
+//     std::cout << std::endl;
+// }
 // void headCreate();                                // “头插法”创建单链表
 // void tailCreate();                                // “尾插法”创建单链表
 // void inverse();                                   // 逆置单链表
