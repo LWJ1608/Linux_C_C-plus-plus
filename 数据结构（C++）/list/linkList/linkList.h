@@ -153,6 +153,15 @@ int LinkList<Type>::search(const Type &value) const // 查找值为value的元�
 template <typename Type>
 Type LinkList<Type>::visit(int i) const // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
 {
+    Node *p = head->next;
+    int num = 0; // 首元结点位序为0
+
+    while (num < i)
+    {
+        p = p->next;
+        num++;
+    }
+    return p->data;
 }
 // void traverse() const;                            // 遍历单链表
 // void headCreate();                                // “头插法”创建单链表
