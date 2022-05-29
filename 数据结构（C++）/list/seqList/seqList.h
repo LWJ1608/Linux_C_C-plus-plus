@@ -127,10 +127,6 @@ void SeqList<Type>::resize() // 扩容
 template <typename Type>
 void SeqList<Type>::inverse() // 逆置顺序表
 {
-    if (isEmpty())
-    {
-        return;
-    }
     Type tmp;
     for (int i = 0; i < count / 2; i++)
     {
