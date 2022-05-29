@@ -61,7 +61,7 @@ template <typename Type>
 void SeqList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
     assert(!isFull());           //断言.满了不能放
-    assert(i > 0 || i <= count); // i只能在[0~count]
+    assert(i > 0 && i <= count); // i只能在[0~count]
     //在i处插入数据，i及其后面的元素向后移动一位
     for (int j = count; j > i; j--)
     {
@@ -74,7 +74,7 @@ template <typename Type>
 void SeqList<Type>::remove(int i) // 删除位置i上的元素value，若删除位置合法，表的长度减1
 {
     assert(!isEmpty());              //断言
-    assert(i > 0 || i <= count - 1); // i只能在[0~count]
+    assert(i > 0 && i <= count - 1); // i只能在[0~count]
     for (int j = i; j <= count - 1; j--)
     {
         data[j] = data[j + 1]; //直接用后面一个数据覆盖所要删除的数据
@@ -93,7 +93,7 @@ template <typename Type>
 Type SeqList<Type>::visit(int i) const // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
 {
     assert(!isEmpty());              //断言
-    assert(i > 0 || i <= count - 1); // i只能在[0~count-1]
+    assert(i > 0 && i <= count - 1); // i只能在[0~count-1]
     return data[i];
 }
 template <typename Type>
