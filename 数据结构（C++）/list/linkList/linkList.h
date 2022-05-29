@@ -97,6 +97,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
     }
     return tmp;
 }
+
 template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
@@ -113,6 +114,7 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 
     count++;
 }
+
 template <typename Type>
 void LinkList<Type>::remove(int i)
 {
