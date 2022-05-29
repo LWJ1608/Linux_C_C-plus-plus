@@ -62,7 +62,7 @@ LinkList<Type>::~LinkList() // 析构函数
 template <typename Type>
 void LinkList<Type>::clear() // 将单链表清空，使之成为空表
 {
-    Node *p = head->next; // head->next指向第一个存储数据的结点，
+    Node *p = head->next; // head->next指向首元结点结点，
     Node *tmp = nullptr;
     while (p)
     {
