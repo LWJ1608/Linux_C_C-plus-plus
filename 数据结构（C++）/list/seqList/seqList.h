@@ -143,7 +143,7 @@ bool SeqList<Type>::Union(SeqList<Type> &B) //合并两个表
     n = B.count;                  // m，n分别为线性表A和B的长度
     k = m + n - 1;                // k为结果线性表的工作指针（下标）
     i = m - 1, j = n - 1;         // i，j分别为线性表A和B的工作指针（下标）
-    while (m + n > this->maxSize) // 空间不够，扩大表空间
+    while (m + n > this->maxSize) // 空间不够，扩大表空间到够为止
     {
         resize();
     }
