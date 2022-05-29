@@ -39,8 +39,9 @@ public:
 template <typename Type>
 SeqList<Type>::SeqList(int isSize) // 构造函数
 {
-    if (isSize < 0 && isSize > maxSize)
+    if (isSize < 0)
     {
+        return;
     }
     this->maxSize = isSize;
     count = 0;
