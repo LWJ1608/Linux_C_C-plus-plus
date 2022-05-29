@@ -31,12 +31,12 @@ private:
     int count;                   //记录元素个数
     Node *getIndex(int i) const; // 返回指向单链表中第i个元素的指针,因为只在当前文件使用，所以放在私有中
 public:
-    LinkList();           // 构造函数
-    ~LinkList();          // 析构函数
-    void clear();         // 将单链表清空，使之成为空表
-    bool isEmpty() const; // 判空
-    int size() const;     // 返回单链表的当前实际长度
-    // void insert(int i, const elemType &value);        // 在位置i上插入一个元素value，表的长度增1
+    LinkList();                            // 构造函数
+    ~LinkList();                           // 析构函数
+    void clear();                          // 将单链表清空，使之成为空表
+    bool isEmpty() const;                  // 判空
+    int size() const;                      // 返回单链表的当前实际长度
+    void insert(int i, const Type &value); // 在位置i上插入一个元素value，表的长度增1
     // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
     // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
     // elemType visit(int i) const;                      // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
@@ -98,9 +98,12 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
     return tmp;
 }
 template <typename Type>
-void insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
+void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
     assert(i >= 0 || i <= count);
+    Node *p = getIndex(i);
+    Node *tmp = getIndex(i);
+    tmp = new Node(value, )
 }
 // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
 // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
