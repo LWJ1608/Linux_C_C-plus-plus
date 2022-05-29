@@ -14,13 +14,13 @@ private:
     struct Node
     {
     public:
-        Tpye data;              //数据域,所要的存储的数据
+        Type data;              //数据域,所要的存储的数据
         Node *next;             //指针域
         Node(Node *p = nullptr) //主要用于创建Node类型的指针
         {
             next = p;
         }
-        Node(const Tyoe &value, Node *p = nullptr) //用储存数据的结点
+        Node(const Type &value, Node *p = nullptr) //用储存数据的结点
         {
             data = value;
             next = p;
