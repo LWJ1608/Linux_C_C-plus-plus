@@ -137,7 +137,7 @@ void SeqList<Type>::inverse() // 逆置顺序表
     }
 }
 
-//把B表合并到A表，如果A表的元素递增有序排列，插入B表后A表还保持递增的次序
+//把B表合并到A表，如果A表和B表的元素递增有序排列，插入B表后A表还保持递增的次序
 template <typename Type>
 bool SeqList<Type>::Union(SeqList<Type> &B)
 {
