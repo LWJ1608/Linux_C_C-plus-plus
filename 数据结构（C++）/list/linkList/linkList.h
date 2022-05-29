@@ -88,6 +88,13 @@ template <typename Type>
 typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 {
     assert(i >= 0 || i < count);
+    Node *tmp = head;
+    int num = 0;
+    while (num <= i)
+    {
+        tmp = tmp->next;
+        num++;
+    }
 }
 template <typename Type>
 void insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
