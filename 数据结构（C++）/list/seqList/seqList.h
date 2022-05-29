@@ -153,9 +153,9 @@ bool SeqList<Type>::Union(SeqList<Type> &B)
     //下面的操作就是排序
     while (i >= 0 && j >= 0) // 合并顺序表，直到一个表为空
     {
-        if (data[i] >= B.data[j])
+        if (data[i] >= B.data[j]) //如果A的元素大于B的元素时
         {
-            data[k--] = data[i--];
+            data[k--] = data[i--]; //相当于A表的元素不动
         }
         else
         {
