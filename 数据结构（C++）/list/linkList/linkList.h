@@ -17,8 +17,13 @@ private:
         Tpye data;  //数据域
         Node *next; //指针域
         int count;  //记录元素个数
-        Node() { Node = nullptr; }
-        Node(const Tyoe &value, const Node *)
+        Node(Node *p = nullptr)
+        {
+            next = p;
+        }
+        Node(const Tyoe &value, Node *p = nullptr)
+        {
+        }
     };
 
 public:
