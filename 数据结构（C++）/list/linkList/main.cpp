@@ -6,13 +6,14 @@
  **/
 #include <iostream>
 #include "linkList.h"
+using namespace std;
 
 void testlinkList()
 {
     LinkList<int> L1;
     LinkList<int> L2;
 
-    std::cout << "插入测试：" << std::endl;
+    cout << "插入测试：" << endl;
     for (int i = 0; i < 4; i++)
     {
         L1.insert(1, 3);
