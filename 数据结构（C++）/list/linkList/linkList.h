@@ -16,7 +16,7 @@ private:
     public:
         Tpye data;              //数据域,所要的存储的数据
         Node *next;             //指针域
-        Node(Node *p = nullptr) //用于创建Node类型的指针
+        Node(Node *p = nullptr) //主要用于创建Node类型的指针
         {
             next = p;
         }
