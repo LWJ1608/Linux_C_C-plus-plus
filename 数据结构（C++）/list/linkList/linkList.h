@@ -101,9 +101,10 @@ template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
     assert(i >= 0 || i <= count);
-    Node *p = getIndex(i);
-    Node *tmp = getIndex(i);
-    tmp = new Node(value, )
+    Node *p = getIndex(i);       // p记录原来i位置
+    Node *tmp = getIndex(i - 1); //指向i-1位置的结点
+    tmp = new Node(value, p);
+    tmp->next =
 }
 // void remove(int i);                               // 删除位置i上的元素value，若删除位置合法，表的长度减1
 // int search(const elemType &value) const;          // 查找值为value的元素第一次出现的位序
