@@ -80,12 +80,16 @@ bool LinkList<Type>::isEmpty() const // 判空
     return head->next == NULL;
 }
 template <typename Type>
-
 int LinkList<Type>::size() const // 返回单链表的当前实际长度
 {
     return curLength;
 }
-Node *template <typename Type>
+template <typename Type>
+Node *getline(int i)
+{
+    assert(i >= 0 || i <=)
+}
+template <typename Type>
 void insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
 }
