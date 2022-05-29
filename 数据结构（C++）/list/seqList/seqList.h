@@ -135,8 +135,10 @@ void SeqList<Type>::inverse() // 逆置顺序表
         data[count - i - 1] = tmp;
     }
 }
+
+//把B表合并到A表，如果A表的元素递增有序排列，插入B表后还保持递增的次序
 template <typename Type>
-bool SeqList<Type>::Union(SeqList<Type> &B) //把B表合并到A表，如果A表
+bool SeqList<Type>::Union(SeqList<Type> &B) 
 {
     int m, n, k, i, j;
     m = this->count;              // 当前对象为线性表A
