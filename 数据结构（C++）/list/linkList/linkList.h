@@ -105,7 +105,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
-    if (i < 0 || i > curLength - 1)
+    if (i < 0 || i > count - 1)
     {
         std::cout << "位置错误！" << std::endl;
     }
@@ -125,7 +125,7 @@ void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一�
 template <typename Type>
 void LinkList<Type>::remove(int i)
 {
-    if (i < 0 || i > curLength - 1)
+    if (i < 0 || i > count - 1)
     {
         std::cout << "位置错误！" << std::endl;
     }
@@ -167,10 +167,12 @@ int LinkList<Type>::search(const Type &value) const // 查找值为value的元�
 template <typename Type>
 Type LinkList<Type>::visit(int i) const // 访问位序为i的元素值，“位序”0表示第一个元素，类似于数组下标
 {
+    if (i < 0 || i > count - 1)
+    {
+        std::cout << "位置错误！" << std::endl;
+    }
     Node *p = head->next;
     int num = 0; // 首元结点位序为0
-    assert(i >= 0 && i < count);
-
     while (num < i)
     {
         p = p->next;
