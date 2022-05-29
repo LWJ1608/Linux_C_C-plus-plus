@@ -4,3 +4,16 @@
  * @Description:实现单链表
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/linkList/linkList.h
  **/
+#include <iostream>
+#include <assert.h>
+
+class LinkList
+{
+private:
+    struct Node
+    {
+    public:
+    };
+
+public:
+};
