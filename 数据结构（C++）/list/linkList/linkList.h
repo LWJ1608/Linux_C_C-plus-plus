@@ -100,7 +100,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const
 template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) // 在位置i上插入一个元素value，表的长度增1
 {
-    assert(i >= 0 || i <= count);
+    assert(i >= 0 && i <= count);
     Node *p = getIndex(i);          // p指向原来i位置的 结点
     Node *tmp = getIndex(i - 1);    //指向i-1位置的结点
     tmp->next = new Node(value, p); // tmp->next原来i位置结点的上一个结点的next
