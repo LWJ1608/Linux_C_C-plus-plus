@@ -155,6 +155,7 @@ Type LinkList<Type>::visit(int i) const // 访问位序为i的元素值，“位
 {
     Node *p = head->next;
     int num = 0; // 首元结点位序为0
+    assert(i >= 0 && i < count);
 
     while (num < i)
     {
