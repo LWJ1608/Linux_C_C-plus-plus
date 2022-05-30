@@ -253,7 +253,7 @@ template <typename Type>
 LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb)
 {
     Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
-    LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
+    LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来,this是当前对象的
     pa = head->next;
     head->next = nullptr; // la表头结点的指针域置为nullptr，构成空链表
     pb = (lb->head)->next;
