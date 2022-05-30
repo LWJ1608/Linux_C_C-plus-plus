@@ -104,7 +104,9 @@ template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入value
 {
     if (i < 0 || i > this->count)
-        throw outOfRange();
+    {
+        std::cout << "outOfRange" << std::endl;
+    }
     Node *p = this->getPosition(i - 1);
     Node *q = new Node(value, p->next);
     p->next = q;
@@ -121,7 +123,9 @@ void LinkList<Type>::remove(int i) //删除第i个元素
 {
     Node *pre, *p;
     if (i < 0 || i > this->count - 1)
-        throw outOfRange();
+    {
+        std::cout << "outOfRange" << std::endl;
+    }
     pre = this->getPosition(i - 1);
     p = pre->next;
     if (p == tail)
@@ -180,7 +184,8 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
     Node *p = head->next;
     int num = 0;
     if (i < 0 || i > this->count - 1)
-        throw outOfRange();
+    {
+    }
     while (i > num)
     {
         p = p->next;
