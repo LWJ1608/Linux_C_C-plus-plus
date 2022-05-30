@@ -53,7 +53,7 @@ public:
 template <typename Type>
 LinkList<Type>::LinkList() //构造函数
 {
-    head = tail = new Node();
+    head = tail = new Node(); //创建一个空表
     this->count = 0;
 }
 
@@ -100,10 +100,10 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const //返回指
 template <typename Type>
 void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入value
 {
-    if (i < 0 || i > this->count)
+    if (i < 0 || i > this->count) //能插入的位置i的范围[0~cout]
     {
         std::cout << "outOfRange!" << std::endl;
-        // return;
+        return;
     }
     Node *p = this->getIndex(i - 1);
     Node *q = new Node(value, p->next);
