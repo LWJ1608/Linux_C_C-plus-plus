@@ -229,12 +229,12 @@ void LinkList<Type>::push_back() //尾插法
         count++;
     }
 }
-//逆置表思路，先用头指针和头结点构建一个空表，然后把其它结点反着插入空表
+//逆置单链表思路，先用头指针和头结点构建一个空表，然后把其它结点反着插入空表，参考一下头插法
 template <typename Type>
 void LinkList<Type>::inverse() // 逆置线性表
 {
     Node *p, *tmp;
-    p = head->next;       // p记录旧首元结点位置
+    p = head->next;       // 工作指针p记录旧首元结点位置
     head->next = nullptr; //让头结点指向空，构成
     if (p)                //如果
     {
