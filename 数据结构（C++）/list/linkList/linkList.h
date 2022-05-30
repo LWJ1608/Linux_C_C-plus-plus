@@ -249,9 +249,9 @@ void LinkList<Type>::inverse() // 逆置线性表
         p = tmp;
     }
 }
-
+//两个单链表合并，如果两个表递增都是递增排序好的，合并后的表还是保证递增排序
 // template <typename Type>
-// LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb) //两个单链表融合
+// LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb)
 // {
 //     Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
 //     LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
