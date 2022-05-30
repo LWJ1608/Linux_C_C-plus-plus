@@ -18,7 +18,7 @@ private:
     public:
         Type data;                                //数据域
         Node *next;                               //指针域
-        Node(const Tpye value, Node *p = nullptr) //结构体Node的两个参数的构造函数
+        Node(const Type value, Node *p = nullptr) //结构体Node的两个参数的构造函数
         {
             this->data = value;
             this->next = p;
