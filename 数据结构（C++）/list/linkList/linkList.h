@@ -47,7 +47,7 @@ public:
     void push_front();                                   // “头插法”创建单链表
     void push_back();                                    // “尾插法”创建单链表
     void inverse();                                      // 逆置线性表
-    // LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
+    LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
 };
 
 template <typename Type>
@@ -238,7 +238,7 @@ void LinkList<Type>::inverse() // 逆置线性表
     head->next = nullptr; //让头结点指向空，构成
     if (p)                //如果
     {
-        tail = p;
+        tail = p; //让首元结点变成尾结点
     }
     while (p)
     {
@@ -248,44 +248,44 @@ void LinkList<Type>::inverse() // 逆置线性表
         p = tmp;
     }
 }
-//两个单链表合并，如果两个表递增都是递增排序好的，合并后的表还是保证递增排序
-// template <typename Type>
-// LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb)
-// {
-//     Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
-//     LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
-//     pa = head->next;
-//     head->next = nullptr; // la表头结点的指针域置为nullptr，构成空链表
-//     pb = (lb->head)->next;
-//     (lb->head)->next = nullptr; // lb表头结点的指针域置为nullptr，构成空链表
-//     pc = lc->head;
+// 两个单链表合并，如果两个表递增都是递增排序好的，合并后的表还是保证递增排序
+template <typename Type>
+LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb)
+{
+    Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
+    LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
+    pa = head->next;
+    head->next = nullptr; // la表头结点的指针域置为nullptr，构成空链表
+    pb = (lb->head)->next;
+    (lb->head)->next = nullptr; // lb表头结点的指针域置为nullptr，构成空链表
+    pc = lc->head;
 
-//     while (pb && pa)
-//     {
-//         if (pa->data <= pb->data)
-//         {
-//             pc->next = pa;
-//             pc = pa;
-//             pa = pa->next;
-//         }
-//         else
-//         {
-//             pc->next = pb;
-//             pc = pb;
-//             pb = pb->next;
-//         }
-//     }
-//     if (pa)
-//     {
-//         pc->next = pa;
-//         lc->tail = tail;
-//     }
-//     else
-//     {
-//         pc->next = pb;
-//         lc->tail = lb->tail;
-//     }
-//     lc->count = count + lb->count;
-//     delete lb;
-//     return lc;
-// }
+    while (pb && pa)
+    {
+        if (pa->data <= pb->data)
+        {
+            pc->next = pa;
+            pc = pa;
+            pa = pa->next;
+        }
+        else
+        {
+            pc->next = pb;
+            pc = pb;
+            pb = pb->next;
+        }
+    }
+    if (pa)
+    {
+        pc->next = pa;
+        lc->tail = tail;
+    }
+    else
+    {
+        pc->next = pb;
+        lc->tail = lb->tail;
+    }
+    lc->count = count + lb->count;
+    delete lb;
+    return lc;
+}
