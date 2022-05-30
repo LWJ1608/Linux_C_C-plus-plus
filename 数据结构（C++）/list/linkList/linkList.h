@@ -45,7 +45,7 @@ public:
     void traverse() const;                               //遍历
     Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
     void headCreate();                                   // “头插法”创建单链表
-    // void tailCreate();                                   // “尾插法”创建单链表
+    void tailCreate();                                   // “尾插法”创建单链表
     // void inverse();                                      // 逆置线性表
     // LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
 };
@@ -206,7 +206,7 @@ void LinkList<Type>::headCreate() // “头插法”创建单链表,从首元结
         // }
         p = new Node(value, head->next);
         head->next = p;
-        if (head == tail)
+        if (head == tail) //成立说明表为空，此时头指针和尾指针现在都指向头结点，
         {
             tail = p;
         }
@@ -214,21 +214,21 @@ void LinkList<Type>::headCreate() // “头插法”创建单链表,从首元结
     }
 }
 
-// template <typename Type>
-// void LinkList<Type>::tailCreate() //尾插法
-// {
-//     Node *p;
-//     int value, flag;
-//     cin >> flag;
+template <typename Type>
+void LinkList<Type>::tailCreate() //尾插法
+{
+    Node *p;
+    int value, flag;
+    cin >> flag;
 
-//     while (cin >> value, flag != value)
-//     {
-//         p = new Node(value, nullptr);
-//         tail->next = p;
-//         tail = p;
-//         count++;
-//     }
-// }
+    while (cin >> value, flag != value)
+    {
+        p = new Node(value, nullptr);
+        tail->next = p;
+        tail = p;
+        count++;
+    }
+}
 
 // template <typename Type>
 // void LinkList<Type>::inverse() // 逆置线性表
