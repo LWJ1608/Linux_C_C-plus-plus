@@ -238,11 +238,11 @@ void LinkList<Type>::inverse() // 逆置线性表
     head->next = nullptr; //让头结点的next指向空，构成空表
     if (p)                //如果p为空，说明表为空
     {
-        tail = p; //让首元结点变成尾结点
+        tail = p;
     }
-    while (p)
+    while (p) //不为空表时
     {
-        tmp = p->next;
+        tmp = p->next; //
         p->next = head->next;
         head->next = p;
         p = tmp;
