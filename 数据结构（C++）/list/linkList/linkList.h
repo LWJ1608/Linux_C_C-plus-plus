@@ -6,8 +6,6 @@
  **/
 #pragma once
 #include <iostream>
-#include <assert.h>
-
 template <typename Type>
 class LinkList
 {
