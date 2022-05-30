@@ -15,11 +15,11 @@
 //     public:
 //         Type data;              //数据域,所要的存储的数据
 //         Node *next;             //指针域
-//         Node(Node *p = nullptr) //主要用于创建Node类型的指针
+//         Node(Node *p = nullptrptr) //主要用于创建Node类型的指针
 //         {
 //             next = p;
 //         }
-//         Node(const Type &value, Node *p = nullptr) //用储存数据的结点
+//         Node(const Type &value, Node *p = nullptrptr) //用储存数据的结点
 //         {
 //             data = value;
 //             next = p;
@@ -62,21 +62,21 @@
 // void LinkList<Type>::clear() // 将单链表清空，使之成为空表
 // {
 //     Node *p = head->next; // head->next指向首元结点结点，
-//     Node *tmp = nullptr;
+//     Node *tmp = nullptrptr;
 //     while (p)
 //     {
 //         tmp = p;
 //         p = p->next;
 //         delete tmp;
 //     }
-//     head->next = nullptr; //头结点指向空指针
+//     head->next = nullptrptr; //头结点指向空指针
 //     head = tail;
 //     count = 0;
 // }
 // template <typename Type>
 // bool LinkList<Type>::isEmpty() const // 判空
 // {
-//     return head->next == nullptr;
+//     return head->next == nullptrptr;
 // }
 // // template <typename Type>
 // // int LinkList<Type>::size() const // 返回单链表的当前实际长度
@@ -89,7 +89,7 @@
 //     //i的范围[-1 ~count], -1是头结点的位置
 //     if (i < -1 || i > count - 1)
 //     {
-//         return nullptr;
+//         return nullptrptr;
 //     }
 //     Node *tmp = head;
 //     int num = 0;
@@ -135,7 +135,7 @@
 //     if (p == tail)
 //     { // 待删结点为尾结点，则修改尾指针
 //         tail = pre;
-//         pre->next = nullptr;
+//         pre->next = nullptrptr;
 //         delete p;
 //     }
 //     else
@@ -150,12 +150,12 @@
 // {
 //     Node *p = head->next;
 //     int num = 0; // 首元结点的位序为0
-//     while (p != nullptr && p->data != value)
+//     while (p != nullptrptr && p->data != value)
 //     {
 //         p = p->next;
 //         num++;
 //     }
-//     if (p == nullptr)
+//     if (p == nullptrptr)
 //     {
 //         return -1; // 查找失败返回-1，这里-1并非头节点
 //     }
@@ -185,7 +185,7 @@
 // {
 //     Node *p = head->next;
 //     std::cout << "traverse:";
-//     while (p != nullptr)
+//     while (p != nullptrptr)
 //     {
 //         std::cout << p->data << "  ";
 //         p = p->next;
@@ -207,14 +207,14 @@ private:
     struct Node
     {
     public:
-        Type data;                          //数据域
-        Node *next;                         //指针域
-        Node(const T value, Node *p = NULL) //结构体Node的两个参数的构造函数
+        Type data;                             //数据域
+        Node *next;                            //指针域
+        Node(const T value, Node *p = nullptr) //结构体Node的两个参数的构造函数
         {
             this->data = value;
             this->next = p;
         }
-        Node(Node *p = NULL) //一个参数的构造函数
+        Node(Node *p = nullptr) //一个参数的构造函数
         {
             this->next = p;
         }
@@ -225,20 +225,20 @@ private:
     Node *getPosition(int i) const; //返回指向第i个元素的指针
 
 public:
-    LinkList();                                       //构造函数
-    ~LinkList();                                      //析构函数
-    bool empty() const { return head->next == NULL; } //判空
-    void clear();                                     //清空单链表
-    int size() const { return curLength; }            //返回单链表的大小
-    void insert(int i, const T &value);               //在第i个位置插入value
-    void remove(int i);                               //删除第i个元素
-    int search(const T &value) const;                 //查找value第一次出现的下标
-    void traverse() const;                            //遍历单链表
-    T visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
-    void headCreate();                                // “头插法”创建单链表
-    void tailCreate();                                // “尾插法”创建单链表
-    void inverse();                                   // 逆置线性表
-    LinkList *Union(LinkList<Type> *lb);              //两个单链表合并
+    LinkList();                                          //构造函数
+    ~LinkList();                                         //析构函数
+    bool empty() const { return head->next == nullptr; } //判空
+    void clear();                                        //清空单链表
+    int size() const { return curLength; }               //返回单链表的大小
+    void insert(int i, const T &value);                  //在第i个位置插入value
+    void remove(int i);                                  //删除第i个元素
+    int search(const T &value) const;                    //查找value第一次出现的下标
+    void traverse() const;                               //遍历单链表
+    Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
+    void headCreate();                                   // “头插法”创建单链表
+    void tailCreate();                                   // “尾插法”创建单链表
+    void inverse();                                      // 逆置线性表
+    LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
 };
 
 template <typename Type>
@@ -263,13 +263,13 @@ void LinkList<Type>::clear() //清空单链表
 {
     Node *p, *temp;
     p = head->next;
-    while (p != NULL)
+    while (p != nullptr)
     {
         temp = p;
         p = p->next;
         delete temp;
     }
-    head->next = NULL;
+    head->next = nullptr;
     tail = head;
     curLength = 0;
 }
@@ -281,7 +281,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getPosition(int i) const //返回
 {
     Node *p = head;
     if (i < -1 || i > this->curLength - 1)
-        return NULL;
+        return nullptr;
 
     int count = 0;
     while (count <= i)
@@ -294,7 +294,7 @@ typename LinkList<Type>::Node *LinkList<Type>::getPosition(int i) const //返回
 
 template <typename Type>
 
-void LinkList<Type>::insert(int i, const T &value) //在第i个位置插入value
+void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入value
 {
     if (i < 0 || i > this->curLength)
         throw outOfRange();
@@ -320,7 +320,7 @@ void LinkList<Type>::remove(int i) //删除第i个元素
     if (p == tail)
     {
         tail = pre;
-        pre->next = NULL;
+        pre->next = nullptr;
         delete p;
     }
     else
@@ -333,16 +333,16 @@ void LinkList<Type>::remove(int i) //删除第i个元素
 
 template <typename Type>
 
-int LinkList<Type>::search(const T &value) const //查找value第一次出现的下标
+int LinkList<Type>::search(const Type &value) const //查找value第一次出现的下标
 {
     Node *p = head->next;
     int count = -1;
-    while (p != NULL && p->data != value)
+    while (p != nullptr && p->data != value)
     {
         p = p->next;
         count++;
     }
-    if (p->next == NULL)
+    if (p->next == nullptr)
     {
         return -1;
     }
@@ -358,7 +358,7 @@ void LinkList<Type>::traverse() const //遍历单链表
 {
     Node *p = head->next;
     cout << "traverse：" << endl;
-    while (p != NULL)
+    while (p != nullptr)
     {
         cout << p->data << " ";
         p = p->next;
@@ -368,7 +368,7 @@ void LinkList<Type>::traverse() const //遍历单链表
 
 template <typename Type>
 
-T LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
+Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
 {
     Node *p = head->next;
     int count = 0;
@@ -410,7 +410,7 @@ void LinkList<Type>::tailCreate() //尾插法
 
     while (cin >> value, flag != value)
     {
-        p = new Node(value, NULL);
+        p = new Node(value, nullptr);
         tail->next = p;
         tail = p;
         curLength++;
@@ -423,7 +423,7 @@ void LinkList<Type>::inverse() // 逆置线性表
 {
     Node *p, *temp;
     p = head->next;
-    head->next = NULL;
+    head->next = nullptr;
     tail = head->next;
     if (p)
         tail = p;
@@ -444,9 +444,9 @@ LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb) //两个单链表融�
     Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
     LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
     pa = head->next;
-    head->next = NULL; // la表头结点的指针域置为NULL，构成空链表
+    head->next = nullptr; // la表头结点的指针域置为nullptr，构成空链表
     pb = (lb->head)->next;
-    (lb->head)->next = NULL; // lb表头结点的指针域置为NULL，构成空链表
+    (lb->head)->next = nullptr; // lb表头结点的指针域置为nullptr，构成空链表
     pc = lc->head;
 
     while (pb && pa)
