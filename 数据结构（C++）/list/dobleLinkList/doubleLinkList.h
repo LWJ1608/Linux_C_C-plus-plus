@@ -82,7 +82,11 @@ typename doubleLinkList<Type>::Node *doubleLinkList<Type>::getIndex(int i) const
     Node *p = head;
     int m = 0;
     if (i < -1 || i > this->count)
-        throw outOfRange();
+    {
+        std::cout << "outOfRange!" << std::endl;
+        return nullptr;
+    }
+
     while (m <= i)
     {
         p = p->next;
@@ -91,26 +95,32 @@ typename doubleLinkList<Type>::Node *doubleLinkList<Type>::getIndex(int i) const
     return p;
 }
 
-template<class Type>
-void doubleLinkList<Type>::insert(int i,const T& value) //在第i个位位置插入元素value
+template <class Type>
+void doubleLinkList<Type>::insert(int i, const T &value) //在第i个位位置插入元素value
 {
-	Node* p = this->getIndex(i-1);
+    Node *p = this->getIndex(i - 1);
 
-	if (i<0 || i>this->count)
-		throw outOfRange();
-	Node* q=new Node(p,value,p->next);
-	p->next = q;
-	p->next->prior = q;
-	++count;
+    if (i < 0 || i > this->count)
+    {
+        std::cout << "outOfRange!" << std::endl;
+        return;
+    }
 
+    Node *q = new Node(p, value, p->next);
+    p->next = q;
+    p->next->prior = q;
+    ++count;
 }
 
 template <typename Type>
 void doubleLinkList<Type>::insert(int i, const T &value)
 {
     Node *p, *tmp;
-    if (i < 0 || i > count)             // 合法的插入位置为[0..n]
-        throw outOfRange();             // 插入位置非法，抛出异常
+    if (i < 0 || i > count) // 合法的插入位置为[0..n]
+    {
+        std::cout << "outOfRange!" << std::endl;
+        return;
+    }
     p = getIndex(i);                    // 若i==n则定位到tail指向的尾结点
     tmp = new Node(p->prior, value, p); // tmp插入到p之前
     p->prior->next = tmp;
@@ -123,7 +133,11 @@ void doubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]
 {
     Node *p;
     if (i < 0 || i > count - 1)
-        throw outOfRange();
+    {
+        std::cout << "outOfRange!" << std::endl;
+        return;
+    }
+
     p = getIndex(i);
     p->prior->next = p->next;
     p->next->prior = p->prior;
@@ -165,7 +179,11 @@ template <typename Type>
 T doubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
 {
     if (i < 0 || i > this->count - 1)
-        throw outOfRange();
+    {
+        std::cout << "outOfRange!" << std::endl;
+        return;
+    }
+
     Node *p = this->getIndex(i);
     return p->data;
 }
