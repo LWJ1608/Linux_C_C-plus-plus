@@ -198,10 +198,9 @@
 // int prior(const elemType &value) const;           // 查找值为value的元素的前驱
 // LinkList *Union(linkList<elemType> *lb);          // 合并两个表
 #pragma once
-#include "list.h"
 #include <stack>
 template <class T>
-class linkList : public List<T> //单链表
+class linkList //单链表
 {
 private:
     struct Node
@@ -465,4 +464,4 @@ linkList<T> *linkList<T>::Union(linkList<T> *lb) //两个单链表融合
     delete lb;
     return lc;
 }
-//#endif;
+
