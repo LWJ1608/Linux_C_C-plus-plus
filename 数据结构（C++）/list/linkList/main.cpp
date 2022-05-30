@@ -45,9 +45,9 @@ void testlinkList()
     // // cout << "头插法测试：" << endl;
     // // L1.headCreate();
     // // L1.traverse();
-    // cout << "测试逆置操作：" << endl;
-    // L1.inverse();
-    // L1.traverse();
+    cout << "测试逆置操作：" << endl;
+    L1.inverse();
+    L1.traverse();
 
     // cout << "测试两个单链表合并操作：" << endl;
     // L1.Union(&L2);
