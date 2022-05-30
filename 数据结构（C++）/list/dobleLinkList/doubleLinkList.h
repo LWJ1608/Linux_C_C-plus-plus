@@ -5,7 +5,7 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/dobleLinkList/doubleLinkList.h
  **/
 #pragma once
-template <class T>
+template <typename Type>
 class doubleLinkList
 {
 private:
@@ -25,13 +25,13 @@ private:
         ~Node() {}
     };
     Node *head, *tail;
-    int curLength;
-    Node *getPosition(int i) const; //返回第i元素的前驱
+    int count;
+    Node *getIndex(int i) const; //返回第i元素的前驱
 public:
     doubleLinkList();                                 //构造函数
     ~doubleLinkList();                                //析构函数
     bool empty() const { return head->next == tail; } //判空
-    T size() const { return curLength; }              //返回
+    T size() const { return count; }                  //返回
     void clear();                                     //清空
     void insert(int i, const T &value);               //在第i个位置插入元素value
     int search(const T &value) const;                 //在线性表中，查找值为value的元素第一次出现的位序
@@ -41,18 +41,18 @@ public:
     virtual void inverse();                           // 逆置线性表
 };
 
-template <class T>
-doubleLinkList<T>::doubleLinkList() //构造函数
+template <typename Type>
+doubleLinkList<Type>::doubleLinkList() //构造函数
 {
     head = new Node;
     tail = new Node;
     head->next = tail;
     tail->prior = head;
-    curLength = 0;
+    count = 0;
 }
 
-template <class T>
-void doubleLinkList<T>::clear() //清空
+template <typename Type>
+void doubleLinkList<Type>::clear() //清空
 {
     Node *p = head->next;
     Node *tmp;
@@ -65,23 +65,23 @@ void doubleLinkList<T>::clear() //清空
         p = tmp;
     }
 
-    curLength = 0;
+    count = 0;
 }
 
-template <class T>
-doubleLinkList<T>::~doubleLinkList() //析构函数
+template <typename Type>
+doubleLinkList<Type>::~doubleLinkList() //析构函数
 {
     clear();
     delete head;
     delete tail;
 }
 
-template <class T>
-typename doubleLinkList<T>::Node *doubleLinkList<T>::getPosition(int i) const //返回指向第i个元素的指针
+template <typename Type>
+typename doubleLinkList<Type>::Node *doubleLinkList<Type>::getIndex(int i) const //返回指向第i个元素的指针
 {
     Node *p = head;
     int m = 0;
-    if (i < -1 || i > this->curLength)
+    if (i < -1 || i > this->count)
         throw outOfRange();
     while (m <= i)
     {
@@ -91,48 +91,48 @@ typename doubleLinkList<T>::Node *doubleLinkList<T>::getPosition(int i) const //
     return p;
 }
 
-// template<class T>
-// void doubleLinkList<T>::insert(int i,const T& value) //在第i个位位置插入元素value
-//{
-//	Node* p = this->getPosition(i-1);
-//
-//	if (i<0 || i>this->curLength)
-//		throw outOfRange();
-//	Node* q=new Node(p,value,p->next);
-//	p->next = q;
-//	p->next->prior = q;
-//	++curLength;
-//
-// }
+template<class Type>
+void doubleLinkList<Type>::insert(int i,const T& value) //在第i个位位置插入元素value
+{
+	Node* p = this->getIndex(i-1);
 
-template <class T>
-void doubleLinkList<T>::insert(int i, const T &value)
+	if (i<0 || i>this->count)
+		throw outOfRange();
+	Node* q=new Node(p,value,p->next);
+	p->next = q;
+	p->next->prior = q;
+	++count;
+
+}
+
+template <typename Type>
+void doubleLinkList<Type>::insert(int i, const T &value)
 {
     Node *p, *tmp;
-    if (i < 0 || i > curLength)         // 合法的插入位置为[0..n]
+    if (i < 0 || i > count)             // 合法的插入位置为[0..n]
         throw outOfRange();             // 插入位置非法，抛出异常
-    p = getPosition(i);                 // 若i==n则定位到tail指向的尾结点
+    p = getIndex(i);                    // 若i==n则定位到tail指向的尾结点
     tmp = new Node(p->prior, value, p); // tmp插入到p之前
     p->prior->next = tmp;
     p->prior = tmp;
-    ++curLength;
+    ++count;
 }
 
-template <class T>
-void doubleLinkList<T>::remove(int i) // 在线性表中，位序为i[0..n-1]的位置删除元素
+template <typename Type>
+void doubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]的位置删除元素
 {
     Node *p;
-    if (i < 0 || i > curLength - 1)
+    if (i < 0 || i > count - 1)
         throw outOfRange();
-    p = getPosition(i);
+    p = getIndex(i);
     p->prior->next = p->next;
     p->next->prior = p->prior;
     delete p;
-    --curLength;
+    --count;
 }
 
-template <class T>
-void doubleLinkList<T>::traverse() const //遍历双链表
+template <typename Type>
+void doubleLinkList<Type>::traverse() const //遍历双链表
 {
     Node *p;
     p = head->next;
@@ -145,12 +145,12 @@ void doubleLinkList<T>::traverse() const //遍历双链表
     }
     cout << endl;
 }
-template <class T>
-int doubleLinkList<T>::search(const T &value) const //在线性表中，查找值为value的元素第一次出现的位序
+template <typename Type>
+int doubleLinkList<Type>::search(const T &value) const //在线性表中，查找值为value的元素第一次出现的位序
 {
     Node *p = head->next;
     int count = 0;
-    while (count <= curLength - 1 && p != tail)
+    while (count <= count - 1 && p != tail)
     {
         if (value == p->data)
         {
@@ -161,17 +161,17 @@ int doubleLinkList<T>::search(const T &value) const //在线性表中，查找�
     }
 }
 
-template <class T>
-T doubleLinkList<T>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
+template <typename Type>
+T doubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
 {
-    if (i < 0 || i > this->curLength - 1)
+    if (i < 0 || i > this->count - 1)
         throw outOfRange();
-    Node *p = this->getPosition(i);
+    Node *p = this->getIndex(i);
     return p->data;
 }
 
-template <class T>
-void doubleLinkList<T>::inverse() // 逆置线性表
+template <typename Type>
+void doubleLinkList<Type>::inverse() // 逆置线性表
 {
     Node *p = head->next;
     Node *tmp;
