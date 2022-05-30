@@ -4,3 +4,43 @@
  * @Description:测试双链表功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/dobleLinkList/main.cpp
  **/
+
+#include <iostream>
+#include "dobleLinkList.h"
+
+void doubleLinkList_test()
+{
+    doubleLinkList<int> d1;
+
+    for (int i = 0; i < 4; i++)
+    {
+        d1.insert(i, i);
+    }
+    cout << "判空和返回大小测试：" << endl;
+    if (d1.empty())
+    {
+        cout << "双链表为空！" << endl;
+    }
+    else
+    {
+        cout << d1.size() << endl;
+    }
+    d1.traverse();
+
+    cout << "删除函数r emove()的测试：" << endl;
+    d1.remove(1);
+    d1.traverse();
+
+    cout << "search()函数的测试：" << endl;
+
+    cout << "元素3第一次出现的位序为：" << d1.search(3) << endl;
+
+    cout << "测试逆置功能：" << endl;
+    d1.inverse();
+    d1.traverse();
+}
+int main()
+{
+    doubleLinkList_test();//双链表测试
+    return 0;
+}
