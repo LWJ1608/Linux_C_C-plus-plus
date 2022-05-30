@@ -234,10 +234,10 @@ template <typename Type>
 void LinkList<Type>::inverse() // 逆置线性表
 {
     Node *p, *tmp;
-    p = head->next;       // p记录首元结点位置
-    head->next = nullptr; //让头结点不在指向
+    p = head->next;       // p记录旧首元结点位置
+    head->next = nullptr; //让头结点不在指向旧的首元结点
     tail = head->next;    //尾指针指向新的尾结点，这个尾结点由原来的首元结点变来的
-    if (p)
+    if (p)                //如果
     {
         tail = p;
     }
