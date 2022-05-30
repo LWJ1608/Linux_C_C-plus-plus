@@ -40,7 +40,7 @@ void testlinkList()
 
     cout << "测试查找位序为2的元素的值：" << endl;
     // L1.clear();
-    cout << L1.visit(2) << endl;
+    cout << L1.visit(6) << endl;
 
     // // cout << "头插法测试：" << endl;
     // // L1.headCreate();
