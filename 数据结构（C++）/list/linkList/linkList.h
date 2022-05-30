@@ -243,7 +243,7 @@ void LinkList<Type>::inverse() // 逆置线性表
     }
     while (p)
     {
-        tep = p->next;
+        tmp = p->next;
         p->next = head->next;
         head->next = p;
         p = tmp;
