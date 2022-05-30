@@ -11,6 +11,7 @@ template <typename Type>
 class LinkList //单链表
 {
 private:
+    //这里我用结构体来做结点，也可以在LinkList类外在创建一个类实现，类实现的话用到友元类，
     struct Node
     {
     public:
