@@ -12,10 +12,10 @@ private:
     struct Node
     {
     public:
-        T data;
+        Type data;
         Node *next;
         Node *prior;
-        Node(Node *p, const T &value, Node *n)
+        Node(Node *p, const Type &value, Node *n)
         {
             this->data = value;
             this->next = n;
@@ -31,12 +31,12 @@ public:
     doubleLinkList();                                 //构造函数
     ~doubleLinkList();                                //析构函数
     bool empty() const { return head->next == tail; } //判空
-    T size() const { return count; }                  //返回
+    Type size() const { return count; }               //返回
     void clear();                                     //清空
     void insert(int i, const T &value);               //在第i个位置插入元素value
     int search(const T &value) const;                 //在线性表中，查找值为value的元素第一次出现的位序
     void traverse() const;                            //遍历双链表
-    T visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
+    Type visit(int i) const;                          // 在线性表中，查找位序为i的元素并返回其值
     void remove(int i);                               //在线性表中，位序为i[0..n-1]的位置删除元素
     virtual void inverse();                           // 逆置线性表
 };
@@ -96,7 +96,7 @@ typename doubleLinkList<Type>::Node *doubleLinkList<Type>::getIndex(int i) const
 }
 
 template <class Type>
-void doubleLinkList<Type>::insert(int i, const T &value) //在第i个位位置插入元素value
+void doubleLinkList<Type>::insert(int i, const Type &value) //在第i个位位置插入元素value
 {
     Node *p = this->getIndex(i - 1);
 
@@ -113,7 +113,7 @@ void doubleLinkList<Type>::insert(int i, const T &value) //在第i个位位置�
 }
 
 template <typename Type>
-void doubleLinkList<Type>::insert(int i, const T &value)
+void doubleLinkList<Type>::insert(int i, const Type &value)
 {
     Node *p, *tmp;
     if (i < 0 || i > count) // 合法的插入位置为[0..n]
@@ -160,7 +160,7 @@ void doubleLinkList<Type>::traverse() const //遍历双链表
     cout << endl;
 }
 template <typename Type>
-int doubleLinkList<Type>::search(const T &value) const //在线性表中，查找值为value的元素第一次出现的位序
+int doubleLinkList<Type>::search(const Type &value) const //在线性表中，查找值为value的元素第一次出现的位序
 {
     Node *p = head->next;
     int count = 0;
@@ -176,12 +176,12 @@ int doubleLinkList<Type>::search(const T &value) const //在线性表中，查�
 }
 
 template <typename Type>
-T doubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
+Type doubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
 {
     if (i < 0 || i > this->count - 1)
     {
         std::cout << "outOfRange!" << std::endl;
-        return;
+        return -1; //找不到
     }
 
     Node *p = this->getIndex(i);
