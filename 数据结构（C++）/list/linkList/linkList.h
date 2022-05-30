@@ -6,6 +6,7 @@
  **/
 #pragma once
 #include <iostream>
+#include <assert.h>
 
 template <typename Type>
 class LinkList //单链表
@@ -180,7 +181,7 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
     if (i < 0 || i > this->count - 1)
     {
         std::cout << "outOfRange!" << std::endl;
-        return;
+        assert();
     }
     while (i > num)
     {
