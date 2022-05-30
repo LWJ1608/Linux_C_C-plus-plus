@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             // "program": "${workspaceFolder}/数据结构（C++）/list/linkList/main",
-            "program": "${workspaceFolder}/数据结构（C++）/list/doubleLinkList/main",
+            "program": "${workspaceFolder}/数据结构（C++）/list/dobleLinkList/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
