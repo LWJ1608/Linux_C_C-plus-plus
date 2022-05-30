@@ -112,21 +112,21 @@ void DoubleLinkList<Type>::insert(int i, const Type &value) //在第i个位位�
     ++count;
 }
 
-template <typename Type>
-void DoubleLinkList<Type>::insert(int i, const Type &value)
-{
-    Node *p, *tmp;
-    if (i < 0 || i > count) // 合法的插入位置为[0..n]
-    {
-        std::cout << "outOfRange!" << std::endl;
-        return;
-    }
-    p = getIndex(i);                    // 若i==n则定位到tail指向的尾结点
-    tmp = new Node(p->prior, value, p); // tmp插入到p之前
-    p->prior->next = tmp;
-    p->prior = tmp;
-    ++count;
-}
+// template <typename Type>
+// void DoubleLinkList<Type>::insert(int i, const Type &value)
+// {
+//     Node *p, *tmp;
+//     if (i < 0 || i > count) // 合法的插入位置为[0..n]
+//     {
+//         std::cout << "outOfRange!" << std::endl;
+//         return;
+//     }
+//     p = getIndex(i);                    // 若i==n则定位到tail指向的尾结点
+//     tmp = new Node(p->prior, value, p); // tmp插入到p之前
+//     p->prior->next = tmp;
+//     p->prior = tmp;
+//     ++count;
+// }
 
 template <typename Type>
 void DoubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]的位置删除元素
@@ -154,7 +154,7 @@ void DoubleLinkList<Type>::traverse() const //遍历双链表
 
     while (p != tail)
     {
-        cout << p->data << " ";
+        std::cout << p->data << " ";
         p = p->next;
     }
     std::cout << std::endl;
