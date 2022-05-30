@@ -35,7 +35,6 @@ private:
     int curLength;                  // 单链表的当前长度
     Node *getPosition(int i) const; // 返回指向单链表中第i个元素的指针
 
-
 public:
     linkList();                                       // 构造函数
     ~linkList();                                      // 析构函数
@@ -116,7 +115,9 @@ void linkList<elemType>::insert(int i, const elemType &value)
     Node *p, *q;
 
     if (i < 0 || i > curLength) // 合法的插入位置为[0..n]
-        throw outOfRange();     // 插入位置非法，抛出异常
+    {
+        throw outOfRange(); // 插入位置非法，抛出异常
+    }
 
     p = getPosition(i - 1); // p是位序为i的结点的前驱
     q = new Node(value, p->next);
@@ -304,6 +305,5 @@ linkList<elemType> *linkList<elemType>::Union(linkList<elemType> *lb)
     delete lb;
     return lc;
 }
-
 
 #endif
