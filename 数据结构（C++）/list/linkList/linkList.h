@@ -67,13 +67,13 @@ LinkList<Type>::~LinkList() //析构函数
 template <typename Type>
 void LinkList<Type>::clear() //清空单链表
 {
-    Node *p, *temp;
+    Node *p, *tmp;
     p = head->next;
     while (p != nullptr)
     {
-        temp = p;
+        tmp = p;
         p = p->next;
-        delete temp;
+        delete tmp;
     }
     head->next = nullptr;
     tail = head;
@@ -227,7 +227,7 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
 // template <typename Type>
 // void LinkList<Type>::inverse() // 逆置线性表
 // {
-//     Node *p, *temp;
+//     Node *p, *tmp;
 //     p = head->next;
 //     head->next = nullptr;
 //     tail = head->next;
@@ -239,7 +239,7 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
 //         temp = p->next;
 //         p->next = head->next;
 //         head->next = p;
-//         p = temp;
+//         p = tmp;
 //     }
 // }
 
