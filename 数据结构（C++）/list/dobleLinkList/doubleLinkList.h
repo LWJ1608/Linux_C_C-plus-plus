@@ -150,14 +150,14 @@ void doubleLinkList<Type>::traverse() const //遍历双链表
 {
     Node *p;
     p = head->next;
-    cout << "遍历双链表：";
+    std::cout << "遍历双链表：";
 
     while (p != tail)
     {
         cout << p->data << " ";
         p = p->next;
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 template <typename Type>
 int doubleLinkList<Type>::search(const Type &value) const //在线性表中，查找值为value的元素第一次出现的位序
