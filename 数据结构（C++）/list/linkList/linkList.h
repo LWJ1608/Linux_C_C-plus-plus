@@ -248,6 +248,7 @@ void LinkList<Type>::inverse() // 逆置线性表
         p = tmp;              //工作指针p重新指向其它未插入结点的开始位置
     }
 }
+
 // 两个单链表合并，如果两个表递增都是递增排序好的，合并后的表还是保证递增排序
 //合并思想是尾插法
 template <typename Type>
