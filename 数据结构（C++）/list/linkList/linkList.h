@@ -105,8 +105,8 @@ void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入va
         std::cout << "outOfRange!" << std::endl;
         return;
     }
-    Node *p = this->getIndex(i - 1);
-    Node *q = new Node(value, p->next);
+    Node *p = this->getIndex(i - 1);    //指向原来i的指针
+    Node *q = new Node(value, p->next); //
     p->next = q;
     if (p == tail)
     {
