@@ -46,7 +46,7 @@ public:
     Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
     void push_front();                                   // “头插法”创建单链表
     void push_back();                                    // “尾插法”创建单链表
-    // void inverse();                                      // 逆置线性表
+    void inverse();                                      // 逆置线性表
     // LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
 };
 
@@ -234,14 +234,15 @@ template <typename Type>
 void LinkList<Type>::inverse() // 逆置线性表
 {
     Node *p, *tmp;
-    p = head->next;
-    head->next = nullptr;
-    tail = head->next;
+    p = head->next;       // p记录首元结点位置
+    head->next = nullptr; //让头结点不在指向
+    tail = head->next;    //尾指针指向新的尾结点，这个尾结点由原来的首元结点变来的
     if (p)
+    {
         tail = p;
+    }
     while (p)
     {
-
         temp = p->next;
         p->next = head->next;
         head->next = p;
