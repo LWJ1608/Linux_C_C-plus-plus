@@ -252,7 +252,7 @@ void LinkList<Type>::inverse() // 逆置线性表
 // 两个单链表合并，如果两个表递增都是递增排序好的，合并后的表还是保证递增排序
 //合并思想是尾插法
 template <typename Type>
-typename LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb)
+LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb)
 {
     Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
     LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来,this是const 指针，它指向当前对象，通过它可以访问当前对象的所有成员
