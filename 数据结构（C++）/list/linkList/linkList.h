@@ -244,8 +244,8 @@ void LinkList<Type>::inverse() // 逆置线性表
     {
         tmp = p->next;        // 指向旧首元结点的后继（下一个）
         p->next = head->next; // p->next指向头结点的next指向的位置
-        head->next = p;       // 然后头结点的next
-        p = tmp;
+        head->next = p;       // 然后头结点的next指向刚插入的结点
+        p = tmp;              //工作指针p重新指向其它未插入结点的开始位置
     }
 }
 // 两个单链表合并，如果两个表递增都是递增排序好的，合并后的表还是保证递增排序
