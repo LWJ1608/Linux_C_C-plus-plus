@@ -16,9 +16,9 @@ private:
     struct Node
     {
     public:
-        Type data;                             //数据域
-        Node *next;                            //指针域
-        Node(const T value, Node *p = nullptr) //结构体Node的两个参数的构造函数
+        Type data;                                //数据域
+        Node *next;                               //指针域
+        Node(const Tpye value, Node *p = nullptr) //结构体Node的两个参数的构造函数
         {
             this->data = value;
             this->next = p;
@@ -43,7 +43,7 @@ public:
     void remove(int i);                                  //删除第i个元素
     int search(const Type &value) const;                 //查找value第一次出现的下标
     void traverse() const;                               //遍历
-    // Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
+    Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
     // void headCreate();                                   // “头插法”创建单链表
     // void tailCreate();                                   // “尾插法”创建单链表
     // void inverse();                                      // 逆置线性表
@@ -280,4 +280,4 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
 //     lc->count = count + lb->count;
 //     delete lb;
 //     return lc;
-}
+// }
