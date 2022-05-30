@@ -242,9 +242,9 @@ void LinkList<Type>::inverse() // 逆置线性表
     }
     while (p) //不为空表时
     {
-        tmp = p->next;        //指向旧首元结点的后继（下一个）
-        p->next = head->next; // p->next指向头结点的next的
-        head->next = p;       //
+        tmp = p->next;        // 指向旧首元结点的后继（下一个）
+        p->next = head->next; // p->next指向头结点的next指向的位置
+        head->next = p;       // 然后头结点的next
         p = tmp;
     }
 }
