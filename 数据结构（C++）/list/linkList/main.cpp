@@ -38,9 +38,9 @@ void testlinkList()
     // L1.remove(2);
     // L1.traverse();
 
-    cout << "测试查找位序为2的元素的值：" << endl;
-    L1.clear();
-    cout << L1.visit(2) << endl;
+    // cout << "测试查找位序为2的元素的值：" << endl;
+    // L1.clear();
+    // cout << L1.visit(2) << endl;
 
     // // cout << "头插法测试：" << endl;
     // // L1.headCreate();
@@ -49,10 +49,10 @@ void testlinkList()
     // L1.inverse();
     // L1.traverse();
 
-    // cout << "测试两个单链表合并操作：" << endl;
-    // L1.Union(&L2);
-    // L1.traverse();
-    // L2.traverse();
+    cout << "测试两个单链表合并操作：" << endl;
+    L1.Union(&L2);
+    L1.traverse();
+    L2.traverse();
 }
 
 int main()
