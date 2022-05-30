@@ -43,11 +43,11 @@ public:
     void remove(int i);                                  //删除第i个元素
     int search(const Type &value) const;                 //查找value第一次出现的下标
     void traverse() const;                               //遍历
-    Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
-    void headCreate();                                   // “头插法”创建单链表
-    void tailCreate();                                   // “尾插法”创建单链表
-    void inverse();                                      // 逆置线性表
-    LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
+    // Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
+    // void headCreate();                                   // “头插法”创建单链表
+    // void tailCreate();                                   // “尾插法”创建单链表
+    // void inverse();                                      // 逆置线性表
+    // LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
 };
 
 template <typename Type>
