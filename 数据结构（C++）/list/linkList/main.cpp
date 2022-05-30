@@ -51,7 +51,7 @@ void testlinkList()
 
     cout << "测试两个单链表合并操作：" << endl;
     L1.Union(&L2);
-    L1.traverse();
+    // L1.traverse();
     L2.traverse();
 }
 
