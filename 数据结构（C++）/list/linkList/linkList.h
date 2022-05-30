@@ -124,7 +124,8 @@ void LinkList<Type>::remove(int i) //删除第i个元素
     Node *pre, *p;
     if (i < 0 || i > this->count - 1)
     {
-        std::cout << "outOfRange" << std::endl;
+        std::cout << "outOfRange!" << std::endl;
+        return 0;
     }
     pre = this->getPosition(i - 1);
     p = pre->next;
