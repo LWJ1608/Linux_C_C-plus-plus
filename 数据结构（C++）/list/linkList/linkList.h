@@ -105,9 +105,9 @@ void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入va
         std::cout << "outOfRange!" << std::endl;
         return;
     }
-    Node *p = this->getIndex(i - 1);    // p指向原来i结点的指针
+    Node *p = this->getIndex(i - 1);    // p指向原来i结点的元素
     Node *q = new Node(value, p->next); // q指向新插入的元素
-    p->next = q;
+    p->next = q;                        // p->next指向新插入的元素
     if (p == tail)
     {
         tail = q;
@@ -119,14 +119,14 @@ template <typename Type>
 void LinkList<Type>::remove(int i) //删除第i个元素
 {
     Node *pre, *p;
-    if (i < 0 || i > this->count - 1)
+    if (i < 0 || i > this->count - 1) //只有在[0~count-1]范围内有data
     {
         std::cout << "outOfRange!" << std::endl;
         return;
     }
-    pre = this->getIndex(i - 1);
+    pre = this->getIndex(i - 1); //返回指向的结点的指针
     p = pre->next;
-    if (p == tail)
+    if (p == tail) //当删除的是尾结点时，让倒数第二个结点成为尾结点，尾指针指向它
     {
         tail = pre;
         pre->next = nullptr;
@@ -180,6 +180,8 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
     int num = 0;
     if (i < 0 || i > this->count - 1)
     {
+        std::cout << "outOfRange!" << std::endl;
+        return;
     }
     while (i > num)
     {
