@@ -49,7 +49,6 @@ public:
 };
 
 template <typename Type>
-
 LinkList<Type>::LinkList() //构造函数
 {
     head = tail = new Node();
@@ -57,7 +56,6 @@ LinkList<Type>::LinkList() //构造函数
 }
 
 template <typename Type>
-
 LinkList<Type>::~LinkList() //析构函数
 {
     clear();
@@ -65,7 +63,6 @@ LinkList<Type>::~LinkList() //析构函数
 }
 
 template <typename Type>
-
 void LinkList<Type>::clear() //清空单链表
 {
     Node *p, *temp;
@@ -83,7 +80,6 @@ void LinkList<Type>::clear() //清空单链表
 //
 //
 template <typename Type>
-
 typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const //返回指向第i个元素的指针
 {
     Node *p = head;
@@ -100,7 +96,6 @@ typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const //返回指
 }
 
 template <typename Type>
-
 void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入value
 {
     if (i < 0 || i > this->count)
