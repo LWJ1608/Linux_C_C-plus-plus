@@ -35,10 +35,6 @@ private:
     int curLength;                  // 单链表的当前长度
     Node *getPosition(int i) const; // 返回指向单链表中第i个元素的指针
 
-    void traverseRecursive(Node *p);
-    void traverseNonRecursive1();
-    void traverseNonRecursive2();
-    void traverseNonRecursive3();
 
 public:
     linkList();                                       // 构造函数
@@ -309,74 +305,5 @@ linkList<elemType> *linkList<elemType>::Union(linkList<elemType> *lb)
     return lc;
 }
 
-template <class elemType>
-void linkList<elemType>::outPut()
-{
-    cout << "递归:";
-    traverseRecursive(head->next);
-    cout << endl;
-    cout << "非递归1:";
-    traverseNonRecursive1();
-    cout << endl;
-    cout << "非递归2:";
-    traverseNonRecursive2();
-    cout << endl;
-    cout << "非递归3:";
-    traverseNonRecursive3();
-    cout << endl;
-}
-template <class elemType>
-void linkList<elemType>::traverseRecursive(Node *p)
-{
-    if (p)
-    {
-        cout << p->data << "  ";    // 输出结点的值
-        traverseRecursive(p->next); // 尾递归调用
-    }
-}
-//顺序输出单链表结点数据的非递归算法一：
-template <class elemType>
-void linkList<elemType>::traverseNonRecursive1()
-{
-    Node *p = head->next;
-Lb1: // 在第一个可执行语句前设标号
-    if (p)
-    {
-        cout << p->data << "  "; // 输出结点的值
-        p = p->next;
-        goto Lb1; // 转到第一个可执行语句
-    }
-}
-//顺序输出单链表结点数据的非递归算法二：
-template <class elemType>
-void linkList<elemType>::traverseNonRecursive2()
-{
-    Node *tmp = head->next;
-    while (tmp != NULL)
-    {
-        cout << tmp->data << "  "; // 输出结点的值
-        tmp = tmp->next;           // 向里一层修改变量值
-    }
-    cout << endl;
-}
-//顺序输出单链表结点数据的非递归算法三：
-template <class elemType>
-void linkList<elemType>::traverseNonRecursive3()
-{
-    stack<Node *> S;
-    Node *tmp = head->next;
-    while (tmp != NULL)
-    {
-        S.push(tmp);
-        tmp = tmp->next;
-    }
-    while (!S.empty())
-    {
-        tmp = S.top();
-        S.pop();
-        cout << tmp->data << "  ";
-    }
-    cout << endl;
-}
 
 #endif
