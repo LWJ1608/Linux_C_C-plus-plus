@@ -82,7 +82,14 @@ typename doubleLinkList<T>::Node *doubleLinkList<T>::getPosition(int i) const //
     Node *p = head;
     int m = 0;
     if (i < -1 || i > this->curLength)
-        throw outOfRange();
+    {
+        if (i < 0 || i > this->count - 1) //只有在[0~count-1]范围内有data
+        {
+            std::cout << "outOfRange!" << std::endl;
+            return;
+        }
+    }
+
     while (m <= i)
     {
         p = p->next;
