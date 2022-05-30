@@ -229,7 +229,7 @@ void LinkList<Type>::push_back() //尾插法
         count++;
     }
 }
-
+//逆置表思路，先用头指针和头结点构建一个空表，然后把其它结点反着插入空表
 template <typename Type>
 void LinkList<Type>::inverse() // 逆置线性表
 {
