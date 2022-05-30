@@ -116,7 +116,7 @@ void linkList<elemType>::insert(int i, const elemType &value)
 
     if (i < 0 || i > curLength) // 合法的插入位置为[0..n]
     {
-        throw outOfRange(); // 插入位置非法，抛出异常
+        // throw outOfRange(); // 插入位置非法，抛出异常
     }
 
     p = getPosition(i - 1); // p是位序为i的结点的前驱
