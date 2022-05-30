@@ -27,17 +27,17 @@ void DoubleLinkList_test()
     }
     d1.traverse();
 
-    cout << "删除函数r emove()的测试：" << endl;
+    cout << "删除函数remove()的测试：" << endl;
     d1.remove(1);
     d1.traverse();
 
-    cout << "search()函数的测试：" << endl;
+    // cout << "search()函数的测试：" << endl;
 
-    cout << "元素3第一次出现的位序为：" << d1.search(3) << endl;
+    // cout << "元素3第一次出现的位序为：" << d1.search(3) << endl;
 
-    cout << "测试逆置功能：" << endl;
-    d1.inverse();
-    d1.traverse();
+    // cout << "测试逆置功能：" << endl;
+    // d1.inverse();
+    // d1.traverse();
 }
 int main()
 {
