@@ -2,7 +2,7 @@
  * @Author: lwj
  * @Date: 2022-05-29 16:04:26
  * @Description:实现单链表
- * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/linkList/linkList.h
+ * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/LinkList/LinkList.h
  **/
 // #pragma once
 // #include <iostream>
@@ -44,7 +44,7 @@
 //     // void tailCreate();                                // “尾插法”创建单链表
 //     // void inverse();                                   // 逆置单链表
 //     // int prior(const Type &value) const;           // 查找值为value的元素的前驱
-//     // LinkList *Union(linkList<Type> *lb);          //合并两个表
+//     // LinkList *Union(LinkList<Type> *lb);          //合并两个表
 // };
 // template <typename Type>
 // LinkList<Type>::LinkList() // 构造函数
@@ -196,17 +196,18 @@
 // void tailCreate();                                // “尾插法”创建单链表
 // void inverse();                                   // 逆置单链表
 // int prior(const elemType &value) const;           // 查找值为value的元素的前驱
-// LinkList *Union(linkList<elemType> *lb);          // 合并两个表
+// LinkList *Union(LinkList<elemType> *lb);          // 合并两个表
 #pragma once
 #include <stack>
-template <class T>
-class linkList //单链表
+template <typename Type>
+
+class LinkList //单链表
 {
 private:
     struct Node
     {
     public:
-        T data;                             //数据域
+        Type data;                          //数据域
         Node *next;                         //指针域
         Node(const T value, Node *p = NULL) //结构体Node的两个参数的构造函数
         {
@@ -224,8 +225,8 @@ private:
     Node *getPosition(int i) const; //返回指向第i个元素的指针
 
 public:
-    linkList();                                       //构造函数
-    ~linkList();                                      //析构函数
+    LinkList();                                       //构造函数
+    ~LinkList();                                      //析构函数
     bool empty() const { return head->next == NULL; } //判空
     void clear();                                     //清空单链表
     int size() const { return curLength; }            //返回单链表的大小
@@ -237,25 +238,28 @@ public:
     void headCreate();                                // “头插法”创建单链表
     void tailCreate();                                // “尾插法”创建单链表
     void inverse();                                   // 逆置线性表
-    linkList *Union(linkList<T> *lb);                 //两个单链表合并
+    LinkList *Union(LinkList<Type> *lb);              //两个单链表合并
 };
 
-template <class T>
-linkList<T>::linkList() //构造函数
+template <typename Type>
+
+LinkList<Type>::LinkList() //构造函数
 {
     head = tail = new Node();
     this->curLength = 0;
 }
 
-template <class T>
-linkList<T>::~linkList() //析构函数
+template <typename Type>
+
+LinkList<Type>::~LinkList() //析构函数
 {
     clear();
     delete head;
 }
 
-template <class T>
-void linkList<T>::clear() //清空单链表
+template <typename Type>
+
+void LinkList<Type>::clear() //清空单链表
 {
     Node *p, *temp;
     p = head->next;
@@ -271,8 +275,9 @@ void linkList<T>::clear() //清空单链表
 }
 //
 //
-template <class T>
-typename linkList<T>::Node *linkList<T>::getPosition(int i) const //返回指向第i个元素的指针
+template <typename Type>
+
+typename LinkList<Type>::Node *LinkList<Type>::getPosition(int i) const //返回指向第i个元素的指针
 {
     Node *p = head;
     if (i < -1 || i > this->curLength - 1)
@@ -287,8 +292,9 @@ typename linkList<T>::Node *linkList<T>::getPosition(int i) const //返回指向
     return p;
 }
 
-template <class T>
-void linkList<T>::insert(int i, const T &value) //在第i个位置插入value
+template <typename Type>
+
+void LinkList<Type>::insert(int i, const T &value) //在第i个位置插入value
 {
     if (i < 0 || i > this->curLength)
         throw outOfRange();
@@ -302,8 +308,9 @@ void linkList<T>::insert(int i, const T &value) //在第i个位置插入value
     this->curLength++;
 }
 
-template <class T>
-void linkList<T>::remove(int i) //删除第i个元素
+template <typename Type>
+
+void LinkList<Type>::remove(int i) //删除第i个元素
 {
     Node *pre, *p;
     if (i < 0 || i > this->curLength - 1)
@@ -324,8 +331,9 @@ void linkList<T>::remove(int i) //删除第i个元素
     }
 }
 
-template <class T>
-int linkList<T>::search(const T &value) const //查找value第一次出现的下标
+template <typename Type>
+
+int LinkList<Type>::search(const T &value) const //查找value第一次出现的下标
 {
     Node *p = head->next;
     int count = -1;
@@ -344,8 +352,9 @@ int linkList<T>::search(const T &value) const //查找value第一次出现的下
     }
 }
 
-template <class T>
-void linkList<T>::traverse() const //遍历单链表
+template <typename Type>
+
+void LinkList<Type>::traverse() const //遍历单链表
 {
     Node *p = head->next;
     cout << "traverse：" << endl;
@@ -357,8 +366,9 @@ void linkList<T>::traverse() const //遍历单链表
     cout << endl;
 }
 
-template <class T>
-T linkList<T>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
+template <typename Type>
+
+T LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
 {
     Node *p = head->next;
     int count = 0;
@@ -372,8 +382,9 @@ T linkList<T>::visit(int i) const // 在线性表中，查找位序为i的元素
     return p->data;
 }
 
-template <class T>
-void linkList<T>::headCreate() // “头插法”创建单链表
+template <typename Type>
+
+void LinkList<Type>::headCreate() // “头插法”创建单链表
 {
     Node *p;
     T value, flag;
@@ -389,8 +400,9 @@ void linkList<T>::headCreate() // “头插法”创建单链表
     }
 }
 
-template <class T>
-void linkList<T>::tailCreate() //尾插法
+template <typename Type>
+
+void LinkList<Type>::tailCreate() //尾插法
 {
     Node *p;
     int value, flag;
@@ -405,8 +417,9 @@ void linkList<T>::tailCreate() //尾插法
     }
 }
 
-template <class T>
-void linkList<T>::inverse() // 逆置线性表
+template <typename Type>
+
+void LinkList<Type>::inverse() // 逆置线性表
 {
     Node *p, *temp;
     p = head->next;
@@ -424,11 +437,12 @@ void linkList<T>::inverse() // 逆置线性表
     }
 }
 
-template <class T>
-linkList<T> *linkList<T>::Union(linkList<T> *lb) //两个单链表融合
+template <typename Type>
+
+LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb) //两个单链表融合
 {
-    Node *pa, *pb, *pc;     // 分别是链表la、lb、lc的工作指针
-    linkList<T> *lc = this; // lc利用la空间，将lb合并进来
+    Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
+    LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
     pa = head->next;
     head->next = NULL; // la表头结点的指针域置为NULL，构成空链表
     pb = (lb->head)->next;
@@ -464,4 +478,3 @@ linkList<T> *linkList<T>::Union(linkList<T> *lb) //两个单链表融合
     delete lb;
     return lc;
 }
-
