@@ -21,26 +21,26 @@ private:
             this->data = value;
             this->next = p;
         }
-        Node(Node *p = nullptr) //一个参数的构造函数
+        Node(Node *p = nullptr) //一个参数的构造函数,用创建头结点之类的使用
         {
             this->next = p;
         }
     };
-    Node *head;                     //单链表的头指针
-    Node *tail;                     //单链表的尾指针
-    int count;                      //单链表的大小
-    Node *getPosition(int i) const; //返回指向第i个元素的指针
+    Node *head;                  //头指针
+    Node *tail;                  //尾指针
+    int count;                   //元素个数
+    Node *getIndex(int i) const; //返回指向第i个元素的指针
 
 public:
     LinkList();                                          //构造函数
     ~LinkList();                                         //析构函数
     bool empty() const { return head->next == nullptr; } //判空
     void clear();                                        //清空单链表
-    int size() const { return count; }                   //返回单链表的大小
+    int size() const { return count; }                   //返回元素个数
     void insert(int i, const T &value);                  //在第i个位置插入value
     void remove(int i);                                  //删除第i个元素
     int search(const T &value) const;                    //查找value第一次出现的下标
-    void traverse() const;                               //遍历单链表
+    void traverse() const;                               //遍历
     Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
     void headCreate();                                   // “头插法”创建单链表
     void tailCreate();                                   // “尾插法”创建单链表
@@ -84,7 +84,7 @@ void LinkList<Type>::clear() //清空单链表
 //
 template <typename Type>
 
-typename LinkList<Type>::Node *LinkList<Type>::getPosition(int i) const //返回指向第i个元素的指针
+typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const //返回指向第i个元素的指针
 {
     Node *p = head;
     if (i < -1 || i > this->count - 1)
@@ -108,7 +108,7 @@ void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入va
         std::cout << "outOfRange!" << std::endl;
         return;
     }
-    Node *p = this->getPosition(i - 1);
+    Node *p = this->getIndex(i - 1);
     Node *q = new Node(value, p->next);
     p->next = q;
     if (p == tail)
@@ -128,7 +128,7 @@ void LinkList<Type>::remove(int i) //删除第i个元素
         std::cout << "outOfRange!" << std::endl;
         return;
     }
-    pre = this->getPosition(i - 1);
+    pre = this->getIndex(i - 1);
     p = pre->next;
     if (p == tail)
     {
