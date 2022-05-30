@@ -20,11 +20,11 @@ void testlinkList()
     linkList<int> L2;
 
     cout << "插入测试：" << endl;
-    for (int i = 0; i < 4; i++)
-    {
-        L1.insert(1, 3);
-        L2.insert(1, 3);
-    }
+    // for (int i = 0; i < 4; i++)
+    // {
+    //     L1.insert(1, 3);
+    //     L2.insert(1, 3);
+    // }
 
     // cout << "测试插入操作：" << endl;
     // L1.insert(2, 99);
