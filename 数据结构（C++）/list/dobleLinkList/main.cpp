@@ -6,8 +6,8 @@
  **/
 
 #include <iostream>
-#include "dobleLinkList.h"
-
+#include "doubleLinkList.h"
+using namespace std;
 void doubleLinkList_test()
 {
     doubleLinkList<int> d1;
