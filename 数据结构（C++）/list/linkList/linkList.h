@@ -11,7 +11,8 @@ template <typename Type>
 class LinkList //单链表
 {
 private:
-    //这里我用结构体来做结点，也可以在LinkList类外在创建一个类实现，类实现的话用到友元类，
+    //这里我用结构体来做结点，也可以在LinkList类外在创建一个类实现，
+    //类实现的话用到友元类，有兴趣的可以自己实现一下
     struct Node
     {
     public:
@@ -38,9 +39,9 @@ public:
     bool empty() const { return head->next == nullptr; } //判空
     void clear();                                        //清空单链表
     int size() const { return count; }                   //返回元素个数
-    void insert(int i, const T &value);                  //在第i个位置插入value
+    void insert(int i, const Type &value);               //在第i个位置插入value
     void remove(int i);                                  //删除第i个元素
-    int search(const T &value) const;                    //查找value第一次出现的下标
+    int search(const Type &value) const;                 //查找value第一次出现的下标
     void traverse() const;                               //遍历
     Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
     void headCreate();                                   // “头插法”创建单链表
@@ -102,7 +103,7 @@ void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入va
     if (i < 0 || i > this->count)
     {
         std::cout << "outOfRange!" << std::endl;
-        return;
+        // return;
     }
     Node *p = this->getIndex(i - 1);
     Node *q = new Node(value, p->next);
