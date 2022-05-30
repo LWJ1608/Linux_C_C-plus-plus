@@ -207,7 +207,9 @@ void LinkList<Type>::headCreate() // “头插法”创建单链表,从首元结
         p = new Node(value, head->next);
         head->next = p;
         if (head == tail)
+        {
             tail = p;
+        }
         count++;
     }
 }
