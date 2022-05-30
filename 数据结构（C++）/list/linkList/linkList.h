@@ -234,9 +234,9 @@ template <typename Type>
 void LinkList<Type>::inverse() // 逆置线性表
 {
     Node *p, *tmp;
-    p = head->next;       // 工作指针p记录旧首元结点位置
-    head->next = nullptr; //让头结点指向空，构成空表，
-    if (p)                //如果
+    p = head->next;       // 工作指针p记录首元结点位置
+    head->next = nullptr; //让头结点的next指向空，构成空表
+    if (p)                //如果p为空，说明表为空
     {
         tail = p; //让首元结点变成尾结点
     }
