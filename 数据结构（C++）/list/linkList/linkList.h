@@ -65,10 +65,10 @@ LinkList<Type>::~LinkList() //析构函数
 }
 
 template <typename Type>
-void LinkList<Type>::clear() //清空单链表
+void LinkList<Type>::clear() //清空单链表，clear和~
 {
     Node *p, *tmp;
-    p = head->next;
+    p = head->next; // head->next指向首元结点
     while (p != nullptr)
     {
         tmp = p;
