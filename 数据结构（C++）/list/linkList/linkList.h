@@ -181,7 +181,7 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
     if (i < 0 || i > this->count - 1)
     {
         std::cout << "outOfRange!" << std::endl;
-        assert();
+        assert(1);
     }
     while (i > num)
     {
