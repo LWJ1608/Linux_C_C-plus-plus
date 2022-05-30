@@ -6,10 +6,9 @@
  **/
 #include <iostream>
 using namespace std;
-//#ifndef _LINKLIST_H_
-//#define _LINKLIST_H_
-//#include<stack>
-#include "List.h"
+#ifndef _LINKLIST_H_
+#define _LINKLIST_H_
+#include "list.h"
 
 template <class elemType> // elemType为单链表存储的元素类型
 class linkList : public List<elemType>
@@ -59,7 +58,7 @@ public:
     linkList *Union(linkList<elemType> *lb);
     void outPut();
 };
-.template <class elemType>
+template <class elemType>
 linkList<elemType>::linkList()
 {
     head = tail = new Node(); // 创建带有头结点的空表，运行需要先看node的构造函数，在上面。
