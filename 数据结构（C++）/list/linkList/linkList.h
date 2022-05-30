@@ -116,7 +116,6 @@ void LinkList<Type>::insert(int i, const Type &value) //在第i个位置插入va
 }
 
 template <typename Type>
-
 void LinkList<Type>::remove(int i) //删除第i个元素
 {
     Node *pre, *p;
@@ -142,7 +141,6 @@ void LinkList<Type>::remove(int i) //删除第i个元素
 }
 
 template <typename Type>
-
 int LinkList<Type>::search(const Type &value) const //查找value第一次出现的下标
 {
     Node *p = head->next;
@@ -163,7 +161,6 @@ int LinkList<Type>::search(const Type &value) const //查找value第一次出现
 }
 
 template <typename Type>
-
 void LinkList<Type>::traverse() const //遍历单链表
 {
     Node *p = head->next;
@@ -177,7 +174,6 @@ void LinkList<Type>::traverse() const //遍历单链表
 }
 
 template <typename Type>
-
 Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
 {
     Node *p = head->next;
@@ -193,99 +189,95 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
     return p->data;
 }
 
-template <typename Type>
+// template <typename Type>
+// void LinkList<Type>::headCreate() // “头插法”创建单链表
+// {
+//     Node *p;
+//     T value, flag;
+//     cout << "请输入结束标志flag的值:";
+//     cin >> flag;
+//     while (cin >> value, value != flag)
+//     {
+//         p = new Node(value, head->next);
+//         head->next = p;
+//         if (head == tail)
+//             tail = p;
+//         count++;
+//     }
+// }
 
-void LinkList<Type>::headCreate() // “头插法”创建单链表
-{
-    Node *p;
-    T value, flag;
-    cout << "请输入结束标志flag的值:";
-    cin >> flag;
-    while (cin >> value, value != flag)
-    {
-        p = new Node(value, head->next);
-        head->next = p;
-        if (head == tail)
-            tail = p;
-        count++;
-    }
-}
+// template <typename Type>
+// void LinkList<Type>::tailCreate() //尾插法
+// {
+//     Node *p;
+//     int value, flag;
+//     cin >> flag;
 
-template <typename Type>
+//     while (cin >> value, flag != value)
+//     {
+//         p = new Node(value, nullptr);
+//         tail->next = p;
+//         tail = p;
+//         count++;
+//     }
+// }
 
-void LinkList<Type>::tailCreate() //尾插法
-{
-    Node *p;
-    int value, flag;
-    cin >> flag;
+// template <typename Type>
+// void LinkList<Type>::inverse() // 逆置线性表
+// {
+//     Node *p, *temp;
+//     p = head->next;
+//     head->next = nullptr;
+//     tail = head->next;
+//     if (p)
+//         tail = p;
+//     while (p)
+//     {
 
-    while (cin >> value, flag != value)
-    {
-        p = new Node(value, nullptr);
-        tail->next = p;
-        tail = p;
-        count++;
-    }
-}
+//         temp = p->next;
+//         p->next = head->next;
+//         head->next = p;
+//         p = temp;
+//     }
+// }
 
-template <typename Type>
+// template <typename Type>
+// LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb) //两个单链表融合
+// {
+//     Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
+//     LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
+//     pa = head->next;
+//     head->next = nullptr; // la表头结点的指针域置为nullptr，构成空链表
+//     pb = (lb->head)->next;
+//     (lb->head)->next = nullptr; // lb表头结点的指针域置为nullptr，构成空链表
+//     pc = lc->head;
 
-void LinkList<Type>::inverse() // 逆置线性表
-{
-    Node *p, *temp;
-    p = head->next;
-    head->next = nullptr;
-    tail = head->next;
-    if (p)
-        tail = p;
-    while (p)
-    {
-
-        temp = p->next;
-        p->next = head->next;
-        head->next = p;
-        p = temp;
-    }
-}
-
-template <typename Type>
-
-LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb) //两个单链表融合
-{
-    Node *pa, *pb, *pc;        // 分别是链表la、lb、lc的工作指针
-    LinkList<Type> *lc = this; // lc利用la空间，将lb合并进来
-    pa = head->next;
-    head->next = nullptr; // la表头结点的指针域置为nullptr，构成空链表
-    pb = (lb->head)->next;
-    (lb->head)->next = nullptr; // lb表头结点的指针域置为nullptr，构成空链表
-    pc = lc->head;
-
-    while (pb && pa)
-    {
-        if (pa->data <= pb->data)
-        {
-            pc->next = pa;
-            pc = pa;
-            pa = pa->next;
-        }
-        else
-        {
-            pc->next = pb;
-            pc = pb;
-            pb = pb->next;
-        }
-    }
-    if (pa)
-    {
-        pc->next = pa;
-        lc->tail = tail;
-    }
-    else
-    {
-        pc->next = pb;
-        lc->tail = lb->tail;
-    }
-    lc->count = count + lb->count;
-    delete lb;
-    return lc;
+//     while (pb && pa)
+//     {
+//         if (pa->data <= pb->data)
+//         {
+//             pc->next = pa;
+//             pc = pa;
+//             pa = pa->next;
+//         }
+//         else
+//         {
+//             pc->next = pb;
+//             pc = pb;
+//             pb = pb->next;
+//         }
+//     }
+//     if (pa)
+//     {
+//         pc->next = pa;
+//         lc->tail = tail;
+//     }
+//     else
+//     {
+//         pc->next = pb;
+//         lc->tail = lb->tail;
+//     }
+//     lc->count = count + lb->count;
+//     delete lb;
+//     return lc;
 }
