@@ -191,7 +191,7 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
 }
 
 template <typename Type>
-void LinkList<Type>::headCreate() // “头插法”创建单链表,从首元结点开始插入
+void LinkList<Type>::push_front() // “头插法”创建单链表,从首元结点开始插入
 {
     Node *p = nullptr;
     Type value, flag;
@@ -215,7 +215,7 @@ void LinkList<Type>::headCreate() // “头插法”创建单链表,从首元结
 }
 
 template <typename Type>
-void LinkList<Type>::tailCreate() //尾插法
+void LinkList<Type>::push_back() //尾插法
 {
     Node *p;
     int value, flag;
@@ -230,24 +230,24 @@ void LinkList<Type>::tailCreate() //尾插法
     }
 }
 
-// template <typename Type>
-// void LinkList<Type>::inverse() // 逆置线性表
-// {
-//     Node *p, *tmp;
-//     p = head->next;
-//     head->next = nullptr;
-//     tail = head->next;
-//     if (p)
-//         tail = p;
-//     while (p)
-//     {
+template <typename Type>
+void LinkList<Type>::inverse() // 逆置线性表
+{
+    Node *p, *tmp;
+    p = head->next;
+    head->next = nullptr;
+    tail = head->next;
+    if (p)
+        tail = p;
+    while (p)
+    {
 
-//         temp = p->next;
-//         p->next = head->next;
-//         head->next = p;
-//         p = tmp;
-//     }
-// }
+        temp = p->next;
+        p->next = head->next;
+        head->next = p;
+        p = tmp;
+    }
+}
 
 // template <typename Type>
 // LinkList<Type> *LinkList<Type>::Union(LinkList<Type> *lb) //两个单链表融合
