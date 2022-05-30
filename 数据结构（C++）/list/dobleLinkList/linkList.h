@@ -9,7 +9,7 @@ using namespace std;
 //#ifndef _LINKLIST_H_
 //#define _LINKLIST_H_
 //#include<stack>
-//#include "List.h"
+#include "List.h"
 
 template <class elemType> // elemType为单链表存储的元素类型
 class linkList : public List<elemType>
