@@ -44,7 +44,7 @@ public:
     int search(const Type &value) const;                 //查找value第一次出现的下标
     void traverse() const;                               //遍历
     Type visit(int i) const;                             // 在线性表中，查找位序为i的元素并返回其值
-    // void headCreate();                                   // “头插法”创建单链表
+    void headCreate();                                   // “头插法”创建单链表
     // void tailCreate();                                   // “尾插法”创建单链表
     // void inverse();                                      // 逆置线性表
     // LinkList *Union(LinkList<Type> *lb);                 //两个单链表合并
@@ -53,7 +53,7 @@ public:
 template <typename Type>
 LinkList<Type>::LinkList() //构造函数
 {
-    head = tail = new Node(); //创建一个空表
+    head = tail = new Node(); //创建一个空表，只有头结点，如果不需要头结点的话直接head=tail=nullptr;
     this->count = 0;
 }
 
@@ -65,7 +65,7 @@ LinkList<Type>::~LinkList() //析构函数
 }
 
 template <typename Type>
-void LinkList<Type>::clear() //清空单链表，clear和~
+void LinkList<Type>::clear() //清空单链表，clear()和~LinkList()在于，clear()保留头结点
 {
     Node *p, *tmp;
     p = head->next; // head->next指向首元结点
@@ -79,7 +79,6 @@ void LinkList<Type>::clear() //清空单链表，clear和~
     tail = head;
     count = 0;
 }
-//
 //
 template <typename Type>
 typename LinkList<Type>::Node *LinkList<Type>::getIndex(int i) const //返回指向第i个元素的指针
@@ -191,22 +190,27 @@ Type LinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的
     return p->data;
 }
 
-// template <typename Type>
-// void LinkList<Type>::headCreate() // “头插法”创建单链表
-// {
-//     Node *p;
-//     T value, flag;
-//     cout << "请输入结束标志flag的值:";
-//     cin >> flag;
-//     while (cin >> value, value != flag)
-//     {
-//         p = new Node(value, head->next);
-//         head->next = p;
-//         if (head == tail)
-//             tail = p;
-//         count++;
-//     }
-// }
+template <typename Type>
+void LinkList<Type>::headCreate() // “头插法”创建单链表,从首元结点开始插入
+{
+    Node *p = nullptr;
+    Type value, flag;
+    cout << "请输入结束标志flag的值:";
+    cin >> flag;
+    while (cin >> value, value != flag)
+    {
+        // cin>>value;
+        // if(value==flag)
+        // {
+        //     break;
+        // }
+        p = new Node(value, head->next);
+        head->next = p;
+        if (head == tail)
+            tail = p;
+        count++;
+    }
+}
 
 // template <typename Type>
 // void LinkList<Type>::tailCreate() //尾插法
