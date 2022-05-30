@@ -8,9 +8,9 @@
 #include <iostream>
 #include "doubleLinkList.h"
 using namespace std;
-void doubleLinkList_test()
+void DoubleLinkList_test()
 {
-    doubleLinkList<int> d1;
+    DoubleLinkList<int> d1;
 
     for (int i = 0; i < 4; i++)
     {
@@ -41,6 +41,6 @@ void doubleLinkList_test()
 }
 int main()
 {
-    doubleLinkList_test();//双链表测试
+    DoubleLinkList_test(); //双链表测试
     return 0;
 }

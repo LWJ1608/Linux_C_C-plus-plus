@@ -2,11 +2,11 @@
  * @Author: lwj
  * @Date: 2022-05-30 23:42:24
  * @Description:实现双链表
- * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/dobleLinkList/doubleLinkList.h
+ * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/list/dobleLinkList/DoubleLinkList.h
  **/
 #pragma once
 template <typename Type>
-class doubleLinkList
+class DoubleLinkList
 {
 private:
     struct Node
@@ -28,8 +28,8 @@ private:
     int count;
     Node *getIndex(int i) const; //返回第i元素的前驱
 public:
-    doubleLinkList();                                 //构造函数
-    ~doubleLinkList();                                //析构函数
+    DoubleLinkList();                                 //构造函数
+    ~DoubleLinkList();                                //析构函数
     bool empty() const { return head->next == tail; } //判空
     Type size() const { return count; }               //返回
     void clear();                                     //清空
@@ -42,7 +42,7 @@ public:
 };
 
 template <typename Type>
-doubleLinkList<Type>::doubleLinkList() //构造函数
+DoubleLinkList<Type>::DoubleLinkList() //构造函数
 {
     head = new Node;
     tail = new Node;
@@ -52,7 +52,7 @@ doubleLinkList<Type>::doubleLinkList() //构造函数
 }
 
 template <typename Type>
-void doubleLinkList<Type>::clear() //清空
+void DoubleLinkList<Type>::clear() //清空
 {
     Node *p = head->next;
     Node *tmp;
@@ -69,7 +69,7 @@ void doubleLinkList<Type>::clear() //清空
 }
 
 template <typename Type>
-doubleLinkList<Type>::~doubleLinkList() //析构函数
+DoubleLinkList<Type>::~DoubleLinkList() //析构函数
 {
     clear();
     delete head;
@@ -77,7 +77,7 @@ doubleLinkList<Type>::~doubleLinkList() //析构函数
 }
 
 template <typename Type>
-typename doubleLinkList<Type>::Node *doubleLinkList<Type>::getIndex(int i) const //返回指向第i个元素的指针
+typename DoubleLinkList<Type>::Node *DoubleLinkList<Type>::getIndex(int i) const //返回指向第i个元素的指针
 {
     Node *p = head;
     int m = 0;
@@ -96,7 +96,7 @@ typename doubleLinkList<Type>::Node *doubleLinkList<Type>::getIndex(int i) const
 }
 
 template <class Type>
-void doubleLinkList<Type>::insert(int i, const Type &value) //在第i个位位置插入元素value
+void DoubleLinkList<Type>::insert(int i, const Type &value) //在第i个位位置插入元素value
 {
     Node *p = this->getIndex(i - 1);
 
@@ -113,7 +113,7 @@ void doubleLinkList<Type>::insert(int i, const Type &value) //在第i个位位�
 }
 
 template <typename Type>
-void doubleLinkList<Type>::insert(int i, const Type &value)
+void DoubleLinkList<Type>::insert(int i, const Type &value)
 {
     Node *p, *tmp;
     if (i < 0 || i > count) // 合法的插入位置为[0..n]
@@ -129,7 +129,7 @@ void doubleLinkList<Type>::insert(int i, const Type &value)
 }
 
 template <typename Type>
-void doubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]的位置删除元素
+void DoubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]的位置删除元素
 {
     Node *p;
     if (i < 0 || i > count - 1)
@@ -146,7 +146,7 @@ void doubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]
 }
 
 template <typename Type>
-void doubleLinkList<Type>::traverse() const //遍历双链表
+void DoubleLinkList<Type>::traverse() const //遍历双链表
 {
     Node *p;
     p = head->next;
@@ -160,7 +160,7 @@ void doubleLinkList<Type>::traverse() const //遍历双链表
     std::cout << std::endl;
 }
 template <typename Type>
-int doubleLinkList<Type>::search(const Type &value) const //在线性表中，查找值为value的元素第一次出现的位序
+int DoubleLinkList<Type>::search(const Type &value) const //在线性表中，查找值为value的元素第一次出现的位序
 {
     Node *p = head->next;
     int count = 0;
@@ -176,7 +176,7 @@ int doubleLinkList<Type>::search(const Type &value) const //在线性表中，�
 }
 
 template <typename Type>
-Type doubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
+Type DoubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
 {
     if (i < 0 || i > this->count - 1)
     {
@@ -189,7 +189,7 @@ Type doubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序�
 }
 
 template <typename Type>
-void doubleLinkList<Type>::inverse() // 逆置线性表
+void DoubleLinkList<Type>::inverse() // 逆置线性表
 {
     Node *p = head->next;
     Node *tmp;
