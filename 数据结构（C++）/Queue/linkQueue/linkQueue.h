@@ -93,9 +93,9 @@ Type linkQueue<Type>::pop() //出队并返回其值
 {
     if (empty())
     {
-        
+        std::cout << "outOfRange!" << std::endl;
+        assert(!empty());
     }
-        throw outOfRange();
     node *p;
     p = begin;
     Type value = begin->data;
@@ -110,6 +110,9 @@ template <typename Type>
 Type linkQueue<Type>::front() const //读队头元素，并返回它的值
 {
     if (empty())
-        throw outOfRange();
+    {
+        std::cout << "outOfRange!" << std::endl;
+        assert(!empty());
+    }
     return begin->data;
 }
