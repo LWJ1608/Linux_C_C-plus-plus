@@ -45,8 +45,8 @@ template <typename Type>
 DoubleLinkList<Type>::DoubleLinkList() //构造函数
 {
     //有两个头结点，头指针和尾指针处各有一个
-    head = new Node;
-    tail = new Node;
+    head = new Node; //头部头结点
+    tail = new Node; //尾部头结点
     head->next = tail;
     tail->prior = head;
     count = 0;
@@ -65,7 +65,6 @@ void DoubleLinkList<Type>::clear() //清空
         delete p;
         p = tmp;
     }
-
     count = 0;
 }
 
@@ -84,7 +83,6 @@ typename DoubleLinkList<Type>::Node *DoubleLinkList<Type>::getIndex(int i) const
     int m = 0;
     if (i < -1 || i > this->count)
     {
-        std::cout << "outOfRange!" << std::endl;
         return nullptr;
     }
 
