@@ -7,6 +7,7 @@
 #pragma once
 #include <iostream>
 #include <assert.h>
+
 template <typename Type>
 class linkQueue
 {
@@ -91,6 +92,9 @@ template <typename Type>
 Type linkQueue<Type>::pop() //出队并返回其值
 {
     if (empty())
+    {
+        
+    }
         throw outOfRange();
     node *p;
     p = begin;
