@@ -7,23 +7,23 @@
 #pragma once
 
 template <class T>
-class seqQueue : public Queue<T>
+class seqQueue
 {
 private:
     T *data;         //
-    int maxSize;     //ѭ������
-    int front, rear; //�ֱ��Ƕ��ף���β��ַָ��
-    void resize();   //����ѭ����������
+    int maxSize;     //队列容量
+    int front, rear; //
 public:
     seqQueue(int initSize = 100);
-    ~seqQueue() { delete[] data; }                                  //��������
-    bool empty() const { return front == rear; }                    //�п�
-    bool full() const { return (rear + 1) % maxSize = front; }      //����
-    void clear() { front = rear = -1; }                             //���
-    void enQueue(const T &value);                                   //���
+    ~seqQueue() { delete[] data; }                                  //
+    bool empty() const { return front == rear; }                    //
+    bool full() const { return (rear + 1) % maxSize = front; }      //
+    void clear() { front = rear = -1; }                             //
+    void enQueue(const T &value);                                   //
     int size() const { return (rear - front + maxSize) % maxSize; } //
-    T deQueue();                                                    //����
-    T getHead() const;                                              //���ض���Ԫ�أ����ı�����±�
+    void resize();                                                  //用于重新定义队列容量
+    T deQueue();                                                    //
+    T getHead() const;                                              //
 };
 
 template <class T>
@@ -55,7 +55,7 @@ T seqQueue<T>::deQueue()
 }
 
 template <class T>
-T seqQueue<T>::getHead() const // ���ض���Ԫ�أ����ƶ�����ָ��
+T seqQueue<T>::getHead() const //
 {
     if (empty())
         throw outOfRange();
