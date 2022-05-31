@@ -21,7 +21,7 @@ void testQueue(linkQueue<int> &p)
         cout << p.pop() << " ";
     }
     cout << endl;
-    // cout << "队首值为：" << p.front() << endl;
+    // cout << "队首值为：" << p.front() << endl;  
 }
 
 int main()
