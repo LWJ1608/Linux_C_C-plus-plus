@@ -6,7 +6,7 @@
  **/
 #pragma once
 #include <iostream>
-#include<assert.h>
+#include <assert.h>
 template <typename Type>
 class seqQueue
 {
@@ -35,7 +35,7 @@ seqQueue<Type>::seqQueue(int initSize) //构造函数
         std::cout << "badSize!" << std::endl; //队列容量有误
         return;
     }
-    data = new T[initSize];
+    data = new Type[initSize];
     maxSize = initSize;
     begin = end = -1;
 }
@@ -44,7 +44,9 @@ template <typename Type>
 void seqQueue<Type>::push(const Type &x) //入队
 {
     if ((end + 1) % maxSize == begin)
+    {
         resize();
+    }
     end = (end + 1) % maxSize;
     data[end] = x;
 }
@@ -55,7 +57,7 @@ Type seqQueue<Type>::pop() //出队
     if (empty())
     {
         std::cout << "outOfRange!" << std::endl;
-        return nullptr;
+        assert(1);
     }
     begin = (begin + 1) % maxSize;
     return data[begin];
