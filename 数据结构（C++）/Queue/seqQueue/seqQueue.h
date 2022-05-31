@@ -19,8 +19,8 @@ public:
     bool isEmpty() const { return front == rear; }                  //判空
     bool isFull() const { return (rear + 1) % maxSize = front; }    //判满
     void clear() { front = rear = -1; }                             //清空
-    void enQueue(const T &value);                                   //
-    int size() const { return (rear - front + maxSize) % maxSize; } //
+    void pop(const T &value);                                       //出队
+    int size() const { return (rear - front + maxSize) % maxSize; } //返回元素个数
     void resize();                                                  //用于重新定义队列容量
     T deQueue();                                                    //
     T getHead() const;                                              //
