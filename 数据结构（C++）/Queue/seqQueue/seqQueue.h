@@ -15,9 +15,9 @@ private:
     int front, rear; //
 public:
     seqQueue(int initSize = 100);                                   //构造函数
-    ~seqQueue() { delete[] data; }                                  //
-    bool empty() const { return front == rear; }                    //
-    bool full() const { return (rear + 1) % maxSize = front; }      //
+    ~seqQueue() { delete[] data; }                                  //析构函数
+    bool isEmpty() const { return front == rear; }                  //
+    bool isFull() const { return (rear + 1) % maxSize = front; }    //
     void clear() { front = rear = -1; }                             //
     void enQueue(const T &value);                                   //
     int size() const { return (rear - front + maxSize) % maxSize; } //
