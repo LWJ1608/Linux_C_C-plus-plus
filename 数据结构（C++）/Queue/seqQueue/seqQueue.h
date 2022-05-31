@@ -50,11 +50,12 @@ void seqQueue<Type>::push(const Type &x) //入队
 }
 
 template <typename Type>
-Type seqQueue<Type>::pop()
+Type seqQueue<Type>::pop() //出队
 {
     if (empty())
     {
-        throw outOfRange();
+        std::cout << "outOfRange!" << std::endl;
+        return nullptr;
     }
     front = (front + 1) % maxSize;
     return data[front];
