@@ -8,8 +8,7 @@
 using namespace std;
 #include "seqQueue.h"
 
-template <typename type>
-void testQuence(seqQueue<Type> &p)
+void testQueue(seqQueue<int> &p)
 {
     cout << "插入和取出测试：" << endl;
     for (int i = 0; i < 4; i++)
@@ -22,12 +21,12 @@ void testQuence(seqQueue<Type> &p)
         cout << p.deQueue() << " ";
     }
     cout << endl;
-    cout << "队首值为：" << p.getHead() << endl;
+    cout << "队首值为：" << p.getPop() << endl;
 }
 
 int main()
 {
     seqQueue<int> s1;
-    testQuence(s1);
+    testQueue(s1);
     return 0;
 }
