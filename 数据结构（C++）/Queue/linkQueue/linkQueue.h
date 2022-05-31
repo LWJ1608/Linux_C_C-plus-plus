@@ -5,14 +5,15 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Queue/linkQueue/linkQueue.h
  **/
 #pragma once
-
+#include <iostream>
+#include <assert.h>
 template <typename Type>
 class linkQueue
 {
 private:
     struct node
     {
-        Type data;     //数据域
+        Type data;  //数据域
         node *next; //指针域
         node(const Type &value, node *p = NULL)
         {
@@ -24,14 +25,14 @@ private:
     };
     node *begin, *end; //分别为队首指针和队尾指针
 public:
-    linkQueue() { begin = end = NULL; }         //构造函数
+    linkQueue() { begin = end = NULL; }          //构造函数
     ~linkQueue();                                //析构函数
     bool empty() const { return begin == NULL; } //判空
     void clear();                                //清空
     int size() const;                            //返回链队列大小
     void push(const Type &value);                //入队
-    Type pop();                                 //出队
-    Type front() const;                           //读队头元素，并返回它的值
+    Type pop();                                  //出队
+    Type front() const;                          //读队头元素，并返回它的值
 };
 
 template <typename Type>
