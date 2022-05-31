@@ -40,7 +40,7 @@ seqQueue<Type>::seqQueue(int initSize)
 }
 
 template <typename Type>
-void seqQueue<Type>::push_back(const Type &x)
+void seqQueue<Type>::push(const Type &x)
 {
     if ((rear + 1) % maxSize == front)
         resize();
@@ -49,19 +49,23 @@ void seqQueue<Type>::push_back(const Type &x)
 }
 
 template <typename Type>
-T seqQueue<Type>::deQueue()
+Type seqQueue<Type>::pop()
 {
     if (empty())
+    {
         throw outOfRange();
+    }
     front = (front + 1) % maxSize;
     return data[front];
 }
 
 template <typename Type>
-T seqQueue<Type>::getPop() const //
+Type seqQueue<Type>::front() const //
 {
     if (empty())
+    {
         throw outOfRange();
+    }
     return data[(front + 1) % maxSize];
 }
 
