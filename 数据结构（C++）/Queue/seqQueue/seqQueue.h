@@ -78,7 +78,7 @@ template <typename Type>
 void seqQueue<Type>::resize() //扩大容量
 {
     Type *tmp = data;
-    data = new T[2 * maxSize];
+    data = new Type[2 * maxSize];
     for (int i = 1; i < maxSize; ++i)
     {
         data[i] = tmp[(begin + i) % maxSize];
