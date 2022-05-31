@@ -5,6 +5,7 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Queue/seqQueue.h
  **/
 #pragma once
+#include <iostream>
 
 template <typename Type>
 class seqQueue
