@@ -66,7 +66,8 @@ Type seqQueue<Type>::front() const //返回对首元素
 {
     if (empty())
     {
-        throw outOfRange();
+        std::cout << "outOfRange!" << std::endl;
+        return nullptr;
     }
     return data[(front + 1) % maxSize];
 }
