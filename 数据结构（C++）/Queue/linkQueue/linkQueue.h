@@ -7,7 +7,7 @@
 #pragma once
 
 template <typename Type>
-class linkQueue : public Queue<Type>
+class linkQueue
 {
 private:
     struct node

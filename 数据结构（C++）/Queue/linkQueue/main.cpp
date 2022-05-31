@@ -4,8 +4,6 @@
  * @Description:测试链队列功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Queue/linkQueue/main.cpp
  **/
-
-
 #include <iostream>
 using namespace std;
 #include "linkQueue.h"
