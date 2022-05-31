@@ -12,9 +12,9 @@ private:
     struct Node
     {
     public:
-        Type data;
-        Node *next;
-        Node *prior;
+        Type data;   //数据域
+        Node *next;  //指向后继结点
+        Node *prior; //指向前继结点
         Node(Node *p, const Type &value, Node *n)
         {
             this->data = value;
@@ -33,8 +33,8 @@ public:
     bool empty() const { return head->next == tail; } //判空
     Type size() const { return count; }               //返回
     void clear();                                     //清空
-    void insert(int i, const Type &value);               //在第i个位置插入元素value
-    int search(const Type &value) const;                 //在线性表中，查找值为value的元素第一次出现的位序
+    void insert(int i, const Type &value);            //在第i个位置插入元素value
+    int search(const Type &value) const;              //在线性表中，查找值为value的元素第一次出现的位序
     void traverse() const;                            //遍历双链表
     Type visit(int i) const;                          // 在线性表中，查找位序为i的元素并返回其值
     void remove(int i);                               //在线性表中，位序为i[0..n-1]的位置删除元素
