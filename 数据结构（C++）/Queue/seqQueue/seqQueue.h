@@ -28,7 +28,7 @@ public:
 };
 
 template <typename Type>
-seqQueue<Type>::seqQueue(int initSize)
+seqQueue<Type>::seqQueue(int initSize) //构造函数
 {
     if (initSize <= 0)
     {
@@ -41,7 +41,7 @@ seqQueue<Type>::seqQueue(int initSize)
 }
 
 template <typename Type>
-void seqQueue<Type>::push(const Type &x)
+void seqQueue<Type>::push(const Type &x) //入队
 {
     if ((rear + 1) % maxSize == front)
         resize();
@@ -61,7 +61,7 @@ Type seqQueue<Type>::pop()
 }
 
 template <typename Type>
-Type seqQueue<Type>::front() const //
+Type seqQueue<Type>::front() const //返回对首元素
 {
     if (empty())
     {
@@ -71,7 +71,7 @@ Type seqQueue<Type>::front() const //
 }
 
 template <typename Type>
-void seqQueue<Type>::resize()
+void seqQueue<Type>::resize() //扩大容量
 {
     Type *tmp = data;
     data = new T[2 * maxSize];
