@@ -10,7 +10,7 @@ template <typename Type>
 class seqQueue
 {
 private:
-    T *data;        //维护数据指针
+    Type *data;     //维护数据指针
     int maxSize;    //队列容量
     int begin, end; //分别指向队头和队尾
 public:
@@ -19,11 +19,11 @@ public:
     bool isEmpty() const { return front == rear; }                  //判空
     bool isFull() const { return (rear + 1) % maxSize = front; }    //判满
     void clear() { front = rear = -1; }                             //清空
-    void push_back(const T &value);                                 //入队
+    void push_back(const Type &value);                              //入队
     int size() const { return (rear - front + maxSize) % maxSize; } //返回元素个数
     void resize();                                                  //用于重新定义队列容量
     Type pop();                                                     //出队
-    Type getHead() const;                                           //取队首
+    Type getPop() const;                                            //取队首
 };
 
 template <typename Type>
@@ -40,7 +40,7 @@ seqQueue<Type>::seqQueue(int initSize)
 }
 
 template <typename Type>
-void seqQueue<Type>::enQueue(const T &x)
+void seqQueue<Type>::push_back(const Type &x)
 {
     if ((rear + 1) % maxSize == front)
         resize();
@@ -58,7 +58,7 @@ T seqQueue<Type>::deQueue()
 }
 
 template <typename Type>
-T seqQueue<Type>::getHead() const //
+T seqQueue<Type>::getPop() const //
 {
     if (empty())
         throw outOfRange();
@@ -68,7 +68,7 @@ T seqQueue<Type>::getHead() const //
 template <typename Type>
 void seqQueue<Type>::resize()
 {
-    T *tmp = data;
+    Type *tmp = data;
     data = new T[2 * maxSize];
     for (int i = 1; i < maxSize; ++i)
     {
