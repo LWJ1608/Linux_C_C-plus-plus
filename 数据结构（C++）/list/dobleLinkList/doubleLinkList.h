@@ -21,7 +21,7 @@ private:
             this->next = n;
             this->prior = p;
         }
-        Node() : prior(NULL), next(NULL) {}
+        Node() : prior(NULL), next(NULL) {} //用列表初始化方法初始化
         ~Node() {}
     };
     Node *head, *tail;
