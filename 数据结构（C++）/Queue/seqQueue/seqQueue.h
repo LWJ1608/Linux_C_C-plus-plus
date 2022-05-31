@@ -33,7 +33,7 @@ seqQueue<Type>::seqQueue(int initSize) //构造函数
     if (initSize <= 0)
     {
         std::cout << "badSize!" << std::endl; //队列容量有误
-        return;
+        assert(initSize > 0);
     }
     data = new Type[initSize];
     maxSize = initSize;
@@ -57,7 +57,7 @@ Type seqQueue<Type>::pop() //出队
     if (empty())
     {
         std::cout << "outOfRange!" << std::endl;
-        assert(1);
+        assert(!empty());
     }
     begin = (begin + 1) % maxSize;
     return data[begin];
