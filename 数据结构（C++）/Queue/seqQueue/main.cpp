@@ -21,6 +21,7 @@ void testQueue(seqQueue<int> &p)
         cout << p.pop() << " ";
     }
     cout << endl;
+    p.clear();
     cout << "队首值为：" << p.front() << endl;
 }
 
