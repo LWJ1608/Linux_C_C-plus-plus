@@ -94,7 +94,7 @@ typename DoubleLinkList<Type>::Node *DoubleLinkList<Type>::getIndex(int i) const
     return p;
 }
 
-template <class Type>
+template <typename Type>
 void DoubleLinkList<Type>::insert(int i, const Type &value) //在第i个位位置插入元素value
 {
     Node *p = this->getIndex(i - 1);
