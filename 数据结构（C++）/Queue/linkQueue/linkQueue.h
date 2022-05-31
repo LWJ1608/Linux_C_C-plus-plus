@@ -16,19 +16,19 @@ private:
     {
         Type data;  //数据域
         node *next; //指针域
-        node(const Type &value, node *p = NULL)
+        node(const Type &value, node *p = nullptr)
         {
             this->data = value;
             this->next = p;
         }
-        node() : next(NULL) {}
+        node() : next(nullptr) {}
         ~node(){};
     };
     node *begin, *end; //分别为队首指针和队尾指针
 public:
-    linkQueue() { begin = end = NULL; }          //构造函数
+    linkQueue() { begin = end = nullptr; }          //构造函数
     ~linkQueue();                                //析构函数
-    bool empty() const { return begin == NULL; } //判空
+    bool empty() const { return begin == nullptr; } //判空
     void clear();                                //清空
     int size() const;                            //返回链队列大小
     void push(const Type &value);                //入队
@@ -57,7 +57,7 @@ void linkQueue<Type>::clear() //清空
         begin = begin->next;
         delete p;
     }
-    end = NULL;
+    end = nullptr;
 }
 
 template <typename Type>
@@ -101,7 +101,9 @@ Type linkQueue<Type>::pop() //出队并返回其值
     Type value = begin->data;
     begin = begin->next;
     if (empty())
-        end = NULL;
+    {
+        end = nullptr;
+    }
     delete p;
     return value;
 }
