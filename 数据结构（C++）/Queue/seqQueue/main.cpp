@@ -13,15 +13,15 @@ void testQueue(seqQueue<int> &p)
     cout << "插入和取出测试：" << endl;
     for (int i = 0; i < 4; i++)
     {
-        p.enQueue(i);
+        p.push(i);
     }
     cout << "队列大小为：" << p.size() << endl;
     while (!p.empty())
     {
-        cout << p.deQueue() << " ";
+        cout << p.pop() << " ";
     }
     cout << endl;
-    cout << "队首值为：" << p.getPop() << endl;
+    cout << "队首值为：" << p.front() << endl;
 }
 
 int main()
