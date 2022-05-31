@@ -10,15 +10,15 @@ template <class T>
 class seqQueue
 {
 private:
-    T *data;         //
+    T *data;         //维护数据指针
     int maxSize;     //队列容量
     int front, rear; //
 public:
     seqQueue(int initSize = 100);                                   //构造函数
     ~seqQueue() { delete[] data; }                                  //析构函数
-    bool isEmpty() const { return front == rear; }                  //
-    bool isFull() const { return (rear + 1) % maxSize = front; }    //
-    void clear() { front = rear = -1; }                             //
+    bool isEmpty() const { return front == rear; }                  //判空
+    bool isFull() const { return (rear + 1) % maxSize = front; }    //判满
+    void clear() { front = rear = -1; }                             //清空
     void enQueue(const T &value);                                   //
     int size() const { return (rear - front + maxSize) % maxSize; } //
     void resize();                                                  //用于重新定义队列容量
