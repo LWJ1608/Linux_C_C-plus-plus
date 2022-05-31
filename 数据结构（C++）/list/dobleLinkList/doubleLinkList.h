@@ -153,7 +153,7 @@ int DoubleLinkList<Type>::search(const Type &value) const //在线性表中，�
             return num;
         }
         p = p->next;
-        ++count;
+        ++num;
     }
 }
 
