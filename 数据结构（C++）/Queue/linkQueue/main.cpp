@@ -16,12 +16,12 @@ void testQueue(linkQueue<int> &p)
         p.push(i);
     }
     cout << "队列大小为：" << p.size() << endl;
-    // while (!p.empty())
-    // {
-    //     cout << p.pop() << " ";
-    // }
+    while (!p.empty())
+    {
+        cout << p.pop() << " ";
+    }
     cout << endl;
-    cout << "队首值为：" << p.front() << endl;
+    // cout << "队首值为：" << p.front() << endl;
 }
 
 int main()
