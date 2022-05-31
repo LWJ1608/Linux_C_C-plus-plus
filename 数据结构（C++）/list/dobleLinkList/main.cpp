@@ -32,8 +32,8 @@ void DoubleLinkList_test()
     d1.remove(3);
     d1.traverse();
 
-    // cout << "search()函数的测试：" << endl;
-    // cout << "元素3第一次出现的位序为：" << d1.search(3) << endl;
+    cout << "search()函数的测试：" << endl;
+    cout << "元素3第一次出现的位序为：" << d1.search(3) << endl;
 
     // cout << "测试逆置功能：" << endl;
     // d1.inverse();
