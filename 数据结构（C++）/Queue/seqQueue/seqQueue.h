@@ -14,7 +14,7 @@ private:
     int maxSize;     //队列容量
     int front, rear; //
 public:
-    seqQueue(int initSize = 100);
+    seqQueue(int initSize = 100);                                   //构造函数
     ~seqQueue() { delete[] data; }                                  //
     bool empty() const { return front == rear; }                    //
     bool full() const { return (rear + 1) % maxSize = front; }      //
@@ -30,7 +30,10 @@ template <class T>
 seqQueue<T>::seqQueue(int initSize)
 {
     if (initSize <= 0)
-        throw badSize();
+    {
+        std::cout << "badSize!" << std::endl; //队列容量有误
+        return;
+    }
     data = new T[initSize];
     maxSize = initSize;
     front = rear = -1;
