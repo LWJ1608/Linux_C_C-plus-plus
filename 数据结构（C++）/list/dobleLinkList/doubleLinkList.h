@@ -146,7 +146,7 @@ int DoubleLinkList<Type>::search(const Type &value) const //在线性表中，�
 {
     Node *p = head->next;
     int num = 0;
-    while (count <= num - 1 && p != tail)
+    while (num <= count - 1 && p != tail)
     {
         if (value == p->data)
         {
