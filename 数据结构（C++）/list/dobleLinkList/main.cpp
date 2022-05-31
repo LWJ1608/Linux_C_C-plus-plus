@@ -28,7 +28,7 @@ void DoubleLinkList_test()
     d1.traverse();
 
     cout << "删除函数remove()的测试：" << endl;
-    d1.remove(0);
+    d1.remove(3);
     d1.traverse();
 
     // cout << "search()函数的测试：" << endl;
