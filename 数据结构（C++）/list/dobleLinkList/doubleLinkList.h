@@ -35,9 +35,9 @@ public:
     void clear();                                     //清空
     void insert(int i, const Type &value);            //在第i个位置插入元素value
     int search(const Type &value) const;              //在线性表中，查找值为value的元素第一次出现的位序
-    void traverse() const; //遍历双链表
+    void traverse() const;                            //遍历双链表
     Type visit(int i) const;                          // 在线性表中，查找位序为i的元素并返回其值
-    void remove(int i); //在线性表中，位序为i[0..n-1]的位置删除元素
+    void remove(int i);                               //在线性表中，位序为i[0..n-1]的位置删除元素
     virtual void inverse();                           // 逆置线性表
 };
 
@@ -145,12 +145,12 @@ template <typename Type>
 int DoubleLinkList<Type>::search(const Type &value) const //在线性表中，查找值为value的元素第一次出现的位序
 {
     Node *p = head->next;
-    int count = 0;
-    while (count <= count - 1 && p != tail)
+    int num = 0;
+    while (count <= num - 1 && p != tail)
     {
         if (value == p->data)
         {
-            return count;
+            return num;
         }
         p = p->next;
         ++count;
