@@ -1,17 +1,17 @@
 /**
  * @Author: lwj
  * @Date: 2022-05-31 15:08:28
- * @Description:顺序队列的实现
+ * @Description:循环队列的实现
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Queue/seqQueue.h
  **/
 #pragma once
 
-template <class T>
+template <typename Type>
 class seqQueue
 {
 private:
-    T *data;         //维护数据指针
-    int maxSize;     //队列容量
+    T *data;        //维护数据指针
+    int maxSize;    //队列容量
     int begin, end; //分别指向队头和队尾
 public:
     seqQueue(int initSize = 100);                                   //构造函数
@@ -22,12 +22,12 @@ public:
     void push_(const T &value);                                     //入队
     int size() const { return (rear - front + maxSize) % maxSize; } //返回元素个数
     void resize();                                                  //用于重新定义队列容量
-    T pop();                                                        //出队
-    T getHead() const;                                              //取队首
+    Type pop();                                                     //出队
+    Type getHead() const;                                           //取队首
 };
 
-template <class T>
-seqQueue<T>::seqQueue(int initSize)
+template <typename Type>
+seqQueue<Type>::seqQueue(int initSize)
 {
     if (initSize <= 0)
     {
@@ -39,8 +39,8 @@ seqQueue<T>::seqQueue(int initSize)
     front = rear = -1;
 }
 
-template <class T>
-void seqQueue<T>::enQueue(const T &x)
+template <typename Type>
+void seqQueue<Type>::enQueue(const T &x)
 {
     if ((rear + 1) % maxSize == front)
         resize();
@@ -48,8 +48,8 @@ void seqQueue<T>::enQueue(const T &x)
     data[rear] = x;
 }
 
-template <class T>
-T seqQueue<T>::deQueue()
+template <typename Type>
+T seqQueue<Type>::deQueue()
 {
     if (empty())
         throw outOfRange();
@@ -57,16 +57,16 @@ T seqQueue<T>::deQueue()
     return data[front];
 }
 
-template <class T>
-T seqQueue<T>::getHead() const //
+template <typename Type>
+T seqQueue<Type>::getHead() const //
 {
     if (empty())
         throw outOfRange();
     return data[(front + 1) % maxSize];
 }
 
-template <class T>
-void seqQueue<T>::resize()
+template <typename Type>
+void seqQueue<Type>::resize()
 {
     T *tmp = data;
     data = new T[2 * maxSize];
