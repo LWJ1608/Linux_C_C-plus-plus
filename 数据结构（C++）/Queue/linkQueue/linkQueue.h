@@ -6,15 +6,15 @@
  **/
 #pragma once
 
-template <class T>
-class linkQueue : public Queue<T>
+template <typename Type>
+class linkQueue : public Queue<Type>
 {
 private:
     struct node
     {
-        T data;     //数据
-        node *next; //
-        node(const T &value, node *p = NULL)
+        Type data;     //数据域
+        node *next; //指针域
+        node(const Type &value, node *p = NULL)
         {
             this->data = value;
             this->next = p;
@@ -22,47 +22,47 @@ private:
         node() : next(NULL) {}
         ~node(){};
     };
-    node *front, *rear; //分别为队首指针和队尾指针
+    node *begin, *end; //分别为队首指针和队尾指针
 public:
-    linkQueue() { front = rear = NULL; }         //构造函数
+    linkQueue() { begin = end = NULL; }         //构造函数
     ~linkQueue();                                //析构函数
-    bool empty() const { return front == NULL; } //判空
+    bool empty() const { return begin == NULL; } //判空
     void clear();                                //清空
     int size() const;                            //返回链队列大小
-    void enQueue(const T &value);                //入队
-    T deQueue();                                 //出队
-    T getHead() const;                           //读队头元素，并返回它的值
+    void push(const Type &value);                //入队
+    Type pop();                                 //出队
+    Type front() const;                           //读队头元素，并返回它的值
 };
 
-template <class T>
-linkQueue<T>::~linkQueue() //析构函数
+template <typename Type>
+linkQueue<Type>::~linkQueue() //析构函数
 {
     node *p;
-    while (front)
+    while (begin)
     {
-        p = front;
-        front = front->next;
+        p = begin;
+        begin = begin->next;
         delete p;
     }
 }
-template <class T>
-void linkQueue<T>::clear() //清空
+template <typename Type>
+void linkQueue<Type>::clear() //清空
 {
     node *p;
-    while (front)
+    while (begin)
     {
-        p = front;
-        front = front->next;
+        p = begin;
+        begin = begin->next;
         delete p;
     }
-    rear = NULL;
+    end = NULL;
 }
 
-template <class T>
-int linkQueue<T>::size() const //返回链队列大小
+template <typename Type>
+int linkQueue<Type>::size() const //返回链队列大小
 {
     node *p;
-    p = front;
+    p = begin;
     int num = 0;
     while (p)
     {
@@ -72,39 +72,39 @@ int linkQueue<T>::size() const //返回链队列大小
     return num;
 }
 
-template <class T>
-void linkQueue<T>::enQueue(const T &value) //入队
+template <typename Type>
+void linkQueue<Type>::push(const Type &value) //入队
 {
     if (empty())
     {
-        front = rear = new node(value);
+        begin = end = new node(value);
     }
     else
     {
-        rear->next = new node(value);
-        rear = rear->next;
+        end->next = new node(value);
+        end = end->next;
     }
 }
 
-template <class T>
-T linkQueue<T>::deQueue() //出队并返回其值
+template <typename Type>
+Type linkQueue<Type>::pop() //出队并返回其值
 {
     if (empty())
         throw outOfRange();
     node *p;
-    p = front;
-    T value = front->data;
-    front = front->next;
+    p = begin;
+    Type value = begin->data;
+    begin = begin->next;
     if (empty())
-        rear = NULL;
+        end = NULL;
     delete p;
     return value;
 }
 
-template <class T>
-T linkQueue<T>::getHead() const //读队头元素，并返回它的值
+template <typename Type>
+Type linkQueue<Type>::front() const //读队头元素，并返回它的值
 {
     if (empty())
         throw outOfRange();
-    return front->data;
+    return begin->data;
 }
