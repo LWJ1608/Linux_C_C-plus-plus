@@ -35,9 +35,9 @@ public:
     void clear();                                     //清空
     void insert(int i, const Type &value);            //在第i个位置插入元素value
     // int search(const Type &value) const;              //在线性表中，查找值为value的元素第一次出现的位序
-    void traverse() const;                            //遍历双链表
+    void traverse() const; //遍历双链表
     // Type visit(int i) const;                          // 在线性表中，查找位序为i的元素并返回其值
-    void remove(int i);                               //在线性表中，位序为i[0..n-1]的位置删除元素
+    void remove(int i); //在线性表中，位序为i[0..n-1]的位置删除元素
     // virtual void inverse();                           // 逆置线性表
 };
 
@@ -95,37 +95,20 @@ typename DoubleLinkList<Type>::Node *DoubleLinkList<Type>::getIndex(int i) const
 }
 
 template <typename Type>
-void DoubleLinkList<Type>::insert(int i, const Type &value) //在第i个位位置插入元素value
+void DoubleLinkList<Type>::insert(int i, const Type &value)
 {
-    Node *p = this->getIndex(i - 1);
-
-    if (i < 0 || i > this->count)
+    Node *p, *tmp;
+    if (i < 0 || i > count) // 合法的插入位置为[0..n]
     {
         std::cout << "outOfRange!" << std::endl;
         return;
     }
-
-    Node *q = new Node(p, value, p->next);
-    p->next = q;
-    p->next->prior = q;
+    p = getIndex(i);                    // 若i==n则定位到tail指向的尾结点
+    tmp = new Node(p->prior, value, p); // tmp插入到p之前
+    p->prior->next = tmp;
+    p->prior = tmp;
     ++count;
 }
-
-// template <typename Type>
-// void DoubleLinkList<Type>::insert(int i, const Type &value)
-// {
-//     Node *p, *tmp;
-//     if (i < 0 || i > count) // 合法的插入位置为[0..n]
-//     {
-//         std::cout << "outOfRange!" << std::endl;
-//         return;
-//     }
-//     p = getIndex(i);                    // 若i==n则定位到tail指向的尾结点
-//     tmp = new Node(p->prior, value, p); // tmp插入到p之前
-//     p->prior->next = tmp;
-//     p->prior = tmp;
-//     ++count;
-// }
 
 template <typename Type>
 void DoubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]的位置删除元素
@@ -138,9 +121,9 @@ void DoubleLinkList<Type>::remove(int i) // 在线性表中，位序为i[0..n-1]
     }
 
     p = getIndex(i);
-    p->prior->next = p->next;
-    p->next->prior = p->prior;
-    delete p;
+    p->prior->next = p->next;  //将i结点的前继的next指向i结点的后继
+    p->next->prior = p->prior; //将i结点的后继的prior指向i结点的前继
+    delete p;                  //删除i结点
     --count;
 }
 
