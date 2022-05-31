@@ -34,11 +34,11 @@ public:
     Type size() const { return count; }               //返回
     void clear();                                     //清空
     void insert(int i, const Type &value);            //在第i个位置插入元素value
-    int search(const Type &value) const;              //在线性表中，查找值为value的元素第一次出现的位序
+    // int search(const Type &value) const;              //在线性表中，查找值为value的元素第一次出现的位序
     void traverse() const;                            //遍历双链表
-    Type visit(int i) const;                          // 在线性表中，查找位序为i的元素并返回其值
+    // Type visit(int i) const;                          // 在线性表中，查找位序为i的元素并返回其值
     void remove(int i);                               //在线性表中，位序为i[0..n-1]的位置删除元素
-    virtual void inverse();                           // 逆置线性表
+    // virtual void inverse();                           // 逆置线性表
 };
 
 template <typename Type>
@@ -158,49 +158,49 @@ void DoubleLinkList<Type>::traverse() const //遍历双链表
     }
     std::cout << std::endl;
 }
-template <typename Type>
-int DoubleLinkList<Type>::search(const Type &value) const //在线性表中，查找值为value的元素第一次出现的位序
-{
-    Node *p = head->next;
-    int count = 0;
-    while (count <= count - 1 && p != tail)
-    {
-        if (value == p->data)
-        {
-            return count;
-        }
-        p = p->next;
-        ++count;
-    }
-}
+// template <typename Type>
+// int DoubleLinkList<Type>::search(const Type &value) const //在线性表中，查找值为value的元素第一次出现的位序
+// {
+//     Node *p = head->next;
+//     int count = 0;
+//     while (count <= count - 1 && p != tail)
+//     {
+//         if (value == p->data)
+//         {
+//             return count;
+//         }
+//         p = p->next;
+//         ++count;
+//     }
+// }
 
-template <typename Type>
-Type DoubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
-{
-    if (i < 0 || i > this->count - 1)
-    {
-        std::cout << "outOfRange!" << std::endl;
-        return -1; //找不到
-    }
+// template <typename Type>
+// Type DoubleLinkList<Type>::visit(int i) const // 在线性表中，查找位序为i的元素并返回其值
+// {
+//     if (i < 0 || i > this->count - 1)
+//     {
+//         std::cout << "outOfRange!" << std::endl;
+//         return -1; //找不到
+//     }
 
-    Node *p = this->getIndex(i);
-    return p->data;
-}
+//     Node *p = this->getIndex(i);
+//     return p->data;
+// }
 
-template <typename Type>
-void DoubleLinkList<Type>::inverse() // 逆置线性表
-{
-    Node *p = head->next;
-    Node *tmp;
-    head->next = tail;
-    tail->prior = head;
-    while (p != tail)
-    {
-        tmp = p->next;
-        p->next = head->next;
-        p->prior = head;
-        head->next->prior = p;
-        head->next = p;
-        p = tmp;
-    }
-}
+// template <typename Type>
+// void DoubleLinkList<Type>::inverse() // 逆置线性表
+// {
+//     Node *p = head->next;
+//     Node *tmp;
+//     head->next = tail;
+//     tail->prior = head;
+//     while (p != tail)
+//     {
+//         tmp = p->next;
+//         p->next = head->next;
+//         p->prior = head;
+//         head->next->prior = p;
+//         head->next = p;
+//         p = tmp;
+//     }
+// }
