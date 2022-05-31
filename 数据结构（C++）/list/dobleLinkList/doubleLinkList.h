@@ -44,6 +44,7 @@ public:
 template <typename Type>
 DoubleLinkList<Type>::DoubleLinkList() //构造函数
 {
+    //有两个头结点，头指针和尾指针处各有一个
     head = new Node;
     tail = new Node;
     head->next = tail;
