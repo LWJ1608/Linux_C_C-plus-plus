@@ -23,7 +23,7 @@ public:
     int size() const { return (rear - front + maxSize) % maxSize; } //返回元素个数
     void resize();                                                  //用于重新定义队列容量
     Type pop();                                                     //出队
-    Type getPop() const;                                            //取队首
+    Type back() const;                                              //取队首
 };
 
 template <typename Type>
