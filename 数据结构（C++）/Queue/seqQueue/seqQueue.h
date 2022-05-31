@@ -12,7 +12,7 @@ class seqQueue
 private:
     T *data;         //维护数据指针
     int maxSize;     //队列容量
-    int front, rear; //
+    int begin, end; //分别指向队头和队尾
 public:
     seqQueue(int initSize = 100);                                   //构造函数
     ~seqQueue() { delete[] data; }                                  //析构函数
@@ -23,7 +23,7 @@ public:
     int size() const { return (rear - front + maxSize) % maxSize; } //返回元素个数
     void resize();                                                  //用于重新定义队列容量
     T pop();                                                        //出队
-    T getHead() const;                                              //
+    T getHead() const;                                              //取队首
 };
 
 template <class T>
