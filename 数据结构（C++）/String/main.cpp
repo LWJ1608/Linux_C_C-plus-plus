@@ -19,9 +19,13 @@ void test01()
     String s2("lwj");
     cout << "s2:maxSize = " << s2.capacity() << endl;
 }
-
+//测试重载函数
+void test02()
+{
+}
 int main()
 {
     test01();
+    test02();
     return 0;
 }
