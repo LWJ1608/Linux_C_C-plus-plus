@@ -34,6 +34,23 @@ public:
     String(const String &S);                    //拷贝构造
     ~String() { delete[] data; }                //析构函数
     size_t capacity() { return this->maxSize; } //返回串容量
+    //求串的长度
+    //判空
+    //比较当前串和串s的大小
+    //从pos位置开始取长度为num的子串
+    //朴素的模式匹配算法
+    //在pos位置插入子串s
+    //删除从pos位置开始的num个字符
+    //获取字符数组data
+    //改进的模式匹配算法
+    //获取next数组
+    //获取nexVal数组
+    //重载==
+    //重载+
+    //重载=
+    //重载[]
+    //重载<<,用于输入串
+    //重载>>，用于输出串
 };
 
 String::String(const char *str)
