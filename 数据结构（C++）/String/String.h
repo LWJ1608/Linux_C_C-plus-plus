@@ -83,7 +83,7 @@ bool String::operator==(const String &str1) const //重载==，用判断两个�
     {
         return false;
     }
-    return strncmp(data, str1.data, str1.strLength) ? false : true;
+    return strncmp(data, str1.data) ? false : true;
 }
 String &String::operator+(const String &str1) //重载+，用于合并俩个串
 {
