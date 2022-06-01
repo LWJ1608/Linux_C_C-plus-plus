@@ -89,8 +89,9 @@ bool String::operator==(const String &str1) const //重载==，用判断两个�
 String &String::operator+(const String &str1) //重载+，用于合并俩个串
 {
     // assert((str1.strLength + strLength) < maxSize);
-    if ((str1.strLength + strLength) < maxSize)
+    if ((str1.strLength + strLength) > maxSize)
     {
+        resize(str1.strLength + strLength);
     }
     strcat(data, str1.data);
     strLength += str1.strLength;
