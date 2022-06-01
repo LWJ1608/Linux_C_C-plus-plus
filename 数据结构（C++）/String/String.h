@@ -43,7 +43,7 @@ public:
     //重载>>，用于输出串
     size_t capacity() { return this->maxSize; } //返回串容量
     size_t size() { return strLength; }         //求串的长度
-    //判空
+    bool empty() { return strLength == 0; }     //判空
     //比较当前串和串s的大小
     //从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
@@ -67,6 +67,6 @@ String::String(const char *str)
     strLength = strlen(data);      //计算串长度
     strncpy(data, str, strLength); //把str拷贝到data中
 }
-bool operator==(const String &str1) const //重载==，用判断两个串是否相等
+bool String::operator==(const String &str1) const //重载==，用判断两个串是否相等
 {
 }
