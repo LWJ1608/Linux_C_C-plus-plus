@@ -4,22 +4,22 @@
  * @Description:
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
-class outOfRange : public exception //用于检查范围的有效性
-{
-public:
-    const char *whar() const throw()
-    {
-        return "ERROR! OUT OF RANGE.\n";
-    }
-};
-class badSize : public exception //用于检查长度的有效性
-{
-public:
-    const char *whar() const throw()
-    {
-        return "ERROR! BAD SIZE.\n";
-    }
-};
+// class outOfRange : public exception //用于检查范围的有效性
+// {
+// public:
+//     const char *whar() const throw()
+//     {
+//         return "ERROR! OUT OF RANGE.\n";
+//     }
+// };
+// class badSize : public exception //用于检查长度的有效性
+// {
+// public:
+//     const char *whar() const throw()
+//     {
+//         return "ERROR! BAD SIZE.\n";
+//     }
+// };
 class String
 {
 private:
