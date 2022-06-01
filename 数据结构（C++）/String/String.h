@@ -111,9 +111,13 @@ istream &operator>>(istream &cin, String &str1) //重载<<，用于输入串
 }
 String &String::operator=(const String &str1) //重载=，把一个串的赋值
 {
+    if (str1.data == data)
+    {
+        return *this; //如果两个相等，直接返回自己
+    }
     delete[] data;
     maxSize = str1.maxSize;
-    data = new char[maxSize];
+    data = new char[maxSize + 1];
     strcpy(data, str1.data);
     strLength = str1.strLength;
     return *this;
