@@ -15,3 +15,7 @@ public:
     String(const String &S);
     ~String();
 };
+class outOfRange : public exception
+{
+public:
+}
