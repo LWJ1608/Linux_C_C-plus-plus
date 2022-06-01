@@ -23,6 +23,7 @@
 #include <iostream>
 #include <string.h>
 #include <assert.h>
+using namespace std;
 class String
 {
 private:
