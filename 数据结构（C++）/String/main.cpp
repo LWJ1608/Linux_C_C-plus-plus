@@ -5,10 +5,11 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/main.cpp
  **/
 #include <iostream>
-using name st
+using namespace std;
 
-    void te 01()
+void test01()
 {
+    
 }
 
 int main()
