@@ -61,10 +61,10 @@ String::String()
 }
 String::String(const char *str)
 {
-    maxSize = 2 * strlen(str);     //设置容量
-    data = new char[maxSize + 1];  //开辟空间
-    strLength = strlen(data);      //计算串长度
-    strncpy(data, str, strLength); //把str拷贝到data中
+    maxSize = 2 * strlen(str);    //设置容量
+    data = new char[maxSize + 1]; //开辟空间
+    strLength = strlen(data);     //计算串长度
+    strcpy(data, str);            //把str拷贝到data中
 }
 bool String::operator==(const String &str1) const //重载==，用判断两个串是否相等
 {
