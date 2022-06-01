@@ -69,7 +69,7 @@ void test03()
     //判断两个串是否相等
     String s2;
     String s3;
-    String s4("lwjj");
+    String s4("lwj");
     s2 = s3 = "lwj";
     bool b = s2.compare(s3);
     if (b)
@@ -78,6 +78,7 @@ void test03()
     }
     else
     {
+        cout << "不相等\n";
     }
 }
 int main()
