@@ -63,7 +63,7 @@ String::String()
 String::String(const char *str)
 {
     maxSize = 2 * strlen(str);     //设置容量
-    data = new char[maxSize + 1];  //开辟空间
+    data = new char[maxSize + 1];  //开辟空间,+1是为了存储‘\0’,在String中不算是字符
     strLength = strlen(data);      //计算串长度
     strncpy(data, str, strLength); //把str拷贝到data中
 }
