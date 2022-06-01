@@ -1,7 +1,7 @@
 /**
  * @Author: lwj
  * @Date: 2022-06-01 15:54:01
- * @Description:
+ * @Description:实现串的基本功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
 // class outOfRange : public exception //用于检查范围的有效性
