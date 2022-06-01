@@ -35,7 +35,6 @@ public:
     String(const String &S);                   //拷贝构造
     ~String() { delete[] data; }               //析构函数
     bool operator==(const String &str1) const; //重载==，用判断两个串是否相等
-
     //重载+，用于合并俩个串
     //重载=，把一个串的赋值
     //重载[]，通过下标运算取出字符
