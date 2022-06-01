@@ -40,7 +40,7 @@ public:
     //重载[]，通过下标运算取出字符
     //重载<<，用于输入串
     //重载>>，用于输出串
-    void resize();                              //扩大容量
+    void resize(const size_t num);              //扩大容量
     size_t capacity() { return this->maxSize; } //返回串容量
     size_t size() { return strLength; }         //求串的长度
     bool empty() { return strLength == 0; }     //判空
@@ -66,6 +66,11 @@ String::String(const char *str)
     data = new char[maxSize + 1]; //开辟空间
     strLength = strlen(data);     //计算串长度
     strcpy(data, str);            //把str拷贝到data中
+}
+void resize(const int num)
+
+{
+    char *tmp = nullptr;
 }
 bool String::operator==(const String &str1) const //重载==，用判断两个串是否相等
 {
