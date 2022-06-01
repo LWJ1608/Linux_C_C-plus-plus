@@ -31,6 +31,7 @@ public:
     String(const String &S);         //拷贝构造
     ~String();                       //析构函数
 };
+
 String::String(const char *s)
 {
 }
