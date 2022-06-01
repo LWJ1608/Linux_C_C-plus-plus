@@ -55,7 +55,7 @@ public:
 };
 String::String()
 {
-    char *data = new char[1]; //创建一个空的空间
+    char *data = new char; //创建一个空的空间
     maxSize = 0;
     strLength = 0;
 }
