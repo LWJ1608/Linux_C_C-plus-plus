@@ -105,6 +105,8 @@ istream &operator>>(istream &cin, String &str1) //重载<<，用于输入串
     cin >> tmp;
     str1.maxSize = 2 * strlen(tmp);         //为str1重新规定容量大小
     str1.data = new char[str1.maxSize + 1]; //+1是为了放‘\0’
-
+    strcpy(str1.data, tmp);
+    str1.strLength = strlen(tmp);
+    delete[] tmp;
     return cin;
 }
