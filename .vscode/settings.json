@@ -68,7 +68,8 @@
         "utility": "cpp",
         "typeinfo": "cpp",
         "list": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "cstring": "cpp"
     },
     "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
 }
