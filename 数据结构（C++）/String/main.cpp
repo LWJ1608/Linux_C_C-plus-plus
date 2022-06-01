@@ -56,9 +56,16 @@ void test02()
     cout << "s4[0] = " << s4[0] << endl;
     cout << "s4[5] = " << s4[5] << endl;
 }
+
+//
+void test03()
+{
+
+}
 int main()
 {
     // test01();
-    test02();
+    // test02();
+    test03();
     return 0;
 }
