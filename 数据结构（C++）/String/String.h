@@ -40,6 +40,6 @@ String::String(const char *str)
 {
     maxSize = 2 * sizeof(str) / sizeof(str[0]);
     data = new char[maxSize + 1];
-    strcpy(data, str);
+    strncpy(data, maxSize, str);
     strLength = strlen(data);
 }
