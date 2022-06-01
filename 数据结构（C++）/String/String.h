@@ -91,3 +91,6 @@ String &String::operator+(const String &str1) //重载+，用于合并俩个串
     strLength += str1.strLength;
     return *this;
 }
+void String::operator<<(const String &str1) //重载<<，用于输入串
+{
+}
