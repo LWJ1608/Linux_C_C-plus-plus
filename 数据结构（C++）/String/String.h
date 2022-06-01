@@ -38,7 +38,7 @@ public:
     bool operator==(const String &str1) const;               //重载==，用判断两个串是否相等
     String &operator+(const String &str1);                   //重载+，用于合并俩个串
     friend ostream &operator<<(ostream &cout, String &str1); //重载<<，用于输入串
-    friend istream &operator>>(ostream &cin, String &str1);  //重载<<，用于输入串
+    friend istream &operator>>(istream &cin, String &str1);  //重载<<，用于输入串
 
     //重载>>，用于输出串
     //重载=，把一个串的赋值
@@ -99,8 +99,9 @@ ostream &operator<<(ostream &cout, String &str1) //重载<<，用于输入串
     cout << str1.data;
     return cout;
 }
-istream &operator>>(ostream &cin, String &str1) //重载<<，用于输入串
+istream &operator>>(istream &cin, String &str1) //重载<<，用于输入串
 {
-    cout << str1.data;
-    return cout;
+    char *tmp = new char[10000]; //申请一个临时空间
+
+    return cin;
 }
