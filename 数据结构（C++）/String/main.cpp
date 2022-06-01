@@ -12,7 +12,7 @@ using namespace std;
 //测试构造函数功能
 void test01()
 {
-    String s1;
+    String s1("dsf");
     cout << "maxSize = " << s1.capacity() << endl;
 }
 
