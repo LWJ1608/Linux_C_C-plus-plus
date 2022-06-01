@@ -69,4 +69,5 @@ String::String(const char *str)
 }
 bool String::operator==(const String &str1) const //重载==，用判断两个串是否相等
 {
+    if (this->strLength !=)
 }
