@@ -75,6 +75,7 @@ void String::resize(const int num)
     strncpy(tmp, data, this->strLength);
     delete[] data;
     data = tmp;
+    maxSize = num;
     tmp = nullptr;
 }
 bool String::operator==(const String &str1) const //重载==，用判断两个串是否相等
@@ -132,5 +133,5 @@ inline char &String::operator[](size_t index) //重载[]，通过下标运算取
 }
 bool String::compare(const String &str1) const //比较当前串和串s的大小
 {
-    return data==str1.data;
+    return data == str1.data;
 }
