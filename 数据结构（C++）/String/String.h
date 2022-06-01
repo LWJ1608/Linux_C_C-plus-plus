@@ -30,10 +30,10 @@ private:
     int maxSize;   //最大容量
     int strLength; //记录串的长度
 public:
-    String();                          //无参构造
-    String(const char *str ); //构造函数
-    String(const String &S);           //拷贝构造
-    ~String() { delete[] data; }       //析构函数
+    String();                    //无参构造
+    String(const char *str);     //构造函数
+    String(const String &S);     //拷贝构造
+    ~String() { delete[] data; } //析构函数
     //重载==，用判断两个串是否相等
     //重载+，用于合并俩个串
     //重载=，把一个串的赋值
@@ -55,14 +55,14 @@ public:
 };
 String::String()
 {
-    char* data=nullptr;
-    maxSize=0;
-    strLength=0;
+    char *data = new char(); //创建一个空的空间
+    maxSize = 0;
+    strLength = 0;
 }
 String::String(const char *str)
 {
-    maxSize = 2 * strlen(str);//设置容量
-    data = new char[maxSize + 1];//开辟空间
-    strLength = strlen(data);//计算串长度
-    strncpy(data,str,strLength);//把str拷贝到data中
+    maxSize = 2 * strlen(str);     //设置容量
+    data = new char[maxSize + 1];  //开辟空间
+    strLength = strlen(data);      //计算串长度
+    strncpy(data, str, strLength); //把str拷贝到data中
 }
