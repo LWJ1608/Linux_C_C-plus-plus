@@ -70,6 +70,7 @@ String::String(const char *str)
 void resize(const int num)
 {
     char *tmp = nullptr;
+    tmp = new char[num];
 }
 bool String::operator==(const String &str1) const //重载==，用判断两个串是否相等
 {
