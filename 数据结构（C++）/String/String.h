@@ -125,3 +125,7 @@ String &String::operator=(const String &str1) //重载=，把一个串的赋值
     strLength = str1.strLength;
     return *this;
 }
+inline char &String::operator[](size_t index) //重载[]，通过下标运算取出字符
+{
+    assert(index >= 0 && index < maxSize);
+}
