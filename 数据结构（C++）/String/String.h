@@ -62,16 +62,16 @@ String::String()
 }
 String::String(const char *str)
 {
-    maxSize = 2 * strlen(str);    //设置容量
-    data = new char[maxSize + 1]; //开辟空间
-    strLength = strlen(data);     //计算串长度
-    strcpy(data, str);            //把str拷贝到data中
+    maxSize = 2 * strlen(str);     //设置容量
+    data = new char[maxSize + 1];  //开辟空间
+    strLength = strlen(data);      //计算串长度
+    strncpy(data, str, strLength); //把str拷贝到data中
 }
 void String::resize(const int num)
 {
     char *tmp = nullptr;
-    tmp = new char[num];
-    strcpy(tmp, data);
+    tmp = new char[num + 1];
+    strncpy(tmp, data, this->strLength);
     delete[] data;
     data = tmp;
     tmp = nullptr;
@@ -84,6 +84,8 @@ bool String::operator==(const String &str1) const //重载==，用判断两个�
     }
     return strcmp(data, str1.data) ? false : true;
 }
-String &operator+(const String &str1) //重载+，用于合并俩个串
+String &String::operator+(const String &str1) //重载+，用于合并俩个串
 {
+    strcat(data, str1.data);
+    return *this;
 }
