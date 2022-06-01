@@ -130,3 +130,7 @@ inline char &String::operator[](size_t index) //重载[]，通过下标运算取
     assert(index >= 0 && index < maxSize);
     return data[index];
 }
+bool String::compare(const String &str1) const //比较当前串和串s的大小
+{
+    return data==str1.data;
+}
