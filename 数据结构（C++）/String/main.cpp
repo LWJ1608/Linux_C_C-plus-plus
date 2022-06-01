@@ -70,9 +70,9 @@ void test03()
     String s2;
     String s3;
     String s4("lwj");
-    s2 = s3 = "lwj";
+    s2 = s3 = "lwjj";
     bool b = s2.compare(s3);
-    if (b)
+    if (b==true)
     {
         cout << "相等\n";
     }
