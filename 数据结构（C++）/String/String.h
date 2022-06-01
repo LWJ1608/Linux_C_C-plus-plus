@@ -40,6 +40,7 @@ public:
     //重载[]，通过下标运算取出字符
     //重载<<，用于输入串
     //重载>>，用于输出串
+    void resize();                              //扩大容量
     size_t capacity() { return this->maxSize; } //返回串容量
     size_t size() { return strLength; }         //求串的长度
     bool empty() { return strLength == 0; }     //判空
@@ -74,7 +75,6 @@ bool String::operator==(const String &str1) const //重载==，用判断两个�
     }
     return strcmp(data, str1.data) ? false : true;
 }
-String &operator+(const String &str1)
+String &operator+(const String &str1) //重载+，用于合并俩个串
 {
-
-} //重载+，用于合并俩个串
+}
