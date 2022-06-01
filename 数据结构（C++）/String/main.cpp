@@ -67,6 +67,11 @@ void test03()
     cout << "扩容后s1的maxSize为：" << s1.capacity() << endl;
 
     //判断两个串是否相等
+    String s2;
+    String s3;
+    String s4("lwjj");
+    s2 = s3 = "lwj";
+    s2.
 }
 int main()
 {
