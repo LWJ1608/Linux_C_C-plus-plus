@@ -32,12 +32,13 @@ private:
 public:
     String(const char *str = nullptr); //构造函数
     String(const String &S);           //拷贝构造
-    ~String();                         //析构函数
+    ~String() { delete[] data; }       //析构函数
 };
 
 String::String(const char *str)
 {
     maxSize = 2 * strlen(str);
     data = new char[maxSize + 1];
-    strcpy_s(data, maxSize + 1, str);
+    strcpy(data, str);
+    strLength = strlen(data);
 }
