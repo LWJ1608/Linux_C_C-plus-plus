@@ -71,7 +71,7 @@ String::String(const char *str)
 void String::resize(const int num)
 {
     char *tmp = nullptr;
-    tmp = new char[num + 1];
+    tmp = new char[num];
     strncpy(tmp, data, this->strLength);
     delete[] data;
     data = tmp;
