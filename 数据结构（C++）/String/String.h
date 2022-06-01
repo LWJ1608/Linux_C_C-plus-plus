@@ -72,5 +72,5 @@ bool String::operator==(const String &str1) const //重载==，用判断两个�
     {
         return false;
     }
-    return strcmp(data, str1.data) ? true : false;
+    return strcmp(data, str1.data) ? false : true;
 }

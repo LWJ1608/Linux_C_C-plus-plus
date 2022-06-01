@@ -24,7 +24,7 @@ void test02()
 {
     //重载==，用判断两个串是否相等
     String b1("abc");
-    String b2("abc");
+    String b2("abcd");
     if (b1 == b2)
     {
         cout << "相等\n";
