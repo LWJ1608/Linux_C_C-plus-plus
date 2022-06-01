@@ -102,6 +102,9 @@ ostream &operator<<(ostream &cout, String &str1) //重载<<，用于输入串
 istream &operator>>(istream &cin, String &str1) //重载<<，用于输入串
 {
     char *tmp = new char[10000]; //申请一个临时空间
+    cin >> tmp;
+    str1.maxSize = 2 * strlen(tmp);         //为str1重新规定容量大小
+    str1.data = new char[str1.maxSize + 1]; //+1是为了放‘\0’
 
     return cin;
 }
