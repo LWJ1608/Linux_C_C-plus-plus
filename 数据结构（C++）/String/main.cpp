@@ -46,9 +46,9 @@ void test02()
     //重载=，把一个串的赋值
 
     //重载+，用于合并俩个串
-    // String s4("aaa");
-    // String s5("bbb");
-    // s4 = s4 + s5;
+    String s4("aaa");
+    String s5("bbb");
+    String s6 = s4 + s5;
 
     //重载[]，通过下标运算取出字符
 }
