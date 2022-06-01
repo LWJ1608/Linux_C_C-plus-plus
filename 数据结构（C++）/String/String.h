@@ -4,22 +4,22 @@
  * @Description:实现串的基本功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
-class outOfRange : public exception //用于检查范围的有效性
-{
-public:
-    const char *whar() const throw()
-    {
-        return "ERROR! OUT OF RANGE.\n";
-    }
-};
-class badSize : public exception //用于检查长度的有效性
-{
-public:
-    const char *whar() const throw()
-    {
-        return "ERROR! BAD SIZE.\n";
-    }
-};
+// class outOfRange : public exception //用于检查范围的有效性
+// {
+// public:
+//     const char *whar() const throw()
+//     {
+//         return "ERROR! OUT OF RANGE.\n";
+//     }
+// };
+// class badSize : public exception //用于检查长度的有效性
+// {
+// public:
+//     const char *whar() const throw()
+//     {
+//         return "ERROR! BAD SIZE.\n";
+//     }
+// };
 #include <iostream>
 #include <string.h>
 #include <cstring>
@@ -34,7 +34,7 @@ public:
     String(const char *str);     //构造函数
     String(const String &S);     //拷贝构造
     ~String() { delete[] data; } //析构函数
-    //重载==，用判断两个串是否相等
+    // 重载==，用判断两个串是否相等
     //重载+，用于合并俩个串
     //重载=，把一个串的赋值
     //重载[]，通过下标运算取出字符
