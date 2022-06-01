@@ -33,6 +33,12 @@ public:
     String(const char *str = nullptr);          //构造函数
     String(const String &S);                    //拷贝构造
     ~String() { delete[] data; }                //析构函数
+    //重载==，用判断两个串是否相等
+    //重载+，用于合并俩个串
+    //重载=，把一个串的赋值
+    //重载[]，通过下标运算取出字符
+    //重载<<，用于输入串
+    //重载>>，用于输出串
     size_t capacity() { return this->maxSize; } //返回串容量
     //求串的长度
     //判空
@@ -45,12 +51,7 @@ public:
     //改进的模式匹配算法
     //获取next数组
     //获取nexVal数组
-    //重载==
-    //重载+
-    //重载=
-    //重载[]
-    //重载<<,用于输入串
-    //重载>>，用于输出串
+
 };
 
 String::String(const char *str)
