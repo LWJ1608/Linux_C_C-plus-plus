@@ -65,6 +65,8 @@ void test03()
     cout << "未扩容前s1的maxSize为：" << s1.capacity() << endl;
     s1.resize(9);
     cout << "扩容后s1的maxSize为：" << s1.capacity() << endl;
+
+    //判断两个串是否相等
 }
 int main()
 {
