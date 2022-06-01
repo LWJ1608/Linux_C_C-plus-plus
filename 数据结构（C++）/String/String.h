@@ -67,10 +67,11 @@ String::String(const char *str)
     strLength = strlen(data);     //计算串长度
     strcpy(data, str);            //把str拷贝到data中
 }
-void resize(const int num)
+void String::resize(const int num)
 {
     char *tmp = nullptr;
     tmp = new char[num];
+    strcpy(tmp, data);
 }
 bool String::operator==(const String &str1) const //重载==，用判断两个串是否相等
 {
