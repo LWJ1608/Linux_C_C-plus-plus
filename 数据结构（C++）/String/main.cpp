@@ -50,7 +50,7 @@ void test02()
     String s5("bbb");
     String s6;
     s6 = s4 + s5;
-
+    cout << "s4 + s5 = " << s6 << endl;
     //重载[]，通过下标运算取出字符
 }
 int main()
