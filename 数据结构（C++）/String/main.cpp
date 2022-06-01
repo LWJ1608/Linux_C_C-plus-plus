@@ -22,6 +22,8 @@ void test01()
 //测试重载函数
 void test02()
 {
+
+    String s3;
 }
 int main()
 {
