@@ -17,13 +17,13 @@
 using namespace std;
 void test01()
 {
-    const char* str1="ba";
-    const char* str2="bd";
-    string s1="bb";
-    string s2="bc";
+    const char *str1 = "ba";
+    const char *str2 = "bd";
+    string s1 = "bb";
+    string s2 = "bc";
     // * `int compare(const string &s) const; `  //与字符串s比较
-    int c_num1=s1.compare(s2);
-    cout<<"s1 s2 "<<c_num1<<endl;
+    int c_num1 = s1.compare(s2);
+    cout << "s1 s2 " << c_num1 << endl;
 
     // * `int compare(const char *s) const;`      //与字符串s比较
     int c_num2 = s1.compare(str1);
