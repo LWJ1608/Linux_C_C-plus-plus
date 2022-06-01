@@ -12,5 +12,6 @@ private:
     int strLength; //记录串的长度
 public:
     String(const char *s = nullptr);
+    String(const String &S);
     ~String();
 };
