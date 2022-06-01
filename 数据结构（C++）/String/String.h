@@ -30,9 +30,10 @@ private:
     int maxSize;   //最大容量
     int strLength; //记录串的长度
 public:
-    String(const char *str = nullptr);          //构造函数
-    String(const String &S);                    //拷贝构造
-    ~String() { delete[] data; }                //析构函数
+    String();
+    String(const char *str = nullptr); //构造函数
+    String(const String &S);           //拷贝构造
+    ~String() { delete[] data; }       //析构函数
     //重载==，用判断两个串是否相等
     //重载+，用于合并俩个串
     //重载=，把一个串的赋值
@@ -51,7 +52,6 @@ public:
     //改进的模式匹配算法
     //获取next数组
     //获取nexVal数组
-
 };
 
 String::String(const char *str)
