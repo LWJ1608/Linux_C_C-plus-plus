@@ -93,9 +93,6 @@ String &String::operator+(const String &str1) //重载+，用于合并俩个串
 }
 ostream &operator<<(ostream &cout, String &str1) //重载<<，用于输入串
 {
-    for (int i = 0; i < str1.strLength; i++)
-    {
-        cout << data[i];
-    }
+    cout << str1.data;
     return cout;
 }
