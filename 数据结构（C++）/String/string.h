@@ -7,9 +7,11 @@
 class String
 {
 private:
-    char *data;  //存储串
-    int maxSize; //最大容量
-    int strLength;  //记录串的长度
+    char *data;    //存储串
+    int maxSize;   //最大容量
+    int strLength; //记录串的长度
 public:
+    String(const char *s = nullptr);
+    ~String();
     
 };
