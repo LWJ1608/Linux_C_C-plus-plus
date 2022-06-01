@@ -67,3 +67,6 @@ String::String(const char *str)
     strLength = strlen(data);      //计算串长度
     strncpy(data, str, strLength); //把str拷贝到data中
 }
+bool operator==(const String &str1) const //重载==，用判断两个串是否相等
+{
+}
