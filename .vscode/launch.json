@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/root/Linux_C_C-plus-plus/数据结构（C++）/String/main",
+            "program": "${workspaceFolder}/数据结构（C++）/String/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
