@@ -30,9 +30,10 @@ private:
     int maxSize;   //最大容量
     int strLength; //记录串的长度
 public:
-    String(const char *str = nullptr); //构造函数
-    String(const String &S);           //拷贝构造
-    ~String() { delete[] data; }       //析构函数
+    String(const char *str = nullptr);          //构造函数
+    String(const String &S);                    //拷贝构造
+    ~String() { delete[] data; }                //析构函数
+    size_t capacity() { return this->maxSize; } //返回串容量
 };
 
 String::String(const char *str)
