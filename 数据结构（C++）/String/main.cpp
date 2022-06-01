@@ -72,6 +72,13 @@ void test03()
     String s4("lwjj");
     s2 = s3 = "lwj";
     bool b = s2.compare(s3);
+    if (b)
+    {
+        cout << "相等\n";
+    }
+    else
+    {
+    }
 }
 int main()
 {
