@@ -54,6 +54,7 @@ void test02()
     //重载[]，通过下标运算取出字符
     cout << "s4 = " << s4 << endl;
     cout << "s4[0] = " << s4[0] << endl;
+    cout << "s4[5] = " << s4[5] << endl;
 }
 int main()
 {
