@@ -40,7 +40,7 @@ public:
     //重载[]，通过下标运算取出字符
     //重载<<，用于输入串
     //重载>>，用于输出串
-    void resize(int num = 2 * maxSize);         //扩大容量,默认空间*2
+    void resize(const int num);                 //扩大容量,默认空间*2
     size_t capacity() { return this->maxSize; } //返回串容量
     size_t size() { return strLength; }         //求串的长度
     bool empty() { return strLength == 0; }     //判空
