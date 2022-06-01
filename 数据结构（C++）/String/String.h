@@ -38,7 +38,8 @@ public:
 
 String::String(const char *str)
 {
-    maxSize = 2 * sizeof(str) / sizeof(str[0]);
+    // maxSize = 2 * sizeof(str) / sizeof(str[0]);
+    maxSize = 2*strlen(str);
     data = new char[maxSize + 1];
     strLength = strlen(data);
     strncpy(data, str, strLength);
