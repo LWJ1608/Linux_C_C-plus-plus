@@ -53,12 +53,16 @@ public:
     //获取next数组
     //获取nexVal数组
 };
-
+String::String()
+{
+    char* data=nullptr;
+    maxSize=0;
+    strLength=0;
+}
 String::String(const char *str)
 {
-    maxSize = 2 * sizeof(str) / sizeof(str[0]);
-    // maxSize = 2 * strlen(str);
-    data = new char[maxSize + 1];
-    strLength = strlen(data);
-    strncpy(data, str, strLength);
+    maxSize = 2 * strlen(str);//设置容量
+    data = new char[maxSize + 1];//开辟空间
+    strLength = strlen(data);//计算串长度
+    strncpy(data,str,strLength);//把str拷贝到data中
 }
