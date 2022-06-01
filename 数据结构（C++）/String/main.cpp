@@ -12,8 +12,12 @@ using namespace std;
 //测试构造函数功能
 void test01()
 {
+    //测试无参构造
     String s1;
     cout << "maxSize = " << s1.capacity() << endl;
+    //测试有参构造
+    String s2("lwj");
+    cout << "maxSize = " << s2.capacity() << endl;
 }
 
 int main()
