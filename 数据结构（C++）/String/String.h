@@ -39,7 +39,7 @@ public:
     String &operator+(const String &str1);                   //重载+，用于合并俩个串
     friend ostream &operator<<(ostream &cout, String &str1); //重载<<，用于输入串
     friend istream &operator>>(istream &cin, String &str1);  //重载<<，用于输入串
-    String &operator=(String &str1);                         //重载=，把一个串的赋值
+    String &operator=(const String &str1);                   //重载=，把一个串的赋值
 
     //重载[]，通过下标运算取出字符
     void resize(const int num);                 //扩大容量,默认空间*2
@@ -109,6 +109,12 @@ istream &operator>>(istream &cin, String &str1) //重载<<，用于输入串
     delete[] tmp;
     return cin;
 }
-String &String::operator=(String &str1) //重载=，把一个串的赋值
+String &String::operator=(const String &str1) //重载=，把一个串的赋值
 {
+    delete[] data;
+    maxSize = str1.maxSize;
+    data = new char[maxSize];
+    strcpy(data, str1.data);
+    strLength = str1.strLength;
+    return *this;
 }
