@@ -4,3 +4,7 @@
  * @Description:
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
+class String
+{
+private:
+};
