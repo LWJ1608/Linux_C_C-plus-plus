@@ -20,6 +20,9 @@
 //         return "ERROR! BAD SIZE.\n";
 //     }
 // };
+#include <iostream>
+#include <string.h>
+
 class String
 {
 private:
@@ -27,11 +30,14 @@ private:
     int maxSize;   //最大容量
     int strLength; //记录串的长度
 public:
-    String(const char *s = nullptr); //构造函数
-    String(const String &S);         //拷贝构造
-    ~String();                       //析构函数
+    String(const char *str = nullptr); //构造函数
+    String(const String &S);           //拷贝构造
+    ~String();                         //析构函数
 };
 
-String::String(const char *s)
+String::String(const char *str)
 {
+    maxSize = 2 * strlen(str);
+    data = new char[maxSize + 1];
+    strcpy_s(data, maxSize + 1, str);
 }
