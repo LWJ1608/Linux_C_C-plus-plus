@@ -109,3 +109,6 @@ istream &operator>>(istream &cin, String &str1) //重载<<，用于输入串
     delete[] tmp;
     return cin;
 }
+String &String::operator=(String &str1) //重载=，把一个串的赋值
+{
+}
