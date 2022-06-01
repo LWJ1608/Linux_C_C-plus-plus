@@ -4,7 +4,7 @@
  * @Description:
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
-class outOfRange : public exception
+class outOfRange : public exception //用于检查范围的有效性
 {
 public:
     const char *whar() const throw()
