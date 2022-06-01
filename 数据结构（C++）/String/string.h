@@ -7,4 +7,5 @@
 class String
 {
 private:
+    char *data; //存储串
 };
