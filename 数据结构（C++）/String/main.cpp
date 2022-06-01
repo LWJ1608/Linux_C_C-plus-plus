@@ -60,7 +60,9 @@ void test02()
 //
 void test03()
 {
-
+    //测试扩容
+    String s1("lwj");
+    cout << "s1的maxSize为：" << s1.capacity() << endl;
 }
 int main()
 {
