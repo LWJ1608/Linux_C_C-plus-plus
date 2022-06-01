@@ -52,6 +52,7 @@ void test02()
     cout << "s4 + s5 = " << s6 << endl;
 
     //重载[]，通过下标运算取出字符
+    cout << "s4 = " << s4 << endl;
     cout << "s4[0] = " << s4[0] << endl;
 }
 int main()
