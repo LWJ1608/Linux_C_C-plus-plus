@@ -22,7 +22,7 @@
 // };
 #include <iostream>
 #include <string.h>
-#include <assert>
+#include <assert.h>
 class String
 {
 private:
@@ -86,8 +86,7 @@ bool String::operator==(const String &str1) const //重载==，用判断两个�
 }
 String &String::operator+(const String &str1) //重载+，用于合并俩个串
 {
-    assert();
-
+    assert((str1.strLength+strLength)<maxSize);
     strcat(data, str1.data);
     return *this;
 }
