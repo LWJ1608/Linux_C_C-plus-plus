@@ -25,6 +25,7 @@ void test02()
     //重载==，用判断两个串是否相等
     String b1("abc");
     String b2("abcd");
+    cout << b1 == b2 ? true : false;
     //重载+，用于合并俩个串
     //重载=，把一个串的赋值
     //重载[]，通过下标运算取出字符
