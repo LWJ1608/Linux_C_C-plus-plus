@@ -13,5 +13,4 @@ private:
 public:
     String(const char *s = nullptr);
     ~String();
-    
 };
