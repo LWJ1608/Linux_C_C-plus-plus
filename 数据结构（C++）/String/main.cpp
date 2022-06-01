@@ -71,7 +71,7 @@ void test03()
     String s3;
     String s4("lwjj");
     s2 = s3 = "lwj";
-    s2.
+    bool b = s2.compare(s3);
 }
 int main()
 {
