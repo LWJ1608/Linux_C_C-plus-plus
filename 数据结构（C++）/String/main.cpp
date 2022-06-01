@@ -43,15 +43,16 @@ void test02()
     cout << "请输入一个字符串> ";
     cin >> b3;
     cout << "输入的字符串为：" << b3 << endl;
-    //重载=，把一个串的赋值
 
-    //重载+，用于合并俩个串
+    //重载[],重载=
     String s4("aaa");
     String s5("bbb");
     String s6;
     s6 = s4 + s5;
     cout << "s4 + s5 = " << s6 << endl;
+
     //重载[]，通过下标运算取出字符
+    cout << "s4[0] = " << s4[0] << endl;
 }
 int main()
 {
