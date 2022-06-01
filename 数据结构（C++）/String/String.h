@@ -30,13 +30,13 @@ private:
     int maxSize;   //最大容量
     int strLength; //记录串的长度
 public:
-    String();                                  //无参构造
-    String(const char *str);                   //构造函数
-    String(const String &S);                   //拷贝构造
-    ~String() { delete[] data; }               //析构函数
-    bool operator==(const String &str1) const; //重载==，用判断两个串是否相等
-    String &operator+(const String &str1);     //重载+，用于合并俩个串
-    void operator<<(const String &str1);       //重载<<，用于输入串
+    String();                                               //无参构造
+    String(const char *str);                                //构造函数
+    String(const String &S);                                //拷贝构造
+    ~String() { delete[] data; }                            //析构函数
+    bool operator==(const String &str1) const;              //重载==，用判断两个串是否相等
+    String &operator+(const String &str1);                  //重载+，用于合并俩个串
+    ostream &operator<<(ostream &cout, const String &str1); //重载<<，用于输入串
     //重载>>，用于输出串
     //重载=，把一个串的赋值
     //重载[]，通过下标运算取出字符
