@@ -39,9 +39,8 @@ public:
     String &operator+(const String &str1);                   //重载+，用于合并俩个串
     friend ostream &operator<<(ostream &cout, String &str1); //重载<<，用于输入串
     friend istream &operator>>(istream &cin, String &str1);  //重载<<，用于输入串
+    String &operator=(String &str1);                         //重载=，把一个串的赋值
 
-    //重载>>，用于输出串
-    //重载=，把一个串的赋值
     //重载[]，通过下标运算取出字符
     void resize(const int num);                 //扩大容量,默认空间*2
     size_t capacity() { return this->maxSize; } //返回串容量
