@@ -158,8 +158,8 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
     }
     int i = 0;
     tmp.maxSize = tmp.strLength = ;
-    while (data[i] && i < num)
-    {
-    }
+    // while (data[i] && i < num)
+    // {
+    // }
     return tmp;
 }
