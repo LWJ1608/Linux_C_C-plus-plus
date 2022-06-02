@@ -137,6 +137,7 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
     }
     delete[] tmp.data;
     tmp.maxSize = tmp.strLength = num;
+    tmp.data = new char[num + 1];
     for (i = 0; i < num; i++)
     {
         tmp.data[i] = data[pos + i];
