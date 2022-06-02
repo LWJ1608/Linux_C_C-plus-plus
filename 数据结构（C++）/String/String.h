@@ -146,20 +146,17 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
         assert(num >= 0 || num < strLength);
     }
     String tmp;
+    int i;
     if (strLength - pos < num)
     {
         num = strLength - pos;
     }
     delete[] tmp.data;
     tmp.maxSize = tmp.strLength = num;
-    for (int i = 0; i < num; i++)
+    for (i = 0; i < num; i++)
     {
         tmp[i] = data[pos + i];
     }
-    int i = 0;
-    tmp.maxSize = tmp.strLength = ;
-    // while (data[i] && i < num)
-    // {
-    // }
+    tmp.data[i]='\0';//记得在子串后面加
     return tmp;
 }
