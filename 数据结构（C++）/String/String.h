@@ -65,7 +65,7 @@ String::String(const char *str)
 {
     maxSize = 2 * strlen(str);    //设置容量
     data = new char[maxSize + 1]; //开辟空间,+1是为了存储‘\0’,在String中不算是字符
-    strLength = strlen(data);     //计算串长度
+    strLength = strlen(str);      //计算串长度
     strcpy(data, str);            //把str拷贝到data中
 }
 void String::resize(const int num)
