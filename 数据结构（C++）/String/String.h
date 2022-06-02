@@ -150,6 +150,10 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
     // {
     //     tmp[i] = data[pos + i];
     // }
-
+    int i = 0;
+    maxSize = strLength =
+        while (data[i] && i < num)
+    {
+    }
     return *tmp;
 }
