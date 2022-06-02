@@ -134,8 +134,8 @@ inline char &String::operator[](size_t index) const //重载[]，通过下标运
 int String::compare(const String &str1) const //比较当前串和串s的大小
 {
     int i = 0;
-    while (data[i++] == str1.data[i++])
+    while (data[i++] == str1.data[i++])//判断是否相等
     {
     }
-    return data[i] - str1.data[i];
+    return data[i] - str1.data[i];//如果相等返回0，小于返回小于0的数，大于返回大于0的数
 }
