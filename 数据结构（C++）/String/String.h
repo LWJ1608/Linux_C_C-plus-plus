@@ -40,13 +40,13 @@ public:
     friend ostream &operator<<(ostream &cout, String &str1); //重载<<，用于输入串
     friend istream &operator>>(istream &cin, String &str1);  //重载<<，用于输入串
     String &operator=(const String &str1);                   //重载=，把一个串的赋值
-    inline char &operator[](size_t index)const;                   //重载[]，通过下标运算取出字符
+    inline char &operator[](size_t index)const;              //重载[]，通过下标运算取出字符
     void resize(const int num);                              //扩大容量,默认空间*2
-    size_t capacity()const { return this->maxSize; }              //返回串容量
-    size_t size() const{ return strLength; }                      //求串的长度
-    bool empty() const{ return strLength == 0; }                  //判空
-    int compare(const String &str1) const;                  //比较当前串和串s的大小
-    String& subStr(int pos,const int num)const;//从pos位置开始取长度为num的子串
+    size_t capacity()const { return this->maxSize; }         //返回串容量
+    size_t size() const{ return strLength; }                 //求串的长度
+    bool empty() const{ return strLength == 0; }             //判空
+    int compare(const String &str1) const;                   //比较当前串和串s的大小
+    String& subStr(int pos,const int num)const;              //从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
     //在pos位置插入子串s
     //删除从pos位置开始的num个字符
