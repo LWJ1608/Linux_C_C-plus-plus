@@ -33,9 +33,9 @@ public:
     int compare(const String &str1) const;                   //比较当前串和串s的大小
     String subStr(int pos, int num) const;                   //从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
-    String &insert(int pop, const String &s); //在pos位置插入子串s
-    String &eraser(int poo, const String &s); //删除从pos位置开始的num个字符
-    char &getData() const;                    //获取字符数组data
+    String &insert(int pop, const String &s);     //在pos位置插入子串s
+    String &eraser(int poo, const String &s);     //删除从pos位置开始的num个字符
+    const char &getData() const { return data; }; //获取字符数组data
     //改进的模式匹配算法
     //获取next数组
     //获取nexVal数组
@@ -172,7 +172,7 @@ String &String::eraser(int pos, const String &s) //删除从pos位置开始的nu
     }
     strLength = strLength - num;
 }
-char &String::getData() const //获取字符数组data
+const char *String::getData() const //获取字符数组data
 {
     return this->data;
 }
