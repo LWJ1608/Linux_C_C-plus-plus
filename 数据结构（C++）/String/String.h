@@ -4,14 +4,7 @@
  * @Description:实现串的基本功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
-class outOfRange : public exception //用于检查范围的有效性
-{
-public:
-    const char *whar() const throw()
-    {
-        return "ERROR! OUT OF RANGE.\n";
-    }
-};
+
 class badSize : public exception //用于检查长度的有效性
 {
 public:
@@ -46,7 +39,7 @@ public:
     size_t size() const { return strLength; }                //求串的长度
     bool empty() const { return strLength == 0; }            //判空
     int compare(const String &str1) const;                   //比较当前串和串s的大小
-    String &subStr(int pos, const int num) const;            //从pos位置开始取长度为num的子串
+    String &subStr(int pos, int num) const;                  //从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
     //在pos位置插入子串s
     //删除从pos位置开始的num个字符
@@ -140,11 +133,20 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
     }
     return data[i] - str1.data[i]; //如果相等返回0，小于返回小于0的数，大于返回大于0的数
 }
-String &String::subStr(int pos, const int num) const //从pos位置开始取长度为num的子串
+String &String::subStr(int pos, int num) const //从pos位置开始取长度为num的子串
 {
     if (pos < 0 || pos >= strLength)
     {
-        cout << "";
+        cout << "ERROR !OUT OF RANGE.\n ";
+        assert(pos >= 0 || pos < strLength);
+    }
+    if (num < 0 || num >= strLength)
+    {
+        cout << "ERROR! BAD SIZE.\n";
+        assert(num >= 0 || num < strLength);
+    }
+    while ()
+    {
     }
     String *tmp = new String[num + 1];
 }
