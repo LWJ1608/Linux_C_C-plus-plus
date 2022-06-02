@@ -142,5 +142,6 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
 }
 String String::subStr(int pos, const int num) const //从pos位置开始取长度为num的子串
 {
-    char *tmp = new char[num + 1];
+    if (pos < 0 || pos >= strLength)
+        String *tmp = new String[num + 1];
 }
