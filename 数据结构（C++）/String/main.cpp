@@ -81,6 +81,11 @@ void test03()
         cout << "不相等\n";
     }
 }
+
+void test04()
+{
+
+}
 int main()
 {
     // test01();
