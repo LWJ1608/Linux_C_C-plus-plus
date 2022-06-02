@@ -161,5 +161,6 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     {
         data[pos + j] = s.data[j];
     }
-    strLength = strLength + s.strLength;
+    strLength +=s.strLength;
+    return *this;
 }
