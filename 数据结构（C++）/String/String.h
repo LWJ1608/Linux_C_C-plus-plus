@@ -145,6 +145,7 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
     tmp.data[i] = '\0'; //记得在子串后面加
     return tmp;
 }
-String &String::insert(int pop, const String &s) //在pos位置插入子串s
+String &String::insert(int pos, const String &s) //在pos位置插入子串s
 {
+    assert(pos >= 0 || pos < strLength);
 }
