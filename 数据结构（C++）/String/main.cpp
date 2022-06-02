@@ -93,6 +93,9 @@ void test04()
     ////在pos位置插入子串s
     String d1("lllll");
     String d2("ddd");
+    d1.insert(2, d2);
+    cout << "d1 = " << d1 << endl;
+    d1.insert(4,d2);
     cout << "d1 = " << d1 << endl;
 }
 int main()
