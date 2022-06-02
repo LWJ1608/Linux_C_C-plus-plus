@@ -35,8 +35,8 @@ void test02()
     }
 
     //重载<<，用于输入串
-    cout << "b1 = " << b1 <<endl;
-    cout << "b2 = " << b2 <<endl;
+    cout << "b1 = " << b1 << endl;
+    cout << "b2 = " << b2 << endl;
 
     //重载>>，用于输出串
     String b3;
@@ -72,7 +72,7 @@ void test03()
     String s4("lwj");
     s2 = s3 = "lwjj";
     bool b = s2.compare(s3);
-    if (b==true)
+    if (b == true)
     {
         cout << "相等\n";
     }
@@ -84,7 +84,6 @@ void test03()
 
 void test04()
 {
-
 }
 int main()
 {
