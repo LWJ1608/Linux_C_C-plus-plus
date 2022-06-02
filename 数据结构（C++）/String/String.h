@@ -4,22 +4,22 @@
  * @Description:实现串的基本功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
-// class outOfRange : public exception //用于检查范围的有效性
-// {
-// public:
-//     const char *whar() const throw()
-//     {
-//         return "ERROR! OUT OF RANGE.\n";
-//     }
-// };
-// class badSize : public exception //用于检查长度的有效性
-// {
-// public:
-//     const char *whar() const throw()
-//     {
-//         return "ERROR! BAD SIZE.\n";
-//     }
-// };
+class outOfRange : public exception //用于检查范围的有效性
+{
+public:
+    const char *whar() const throw()
+    {
+        return "ERROR! OUT OF RANGE.\n";
+    }
+};
+class badSize : public exception //用于检查长度的有效性
+{
+public:
+    const char *whar() const throw()
+    {
+        return "ERROR! BAD SIZE.\n";
+    }
+};
 #include <iostream>
 #include <cstring>
 #include <assert.h>
@@ -144,6 +144,7 @@ String &String::subStr(int pos, const int num) const //从pos位置开始取长�
 {
     if (pos < 0 || pos >= strLength)
     {
+        cout << "";
     }
     String *tmp = new String[num + 1];
 }
