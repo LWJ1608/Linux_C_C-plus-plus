@@ -148,7 +148,7 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
 String &String::insert(int pos, const String &s) //在pos位置插入子串s
 {
     assert(pos >= 0 || pos < strLength);
-    if (strLength + s.strLength > maxSize)
+    if (strLength + s.strLength > maxSize)//空间不够的话扩容
     {
         resize(strLength + s.strLength);
     }

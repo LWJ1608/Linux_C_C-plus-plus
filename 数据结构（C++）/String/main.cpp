@@ -95,7 +95,7 @@ void test04()
     String d2("ddd");
     d1.insert(2, d2);
     cout << "d1 = " << d1 << endl;
-    d1.insert(6,d2);
+    d1.insert(9,d2);
     cout << "d1 = " << d1 << endl;
 }
 int main()
