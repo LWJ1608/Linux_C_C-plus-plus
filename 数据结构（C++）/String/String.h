@@ -153,12 +153,13 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
         resize(strLength + s.strLength);
     }
     int j = 0;
-    for (int i = strLength; i >= pos; i--) // data[strLength]为‘\0’
+    for (int i = strLength; i >= pos; i--) // data[strLength]为‘\0’,记得也后移
     {
         data[i + s.strLength] = data[i];
     }
-    for (int j = pos; j < strLength; j++)
+    for (int j = 0; j < s.strLength; j++)
     {
+        data[pos + j] = s.data[j];
     }
-    data[i]
+    strLength = strLength + s.strLength;
 }
