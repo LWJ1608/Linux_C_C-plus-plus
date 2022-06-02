@@ -133,5 +133,10 @@ inline char &String::operator[](size_t index) const //重载[]，通过下标运
 }
 int String::compare(const String &str1) const //比较当前串和串s的大小
 {
-    int return 1;
+    int i = 0;
+    while (data[i++] == data[i++])
+    {
+        if (data[i] = data[i])
+    }
+    return;
 }
