@@ -33,7 +33,7 @@ public:
     int compare(const String &str1) const;                   //比较当前串和串s的大小
     String subStr(int pos, int num) const;                   //从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
-    //在pos位置插入子串s
+    String &insert(int pop, const String &s); //在pos位置插入子串s
     //删除从pos位置开始的num个字符
     //获取字符数组data
     //改进的模式匹配算法
@@ -144,4 +144,7 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
     }
     tmp.data[i] = '\0'; //记得在子串后面加
     return tmp;
+}
+String &String::insert(int pop, const String &s) //在pos位置插入子串s
+{
 }
