@@ -97,6 +97,9 @@ void test04()
     cout << "d1 = " << d1 << endl;
     d1.insert(7,d2);
     cout << "d1 = " << d1 << endl;
+
+    ////删除从pos位置开始的num个字符
+    d1.eraser(7,3);
 }
 int main()
 {
