@@ -127,10 +127,8 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
 }
 String String::subStr(int pos, int num) const //从pos位置开始取长度为num的子串
 {
-
     assert(pos >= 0 || pos < strLength);
-    assert(num >= 0 || num < strLength);
-
+    assert(num >= 0 || num <= strLength);
     String tmp;
     int i;
     if (strLength - pos < num)

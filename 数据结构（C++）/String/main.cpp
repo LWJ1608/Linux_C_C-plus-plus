@@ -78,7 +78,7 @@ void test03()
     cout << "b = " << b << endl;
     cout << "c = " << c << endl;
 }
-
+//
 void test04()
 {
 }
