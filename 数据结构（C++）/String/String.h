@@ -150,5 +150,6 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     assert(pos >= 0 || pos < strLength);
     if (strLength + s.strLength > maxSize)
     {
+        resize(strLength + s.strLength);
     }
 }
