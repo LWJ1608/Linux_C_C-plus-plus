@@ -88,13 +88,14 @@ void test04()
     // String c4 = c1.subStr(9, 9);
     cout << "c2 = " << c2 << endl;
     cout << "c3 = " << c3 << endl;
-    cout << "c4= " << c4 << endl;
+    // cout << "c4 = " << c4 << endl;
     // cout << "c5= " << c2 << endl;
 }
 int main()
 {
     // test01();
     // test02();
-    test03();
+    // test03();
+    test04();
     return 0;
 }
