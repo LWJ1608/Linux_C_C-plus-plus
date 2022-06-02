@@ -172,3 +172,7 @@ String &String::eraser(int pos, const String &s) //删除从pos位置开始的nu
     }
     strLength = strLength - num;
 }
+char &String::getData() const //获取字符数组data
+{
+    return this->data;
+}
