@@ -5,14 +5,6 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
 
-class badSize : public exception //用于检查长度的有效性
-{
-public:
-    const char *whar() const throw()
-    {
-        return "ERROR! BAD SIZE.\n";
-    }
-};
 #include <iostream>
 #include <cstring>
 #include <assert.h>
@@ -135,16 +127,10 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
 }
 String String::subStr(int pos, int num) const //从pos位置开始取长度为num的子串
 {
-    if (pos < 0 || pos >= strLength)
-    {
-        cout << "ERROR !OUT OF RANGE.\n ";
-        assert(pos >= 0 || pos < strLength);
-    }
-    if (num < 0 || num >= strLength)
-    {
-        cout << "ERROR! BAD SIZE.\n";
-        assert(num >= 0 || num < strLength);
-    }
+
+    assert(pos >= 0 || pos < strLength);
+    assert(num >= 0 || num < strLength);
+
     String tmp;
     int i;
     if (strLength - pos < num)
@@ -157,6 +143,6 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
     {
         tmp[i] = data[pos + i];
     }
-    tmp.data[i]='\0';//记得在子串后面加
+    tmp.data[i] = '\0'; //记得在子串后面加
     return tmp;
 }
