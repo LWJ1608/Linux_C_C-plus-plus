@@ -137,5 +137,5 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
     while (data[i++] == str1.data[i++])
     {
     }
-    return data[i++] - str1.data[i++];
+    return data[i] - str1.data[i];
 }
