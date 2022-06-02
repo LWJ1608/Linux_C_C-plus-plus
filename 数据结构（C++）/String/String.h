@@ -46,7 +46,7 @@ public:
     size_t size() { return strLength; }                      //求串的长度
     bool empty() { return strLength == 0; }                  //判空
     bool compare(const String &str1) const;                  //比较当前串和串s的大小
-    //从pos位置开始取长度为num的子串
+    String& subStr(int )//从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
     //在pos位置插入子串s
     //删除从pos位置开始的num个字符
