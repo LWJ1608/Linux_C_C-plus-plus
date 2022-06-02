@@ -34,7 +34,7 @@ public:
     String subStr(int pos, int num) const;                   //从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
     String &insert(int pop, const String &s); //在pos位置插入子串s
-    // 删除从pos位置开始的num个字符
+    String &eraser(int poo, const String &s); // 删除从pos位置开始的num个字符
     //获取字符数组data
     //改进的模式匹配算法
     //获取next数组
