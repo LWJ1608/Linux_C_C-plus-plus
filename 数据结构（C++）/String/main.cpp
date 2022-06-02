@@ -82,6 +82,14 @@ void test03()
 void test04()
 {
     //从pos位置开始取长度为num的子串
+    String c1 = "hello";
+    String c2 = c1.subStr(0, 2);
+    String c3 = c1.subStr(1, 2);
+    // String c4 = c1.subStr(9, 9);
+    cout << "c2 = " << c2 << endl;
+    cout << "c3 = " << c3 << endl;
+    cout << "c4= " << c4 << endl;
+    // cout << "c5= " << c2 << endl;
 }
 int main()
 {
