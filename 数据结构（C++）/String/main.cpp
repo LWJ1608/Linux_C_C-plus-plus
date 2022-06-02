@@ -36,7 +36,7 @@ void test02()
 
     //重载<<，用于输入串
     cout << "b1 = " << b1 <<endl;
-    cout << "b2 = " << b2 << endl;
+    cout << "b2 = " << b2 <<endl;
 
     //重载>>，用于输出串
     String b3;
