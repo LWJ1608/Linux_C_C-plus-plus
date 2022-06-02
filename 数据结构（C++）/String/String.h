@@ -135,3 +135,5 @@ bool String::compare(const String &str1) const //比较当前串和串s的大小
 {
     return data == str1.data;
 }
+
+
