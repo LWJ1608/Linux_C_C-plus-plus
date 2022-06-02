@@ -145,10 +145,11 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
         cout << "ERROR! BAD SIZE.\n";
         assert(num >= 0 || num < strLength);
     }
-    String *tmp = new String[num + 1];
-    for (int i = 0; i < num; i++)
-    {
-        tmp.data[i] = data[pos + i];
-    }
+    String *tmp;
+    // for (int i = 0; i < num; i++)
+    // {
+    //     tmp[i] = data[pos + i];
+    // }
+
     return *tmp;
 }
