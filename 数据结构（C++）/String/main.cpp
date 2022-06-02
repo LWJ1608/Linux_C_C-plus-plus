@@ -90,7 +90,10 @@ void test04()
     cout << "c3 = " << c3 << endl;
     // cout << "c4 = " << c4 << endl;
 
-    //
+    ////在pos位置插入子串s
+    String d1("lllll");
+    String d2("ddd");
+    cout << "d1 = " << d1 << endl;
 }
 int main()
 {
