@@ -139,7 +139,7 @@ String String::subStr(int pos, int num) const //从pos位置开始取长度为nu
     tmp.maxSize = tmp.strLength = num;
     for (i = 0; i < num; i++)
     {
-        tmp[i] = data[pos + i];
+        tmp.data[i] = data[pos + i];
     }
     tmp.data[i] = '\0'; //记得在子串后面加
     return tmp;
