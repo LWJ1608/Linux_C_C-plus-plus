@@ -93,7 +93,6 @@ String &String::operator+(const String &str1) //重载+，用于合并俩个串
     {
         resize(str1.strLength + strLength);
     }
-    maxSize = str1.strLength + strLength + 1;
     strcat(data, str1.data);
     strLength += str1.strLength;
     return *this;
