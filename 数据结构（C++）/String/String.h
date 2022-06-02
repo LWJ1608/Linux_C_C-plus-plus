@@ -34,7 +34,7 @@ public:
     String subStr(int pos, int num) const;                   //从pos位置开始取长度为num的子串
     //朴素的模式匹配算法
     String &insert(int pop, const String &s); //在pos位置插入子串s
-    String &eraser(int poo, const String &s); // 删除从pos位置开始的num个字符
+    String &eraser(int poo, const String &s); //删除从pos位置开始的num个字符
     char &getData() const;                    //获取字符数组data
     //改进的模式匹配算法
     //获取next数组
@@ -152,7 +152,6 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     {
         resize(strLength + s.strLength);
     }
-    int j = 0;
     for (int i = strLength; i >= pos; i--) // data[strLength]为‘\0’,记得也后移
     {
         data[i + s.strLength] = data[i];
@@ -163,4 +162,12 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     }
     strLength += s.strLength;
     return *this;
+}
+String &eraser(int pos, const String &s) //删除从pos位置开始的num个字符
+{
+    assert(pos >= 0 && pos < strLength);
+    for (int i = 0; i < s.strLength; i++)
+    {
+        data[]
+    }
 }
