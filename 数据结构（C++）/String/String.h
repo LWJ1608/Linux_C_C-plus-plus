@@ -163,11 +163,12 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     strLength += s.strLength;
     return *this;
 }
-String &eraser(int pos, const String &s) //删除从pos位置开始的num个字符
+String &String::eraser(int pos, const String &s) //删除从pos位置开始的num个字符
 {
     assert(pos >= 0 && pos < strLength);
-    for (int i = 0; i < s.strLength; i++)
+    for (int i = 0; i < strLength - num; i++)
     {
-        data[]
+        data[pos] = data[pos + num - i];
     }
+    strLength = strLength - num;
 }
