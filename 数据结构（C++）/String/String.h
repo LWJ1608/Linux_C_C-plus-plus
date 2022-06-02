@@ -152,4 +152,5 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     {
         resize(strLength + s.strLength);
     }
+    for (int i = pos; i <)
 }
