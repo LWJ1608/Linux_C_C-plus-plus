@@ -42,7 +42,7 @@ public:
     String &operator=(const String &str1);                   //重载=，把一个串的赋值
     inline char &operator[](size_t index)const;                   //重载[]，通过下标运算取出字符
     void resize(const int num);                              //扩大容量,默认空间*2
-    size_t capacity()cosnt { return this->maxSize; }              //返回串容量
+    size_t capacity()const { return this->maxSize; }              //返回串容量
     size_t size() const{ return strLength; }                      //求串的长度
     bool empty() const{ return strLength == 0; }                  //判空
     bool compare(const String &str1) const;                  //比较当前串和串s的大小
@@ -126,7 +126,7 @@ String &String::operator=(const String &str1) //重载=，把一个串的赋值
     strLength = str1.strLength;
     return *this;
 }
-inline char &String::operator[](size_t index)cosnt //重载[]，通过下标运算取出字符
+inline char &String::operator[](size_t index)const //重载[]，通过下标运算取出字符
 {
     assert(index >= 0 && index < maxSize);
     return data[index];
