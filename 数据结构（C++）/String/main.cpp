@@ -70,7 +70,7 @@ void test03()
     String s2;
     String s3;
     String s4("lwj");
-    s2 = s3 = "lwjj";
+    s2 = s3 = "wjj";
     int b = s2.compare(s3);
     cout << "b = " << b << endl;
     // if (b == true)
