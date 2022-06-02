@@ -156,7 +156,7 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     {
         if (i > strLength - 1)
         {
-                }
+        }
     }
     data[i]
 }
