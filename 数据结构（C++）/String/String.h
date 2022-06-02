@@ -172,7 +172,4 @@ String &String::eraser(int pos, int num) //删除从pos位置开始的num个字�
     }
     strLength = strLength - num;
 }
-const char *String::getData() const //获取字符数组data
-{
-    return this->data;
-}
+
