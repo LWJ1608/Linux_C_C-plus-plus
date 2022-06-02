@@ -152,11 +152,16 @@ String &String::insert(int pos, const String &s) //在pos位置插入子串s
     {
         resize(strLength + s.strLength);
     }
-    for (int i = strLength + s.strLength; i < ; i--)
+    int j = 0;
+    for (int i = strLength + s.strLength; i > s.strLength - 1; i--)
     {
-        if (i > strLength - 1)
-        {
-        }
+
+        data[i] = data[i];
+        j++;
+
+        data
     }
+    for (int j =)
+        ;
     data[i]
 }
