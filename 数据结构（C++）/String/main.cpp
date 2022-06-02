@@ -78,9 +78,10 @@ void test03()
     cout << "b = " << b << endl;
     cout << "c = " << c << endl;
 }
-//
+//子串操作测试
 void test04()
 {
+    //从pos位置开始取长度为num的子串
 }
 int main()
 {
