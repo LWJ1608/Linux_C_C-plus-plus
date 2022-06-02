@@ -74,7 +74,7 @@ void test03()
     int b = s2.compare(s3);
     int c = s2.compare(s4);
     cout << "b = " << b << endl;
-    cout << "c = " << c
+    cout << "c = " << c << endl;
     // if (b == true)
     // {
     //     cout << "相等\n";
