@@ -106,11 +106,20 @@ void test04()
     d1.eraser(3, 3);
     cout << "d1 = " << d1 << endl;
 }
+void test05()
+{
+    //朴素的模式匹配算法
+    String s1 = "lwjlwjlwjlllwef";
+    String s2 = "lwe";
+    int index = s1.bfFind(s2);
+    cout << "index = " << index << endl;
+}
 int main()
 {
     // test01();
     // test02();
     // test03();
-    test04();
+    // test04();
+    test05();
     return 0;
 }
