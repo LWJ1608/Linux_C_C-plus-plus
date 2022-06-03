@@ -168,11 +168,12 @@ String &String::eraser(int pos, int num) //删除从pos位置开始的num个字�
     assert(pos >= 0 && pos < strLength);
     if (strLength - pos <= num)
     {
+        data[pos] = '\0';
         strLength -= num;
     }
     for (int i = 0; i < strLength - pos; i++)
     {
-        data[pos+i] = data[pos + num + i];
+        data[pos + i] = data[pos + num + i];
     }
     strLength -= num;
 }
