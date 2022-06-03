@@ -147,6 +147,13 @@ int String::bfFind(const String &s) const //朴素的模式匹配算法,找到�
     }
 
     if (data[i] = data[j])
+    {
+        return i - s.strLength;
+    }
+    else
+    {
+        return -1;
+    }
 }
 
 String String::subStr(int pos, int num) const //从pos位置开始取长度为num的子串
