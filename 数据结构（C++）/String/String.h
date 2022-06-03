@@ -147,7 +147,7 @@ int String::bfFind(const String &s) const //朴素的模式匹配算法,找到�
         }
     }
 
-    if (data[i] = data[j])
+    if (s.strLength <= j)
     {
         return i - s.strLength;
     }
@@ -209,9 +209,9 @@ String &String::eraser(int pos, int num) //删除从pos位置开始的num个字�
     }
     strLength -= num;
 }
-void String::getNext(const String &t, int *next) //获取next数组
-{
-}
-int String::kmpFind(const String &) const //改进的模式匹配算法
-{
-}
+// void String::getNext(const String &t, int *next) //获取next数组
+// {
+// }
+// int String::kmpFind(const String &) const //改进的模式匹配算法
+// {
+// }
