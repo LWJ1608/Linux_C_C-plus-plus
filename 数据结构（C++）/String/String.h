@@ -127,7 +127,7 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
 }
 int String::bfFind(const String &s) const //朴素的模式匹配算法,找到串s，返回第一次出现的下标，没有返回-1
 {
-    if (s.strLength - strLength)
+    if (s.strLength > strLength)
     {
         return -1;
     }
@@ -135,9 +135,10 @@ int String::bfFind(const String &s) const //朴素的模式匹配算法,找到�
     int j = 0; //子串指针
     while (i < strLength && j < s.strLength)
     {
-        if (data[i++] == s.data[j++]) //相等的话下一个
+        if (data[i] == s.data[j]) //相等的话下一个
         {
-            ;
+            i++;
+            j++;
         }
         else //不相等的话，指针回溯
         {
