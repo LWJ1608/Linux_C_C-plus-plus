@@ -209,3 +209,9 @@ String &String::eraser(int pos, int num) //删除从pos位置开始的num个字�
     }
     strLength -= num;
 }
+void String::getNext(const String &t, int *next) //获取next数组
+{
+}
+int String::kmpFind(const String &) const //改进的模式匹配算法
+{
+}
