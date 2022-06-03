@@ -131,7 +131,9 @@ int String::bfFind(const String &s) const //朴素的模式匹配算法,找到�
     {
         return -1;
     }
-    for ()
+    while ()
+    {
+    }
 }
 
 String String::subStr(int pos, int num) const //从pos位置开始取长度为num的子串
