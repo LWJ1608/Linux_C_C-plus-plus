@@ -103,6 +103,8 @@ void test04()
     cout << "d1 = " << d1 << endl;
     d1.eraser(0, 2);
     cout << "d1 = " << d1 << endl;
+    d1.eraser(3, 3);
+    cout << "d1 = " << d1 << endl;
 }
 int main()
 {
