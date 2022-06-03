@@ -131,6 +131,8 @@ int String::bfFind(const String &s) const //朴素的模式匹配算法,找到�
     {
         return -1;
     }
+    int i = 0;
+    int j = 0;
     while ()
     {
     }
