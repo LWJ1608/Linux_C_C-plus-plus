@@ -113,7 +113,7 @@ void test05()
     String s2 = "lwe";
     int index = s1.bfFind(s2);
     cout << "index = " << index << endl;
-    index = s1.bfFind("lwj");
+    index = s1.bfFind("ef");
     cout << "index = " << index << endl;
 }
 int main()
