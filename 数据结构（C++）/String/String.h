@@ -33,11 +33,11 @@ public:
     int compare(const String &str1) const;                   //比较当前串和串s的大小
     String subStr(int pos, int num) const;                   //从pos位置开始取长度为num的子串
     int bfFind(const String &s) const;                       //朴素的模式匹配算法
-    String &insert(int pop, const String &s);                //在pos位置插入子串s
-    String &eraser(int poo, int num);                        //删除从pos位置开始的num个字符
+    String &insert(int pos, const String &s);                //在pos位置插入子串s
+    String &eraser(int pos, int num);                        //删除从pos位置开始的num个字符
     const char *getData() const { return data; };            //获取字符数组data
-    //改进的模式匹配算法
-    //获取next数组
+    int kmpFind(const String &) const;                       //改进的模式匹配算法
+    void getNext(const String &t, int *next);                //获取next数组
     //获取nexVal数组
 };
 String::String()
