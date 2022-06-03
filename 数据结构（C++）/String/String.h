@@ -32,10 +32,10 @@ public:
     bool empty() const { return strLength == 0; }            //判空
     int compare(const String &str1) const;                   //比较当前串和串s的大小
     String subStr(int pos, int num) const;                   //从pos位置开始取长度为num的子串
-    //朴素的模式匹配算法
-    String &insert(int pop, const String &s);     //在pos位置插入子串s
-    String &eraser(int poo, int num);             //删除从pos位置开始的num个字符
-    const char *getData() const { return data; }; //获取字符数组data
+    int bfFind(const String &s) const;                       //朴素的模式匹配算法
+    String &insert(int pop, const String &s);                //在pos位置插入子串s
+    String &eraser(int poo, int num);                        //删除从pos位置开始的num个字符
+    const char *getData() const { return data; };            //获取字符数组data
     //改进的模式匹配算法
     //获取next数组
     //获取nexVal数组
@@ -125,6 +125,10 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
     }
     return data[i] - str1.data[i]; //如果相等返回0，小于返回小于0的数，大于返回大于0的数
 }
+int String::bfFind(const String &s) const //朴素的模式匹配算法,找到串s，返回第一次出现的下标，没有返回-1
+{
+}
+
 String String::subStr(int pos, int num) const //从pos位置开始取长度为num的子串
 {
     assert(pos >= 0 && pos < strLength);
