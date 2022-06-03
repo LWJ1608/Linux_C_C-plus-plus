@@ -127,6 +127,10 @@ int String::compare(const String &str1) const //比较当前串和串s的大小
 }
 int String::bfFind(const String &s) const //朴素的模式匹配算法,找到串s，返回第一次出现的下标，没有返回-1
 {
+    if (s.strLength - strLength)
+    {
+        return -1;
+    }
 }
 
 String String::subStr(int pos, int num) const //从pos位置开始取长度为num的子串
