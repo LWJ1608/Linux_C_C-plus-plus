@@ -170,9 +170,9 @@ String &String::eraser(int pos, int num) //删除从pos位置开始的num个字�
     {
         strLength -= num;
     }
-    for (int i = 0; i < strLength - num; i++)
+    for (int i = 0; i < strLength - pos; i++)
     {
-        data[pos] = data[pos + num - i];
+        data[pos+i] = data[pos + num + i];
     }
     strLength -= num;
 }

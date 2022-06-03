@@ -95,11 +95,14 @@ void test04()
     String d2("ddd");
     d1.insert(2, d2);
     cout << "d1 = " << d1 << endl;
-    d1.insert(7,d2);
+    d1.insert(7, d2);
     cout << "d1 = " << d1 << endl;
 
     ////删除从pos位置开始的num个字符
-    d1.eraser(7,3);
+    d1.eraser(7, 3);
+    cout << "d1 = " << d1 << endl;
+    d1.eraser(0, 2);
+    cout << "d1 = " << d1 << endl;
 }
 int main()
 {
