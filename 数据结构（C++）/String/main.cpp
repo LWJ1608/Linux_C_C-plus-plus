@@ -115,6 +115,7 @@ void test05()
     cout << "index = " << index << endl;
     index = s1.bfFind("ef");
     cout << "index = " << index << endl;
+    // KMP算法
 }
 int main()
 {
