@@ -131,10 +131,19 @@ int String::bfFind(const String &s) const //朴素的模式匹配算法,找到�
     {
         return -1;
     }
-    int i = 0;
-    int j = 0;
-    while ()
+    int i = 0; //主串指针
+    int j = 0; //子串指针
+    while (i < strLength && j < s.strLength)
     {
+        if (data[i++] == s.data[j++]) //相等的话下一个
+        {
+            ;
+        }
+        else //不相等的话，指针回溯
+        {
+            i = i - j + 1; //主串
+            j = 0;         //子串
+        }
     }
 }
 
