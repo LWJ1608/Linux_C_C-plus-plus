@@ -174,5 +174,5 @@ String &String::eraser(int pos, int num) //删除从pos位置开始的num个字�
     {
         data[pos] = data[pos + num - i];
     }
-    strLength = strLength - num;
+    strLength -= num;
 }
