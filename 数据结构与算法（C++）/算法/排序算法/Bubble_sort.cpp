@@ -7,7 +7,7 @@
 #include <iostream>
 
 template <typename Type>
-void print(const Type &arr, int size)//打印数组
+void print(const Type &arr, int size) //打印数组
 {
     for (int i = 0; i < size; i++)
     {
@@ -17,7 +17,7 @@ void print(const Type &arr, int size)//打印数组
 }
 
 template <typename Type>
-void bubbleSort(Type *arr, int size)//冒泡排序
+void bubbleSort(Type *arr, int size) //冒泡排序
 {
     Type tmp;
     for (int i = 0; i < size - 1; i++)
@@ -29,7 +29,7 @@ void bubbleSort(Type *arr, int size)//冒泡排序
                 // tmp = arr[j];
                 // arr[j] = arr[j + 1];
                 // arr[j + 1] = tmp;
-                std::swap(arr[j],arr[j+1]);//交换
+                std::swap(arr[j], arr[j + 1]); //交换,升序话把两个数换位
             }
         }
     }
