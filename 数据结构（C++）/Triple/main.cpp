@@ -1,6 +1,19 @@
 /**
  * @Author: lwj
  * @Date: 2022-06-04 20:11:32
- * @Description:
+ * @Description:稀疏矩阵的测试
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Triple/main.cpp
  **/
+#include<iostream>
+#include"triple.h"
+
+using namespace std;
+void test01()
+{
+
+}
+int main()
+{
+    test01();
+    return 0;
+}
