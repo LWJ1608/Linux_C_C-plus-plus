@@ -19,7 +19,7 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 void bubbleSort(Type *arr, int size) //冒泡排序
 {
-    Type tmp;
+    // Type tmp;
     for (int i = 0; i < size - 1; i++)
     {
         for (int j = 0; j < size - i - 1; j++)
