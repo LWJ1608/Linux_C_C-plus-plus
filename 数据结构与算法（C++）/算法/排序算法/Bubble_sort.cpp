@@ -19,7 +19,7 @@ template <typename Type>
 void bubbleSort(Type *arr, int size)
 {
     Type tmp;
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         for (int j = i + 1; j < size - i - 1; j++)
         {
