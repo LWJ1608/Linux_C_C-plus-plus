@@ -19,7 +19,9 @@ void bubbleSort(Type arr[], int size)
 {
     for (int i = 0; i < size; i++)
     {
-        for (int j =)
+        for (int j = i + 1; j < i - 1; j++)
+        {
+        }
     }
 }
 int main()
