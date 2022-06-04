@@ -17,10 +17,23 @@ void print(const Type &arr, int size)
 template <typename Type>
 void bubbleSort(Type arr[], int size)
 {
+    Type tmp;
     for (int i = 0; i < size; i++)
     {
         for (int j = i + 1; j > size - i - 1; j++)
         {
+            if (arr[i] < arr[j])
+            {
+                tmp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = tmp;
+            }
+            else
+            {
+                tmp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = tmp;
+            }
         }
     }
 }
