@@ -14,7 +14,7 @@ void print(const Type &arr, int size)
     }
     std::cout << std::endl;
 }
-//方法一
+
 template <typename Type>
 void bubbleSort(Type *arr, int size)
 {
@@ -29,15 +29,9 @@ void bubbleSort(Type *arr, int size)
                 arr[j] = arr[j + 1];
                 arr[j + 1] = tmp;
             }
-            // else
-            // {
-            //     arr[j+1] = arr[j + 1];
-            //     arr[j + 1] = arr[j + 2];
-            // }
         }
     }
 }
-//方法二
 int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
