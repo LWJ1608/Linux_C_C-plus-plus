@@ -17,22 +17,8 @@ void print(const Type &arr, int size) //打印数组
 }
 
 template <typename Type>
-void bubbleSort(Type *arr, int size) //冒泡排序
+void quickSort(Type *arr, int size) //冒泡排序
 {
-    Type tmp;
-    for (int i = 0; i < size - 1; i++)
-    {
-        for (int j = 0; j < size - i - 1; j++)
-        {
-            if (arr[j] < arr[j + 1])
-            {
-                // tmp = arr[j];
-                // arr[j] = arr[j + 1];
-                // arr[j + 1] = tmp;
-                std::swap(arr[j], arr[j + 1]); 
-            }
-        }
-    }
 }
 int main()
 {
