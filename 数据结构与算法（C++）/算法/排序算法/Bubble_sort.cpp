@@ -23,16 +23,16 @@ void bubbleSort(Type *arr, int size)
     {
         for (int j = i + 1; j < size - i - 1; j++)
         {
-            if (arr[i] < arr[j])
+            if (arr[j] < arr[j + 1])
             {
                 tmp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = tmp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
             }
             else
             {
-                arr[i] = arr[j];
                 arr[j] = arr[j + 1];
+                arr[j + 1] = arr[j + 2];
             }
         }
     }
