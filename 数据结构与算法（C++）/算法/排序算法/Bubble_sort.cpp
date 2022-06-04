@@ -14,6 +14,7 @@ void print(const Type &arr, int size)
     }
     std::cout << std::endl;
 }
+//方法一
 template <typename Type>
 void bubbleSort(Type arr[], int size)
 {
@@ -36,11 +37,12 @@ void bubbleSort(Type arr[], int size)
         }
     }
 }
+//方法二
 int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
     int count = sizeof(arr) / sizeof(arr[0]);
-    bubbleSort<int>(arr, count);
+    bubbleSort(arr, count);
     print(arr, count);
     return 0;
 }
