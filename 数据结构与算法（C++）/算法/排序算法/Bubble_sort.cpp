@@ -40,7 +40,7 @@ int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
     int count = sizeof(arr) / sizeof(arr[0]);
-    bubbleSort<int>(arr[count], count);
-    print(arr, count);
+    bubbleSort<int>(arr, count);
+    print<int>(arr, count);
     return 0;
 }
