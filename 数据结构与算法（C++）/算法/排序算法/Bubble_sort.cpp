@@ -30,9 +30,8 @@ void bubbleSort(Type arr[], int size)
             }
             else
             {
-                tmp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = tmp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = arr[j + 2];
             }
         }
     }
@@ -42,5 +41,6 @@ int main()
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
     int count = sizeof(arr) / sizeof(arr[0]);
     bubbleSort(arr, count);
+    print(arr, count);
     return 0;
 }
