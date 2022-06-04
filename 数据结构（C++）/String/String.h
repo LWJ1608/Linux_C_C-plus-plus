@@ -36,8 +36,8 @@ public:
     String &insert(int pos, const String &s);                //在pos位置插入子串s
     String &eraser(int pos, int num);                        //删除从pos位置开始的num个字符
     const char *getData() const { return data; };            //获取字符数组data
-    int kmpFind(const String &) const;                       //改进的模式匹配算法
-    void getNext(const String &t, int *next);                //获取next数组
+    // int kmpFind(const String &) const;                       //改进的模式匹配算法
+    // void getNext(const String &t, int *next);                //获取next数组
     //获取nexVal数组
 };
 String::String()
