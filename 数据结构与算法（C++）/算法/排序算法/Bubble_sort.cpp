@@ -29,7 +29,7 @@ void bubbleSort(Type *arr, int size)//冒泡排序
                 // tmp = arr[j];
                 // arr[j] = arr[j + 1];
                 // arr[j + 1] = tmp;
-                swap(arr[j],arr[j+1]);//交换
+                std::swap(arr[j],arr[j+1]);//交换
             }
         }
     }
