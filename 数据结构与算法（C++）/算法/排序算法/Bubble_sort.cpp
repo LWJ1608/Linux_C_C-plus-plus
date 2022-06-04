@@ -31,8 +31,8 @@ void bubbleSort(Type *arr, int size)
             }
             else
             {
+                arr[i] = arr[j];
                 arr[j] = arr[j + 1];
-                arr[j + 1] = arr[j + 2];
             }
         }
     }
