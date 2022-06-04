@@ -5,10 +5,22 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构与算法（C++）/算法/排序算法/Bubble_sort.cpp
  **/
 #include <iostream>
-
+template <typename Type>
+void print(const Type &arr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
 template <typename Type>
 void bubbleSort(Type arr[], int size)
 {
+    for (int i = 0; i < size; i++)
+    {
+        for (int j =)
+    }
 }
 int main()
 {
