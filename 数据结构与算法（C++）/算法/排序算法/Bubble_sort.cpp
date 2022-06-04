@@ -5,8 +5,9 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构与算法（C++）/算法/排序算法/Bubble_sort.cpp
  **/
 #include <iostream>
+
 template <typename Type>
-void print(const Type &arr, int size)
+void print(const Type &arr, int size)//打印数组
 {
     for (int i = 0; i < size; i++)
     {
@@ -16,7 +17,7 @@ void print(const Type &arr, int size)
 }
 
 template <typename Type>
-void bubbleSort(Type *arr, int size)
+void bubbleSort(Type *arr, int size)//冒泡排序
 {
     Type tmp;
     for (int i = 0; i < size - 1; i++)
@@ -25,9 +26,10 @@ void bubbleSort(Type *arr, int size)
         {
             if (arr[j] < arr[j + 1])
             {
-                tmp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = tmp;
+                // tmp = arr[j];
+                // arr[j] = arr[j + 1];
+                // arr[j + 1] = tmp;
+                swap(arr[j],arr[j+1]);//交换
             }
         }
     }
