@@ -29,11 +29,11 @@ void bubbleSort(Type *arr, int size)
                 arr[j] = arr[j + 1];
                 arr[j + 1] = tmp;
             }
-            else
-            {
-                arr[j] = arr[j + 1];
-                arr[j + 1] = arr[j + 2];
-            }
+            // else
+            // {
+            //     arr[j+1] = arr[j + 1];
+            //     arr[j + 1] = arr[j + 2];
+            // }
         }
     }
 }
