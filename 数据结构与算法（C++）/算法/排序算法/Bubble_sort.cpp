@@ -13,6 +13,7 @@ void bubbleSort(Type arr[], int size)
 int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
+    int count = ;
     bubbleSort(arr, );
 
     return 0;
