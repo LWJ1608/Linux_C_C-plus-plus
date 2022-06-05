@@ -17,7 +17,7 @@ void print(const Type &arr, int size) //打印数组
 }
 //一趟快速排序
 template <typename Type>
-void partition(Type arr[], int low, int high) //快速排序
+int partition(Type arr[], int low, int high) //快速排序
 {
     Type tmp = arr[0]; //
     while (low != high)
@@ -44,7 +44,7 @@ void partition(Type arr[], int low, int high) //快速排序
 }
 //递归快速排序
 template <typename Type>
-int quickSort(Type arr, int low, int high)
+void quickSort(Type arr, int low, int high)
 {
     int pivot; //中心轴位置
     if (low >= high)
@@ -59,7 +59,7 @@ int quickSort(Type arr, int low, int high)
 template <typename Type>
 void quickSort(Type arr, int size)
 {
-    quickSort(arr,0, size-1);
+    quickSort(arr, 0, size - 1);
 }
 int main()
 {
