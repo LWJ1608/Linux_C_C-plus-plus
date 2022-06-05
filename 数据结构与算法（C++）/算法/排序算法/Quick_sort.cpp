@@ -39,13 +39,14 @@ void partition(Type *arr, int low, int high) //快速排序
             arr[high] = arr[low];
         }
     }
-    arr[low] = tmp;
+    arr[low] = tmp; //把中心抽放到分界处
+    return low;     //返回中心轴
 }
 //递归快速排序
 template <typename Type>
 int quickSort(Type *arr, int low, int high)
 {
-    int
+    int pivot; //
 }
 //快速排序的接口
 template <typename Type>
