@@ -15,16 +15,17 @@ void print(const Type &arr, int size) //打印数组
     }
     std::cout << std::endl;
 }
-
+//一趟快速排序
 template <typename Type>
-void quickSort(Type *arr, int size) //快速排序
+void quickSort1(Type *arr, int size) //快速排序
 {
 }
+
 int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
     int count = sizeof(arr) / sizeof(arr[0]);
-    quickSort(arr, count);
+    quickSort1(arr, count);
     print(arr, count);
     return 0;
 }
