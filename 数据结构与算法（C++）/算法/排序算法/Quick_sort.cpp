@@ -19,6 +19,10 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 void partition(Type *arr, int size) //快速排序
 {
+    Type tmp = arr[0]; //
+    while (low != high)
+    {
+    }
 }
 //递归快速排序
 template <typename Type>
@@ -29,7 +33,7 @@ int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
     int count = sizeof(arr) / sizeof(arr[0]);
-    quickSort1(arr, count);
+    partition(arr, count);
     print(arr, count);
     return 0;
 }
