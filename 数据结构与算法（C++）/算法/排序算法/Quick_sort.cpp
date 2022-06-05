@@ -20,7 +20,11 @@ template <typename Type>
 void quickSort1(Type *arr, int size) //快速排序
 {
 }
-
+//递归快速排序
+template <typename Type>
+int partition(Type *arr, int low, int high)
+{
+}
 int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
