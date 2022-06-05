@@ -29,6 +29,7 @@ int partition(Type arr[], int low, int high) //快速排序
         if (low < high) //如果还没相等，数值移动
         {
             arr[low] = arr[high];
+            low++;
         }
         while (low < high && tmp >= arr[low]) //在右边移动一个，轮到左边移动一个
         {
@@ -37,6 +38,7 @@ int partition(Type arr[], int low, int high) //快速排序
         if (low < high)
         {
             arr[high] = arr[low];
+            high--;
         }
     }
     arr[low] = tmp; //把中心抽放到分界处
