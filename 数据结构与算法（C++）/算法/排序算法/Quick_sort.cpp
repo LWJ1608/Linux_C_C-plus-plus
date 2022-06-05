@@ -38,7 +38,7 @@ int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
     int count = sizeof(arr) / sizeof(arr[0]);
-    partition(arr, count);
+    quickSort(arr, count);
     print(arr, count);
     return 0;
 }
