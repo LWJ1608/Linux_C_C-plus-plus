@@ -52,7 +52,7 @@ void quickSort(Type arr[], int low, int high)
         return;
     }
     pivot = partition(arr, low, high);
-    quickSort(arr, 0, size - 1);         //中心轴左边
+    quickSort(arr, 0, pivot - 1);         //中心轴左边
     quickSort(arr, pivot + 1, size - 1); //中心轴右边
 }
 //快速排序的接口
