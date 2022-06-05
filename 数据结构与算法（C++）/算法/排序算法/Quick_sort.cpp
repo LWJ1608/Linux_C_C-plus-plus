@@ -22,6 +22,15 @@ void partition(Type *arr, int low, int high) //快速排序
     Type tmp = arr[0]; //
     while (low != high)
     {
+        while (low < high && tmp <= arr[high])
+        {
+            high--;
+        } //
+        if (low < high)
+        {
+            arr[low], arr[high];
+        }
+        while ()
     }
 }
 //递归快速排序
