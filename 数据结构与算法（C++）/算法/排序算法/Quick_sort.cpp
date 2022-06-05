@@ -19,7 +19,6 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 void quickSort(Type *arr, int size) //快速排序
 {
-
 }
 int main()
 {
