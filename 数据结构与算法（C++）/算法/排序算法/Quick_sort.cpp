@@ -17,12 +17,12 @@ void print(const Type &arr, int size) //打印数组
 }
 //一趟快速排序
 template <typename Type>
-void quickSort1(Type *arr, int size) //快速排序
+void partition(Type *arr, int size) //快速排序
 {
 }
 //递归快速排序
 template <typename Type>
-int partition(Type *arr, int low, int high)
+int quickSort1(Type *arr, int low, int high)
 {
 }
 int main()
