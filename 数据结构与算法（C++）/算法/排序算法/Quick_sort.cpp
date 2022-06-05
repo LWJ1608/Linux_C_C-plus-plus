@@ -36,6 +36,7 @@ void partition(Type *arr, int low, int high) //快速排序
         }
         if (low < high)
         {
+            arr[high] = arr[low];
         }
     }
 }
