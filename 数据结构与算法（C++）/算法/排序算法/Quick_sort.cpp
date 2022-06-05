@@ -17,7 +17,7 @@ void print(const Type &arr, int size) //打印数组
 }
 //一趟快速排序
 template <typename Type>
-void partition(Type *arr, int size) //快速排序
+void partition(Type *arr, int low, int high) //快速排序
 {
     Type tmp = arr[0]; //
     while (low != high)
@@ -26,7 +26,12 @@ void partition(Type *arr, int size) //快速排序
 }
 //递归快速排序
 template <typename Type>
-int quickSort1(Type *arr, int low, int high)
+int quickSort(Type *arr, int low, int high)
+{
+}
+//快速排序的接口
+template <typename Type>
+void quickSort(Type *arr, int size)
 {
 }
 int main()
