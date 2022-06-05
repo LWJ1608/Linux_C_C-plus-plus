@@ -46,7 +46,12 @@ void partition(Type *arr, int low, int high) //快速排序
 template <typename Type>
 int quickSort(Type *arr, int low, int high)
 {
-    int pivot; //
+    int pivot; //中心轴位置
+    if (low >= high)
+    {
+        return;
+    }
+    pivot = partition(*arr, low, high);
 }
 //快速排序的接口
 template <typename Type>
