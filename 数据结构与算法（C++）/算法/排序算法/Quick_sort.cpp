@@ -59,7 +59,7 @@ int quickSort(Type arr, int low, int high)
 template <typename Type>
 void quickSort(Type arr, int size)
 {
-    quickSort(arr)
+    quickSort(arr,0, size-1);
 }
 int main()
 {
