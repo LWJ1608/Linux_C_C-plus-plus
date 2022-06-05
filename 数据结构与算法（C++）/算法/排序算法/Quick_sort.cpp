@@ -44,7 +44,7 @@ int partition(Type arr[], int low, int high) //快速排序
 }
 //递归快速排序
 template <typename Type>
-void quickSort(Type arr, int low, int high)
+void quickSort(Type arr[], int low, int high)
 {
     int pivot; //中心轴位置
     if (low >= high)
@@ -57,7 +57,7 @@ void quickSort(Type arr, int low, int high)
 }
 //快速排序的接口
 template <typename Type>
-void quickSort(Type arr, int size)
+void quickSort(Type arr[], int size)
 {
     quickSort(arr, 0, size - 1);
 }
