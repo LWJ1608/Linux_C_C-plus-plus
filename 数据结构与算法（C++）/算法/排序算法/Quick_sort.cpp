@@ -54,7 +54,7 @@ void quickSort(Type arr[], int low, int high)
         return;
     }
     pivot = partition(arr, low, high);
-    quickSort(arr, low, pivot - 1);         //中心轴左边
+    quickSort(arr, low, pivot - 1);  //中心轴左边
     quickSort(arr, pivot + 1, high); //中心轴右边
 }
 //快速排序的接口
@@ -67,7 +67,7 @@ int main()
 {
     int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
     int count = sizeof(arr) / sizeof(arr[0]);
-    quickSort(arr, count);
+    quickSort(arr[count], count);
     print(arr, count);
     return 0;
 }
