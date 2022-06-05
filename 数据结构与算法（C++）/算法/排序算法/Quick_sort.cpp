@@ -19,7 +19,7 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 int partition(Type arr[], int low, int high) //快速排序
 {
-    Type tmp = arr[0]; //
+    Type tmp = arr[low]; //
     while (low != high)
     {
         while (low < high && tmp <= arr[high]) //先从右边开始移动
