@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun  5 14:27:46 2022
+# Make data base, printed on Sun Jun  5 18:08:43 2022
 
 # Variables
 
@@ -63,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-e5f5728d-182f-48ba-a989-80b9f7226298.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-ce4b5846-02be-4973-905e-40fc009e5f8d.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -214,7 +214,7 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Sun Jun  5 14:27:46 2022
+# Finished Make data base on Sun Jun  5 18:08:43 2022
 
  
 make: *** No rule to make target `all'.  Stop.
