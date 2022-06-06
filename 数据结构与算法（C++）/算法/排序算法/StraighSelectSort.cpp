@@ -1,4 +1,4 @@
-#include<iostrearm>
+#include<iostream>
 
 template<typename Type>
 void print(const Type(arr&)[],int size)
