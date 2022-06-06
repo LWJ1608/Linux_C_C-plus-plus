@@ -1,4 +1,4 @@
-#include<iosteam>
+#include<iostrearm>
 
 template<typename Type>
 void print(const Type(arr&)[],int size)
