@@ -24,6 +24,7 @@ void straighSelectSort(Type *arr,const int size)
 				min = j;
 			}
 		}
+		if(min != i) 
 		std::swap(arr[i],arr[min]);
 	}
 	
