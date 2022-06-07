@@ -32,7 +32,7 @@ int main()
 {
 	int arr[] = {1,7,5,2,3,88,9};
 	int size = sizeof(arr)/sizeof(arr[0]);
-	StraighSelectSort(arr,size);
+	straighSelectSort(arr,size);
 	print(arr,size);
 	return 0;
 }
