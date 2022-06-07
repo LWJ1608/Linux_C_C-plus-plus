@@ -24,7 +24,7 @@ void straighSelectSort(Type arr[],int size)
 				min = j;
 			}
 		}
-		swap(arr[i],arr[min];
+		swap(arr[i],arr[min]);
 	}
 	
 }
@@ -32,7 +32,7 @@ int main()
 {
 	int arr[] = {1,7,5,2,3,88,9};
 	int size = sizeof(arr)/sizeof(arr[0]);
-	//StraighSelectSort(arr,size);
+	StraighSelectSort(arr,size);
 	print(arr,size);
 	return 0;
 }
