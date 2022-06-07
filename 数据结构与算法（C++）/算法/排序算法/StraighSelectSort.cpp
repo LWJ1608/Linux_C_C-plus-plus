@@ -11,7 +11,7 @@ void print(Type arr[],int size)
 		std::cout<<std::endl;
 }
 template<typename Type>
-void straighSelectSort(Type arr[],int size)
+void straighSelectSort(Type *arr,int size)
 {
 	Type min;
 	for(int i = 0;i < size - 1;i++)
