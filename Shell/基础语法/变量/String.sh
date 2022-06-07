@@ -15,4 +15,6 @@ echo "$s\n"
 echo "$s1 haha"
 echo "My name is $s2"
 
-
+#2.获取字符串的长度
+String="abcd"
+echo ${#String}
