@@ -2,7 +2,7 @@
 #include<algorithm>
 
 template<typename Type>
-void print(Type arr[],int size)
+void print(const Type *arr,const int size)
 {
 	for(int i = 0;i < size;i++)
 	{
@@ -11,12 +11,12 @@ void print(Type arr[],int size)
 		std::cout<<std::endl;
 }
 template<typename Type>
-void straighSelectSort(Type *arr,int size)
+void straighSelectSort(Type *arr,const int size)
 {
 	Type min;
 	for(int i = 0;i < size - 1;i++)
 	{
-		for(int j = i+1;j < size - 1;j++)
+		for(int j = i+1;j < size;j++)
 		{
 			min = i;
 			if(arr[i] > arr[j])
