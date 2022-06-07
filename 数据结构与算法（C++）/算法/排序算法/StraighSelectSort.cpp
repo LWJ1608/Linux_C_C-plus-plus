@@ -1,5 +1,5 @@
 #include<iostream>
-tempalate<typename Type>
+template<typename Type>
 void print(Type arr[],int size)
 {
 	for(int i = 0;i < size;i++)
@@ -8,7 +8,7 @@ void print(Type arr[],int size)
 	}
 		std::cout<<std::endl;
 ｝
-tempalate<typename Type>
+template<typename Type>
 void straighSelectSort(Type arr[],int size)
 {
 	
