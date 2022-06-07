@@ -7,7 +7,7 @@ void print(Type arr[],int size)
 		std::cout<<arr[i]<<" ";
 	}
 		std::cout<<std::endl;
-｝
+}
 template<typename Type>
 void straighSelectSort(Type arr[],int size)
 {
