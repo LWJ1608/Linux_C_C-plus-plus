@@ -24,7 +24,7 @@ void straighSelectSort(Type arr[],int size)
 				min = j;
 			}
 		}
-		swap(arr[i],arr[min]);
+		std::swap(arr[i],arr[min]);
 	}
 	
 }
