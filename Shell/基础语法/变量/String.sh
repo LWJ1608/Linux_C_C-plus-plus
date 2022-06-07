@@ -21,4 +21,5 @@ echo ${#String}  #输出4
 
 echo 3.提取子串
 String="abacd"
-echo ${String:1:3}  #输出aba
+echo ${String:1:3}  #输出 bac
+echo ${String:0:3}  #输出 aba
