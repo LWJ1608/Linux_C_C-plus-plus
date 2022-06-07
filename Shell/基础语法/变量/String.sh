@@ -11,14 +11,14 @@ echo '$s1'
 echo "$s\n"
 
 ###字符串操作
-#1.拼接字符串
+echo 1.拼接字符串
 echo "$s1 haha"
 echo "My name is $s2"
 
-#2.获取字符串的长度
+echo 2.获取字符串的长度
 String1="abcd"
 echo ${#String}  #输出4
 
-#3.提取子串
+echo 3.提取子串
 String2="abacd"
 echo ${String:1:3}  #输出aba
