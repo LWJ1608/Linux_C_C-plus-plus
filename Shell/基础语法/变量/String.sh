@@ -16,5 +16,9 @@ echo "$s1 haha"
 echo "My name is $s2"
 
 #2.获取字符串的长度
-String="abcd"
-echo ${#String}
+String1="abcd"
+echo ${#String}  #输出4
+
+#3.提取子串
+String2="abacd"
+echo ${String:1:3}  #输出aba
