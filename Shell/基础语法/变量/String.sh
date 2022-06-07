@@ -10,6 +10,7 @@ s3='not'
 echo '$s1'
 echo "$s\n"
 
+
 ###字符串操作
 echo 1.拼接字符串
 echo "$s1 haha"
@@ -19,7 +20,11 @@ echo 2.获取字符串的长度
 String="abcd"
 echo ${#String}  #输出4
 
-echo 3.提取子串
+echo 3.提取子串，索引从0开始
 String="abacd"
 echo ${String:1:3}  #输出 bac
 echo ${String:0:3}  #输出 aba
+
+echo 4.查找子串,返回出现在第几个，从1开始
+String="this is a string"
+echo `expr index "$String" io`  #输出3
