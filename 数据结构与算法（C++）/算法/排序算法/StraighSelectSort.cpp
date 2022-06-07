@@ -16,9 +16,9 @@ void straighSelectSort(Type *arr,const int size)
 	Type min;
 	for(int i = 0;i < size - 1;i++)
 	{
+		min = i;
 		for(int j = i+1;j < size;j++)
 		{
-			min = i;
 			if(arr[i] > arr[j])
 			{
 				min = j;
