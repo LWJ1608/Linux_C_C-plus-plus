@@ -1,4 +1,6 @@
 #include<iostream>
+#include<algorithm>
+
 template<typename Type>
 void print(Type arr[],int size)
 {
@@ -11,7 +13,19 @@ void print(Type arr[],int size)
 template<typename Type>
 void straighSelectSort(Type arr[],int size)
 {
-	
+	Type min;
+	for(int i = 0;i < size - 1;i++)
+	{
+		for(int j = i+1;j < size - 1;j++)
+		{
+			min = i;
+			if(arr[i] > arr[j])
+			{
+				min = j;
+			}
+		}
+		swap(arr[i],arr[min];
+	}
 	
 }
 int main()
