@@ -17,7 +17,7 @@ void print(const Type *arr, const int size)
     std::cout << std::endl;
 }
 template <typename Type>
-void straighSelectSort(Type *arr, const int size)
+void straighSelectSort(Type *arr, constint size)
 {
 
 }
