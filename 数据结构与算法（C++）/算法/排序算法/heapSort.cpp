@@ -19,7 +19,6 @@ void print(const Type *arr, const int size)
 template <typename Type>
 void straighSelectSort(Type *arr, const int size)
 {
-
 }
 int main()
 {
