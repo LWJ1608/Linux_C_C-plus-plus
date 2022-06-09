@@ -19,10 +19,18 @@ void print(const Type *arr, const int size)
 template <typename Type>
 void siftDown(Type arr[], int pos, int size)
 {
+    int child;           //
+    Type tmp = arr[pos]; //暂存根节点
+    for (; pos * 2 - 1 < size; pos = child)
+    {
+    }
 }
 template <typename Type>
 void heapSort(Type arr[], int size)
 {
+    for (int i = size / 2 - 1; i < count; i++)
+    {
+    }
 }
 int main()
 {
