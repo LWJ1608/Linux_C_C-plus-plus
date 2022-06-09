@@ -41,8 +41,15 @@ void siftDown(Type arr[], int pos, int size)
 template <typename Type>
 void heapSort(Type arr[], int size)
 {
-    for (int i = size / 2 - 1; i < count; i++)
+    int i;
+    for (i = size / 2 - 1; i >= 0; i++)
     {
+        siftDown(arr, i, size);
+    }
+    for (i = size - 1; i > 0; i--)
+    {
+        std::swap(arr[0], arr[i]);
+        siftDown(arr, 0, i);
     }
 }
 int main()
