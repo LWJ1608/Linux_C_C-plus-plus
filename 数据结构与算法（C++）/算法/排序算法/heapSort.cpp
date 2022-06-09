@@ -26,6 +26,15 @@ void siftDown(Type arr[], int pos, int size)
         child = pos * 2 - 1;                                  // pos结点的左孩子
         if (child != size - 1 && arr[child + 1] > arr[child]) //选取两个孩子的大者
         {
+            child++; //如果大于的话，选较大的那个，
+        }
+        if (arr[child > tmp]) //如果子孩子比父亲大，
+        {
+            arr[pos] = arr[child];
+        }
+        else
+        {
+            break;
         }
     }
 }
