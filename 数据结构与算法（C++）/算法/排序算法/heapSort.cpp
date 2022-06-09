@@ -20,12 +20,13 @@ template <typename Type>
 void siftDown(Type arr[], int pos, int size)
 {
     int child;           //
-    Type tmp = arr[pos]; //暂存根节点
+    Type tmp = arr[pos]; //暂存根记录
     for (; pos * 2 - 1 < size; pos = child)
     {
         child = pos * 2 - 1; // pos结点的左孩子
-        if (child != size - 1 && arr[child + 1] > arr[child])
+        if (child != size - 1 && arr[child + 1] > arr[child])//选取两个孩子的大者
         {
+            
         }
     }
 }
