@@ -37,6 +37,7 @@ void siftDown(Type arr[], int pos, int size)
             break;
         }
     }
+    arr[pos] = tmp;
 }
 template <typename Type>
 void heapSort(Type arr[], int size)
