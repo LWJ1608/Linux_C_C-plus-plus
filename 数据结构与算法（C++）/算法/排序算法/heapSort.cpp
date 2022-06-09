@@ -42,7 +42,7 @@ template <typename Type>
 void heapSort(Type arr[], int size)
 {
     int i;
-    for (i = size / 2 - 1; i >= 0; i++)
+    for (i = size / 2 - 1; i >= 0; i--)
     {
         siftDown(arr, i, size);
     }
@@ -56,7 +56,7 @@ int main()
 {
     int arr[] = {1, 7, 5, 2, 3, 88, 9};
     int size = sizeof(arr) / sizeof(arr[0]);
-
+    heapSort(arr, size);
     print(arr, size);
     return 0;
 }
