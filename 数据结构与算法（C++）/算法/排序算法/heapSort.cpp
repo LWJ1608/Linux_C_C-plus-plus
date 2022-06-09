@@ -17,7 +17,11 @@ void print(const Type *arr, const int size)
     std::cout << std::endl;
 }
 template <typename Type>
-void straighSelectSort(Type *arr, const int size)
+void siftDown(Type arr[], int pos, int size)
+{
+}
+template <typename Type>
+void heapSort(Type arr[], int size)
 {
 }
 int main()
