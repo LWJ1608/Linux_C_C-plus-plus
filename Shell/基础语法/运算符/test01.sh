@@ -20,7 +20,7 @@ echo "b / a : $val"
 val=`expr $b % $a`
 echo "b % a : $val"
 
-if [ $a == $b ]
+if [$a == $b ]
 then
    echo "a 等于 b"
 fi
