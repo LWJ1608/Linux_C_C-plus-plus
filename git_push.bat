@@ -1,6 +1,8 @@
 @echo off
 echo "DOCS PUSH BAT"
 
+git pull
+
 echo "1. Move to working directory" 
 cd E:\桌面\专业学习\Linux_C_C++\Linux_C_C-plus-plus
 
