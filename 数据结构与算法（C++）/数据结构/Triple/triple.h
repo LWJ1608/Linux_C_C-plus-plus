@@ -29,9 +29,10 @@ private:
         }
     };
     Node *matrix; //三元组表
-    int numRow;   //
-    int numCol;
-    int count;
+    int numRow;   //矩阵的行数
+    int numCol;   //矩阵的列数
+    int count;    //非零元素个数
+    int maxSize;  //矩阵容量
 
 public:
 };
