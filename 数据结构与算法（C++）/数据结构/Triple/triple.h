@@ -43,7 +43,7 @@ public:
     //快速转置算法
     //矩阵乘法
     void print() const; //输出三元组表
-    //扩大三元组表空间
+    void resize();      //扩大三元组表空间
 };
 template <typename Type>
 Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
@@ -72,7 +72,6 @@ Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
 template <typename Type>
 void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
 {
-    =]7yn
 }
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
@@ -85,5 +84,14 @@ void Triple<Type>::print() const //输出三元组表
         std::cout << "(" << matrix[i].row << ","
                   << matrix[i].col << ","
                   << matrix[i].data << ")" << std::endl;
+    }
+}
+template <typename Type>
+void Triple<Type>::resize() //扩大三元组表空间
+{
+    Node *tmp = matrix;
+    if (2 * maxSize > numRow * numCol)
+    {
+        maxSize = numRow * numCol;
     }
 }
