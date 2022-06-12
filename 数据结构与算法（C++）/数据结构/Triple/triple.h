@@ -42,7 +42,7 @@ public:
     //用当前对象保存A的转置的三元组表
     //快速转置算法
     //矩阵乘法
-    //输出三元组表
+    void print() const; //输出三元组表
     //扩大三元组表空间
 };
 template <typename Type>
@@ -73,3 +73,5 @@ template <typename Type>
 void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
 {
 }
+template <typename Type>
+void Triple<Type>::print() const; //输出三元组表
