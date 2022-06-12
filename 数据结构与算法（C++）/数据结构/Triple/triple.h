@@ -94,4 +94,8 @@ void Triple<Type>::resize() //扩大三元组表空间
     {
         maxSize = numRow * numCol;
     }
+    else
+    {
+        maxSize = 2 * maxSize;
+    }
 }
