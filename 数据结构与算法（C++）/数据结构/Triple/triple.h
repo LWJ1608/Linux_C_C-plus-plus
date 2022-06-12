@@ -97,7 +97,10 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
     }
     for (int j = count - 1; j >= i; j--)
     {
+        matrix[j + 1] = matrix[j];
     }
+    matrix[i].pushNodeValue(r, c, size);
+    count++;
 }
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
