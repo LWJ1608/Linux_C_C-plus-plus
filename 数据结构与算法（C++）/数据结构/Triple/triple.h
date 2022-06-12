@@ -74,4 +74,6 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
 {
 }
 template <typename Type>
-void Triple<Type>::print() const; //输出三元组表
+void Triple<Type>::print() const //输出三元组表
+{
+}
