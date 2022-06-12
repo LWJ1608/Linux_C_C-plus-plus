@@ -86,6 +86,10 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
     {
         if (matrix[i].row > r || (matrix[i].row == r && matrix[i].col > c))
         {
+            break; //说明要插入的位置没有元素，跳出循环
+        }
+        if (matrix[i].row == r && matrix[i].col == c)
+        {
         }
     }
 }
