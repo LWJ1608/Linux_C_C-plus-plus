@@ -15,11 +15,17 @@ private:
         int row;                   //非零元素的行数
         int col;                   //非零元素的列数
         Type data;                 //非零元素的值
-        Node(int r, int c, Type d) //元素为零结点
+        Node(int r = -1, int c = -1, Type d = 0) //结点构造函数
         {
+            row = r;
+            col = c;
+            data = d;
         }
-        Node(int r, int c, Type d)
+        Node(int r, int c, Type d)//非零元素结点
         {
+            row = r;
+            col = c;
+            data = d;
         }
     };
 };
