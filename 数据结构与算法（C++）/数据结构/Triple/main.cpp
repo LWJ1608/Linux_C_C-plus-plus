@@ -11,6 +11,7 @@ using namespace std;
 void test01()
 {
     Triple<int> T1(3, 3, 2);
+    T1.print();
 }
 int main()
 {
