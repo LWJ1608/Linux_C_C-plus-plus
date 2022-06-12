@@ -89,7 +89,7 @@ void Triple<Type>::print() const //输出三元组表
 template <typename Type>
 void Triple<Type>::resize() //扩大三元组表空间
 {
-    Node *tmp = matrix;
+    Node *tmp = matrix; //把原空间先给tmp保管
     if (2 * maxSize > numRow * numCol)
     {
         maxSize = numRow * numCol;
@@ -97,5 +97,10 @@ void Triple<Type>::resize() //扩大三元组表空间
     else
     {
         maxSize = 2 * maxSize;
+    }
+    matrix = new Node[maxSize]; //创建新空间
+    for (int i = 0; i < count; i++)
+    {
+        /* code */
     }
 }
