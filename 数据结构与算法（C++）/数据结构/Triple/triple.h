@@ -12,8 +12,14 @@ class Triple //三元组表
 private:
     struct Node //三元组表的类型，一个struct类型代表一个结点
     {
-        int row;  //非零元素的行数
-        int col;  //非零元素的列数
-        int data; //非零元素的值
+        int row;                   //非零元素的行数
+        int col;                   //非零元素的列数
+        Type data;                 //非零元素的值
+        Node(int r, int c, Type d) //元素为零结点
+        {
+        }
+        Node(int r, int c, Type d)
+        {
+        }
     };
 };
