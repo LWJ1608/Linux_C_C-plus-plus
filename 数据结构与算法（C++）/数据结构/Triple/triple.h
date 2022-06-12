@@ -33,6 +33,7 @@ private:
     int numCol;   //矩阵的列数
     int count;    //非零元素个数
     int maxSize;  //矩阵容量
-
 public:
+    Triple(int r, int c, int size = 10); //构造函数，默认矩阵容量为10
+    ~Triple() { delete[] data; }         //析构函数
 };
