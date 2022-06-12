@@ -21,14 +21,14 @@ private:
             col = c;
             data = d;
         }
-        Node(int r, int c, Type d) //非零元素结点
+        void setNodeValue(int r, int c, Type d) //元素赋值
         {
             row = r;
             col = c;
             data = d;
         }
     };
+    Node *matrix; //三元组表
 
 public:
-
 };
