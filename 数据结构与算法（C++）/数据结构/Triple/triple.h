@@ -90,6 +90,9 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
         }
         if (matrix[i].row == r && matrix[i].col == c)
         {
+            //说明要插入位置已有元素，则用新值覆盖它
+            matrix[i].pushNodeValue(r, c, size);
+            return;
         }
     }
 }
