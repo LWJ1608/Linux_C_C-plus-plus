@@ -10,4 +10,8 @@ template <typename Type>
 class Triple
 {
 private:
+    struct Node
+    {
+        int row
+    };
 };
