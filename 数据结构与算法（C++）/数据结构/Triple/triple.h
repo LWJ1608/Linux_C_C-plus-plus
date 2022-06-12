@@ -35,10 +35,10 @@ private:
     int count;    //非零元素个数
     int maxSize;  //矩阵容量
 public:
-    Triple(int r, int c, int size = 10);    //构造函数，默认矩阵容量为10
-    ~Triple() { delete[] matrix; }          //析构函数
+    Triple(int r, int c, int size = 10);            //构造函数，默认矩阵容量为10
+    ~Triple() { delete[] matrix; }                  //析构函数
     void pushValue(int r, int c, const Type &size); //元素赋值
-    Type getValue(int r, int c) const;      //取元素的值
+    Type getValue(int r, int c) const;              //取元素的值
     //用当前对象保存A的转置的三元组表
     //快速转置算法
     //矩阵乘法
