@@ -70,6 +70,6 @@ Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
     }
 }
 template <typename Type>
-void Triple<Tpye>::pushValue(int r, int c, int size) //元素赋值
+void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
 {
 }
