@@ -38,7 +38,7 @@ public:
     Triple(int r, int c, int size = 10);    //构造函数，默认矩阵容量为10
     ~Triple() { delete[] matrix; }          //析构函数
     void pushValue(int r, int c, int size); //元素赋值
-    //取元素的值
+    pop                                     //取元素的值
     //用当前对象保存A的转置的三元组表
     //快速转置算法
     //矩阵乘法
