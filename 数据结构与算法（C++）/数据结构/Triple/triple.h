@@ -72,6 +72,8 @@ Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
 template <typename Type>
 void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
 {
+    if (size == 0)
+        return;
 }
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
@@ -86,6 +88,7 @@ void Triple<Type>::print() const //输出三元组表
                   << matrix[i].data << ")" << std::endl;
     }
 }
+
 template <typename Type>
 void Triple<Type>::resize() //扩大三元组表空间
 {
@@ -98,9 +101,11 @@ void Triple<Type>::resize() //扩大三元组表空间
     {
         maxSize = 2 * maxSize;
     }
-    matrix = new Node[maxSize]; //创建新空间
-    for (int i = 0; i < count; i++)
+    matrix = new Node[maxSize];     //创建新空间
+    for (int i = 0; i < count; i++) //把数据放入新空间中
     {
-        /* code */
+        matrix[i] = tmp[i];
     }
+    delete[] tmp;
+    tmp = nullptr;
 }
