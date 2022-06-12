@@ -4,3 +4,10 @@
  * @Description:稀疏矩阵
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Triple/triple.h
  **/
+#include <iostream>
+
+template <typename Type>
+class Triple
+{
+private:
+};
