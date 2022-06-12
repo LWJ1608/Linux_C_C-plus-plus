@@ -95,6 +95,9 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
             return;
         }
     }
+    for (int j = count - 1; j >= i; j--)
+    {
+    }
 }
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
