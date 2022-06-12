@@ -13,8 +13,8 @@ class Triple //三元组表
 private:
     struct Node //三元组表的类型，一个struct类型代表一个结点
     {
-        int row;                                 //非零元素的行数
-        int col;                                 //非零元素的列数
+        int row;                                 //非零元素的行号
+        int col;                                 //非零元素的列号
         Type data;                               //非零元素的值
         Node(int r = -1, int c = -1, Type d = 0) //结点构造函数
         {
@@ -46,13 +46,24 @@ public:
     //扩大三元组表空间
 };
 template <typename Type>
-Triple<Type>::Triple(int r, int c, int size)
+Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
 {
     assert(r >= 0 &&c >= 0 &&size > 0 = 0); //判定传入的数是否越界
     numRow = r;
     numCol = c;
     count = 0;
-    if (r * c > size)
+    if (r * c > size) // r*c为最大容量
     {
+        maxSize = size;
     }
+    else
+    {
+        maxSize = r * c; //最多只能有c*r个非零元素
+    }
+    if (maxSize != 0)
+
+        matrix = new Node[maxSize];
+
+    else
+        matrix = nullptr;
 }
