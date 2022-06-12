@@ -5,8 +5,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Sun Jun 12 13:32:11 2022
+
+# Make data base, printed on Sun Jun 12 18:40:43 2022
 
 # Variables
 
@@ -63,7 +66,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-fe4b9d97-25c5-4216-b34d-dee607a8d21d.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-c3b97db4-4441-4846-9417-4dfa2d67c982.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -75,7 +78,7 @@ HOME = /root
 # environment
 LOGNAME = root
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 +F = $(notdir $+)
 # environment
@@ -214,8 +217,6 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=2/25=8%
-# Finished Make data base on Sun Jun 12 13:32:11 2022
+# Finished Make data base on Sun Jun 12 18:40:43 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-
