@@ -76,13 +76,13 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
 {
-    std::cout << "Row:" << numRow << ","
-              << "Col:" << numCol << ","
+    std::cout << "Row:" << numRow << "\t"
+              << "Col:" << numCol << "\t"
               << "Count:" << count << std::endl;
     for (int i = 0; i < count; i++)
     {
         std::cout << "(" << matrix[i].row << ","
                   << matrix[i].col << ","
-                  << matrix[i].data  << ")" << std::endl;
+                  << matrix[i].data << ")" << std::endl;
     }
 }
