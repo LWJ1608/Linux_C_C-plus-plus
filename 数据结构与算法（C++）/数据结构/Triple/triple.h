@@ -77,6 +77,10 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
         return;
     }
     assert(r >= 0 && r < numRow - 1 && c >= 0 && c < numCol - 1); //越界报错
+    if (count == maxSize)
+    {
+        resize();
+    }
 }
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
