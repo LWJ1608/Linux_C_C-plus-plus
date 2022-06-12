@@ -81,6 +81,13 @@ void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
     {
         resize();
     }
+    int i;
+    for (i = 0; i < count; i++)
+    {
+        if (matrix[i].row > r || (matrix[i].row == r && matrix[i].col > c))
+        {
+        }
+    }
 }
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
