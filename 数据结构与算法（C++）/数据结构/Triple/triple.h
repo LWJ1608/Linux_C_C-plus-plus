@@ -37,7 +37,7 @@ private:
 public:
     Triple(int r, int c, int size = 10);    //构造函数，默认矩阵容量为10
     ~Triple() { delete[] matrix; }          //析构函数
-    void pushValue(int r, int c, int size); //元素赋值
+    void pushValue(int r, int c, const Type &size); //元素赋值
     Type getValue(int r, int c) const;      //取元素的值
     //用当前对象保存A的转置的三元组表
     //快速转置算法
@@ -70,7 +70,7 @@ Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
     }
 }
 template <typename Type>
-void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
+void Triple<Type>::pushValue(int r, int c, const Type &size) //元素赋值
 {
     if (size == 0) // 0不存储
     {
