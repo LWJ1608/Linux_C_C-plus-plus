@@ -4,13 +4,13 @@
  * @Description:稀疏矩阵的测试
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Triple/main.cpp
  **/
-#include<iostream>
-#include"triple.h"
+#include <iostream>
+#include "triple.h"
 
 using namespace std;
 void test01()
 {
-    Triple<int> T1;
+    Triple<int> T1();
 }
 int main()
 {
