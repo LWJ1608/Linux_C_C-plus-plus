@@ -72,6 +72,7 @@ Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
 template <typename Type>
 void Triple<Type>::pushValue(int r, int c, int size) //元素赋值
 {
+    =]7yn
 }
 template <typename Type>
 void Triple<Type>::print() const //输出三元组表
