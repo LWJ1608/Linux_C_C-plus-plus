@@ -29,6 +29,9 @@ private:
         }
     };
     Node *matrix; //三元组表
+    int numRow;   //
+    int numCol;
+    int count;
 
 public:
 };
