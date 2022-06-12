@@ -83,6 +83,6 @@ void Triple<Type>::print() const //输出三元组表
     {
         std::cout << "(" << matrix[i].row << ","
                   << matrix[i].col << ","
-                  << matrix[i].data << ")" << std::endl;
+                  << matrix[i].data  << ")" << std::endl;
     }
 }
