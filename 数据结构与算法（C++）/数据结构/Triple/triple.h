@@ -21,7 +21,7 @@ private:
             col = c;
             data = d;
         }
-        void setNodeValue(int r, int c, Type d) //元素赋值
+        void pushNodeValue(int r, int c, Type d) //元素赋值
         {
             row = r;
             col = c;
@@ -34,8 +34,7 @@ private:
     int count;    //非零元素个数
     int maxSize;  //矩阵容量
 public:
-    Triple(int r, int c, int size = 10); //构造函数，默认矩阵容量为10
-    ~Triple() { delete[] maxSize; }      //析构函数
-    void pushValue
-        set
+    Triple(int r, int c, int size = 10);    //构造函数，默认矩阵容量为10
+    ~Triple() { delete[] maxSize; }         //析构函数
+    void pushValue(int r, int c, int size); //元素赋值
 };
