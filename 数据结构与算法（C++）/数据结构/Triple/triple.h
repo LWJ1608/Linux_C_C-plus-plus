@@ -61,9 +61,11 @@ Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
         maxSize = r * c; //最多只能有c*r个非零元素
     }
     if (maxSize != 0)
-
+    {
         matrix = new Node[maxSize];
-
+    }
     else
+    {
         matrix = nullptr;
+    }
 }
