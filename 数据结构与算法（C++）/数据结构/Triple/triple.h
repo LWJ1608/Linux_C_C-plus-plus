@@ -62,10 +62,14 @@ Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
     }
     if (maxSize != 0)
     {
-        matrix = new Node[maxSize];
+        matrix = new Node[maxSize]; //开辟矩阵空间
     }
     else
     {
         matrix = nullptr;
     }
+}
+template <typename Type>
+void Triple<Tpye>::pushValue(int r, int c, int size) //元素赋值
+{
 }
