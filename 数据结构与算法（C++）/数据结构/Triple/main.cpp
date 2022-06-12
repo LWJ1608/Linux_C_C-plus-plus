@@ -10,7 +10,7 @@
 using namespace std;
 void test01()
 {
-    Triple<int> T1();
+    Triple<int> T1;
 }
 int main()
 {
