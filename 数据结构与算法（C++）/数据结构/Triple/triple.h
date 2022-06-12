@@ -42,7 +42,10 @@ public:
     //快速转置算法
     //矩阵乘法
     //输出三元组表
-    //扩大三元
-    //
-    //
+    //扩大三元组表空间
 };
+template <typename Type>
+Triple<Type>::Triple(int r, int c, int size)
+{
+    assert(r >= 0 &&c >= 0 &&size > 0 = 0); //判定传入的数是否越界
+}
