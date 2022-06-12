@@ -5,6 +5,7 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Triple/triple.h
  **/
 #include <iostream>
+#include <assert.h>
 
 template <typename Type>
 class Triple //三元组表
@@ -48,4 +49,10 @@ template <typename Type>
 Triple<Type>::Triple(int r, int c, int size)
 {
     assert(r >= 0 &&c >= 0 &&size > 0 = 0); //判定传入的数是否越界
+    numRow = r;
+    numCol = c;
+    count = 0;
+    if (r * c > size)
+    {
+    }
 }
