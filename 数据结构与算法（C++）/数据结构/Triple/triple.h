@@ -48,7 +48,7 @@ public:
 template <typename Type>
 Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
 {
-    assert(r >= 0 &&c >= 0 &&size > 0 = 0); //判定传入的数是否越界
+    assert(r >= 0 && c >= 0 && size >= 0); //判定传入的数是否越界
     numRow = r;
     numCol = c;
     count = 0;
