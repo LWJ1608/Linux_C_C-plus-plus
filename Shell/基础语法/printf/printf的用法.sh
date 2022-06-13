@@ -9,3 +9,5 @@ printf "%-10s %-8s %-4.2f\n" 小白 男 66.888
 printf "%-10s %-8s %-4.2f\n" 小三 女 77.3423
 printf "%-10s %-8s %-4.2f\n" 小宏 男 99.999
 
+#
+printf "%d %s\n" 1 "abc"
