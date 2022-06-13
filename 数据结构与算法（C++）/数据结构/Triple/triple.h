@@ -114,8 +114,10 @@ Type Triple<Type>::getValue(int r, int c) const //取元素的值
     {
         if (matrix[i].row == r && matrix[i].col == c)
         {
+            return matrix[i].data;
         }
     }
+    return 0;
 }
 
 template <typename Type>
