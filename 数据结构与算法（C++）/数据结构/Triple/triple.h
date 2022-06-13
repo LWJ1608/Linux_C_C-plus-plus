@@ -39,10 +39,10 @@ public:
     ~Triple() { delete[] matrix; }                  //析构函数
     void pushValue(int r, int c, const Type &size); //元素赋值
     Type getValue(int r, int c) const;              //取元素的值
-    //用当前对象保存A的转置的三元组表
-    //快速转置算法
-    void print() const; //输出三元组表
-    void resize();      //扩大三元组表空间
+    void transpose(const Triple<Type> &t);          //用当前对象保存A的转置的三元组表
+    void quickTranspose();                          //快速转置算法
+    void print() const;                             //输出三元组表
+    void resize();                                  //扩大三元组表空间
 };
 template <typename Type>
 Triple<Type>::Triple(int r, int c, int size) //行数r,列数c,非零个数size
@@ -117,6 +117,10 @@ Type Triple<Type>::getValue(int r, int c) const //取元素的值
         }
     }
     return 0;
+}
+template <typename Type>
+void Triple<Type>::transpose(const Triple<Type> &t) //用当前对象保存A的转置的三元组表
+{
 }
 
 template <typename Type>
