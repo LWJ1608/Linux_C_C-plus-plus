@@ -120,22 +120,22 @@ Type Triple<Type>::getValue(int r, int c) const //取元素的值
 }
 // a为未逆置前，b是逆置后，根据矩阵的规律发现，逆置后:a[i][j]=b[j][i]
 template <typename Type>
-void Triple<Type>::transpose(const Triple<Type> &t) //用当前对象保存A的转置的三元组表
+void Triple<Type>::transpose(const Triple<Type> &A) //用当前对象保存A的转置的三元组表
 {
     //先构建b矩阵
-    numCol = t.numRow;
-    numRow = t.numCol;
-    if (maxSize < t.count) //如果b矩阵存不下a的逆置，重新开辟空间
+    numCol = A.numRow;
+    numRow = A.numCol;
+    if (maxSize < A.count) //如果b矩阵存不下a的逆置，重新开辟空间
     {
-        maxSize = t.maxSize;
+        maxSize = A.maxSize;
         delete[] matrix; //释放b的空间
         matrix = new Node[maxSize];
     }
-    count = t.count;
-    int p = 0;                         //
-    for (int i = 0; i < t.numCol; i++) //按列转序
+    count = A.count;
+    int p = 0;                         //控制当前对象matrix空间的下标
+    for (int i = 0; i < A.numCol; i++) //按列转序
     {
-        for (int j = 0; j < t.count; i++)
+        for (int j = 0; j < A.count; i++)
         {
             if ()
         }
