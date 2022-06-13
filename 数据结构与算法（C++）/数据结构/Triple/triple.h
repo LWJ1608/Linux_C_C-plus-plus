@@ -41,7 +41,6 @@ public:
     Type getValue(int r, int c) const;              //取元素的值
     //用当前对象保存A的转置的三元组表
     //快速转置算法
-    //矩阵乘法
     void print() const; //输出三元组表
     void resize();      //扩大三元组表空间
 };
