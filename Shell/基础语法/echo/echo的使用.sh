@@ -12,3 +12,6 @@ echo "lll"
 echo -e "lwj \c"
 echo "is me"
 
+#显示结果到文件中
+echo "lwj" > echo.txt
+
