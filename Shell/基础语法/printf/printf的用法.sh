@@ -7,7 +7,9 @@
 printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg
 printf "%-10s %-8s %-4.2f\n" 小白 男 66.888
 printf "%-10s %-8s %-4.2f\n" 小三 女 77.3423
-printf "%-10s %-8s %-4.2f\n" 小宏 男 99.999
+printf "%-10s %-8s %-4.2f\n\n\n" 小宏 男 99.999
 
-#
+#双引号和单引号作用一样
 printf "%d %s\n" 1 "abc"
+printf '%d %s\n' 1 "abc"
+
