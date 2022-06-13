@@ -13,6 +13,12 @@ printf "%-10s %-8s %-4.2f\n\n\n" 小宏 男 99.999
 printf "%d %s\n" 1 "abc"
 printf '%d %s\n' 1 "abc"
 
-#没用引号也可输出
-printf %s abcdf
+printf "a string, no processing:<%s>\n" "A\nB"
+a string, no processing:<A\nB>
 
+printf "a string, no processing:<%b>\n" "A\nB"
+a string, no processing:<A
+B>
+
+printf "www.runoob.com \a"
+www.runoob.com $   
