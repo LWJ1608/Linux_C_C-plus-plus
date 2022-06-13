@@ -11,6 +11,9 @@ using namespace std;
 void test01()
 {
     Triple<int> T1(3, 3, 2);
+    T1.pushValue(0, 2, 3);
+    T1.pushValue(0, 1, 3);
+    T1.pushValue(0, 0, 3);
     T1.print();
 }
 int main()
