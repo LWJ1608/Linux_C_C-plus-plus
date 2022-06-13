@@ -135,7 +135,7 @@ void Triple<Type>::transpose(const Triple<Type> &t) //用当前对象保存A的�
     int p = 0;
     for (int i = 0; i < t.; i++)
     {
-    }
+        }
 }
 
 template <typename Type>
