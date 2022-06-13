@@ -14,4 +14,5 @@ printf "%d %s\n" 1 "abc"
 printf '%d %s\n' 1 "abc"
 
 #没用引号也可输出
-printf "%s abcdf\n"
+printf %s abcdf
+
