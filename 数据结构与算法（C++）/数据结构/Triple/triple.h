@@ -125,7 +125,15 @@ void Triple<Type>::transpose(const Triple<Type> &t) //用当前对象保存A的�
     //先构建b矩阵
     numCol = t.numRow;
     numRow = t.numCol;
-    if (maxSize < t.maxSize)
+    if (maxSize < t.count) //如果b矩阵存不下a的逆置，重新开辟空间
+    {
+        maxSize = t.maxSize;
+        delete[] matrix; //释放b的空间
+        matrix = new Node[maxSize];
+    }
+    count = t.count;
+    int p = 0;
+    for (int i = 0; i < t.; i++)
     {
     }
 }
