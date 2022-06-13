@@ -15,3 +15,5 @@ echo "is me"
 #显示结果到文件中
 echo "lwj" > echo.txt
 
+#显示命令执行结果
+echo `data`
