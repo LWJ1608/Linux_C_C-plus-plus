@@ -105,12 +105,17 @@ void Triple<Type>::pushValue(int r, int c, const Type &size) //元素赋值
 template <typename Type>
 Type Triple<Type>::getValue(int r, int c) const //取元素的值
 {
-    if (count == 0)
+    if (count == 0) //如果为空，直接返回0
     {
-        std::cout << "矩阵为空!" << std::endl;
         return 0;
     }
     assert(r >= 0 && r < numRow - 1 && c >= 0 && c < numCol - 1); //越界报错
+    for (int i = 0; i < count; i++)
+    {
+        if (matrix[i].row == r && matrix[i].col == c)
+        {
+        }
+    }
 }
 
 template <typename Type>
