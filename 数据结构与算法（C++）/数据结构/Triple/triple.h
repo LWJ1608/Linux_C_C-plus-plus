@@ -132,7 +132,7 @@ void Triple<Type>::transpose(const Triple<Type> &A) //用当前对象保存A的�
         matrix = new Node[maxSize];
     }
     count = A.count;
-    int p = 0;                         //控制当前对象matrix空间的下标
+    int q = 0;                         //控制当前对象matrix空间的下标
     for (int i = 0; i < A.numCol; i++) //按列转序
     {
         for (int j = 0; j < A.count; j++)
