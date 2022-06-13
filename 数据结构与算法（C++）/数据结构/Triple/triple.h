@@ -76,8 +76,8 @@ void Triple<Type>::pushValue(int r, int c, const Type &size) //元素赋值
     {
         return;
     }
-    assert(r >= 0 && r < numRow - 1 && c >= 0 && c < numCol - 1); //越界报错
-    if (count == maxSize)                                         //空间满扩容
+    assert(r >= 0 && r < numRow && c >= 0 && c < numCol); //越界报错
+    if (count == maxSize)                                 //空间满扩容
     {
         resize();
     }
