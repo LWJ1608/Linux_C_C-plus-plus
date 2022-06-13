@@ -108,6 +108,7 @@ Type Triple<Type>::getValue(int r, int c) const //取元素的值
     if (count == 0)
     {
         std::cout << "矩阵为空!" << std::endl;
+        return 0;
     }
     assert(r >= 0 && r < numRow - 1 && c >= 0 && c < numCol - 1); //越界报错
 }
