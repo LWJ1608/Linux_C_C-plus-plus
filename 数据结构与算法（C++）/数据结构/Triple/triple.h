@@ -118,9 +118,16 @@ Type Triple<Type>::getValue(int r, int c) const //取元素的值
     }
     return 0;
 }
+// a为未逆置前，b是逆置后，根据矩阵的规律发现，逆置后:a[i][j]=b[j][i]
 template <typename Type>
 void Triple<Type>::transpose(const Triple<Type> &t) //用当前对象保存A的转置的三元组表
 {
+    //先构建b矩阵
+    numCol = t.numRow;
+    numRow = t.numCol;
+    if (maxSize < t.maxSize)
+    {
+    }
 }
 
 template <typename Type>
