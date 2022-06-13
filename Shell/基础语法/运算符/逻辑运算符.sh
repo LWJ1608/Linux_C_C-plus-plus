@@ -5,7 +5,7 @@
 a=9
 b=4
 
-if[ $a -eq $b ]
+if [ $a -eq $b ]
 then
 	echo"$a -eq $b: a=b"
 else
