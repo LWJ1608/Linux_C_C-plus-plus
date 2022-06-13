@@ -109,7 +109,7 @@ Type Triple<Type>::getValue(int r, int c) const //取元素的值
     {
         return 0;
     }
-    assert(r >= 0 && r < numRow - 1 && c >= 0 && c < numCol - 1); //越界报错
+    assert(r >= 0 && r < numRow && c >= 0 && c < numCol); //越界报错
     for (int i = 0; i < count; i++)
     {
         if (matrix[i].row == r && matrix[i].col == c)
