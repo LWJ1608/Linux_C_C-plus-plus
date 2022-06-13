@@ -5,5 +5,6 @@
 echo "my name is lwj"
 
 #显示转义字符
-echo -e "lwj\t"
+echo -e "lwj\n"
+echo "lll"
 
