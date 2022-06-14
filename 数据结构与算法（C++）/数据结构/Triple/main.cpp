@@ -12,11 +12,12 @@ void test01()
 {
     Triple<int> T1(3, 3, 2);
     T1.pushValue(0, 2, 3);
-    T1.pushValue(0, 1, 3);
-    T1.pushValue(0, 0, 3);
+    T1.pushValue(0, 1, 2);
+    T1.pushValue(0, 0, 1);
     T1.print();
-    //取位置为（2，0）的元素
+    //取位置为（2，0）,(0,2)的元素
     int value01 = T1.getValue(2, 0);
+    int value02 = T1.getValue(0, 2);
     cout << "value01 = " << value01 << "\t"
          << "value02 = " << value02 << endl;
 }
