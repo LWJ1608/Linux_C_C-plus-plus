@@ -16,8 +16,9 @@ void test01()
     T1.pushValue(0, 0, 3);
     T1.print();
     //取位置为（2，0）的元素
-    int value = T1.getValue(2, 0);
-    cout << "value = " << value << endl;
+    int value01 = T1.getValue(2, 0);
+    cout << "value01 = " << value01 << "\t"
+         << "value02 = " << value02 << endl;
 }
 int main()
 {
