@@ -133,11 +133,11 @@ void Triple<Type>::transpose(const Triple<Type> &A) //用当前对象保存A的�
     }
     count = A.count;
     int q = 0;                         //控制当前对象matrix空间的下标
-    for (int i = 0; i < A.numCol; i++) //按列转序
+    for (int i = 0; i < A.numCol; i++) //按列转序，列号不为-1则存在非0元素
     {
-        for (int j = 0; j < A.count; j++)
+        for (int j = 0; j < A.count; j++) // j控制对象A的数组的下标
         {
-            if (A.matrix[p].col == i)
+            if (A.matrix[j].col == i)
             {
                 matrix[q].row = A.matrix[j].col;
                 matrix[q].col = A.matrix[j].row;
@@ -146,6 +146,11 @@ void Triple<Type>::transpose(const Triple<Type> &A) //用当前对象保存A的�
             }
         }
     }
+}
+
+template <typename Type>
+void Triple<Type>::quickTranspose() //快速转置算法
+{
 }
 
 template <typename Type>
