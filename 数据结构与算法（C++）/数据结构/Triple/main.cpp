@@ -20,6 +20,10 @@ void test01()
     int value02 = T1.getValue(0, 2);
     cout << "value01 = " << value01 << "\t"
          << "value02 = " << value02 << endl;
+    //逆置
+    Triple<int> T2(3, 3, 2);
+    T2.transpose(T1);
+    T2.print();
 }
 int main()
 {
