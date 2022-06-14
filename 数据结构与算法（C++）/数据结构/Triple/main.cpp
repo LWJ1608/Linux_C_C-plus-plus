@@ -15,6 +15,7 @@ void test01()
     T1.pushValue(0, 1, 3);
     T1.pushValue(0, 0, 3);
     T1.print();
+    //取位置为（2，0）的
 }
 int main()
 {
