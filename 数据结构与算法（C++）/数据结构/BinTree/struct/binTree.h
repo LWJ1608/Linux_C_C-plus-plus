@@ -42,9 +42,9 @@ private: //以下为内部接口
     //查找当前节点的父节点
     //两个二叉树是否相同的比较
     //复制一个二叉树
-    void preOrder(Node *t) const; //递归前序遍历
-    void inOreder(Node *t) const; //递归中序遍历
-    // void postOrder(Node *t) const;            //递归后序遍历
+    void preOrder(Node *t) const;             //递归前序遍历
+    void inOreder(Node *t) const;             //递归中序遍历
+    void postOrder(Node *t) const;            //递归后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 
     //////////////////////以下为外部接口////////////////////////
@@ -157,17 +157,18 @@ void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
 template <typename Type>
 void BinTree<Type>::inOreder(Node *t) const //递归中序遍历
 {
-    preOrder(t->leftChild);
-    std::cout << t->data << ' '; //前序是从根开始遍历，所以输出语句放在第一条
-    preOrder(t->rightChild);
+    inOrder(t->leftChild);
+    std::cout << t->data << ' ';
+    inOrder(t->rightChild);
 }
 template <typename Type>
-void BinTree<Type>::inOreder(Node *t) const //递归中序遍历
+void BinTree<Type>::postOrder(Node *t) const //递归中序遍历
 {
-    preOrder(t->leftChild);
-    std::cout << t->data << ' '; //前序是从根开始遍历，所以输出语句放在第一条
-    preOrder(t->rightChild);
+    postOrder(t->leftChild);
+    postOrder(t->rightChild);
+    std::cout << t->data << ' ';
 }
+
 //使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个完全二叉树，这样更好理解
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
