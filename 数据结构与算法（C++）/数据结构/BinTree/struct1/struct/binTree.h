@@ -11,18 +11,31 @@ template <typename Type>
 class BinTree //二叉树类
 {
 private:
-    struct Node //二叉树结点
-    {
-        Type data;                                              //数据
-        Node *leftChild, *rightChild;                           //分别为左孩子和右孩子
-        Node() : leftChild(NULL), rightChild(NULL) {}           //无参构造
-        Node(Type value, Node *left = NULL, Node *rigth = NULL) //有参构造
-        {
-            data = value;
-            leftChild = left;
-            rightChild = rigth;
-        }
+    // struct Node //二叉树结点
+    // {
+    //     Type data;                                              //数据
+    //     Node *left, *right;                           //分别为左孩子和右孩子
+    //     Node() : left(NULL), right(NULL) {}           //无参构造
+    //     Node(Type value, Node *left = NULL, Node *rigth = NULL) //有参构造
+    //     {
+    //         data = value;
+    //         left = left;
+    //         right = rigth;
+    //     }
 
+    //     ~Node(){};
+    // };
+    struct Node
+    {                                       //结点定义
+        Node *left, *right;                 //左结点，右结点
+        elemType data;                      //数据域 （二叉树结点数）
+        Node() : left(NULL), right(NULL) {} //无参构造函数
+        Node(elemType value, Node *l = NULL, Node *r = NULL)
+        { //有参构造函数
+            data = value;
+            left = l;
+            right = r;
+        }
         ~Node(){};
     };
     Node *root; //指向二叉树的根
@@ -55,13 +68,13 @@ public:
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
 {
-    if (t->leftChild)
+    if (t->left)
     {
-        clear(t->leftChild);
+        clear(t->left);
     } //利用递归完成释放空间的功能
-    if (t->rightChild)
+    if (t->right)
     {
-        clear(t->rightChild);
+        clear(t->right);
     }
     delete t;
 }
@@ -73,7 +86,7 @@ int BinTree<Type>::size(Node *t) const //返回返回结点个数
     {
         return 0;
     }
-    return 1 + size(t->leftChild) + size(t->rightChild);
+    return 1 + size(t->left) + size(t->right);
 }
 
 template <typename Type>
@@ -84,7 +97,7 @@ void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉�
     if (value != flag)
     {
         t = new Node(value);
-        preOrderCreate(flag, t->leftChild);
-        preOrderCreate(flag, t->rightChild);
+        preOrderCreate(flag, t->left);
+        preOrderCreate(flag, t->right);
     }
 }
