@@ -22,6 +22,7 @@ void test01()
     t1.inOrederTraverse();
     cout << "\n后序遍历二叉树：";
     t1.postOrderTraverse();
+    cout << endl;
 }
 
 int main()
