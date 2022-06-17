@@ -12,7 +12,8 @@ void test01()
 {
 
     BinTree<int> t1;
-    cout << "结点个数为：" << t1.size() << endl;
+    cout << "二叉树结点个数为：" << t1.size() << endl;
+    cout << "二叉树高度为：" << t1.high() << endl;
 }
 
 int main()
