@@ -89,7 +89,7 @@ void BinTree<Type>::clear(Node *t) //清空二叉树
 template <typename Type>
 int BinTree<Type>::size(Node *t) const //返回返回结点个数
 {
-    if (root == nullptr)
+    if (t == nullptr)
     {
         return 0;
     }
@@ -99,7 +99,7 @@ int BinTree<Type>::size(Node *t) const //返回返回结点个数
 template <typename Type>
 int BinTree<Type>::height(Node *t) const //返回二叉树高度
 {
-    if (root == nullptr)
+    if (t == nullptr)
     {
         return 0;
     }
@@ -113,7 +113,7 @@ int BinTree<Type>::height(Node *t) const //返回二叉树高度
 template <typename Type>
 int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 {
-    if (root == nullptr)
+    if (t == nullptr)
     {
         return 0;
     }
