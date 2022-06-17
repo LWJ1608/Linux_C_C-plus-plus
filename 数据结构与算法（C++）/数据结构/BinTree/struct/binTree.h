@@ -56,7 +56,7 @@ public:
         }
         root = nullptr;
     }                                                 //清空
-    int size() const;                                 //返回返回结点个数
+    int size() const { size(root); }                  //返回返回结点个数
     int hight() const;                                //返回二叉树高度
     int leafNum() const;                              //返回二叉树叶子数
     void preOrderTraverse() const;                    //前序遍历
