@@ -43,7 +43,7 @@ private: //以下为内部接口
     //两个二叉树是否相同的比较
     //复制一个二叉树
     void preOrder(Node *t) const;             //递归前序遍历
-    void inOreder(Node *t) const;             //递归中序遍历
+    void inOrder(Node *t) const;             //递归中序遍历
     void postOrder(Node *t) const;            //递归后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 
@@ -155,7 +155,7 @@ void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
 }
 
 template <typename Type>
-void BinTree<Type>::inOreder(Node *t) const //递归中序遍历
+void BinTree<Type>::inOrder(Node *t) const //递归中序遍历
 {
     inOrder(t->leftChild);
     std::cout << t->data << ' ';
