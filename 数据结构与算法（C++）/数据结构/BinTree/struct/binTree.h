@@ -18,8 +18,15 @@ private:
         Type data;                                          //数据
         Node *leftChild, *rightChild;                       //分别为左孩子和右孩子
         Node() : leftChild(nullptr), rightChild(nullptr) {} //无参构造
-        Node(Type value, Node *left = nullptr, Node *rigth = nullptr)
-            : data(value), leftChild(left), rightChild(rigth) {} //有参构造
+        // Node(Type value, Node *left = nullptr, Node *rigth = nullptr)
+        //     : data(value), leftChild(left), rightChild(rigth) {} //有参构造
+        Node(Type value, Node *left = nullptr, Node *rigth = nullptr) //有参构造
+        {
+            data = value;
+            leftChild = left;
+            rightChild = rigth;
+        }
+
         ~Node(){};
     };
     Node *root; //指向二叉树的根
