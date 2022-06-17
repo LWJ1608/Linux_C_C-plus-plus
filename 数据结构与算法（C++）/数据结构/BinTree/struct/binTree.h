@@ -29,10 +29,17 @@ private:        //以下为内部接口
     int size(Node *t) const;
     int hight(Node *t) const;
     int leafNum(Node *t) const;
-    void preOrder(Node *t) const;
-    void inOreder(Node *t) const;
-    void postOrder(Node *t) const;
-    void preOrderCreate(Type flag, Node *&t);
-
-public: //以下为外部接口
+    void preOrder(Node *t) const;             //前序遍历
+    void inOreder(Node *t) const;             //中序遍历
+    void postOrder(Node *t) const;            //后序遍历
+    void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
+public:                                       //以下为外部接口
+    void clear();
+    int size() const;
+    int hight() const;
+    int leafNum() const;
+    void preOrder() const;                    //前序遍历
+    void inOreder() const;                    //中序遍历
+    void postOrder() const;                   //后序遍历
+    void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 };
