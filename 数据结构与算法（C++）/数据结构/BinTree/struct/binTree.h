@@ -14,5 +14,9 @@ class BinTree //二叉树类
 {
     struct Node //二叉树结点
     {
+        Type data;        //数据
+        Node *leftChild;  //左孩子指针
+        Node *rightChild; //右孩子
+        Node()
     };
 };
