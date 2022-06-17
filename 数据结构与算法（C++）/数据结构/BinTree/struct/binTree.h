@@ -56,13 +56,16 @@ public:
         }
         root = nullptr;
     }
-    int size() const { size(root); }                  //返回返回结点个数
-    int height() const { height(root); }              //返回二叉树高度
-    int leafNum() const { leafNum(root); }            //返回二叉树叶子数
-    void preOrderTraverse() const;                    //前序遍历
-    void inOrederTraverse() const;                    //中序遍历
-    void postOrderTraverse() const;                   //后序遍历
-    void preOrderCreateTraverse(Type flag, Node *&t); //前序法创建二叉树
+    int size() const { size(root); }       //返回返回结点个数
+    int height() const { height(root); }   //返回二叉树高度
+    int leafNum() const { leafNum(root); } //返回二叉树叶子数
+    void preOrderTraverse() const;         //前序遍历
+    void inOrederTraverse() const;         //中序遍历
+    void postOrderTraverse() const;        //后序遍历
+    void preOrderCreate(Type flag)         //前序法创建二叉树
+    {
+        preOrderCreate(flag, root);
+    }
 };
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
