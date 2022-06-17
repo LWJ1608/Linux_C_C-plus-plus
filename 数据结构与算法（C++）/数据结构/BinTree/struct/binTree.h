@@ -114,3 +114,7 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
         return 1 + leafNum(t->leftChild) + leafNum(t->rightChild);
     }
 }
+template <typename Type>
+void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
+{
+}
