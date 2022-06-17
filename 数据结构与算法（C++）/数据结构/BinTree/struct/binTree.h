@@ -60,27 +60,16 @@ public:
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
 {
-    if (t->leftChild)
-    {
-        clear(t->leftChild);
-    } //利用递归完成释放空间的功能
-    if (t->rightChild)
-    {
-        clear(t->rightChild);
-    }
+    if (t->leftChild) { clear(t->leftChild); } //利用递归完成释放空间的功能
+    if (t->rightChild) { clear(t->rightChild); }
     delete t;
 }
 
 template <typename Type>
 int BinTree<Type>::size(Node *t) const
 {
-    static int l = 0;
-    if (t->leftChild)
-    {
-        clear(t->leftChild);
-    } //；利用递归完成释放空间的功能
-    if (t->rightChild)
-    {
-        clear(t->rightChild);
-    }
+    static int l=0;
+    if (t->leftChild) { clear(t->leftChild); }// 
+    if (t->rightChild) { clear(t->rightChild); }
+    l++;
 }
