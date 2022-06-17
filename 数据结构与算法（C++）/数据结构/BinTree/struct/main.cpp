@@ -7,10 +7,12 @@
 
 #include "binTree.h"
 #include <iostream>
+using namespace std;
 void test01()
 {
+
     BinTree<int> t1;
-    cout << "结点个数为：" <<t1.size()<<
+    cout << "结点个数为：" << t1.size() << endl;
 }
 
 int main()
