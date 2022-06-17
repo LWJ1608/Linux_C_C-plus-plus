@@ -58,14 +58,15 @@ public:
     void preOrderCreateTraverse(Type flag, Node *&t); //前序法创建二叉树
 };
 template <typename Type>
-void BinTree<Type>::clear(Node *t)
+void BinTree<Type>::clear(Node *t) //
 {
     if (t->leftChild)
     {
         clear(t->leftChild);
     }
-    if (t->leftChild)
+    if (t->rightChild)
     {
-        clear(t->leftChild);
+        clear(t->rightChild);
     }
+    delete t;
 }
