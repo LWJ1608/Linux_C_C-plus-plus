@@ -12,4 +12,7 @@
 template <typename Type>
 class BinTree //二叉树类
 {
+    struct Node //二叉树结点
+    {
+    };
 };
