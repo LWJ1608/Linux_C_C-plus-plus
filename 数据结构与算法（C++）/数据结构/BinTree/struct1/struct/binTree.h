@@ -28,9 +28,9 @@ private:
     struct Node
     {                                       //结点定义
         Node *left, *right;                 //左结点，右结点
-        elemType data;                      //数据域 （二叉树结点数）
+        Type data;                          //数据域 （二叉树结点数）
         Node() : left(NULL), right(NULL) {} //无参构造函数
-        Node(elemType value, Node *l = NULL, Node *r = NULL)
+        Node(Type value, Node *l = NULL, Node *r = NULL)
         { //有参构造函数
             data = value;
             left = l;
