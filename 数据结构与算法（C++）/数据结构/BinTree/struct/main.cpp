@@ -10,7 +10,7 @@
 void test01()
 {
     BinTree<int> t1;
-    cout << "结点个数为：" <<
+    cout << "结点个数为：" <<t1.size()<<
 }
 
 int main()
