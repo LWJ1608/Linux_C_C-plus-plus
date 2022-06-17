@@ -26,3 +26,9 @@ public:
     }
     ~BinTreeNode();
 };
+
+template <typename Type>
+class BinTree
+{
+private:
+};
