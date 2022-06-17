@@ -4,3 +4,16 @@
  * @Description:测试二叉树功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构与算法（C++）/数据结构/BinTree/main.cpp
  **/
+
+#include"binTree.h"
+#include<iostream>
+void test01()
+{
+
+}
+
+int main()
+{
+    test01();
+    return 0;
+}
