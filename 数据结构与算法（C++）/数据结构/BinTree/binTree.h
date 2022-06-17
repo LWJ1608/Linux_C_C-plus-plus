@@ -31,4 +31,5 @@ template <typename Type>
 class BinTree
 {
 private:
+    BinTreeNode<Type> *
 };
