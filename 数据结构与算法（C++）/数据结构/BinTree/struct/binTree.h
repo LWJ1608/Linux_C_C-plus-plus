@@ -19,8 +19,9 @@ private:
         Node *leftChild;                                                  //左孩子指针
         Node *rightChild;                                                 //右孩子
         Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
-        Node(const Type value, const Node *left, const Node *rigth)
+        Node(const Type value, const Node *left = nullptr, const Node *rigth = nullptr)
             : data(value), leftChild(left), rightChild(rigth) {} //有参构造
+        ~Node(){};
     };
     Node *root; //指向二叉树的根
 private:        //以下为内部接口
