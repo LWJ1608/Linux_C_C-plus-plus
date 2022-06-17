@@ -4,6 +4,7 @@
  * @Description:三元组表构建稀疏矩阵
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/Triple/triple.h
  **/
+#pragma once
 #include <iostream>
 #include <assert.h>
 

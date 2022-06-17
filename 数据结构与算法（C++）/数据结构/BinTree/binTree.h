@@ -4,3 +4,4 @@
  * @Description:二叉树方法的实现
  * @FilePath: /Linux_C_C-plus-plus/数据结构与算法（C++）/数据结构/BinTree/binTree.h
  **/
+#pragma once
