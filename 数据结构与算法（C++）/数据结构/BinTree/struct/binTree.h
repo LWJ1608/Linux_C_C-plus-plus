@@ -75,7 +75,11 @@ public:
         if (root)
             inOreder(root);
     }
-    // void postOrderTraverse() const;        //后序遍历
+    void postOrderTraverse() const; //后序遍历
+    {
+        if (root)
+            postOrder(root);
+    }
     void preOrderCreate(Type flag) //前序法创建二叉树
     {
         preOrderCreate(flag, root);
@@ -157,7 +161,13 @@ void BinTree<Type>::inOreder(Node *t) const //递归中序遍历
     std::cout << t->data << ' '; //前序是从根开始遍历，所以输出语句放在第一条
     preOrder(t->rightChild);
 }
-
+template <typename Type>
+void BinTree<Type>::inOreder(Node *t) const //递归中序遍历
+{
+    preOrder(t->leftChild);
+    std::cout << t->data << ' '; //前序是从根开始遍历，所以输出语句放在第一条
+    preOrder(t->rightChild);
+}
 //使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个完全二叉树，这样更好理解
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
