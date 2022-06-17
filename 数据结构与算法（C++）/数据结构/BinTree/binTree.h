@@ -28,7 +28,7 @@ public:
 };
 
 template <typename Type>
-class BinTree
+class BinTree //二叉树模板类
 {
 private:
     BinTreeNode<Type> *
