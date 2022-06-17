@@ -42,7 +42,7 @@ private: //以下为内部接口
     //查找当前节点的父节点
     //两个二叉树是否相同的比较
     //复制一个二叉树
-    // void preOrder(Node *t) const;             //递归前序遍历
+    void preOrder(Node *t) const;             //递归前序遍历
     // void inOreder(Node *t) const;             //递归中序遍历
     // void postOrder(Node *t) const;            //递归后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
@@ -126,6 +126,16 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
         return leafNum(t->leftChild) + leafNum(t->rightChild);
     }
 }
+template <typename Type>
+void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
+{
+    std::cout<<t->data<<" ";//前序是从根开始遍历，所以输出语句放在第一条
+    preOrder(t->leftChild);
+    preOrder(t->rightChild);
+}
+
+
+
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
 {
