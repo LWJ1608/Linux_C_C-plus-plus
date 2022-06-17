@@ -24,17 +24,21 @@ private:
         ~Node(){};
     };
     Node *root; //指向二叉树的根
-private:        //以下为内部接口
+
+    ////////以下为内部接口////////
+private: //以下为内部接口
     void clear(Node *t);
     int size(Node *t) const;
     int hight(Node *t) const;
     int leafNum(Node *t) const;
+
     void preOrder(Node *t) const;             //前序遍历
     void inOreder(Node *t) const;             //中序遍历
     void postOrder(Node *t) const;            //后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 
-public:                                       //以下为外部接口
+    ////////以下为外部接口////////
+public:
     void clear();                             //清空
     int size() const;                         //返回返回结点个数
     int hight() const;                        //返回二叉树高度
