@@ -52,7 +52,7 @@ public:
     int size() const;                              //返回返回结点个数
     int hight() const;                             //返回二叉树高度
     int leafNum() const;                           //返回二叉树叶子数
-    void preOrder() const;                         //前序遍历
+    void preOrderTraverse() const;                 //前序遍历
     void inOreder() const;                         //中序遍历
     void postOrder() const;                        //后序遍历
     void preOrderCreate(Type flag, Node *&t);      //前序法创建二叉树
