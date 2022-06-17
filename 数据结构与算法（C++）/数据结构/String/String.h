@@ -4,7 +4,7 @@
  * @Description:实现串的基本功能
  * @FilePath: /Linux_C_C-plus-plus/数据结构（C++）/String/string.h
  **/
-
+#pragma once
 #include <iostream>
 #include <cstring>
 #include <assert.h>
