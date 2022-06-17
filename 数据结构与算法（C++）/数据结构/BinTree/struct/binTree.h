@@ -29,7 +29,7 @@ private:
 private: //以下为内部接口
     void clear(Node *t);
     int size(Node *t) const;
-    int hight(Node *t) const;
+    int height(Node *t) const;
     int leafNum(Node *t) const;
     //求根节点
     //求当前节点的左孩子
@@ -57,7 +57,7 @@ public:
         root = nullptr;
     }                                                 //清空
     int size() const { size(root); }                  //返回返回结点个数
-    int high() const;                                 //返回二叉树高度
+    int height() const;                                 //返回二叉树高度
     int leafNum() const;                              //返回二叉树叶子数
     void preOrderTraverse() const;                    //前序遍历
     void inOrederTraverse() const;                    //中序遍历
@@ -89,7 +89,7 @@ int BinTree<Type>::size(Node *t) const //返回返回结点个数
 }
 
 template <typename Type>
-int BinTree<Type>::high(Node *t) const //返回二叉树高度
+int BinTree<Type>::height(Node *t) const //返回二叉树高度
 {
     if (root == nullptr)
     {
@@ -97,8 +97,8 @@ int BinTree<Type>::high(Node *t) const //返回二叉树高度
     }
     else
     {
-        int l = high(t->leftChild);
-        int r = high(t->rightChild);
+        int l = height(t->leftChild);
+        int r = height(t->rightChild);
         return 1 + (l > r ? l : r);
     }
 }
