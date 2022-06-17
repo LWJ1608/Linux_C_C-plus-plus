@@ -57,3 +57,7 @@ public:
     void postOrderTraverse() const;                   //后序遍历
     void preOrderCreateTraverse(Type flag, Node *&t); //前序法创建二叉树
 };
+template <typename Type>
+void BinTree<Type>::clear(Node *t)
+{
+}
