@@ -9,8 +9,13 @@
 #include <queue>
 #include <iostream>
 
+template <typename Type>
 class BinTreeNode //二叉树结点类
 {
 private:
+    Type data;                     //数据
+    BinTreeNode<Type> *leftChild;  //左孩子
+    BinTreeNode<Type> *rightChild; //右孩子
+
 public:
 };
