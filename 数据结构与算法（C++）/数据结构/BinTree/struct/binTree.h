@@ -26,7 +26,13 @@ private:
     Node *root; //指向二叉树的根
 private:        //以下为内部接口
     void clear(Node *t);
-    int size(Node *t);
+    int size(Node *t) const;
+    int hight(Node *t) const;
+    int leafNum(Node *t) const;
+    void preOrder(Node *t) const;
+    void inOreder(Node *t) const;
+    void postOrder(Node *t) const;
+    void preOrderCreate(Type flag, Node *&t);
 
 public: //以下为外部接口
 };
