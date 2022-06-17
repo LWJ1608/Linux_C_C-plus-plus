@@ -117,9 +117,9 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
     {
         return 0;
     }
-    if else
+    else if (t->leftChild == nullptr && t->rightChild == nullptr) //根就是叶子的时候
     {
-        
+        return 1;
     }
     else
     {
