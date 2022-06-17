@@ -117,7 +117,7 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
     {
         return 0;
     }
-    if (root->leftChild == nullptr && root->rightChild == nullptr)
+    if (t->leftChild == nullptr && t->rightChild == nullptr)
     {
         return 1 + leafNum(t->leftChild) + leafNum(t->rightChild);
     }
