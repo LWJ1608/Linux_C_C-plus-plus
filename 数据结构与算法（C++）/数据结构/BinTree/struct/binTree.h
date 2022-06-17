@@ -157,17 +157,22 @@ void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
 template <typename Type>
 void BinTree<Type>::inOrder(Node *t) const //递归中序遍历
 {
-    inOrder(t->leftChild);
-    std::cout << t->data << ' ';
-    inOrder(t->rightChild);
+    if (t)
+    {
+        inOrder(t->leftChild);
+        std::cout << t->data << ' ';
+        inOrder(t->rightChild);
+    }
 }
 template <typename Type>
 void BinTree<Type>::postOrder(Node *t) const
 {
-    // if(t)
-    postOrder(t->leftChild);
-    postOrder(t->rightChild);
-    std::cout << t->data << ' ';
+    if (t)
+    {
+        postOrder(t->leftChild);
+        postOrder(t->rightChild);
+        std::cout << t->data << ' ';
+    }
 }
 
 //使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个完全二叉树，这样更好理解
