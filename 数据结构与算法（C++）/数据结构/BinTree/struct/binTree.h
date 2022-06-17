@@ -81,6 +81,7 @@ void BinTree<Type>::clear(Node *t) //清空二叉树
 template <typename Type>
 int BinTree<Type>::size(Node *t) const
 {
-    static int l = 0;
-    return;
+    if (root)
+        return 0;
+    return 1 + size(t->leftChild) + size(t->rightChild);
 }
