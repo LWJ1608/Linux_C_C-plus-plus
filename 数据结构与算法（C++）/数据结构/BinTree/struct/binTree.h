@@ -73,7 +73,7 @@ public:
     void inOrederTraverse() const //中序遍历
     {
         if (root)
-            inOreder(root);
+            inOrder(root);
     }
     void postOrderTraverse() const //后序遍历
     {
