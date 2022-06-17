@@ -31,5 +31,5 @@ template <typename Type>
 class BinTree //二叉树模板类
 {
 private:
-    BinTreeNode<Type> *
+    BinTreeNode<Type> *root; //指向二叉树
 };
