@@ -130,8 +130,4 @@ void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉�
         preOrderCreate(flag, t->leftChild);
         preOrderCreate(flag, t->rightChild);
     }
-    else
-    {
-        return;
-    }
 }
