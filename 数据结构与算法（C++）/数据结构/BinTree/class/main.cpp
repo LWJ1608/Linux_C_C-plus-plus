@@ -57,7 +57,7 @@ int main(void)
         }
     */
     BinTree<char> bt('#');
-    char *str = "ABC##DE##F##G#H##";
+    const char *str = "ABC##DE##F##G#H##";
     bt.createBinTree(str);
     cout << bt.size() << endl;
     cout << bt.height() << endl;
