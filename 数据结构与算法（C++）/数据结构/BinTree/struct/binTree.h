@@ -63,7 +63,7 @@ void BinTree<Type>::clear(Node *t) //清空二叉树
     if (t->leftChild)
     {
         clear(t->leftChild);
-    } //；利用递归完成释放空间的功能
+    } //利用递归完成释放空间的功能
     if (t->rightChild)
     {
         clear(t->rightChild);
