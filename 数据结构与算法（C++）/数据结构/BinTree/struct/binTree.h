@@ -75,7 +75,7 @@ public:
         if (root)
             inOreder(root);
     }
-    void postOrderTraverse() const; //后序遍历
+    void postOrderTraverse() const //后序遍历
     {
         if (root)
             postOrder(root);
