@@ -37,7 +37,7 @@ public:                                       //以下为外部接口
     void clear();
     int size() const;
     int hight() const;
-    int leafNum() const;
+    int leafNum() const;                      //返回二叉树叶子数
     void preOrder() const;                    //前序遍历
     void inOreder() const;                    //中序遍历
     void postOrder() const;                   //后序遍历
