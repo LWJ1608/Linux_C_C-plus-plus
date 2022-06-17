@@ -28,9 +28,9 @@ private:
     /////////////////////以下为内部接口//////////////////////
 private: //以下为内部接口
     void clear(Node *t);
-    int size(Node *t) const;
-    int height(Node *t) const;
-    int leafNum(Node *t) const;
+    // int size(Node *t) const;
+    // int height(Node *t) const;
+    // int leafNum(Node *t) const;
     //求根节点
     //求当前节点的左孩子
     //求当前节点的右孩子
@@ -56,9 +56,9 @@ public:
         }
         root = nullptr;
     }
-    int size() const { size(root); }       //返回返回结点个数
-    int height() const { height(root); }   //返回二叉树高度
-    int leafNum() const { leafNum(root); } //返回二叉树叶子数
+    // int size() const { size(root); }       //返回返回结点个数
+    // int height() const { height(root); }   //返回二叉树高度
+    // int leafNum() const { leafNum(root); } //返回二叉树叶子数
     // void preOrderTraverse() const;         //前序遍历
     // void inOrederTraverse() const;         //中序遍历
     // void postOrderTraverse() const;        //后序遍历
@@ -82,42 +82,42 @@ void BinTree<Type>::clear(Node *t) //清空二叉树
     delete t;
 }
 
-template <typename Type>
-int BinTree<Type>::size(Node *t) const //返回返回结点个数
-{
-    if (root == nullptr)
-    {
-        return 0;
-    }
-    return 1 + size(t->leftChild) + size(t->rightChild);
-}
+// template <typename Type>
+// int BinTree<Type>::size(Node *t) const //返回返回结点个数
+// {
+//     if (root == nullptr)
+//     {
+//         return 0;
+//     }
+//     return 1 + size(t->leftChild) + size(t->rightChild);
+// }
 
-template <typename Type>
-int BinTree<Type>::height(Node *t) const //返回二叉树高度
-{
-    if (root == nullptr)
-    {
-        return 0;
-    }
-    else
-    {
-        int l = height(t->leftChild);
-        int r = height(t->rightChild);
-        return 1 + (l > r ? l : r);
-    }
-}
-template <typename Type>
-int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
-{
-    if (root == nullptr)
-    {
-        return 0;
-    }
-    if (root->leftChild == nullptr && root->rightChild == nullptr)
-    {
-        return 1 + leafNum(t->leftChild) + leafNum(t->rightChild);
-    }
-}
+// template <typename Type>
+// int BinTree<Type>::height(Node *t) const //返回二叉树高度
+// {
+//     if (root == nullptr)
+//     {
+//         return 0;
+//     }
+//     else
+//     {
+//         int l = height(t->leftChild);
+//         int r = height(t->rightChild);
+//         return 1 + (l > r ? l : r);
+//     }
+// }
+// template <typename Type>
+// int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
+// {
+//     if (root == nullptr)
+//     {
+//         return 0;
+//     }
+//     if (root->leftChild == nullptr && root->rightChild == nullptr)
+//     {
+//         return 1 + leafNum(t->leftChild) + leafNum(t->rightChild);
+//     }
+// }
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
 {
