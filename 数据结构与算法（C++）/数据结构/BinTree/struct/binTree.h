@@ -117,4 +117,10 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
 {
+    Type value;   //键盘输入的值
+    cin >> value; //输入
+    if (value != flag)
+    {
+        preOrderCreate(flag, root->leftChild);
+    }
 }
