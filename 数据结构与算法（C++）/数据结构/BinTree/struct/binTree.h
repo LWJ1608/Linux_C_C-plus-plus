@@ -18,6 +18,6 @@ class BinTree //二叉树类
         Node *leftChild;                                                  //左孩子指针
         Node *rightChild;                                                 //右孩子
         Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
-        Node() :
+        Node(const Type value, const Node *left, const Node *rigth) :
     };
 };
