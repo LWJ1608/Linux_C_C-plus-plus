@@ -51,7 +51,9 @@ public:
     void clear()
     {
         if (root)
+        {
             clear(t);
+        }
         root = nullptr;
     }                                                 //清空
     int size() const;                                 //返回返回结点个数
