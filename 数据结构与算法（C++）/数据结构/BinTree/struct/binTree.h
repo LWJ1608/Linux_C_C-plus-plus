@@ -82,7 +82,9 @@ template <typename Type>
 int BinTree<Type>::size(Node *t) const //返回返回结点个数
 {
     if (!root)
+    {
         return 0;
+    }
     if (root)
     {
         return 0;
@@ -93,6 +95,7 @@ int BinTree<Type>::size(Node *t) const //返回返回结点个数
 template <typename Type>
 int BinTree<Type>::hight(Node *t) const //返回二叉树高度
 {
-    int a = return 1 + hight(t->leftChild);
-    int b = return
+    int l = hight(t->leftChild);
+    int r = hight(t->rightChild);
+    return 1 + (l > r ? l : r)
 }
