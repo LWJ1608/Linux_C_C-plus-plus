@@ -25,5 +25,7 @@ private:
     };
     Node *root; //指向二叉树的根
 private:        //以下为内部接口
-public:         //以下为外部接口
+    void clear();
+
+public: //以下为外部接口
 };
