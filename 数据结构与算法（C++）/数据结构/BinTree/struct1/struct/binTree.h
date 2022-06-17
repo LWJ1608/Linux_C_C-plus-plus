@@ -13,10 +13,10 @@ class BinTree //二叉树类
 private:
     struct Node //二叉树结点
     {
-        Type data;                                                    //数据
-        Node *leftChild, *rightChild;                                 //分别为左孩子和右孩子
-        Node() : leftChild(nullptr), rightChild(nullptr) {}           //无参构造
-        Node(Type value, Node *left = nullptr, Node *rigth = nullptr) //有参构造
+        Type data;                                              //数据
+        Node *leftChild, *rightChild;                           //分别为左孩子和右孩子
+        Node() : leftChild(NULL), rightChild(NULL) {}           //无参构造
+        Node(Type value, Node *left = NULL, Node *rigth = NULL) //有参构造
         {
             data = value;
             leftChild = left;
@@ -35,7 +35,7 @@ private: //以下为内部接口
 
     //////////////////////以下为外部接口////////////////////////
 public:
-    BinTree() : root(nullptr) {}
+    BinTree() : root(NULL) {}
     ~BinTree() { clear(); }
     void clear() //清空
     {
@@ -43,7 +43,7 @@ public:
         {
             clear(root);
         }
-        root = nullptr;
+        root = NULL;
     }
     int size() const { return size(root); } //返回返回结点个数
     void preOrderCreate(Type flag)          //前序法创建二叉树
@@ -69,7 +69,7 @@ void BinTree<Type>::clear(Node *t) //清空二叉树
 template <typename Type>
 int BinTree<Type>::size(Node *t) const //返回返回结点个数
 {
-    if (root == nullptr)
+    if (root == NULL)
     {
         return 0;
     }
