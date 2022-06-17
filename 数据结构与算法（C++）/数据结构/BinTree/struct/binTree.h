@@ -97,12 +97,12 @@ int BinTree<Type>::hight(Node *t) const //返回二叉树高度
 {
     if (!root)
     {
-        reurn 0;
+        return 0;
     }
     else
     {
         int l = hight(t->leftChild);
         int r = hight(t->rightChild);
-        return 1 + (l > r ? l : r)
+        return 1 + (l > r ? l : r);
     }
 }
