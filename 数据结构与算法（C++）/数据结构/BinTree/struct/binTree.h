@@ -48,7 +48,7 @@ public:
     BinTree() : root(nullptr) {}
     ~BinTree() { clear(); }
     bool empty() const { return root == nullptr; }    //判空
-    void clear();                                     //清空
+    void clear() { clear(Node * t); }                 //清空
     int size() const;                                 //返回返回结点个数
     int hight() const;                                //返回二叉树高度
     int leafNum() const;                              //返回二叉树叶子数
