@@ -48,14 +48,14 @@ public:
     BinTree() : root(nullptr) {}
     ~BinTree() { clear(); }
     bool empty() const { return root == nullptr; } //判空
-    void clear()
+    void clear()                                   //清空
     {
         if (root)
         {
             clear(root);
         }
         root = nullptr;
-    }                                                 //清空
+    }
     int size() const { size(root); }                  //返回返回结点个数
     int height() const { height(root); }              //返回二叉树高度
     int leafNum() const;                              //返回二叉树叶子数
@@ -101,4 +101,9 @@ int BinTree<Type>::height(Node *t) const //返回二叉树高度
         int r = height(t->rightChild);
         return 1 + (l > r ? l : r);
     }
+}
+template <typename Type>
+int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
+{
+    if (root)
 }
