@@ -19,7 +19,7 @@ private:
         Node *leftChild;                                                  //左孩子指针
         Node *rightChild;                                                 //右孩子
         Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
-        Node(const Type value, const Node *left = nullptr, const Node *rigth = nullptr)
+        Node(Type value, Node *left = nullptr, Node *rigth = nullptr)
             : data(value), leftChild(left), rightChild(rigth) {} //有参构造
         ~Node(){};
     };
