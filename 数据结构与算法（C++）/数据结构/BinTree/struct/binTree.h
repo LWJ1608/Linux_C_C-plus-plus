@@ -105,5 +105,12 @@ int BinTree<Type>::height(Node *t) const //返回二叉树高度
 template <typename Type>
 int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 {
-    if (root)
+    if(root==nullptr)
+    {
+        return 0;
+    }
+    if (root->leftChild==nullptr&&root->rightChild==nullptr)
+    {
+        return 1+leafNum(t->leftChild)+leafNum(t->rightChild);
+    }
 }
