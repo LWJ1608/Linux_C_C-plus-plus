@@ -138,7 +138,7 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 template <typename Type>
 void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
 {
-    std::cout << t->data << " "; //前序是从根开始遍历，所以输出语句放在第一条
+    std::cout << t->data << ' '; //前序是从根开始遍历，所以输出语句放在第一条
     preOrder(t->leftChild);
     preOrder(t->rightChild);
 }
