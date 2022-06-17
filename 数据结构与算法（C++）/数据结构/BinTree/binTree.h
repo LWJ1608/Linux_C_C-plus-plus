@@ -5,3 +5,11 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构与算法（C++）/数据结构/BinTree/binTree.h
  **/
 #pragma once
+#include <stack>
+#include <queue>
+#include <iostream>
+
+class BinTreeNode //二叉树结点类
+{
+public:
+};
