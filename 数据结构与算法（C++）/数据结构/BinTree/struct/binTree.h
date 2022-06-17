@@ -47,15 +47,15 @@ private: //以下为内部接口
 public:
     BinTree() : root(nullptr) {}
     ~BinTree() { clear(); }
-    bool empty() const { return root == nullptr; }    //判空
+    bool empty() const { return root == nullptr; }          //判空
     void clear() { if (root){clear(root);}root = nullptr; } //清空
-    int size() const;                                 //返回返回结点个数
-    int hight() const;                                //返回二叉树高度
-    int leafNum() const;                              //返回二叉树叶子数
-    void preOrderTraverse() const;                    //前序遍历
-    void inOrederTraverse() const;                    //中序遍历
-    void postOrderTraverse() const;                   //后序遍历
-    void preOrderCreateTraverse(Type flag, Node *&t); //前序法创建二叉树
+    int size() const;                                       //返回返回结点个数
+    int hight() const;                                      //返回二叉树高度
+    int leafNum() const;                                    //返回二叉树叶子数
+    void preOrderTraverse() const;                          //前序遍历
+    void inOrederTraverse() const;                          //中序遍历
+    void postOrderTraverse() const;                         //后序遍历
+    void preOrderCreateTraverse(Type flag, Node *&t);       //前序法创建二叉树
 };
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
