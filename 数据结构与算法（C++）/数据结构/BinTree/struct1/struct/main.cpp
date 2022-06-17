@@ -14,8 +14,6 @@ void test01()
     BinTree<char> t1;
     t1.preOrderCreate('*');
     cout << "二叉树结点个数为：" << t1.size() << endl;
-    // cout << "二叉树高度为：" << t1.height() << endl;
-    // cout << "二叉树叶子数为：" << t1.leafNum() << endl;
 }
 
 int main()
