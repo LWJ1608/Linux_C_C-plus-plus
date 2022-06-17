@@ -31,13 +31,13 @@ private: //以下为内部接口
     int size(Node *t) const;
     int hight(Node *t) const;
     int leafNum(Node *t) const;
-    // 求根节点
-    //  求当前节点的左孩子
-    //  求当前节点的右孩子
-    //  查找当前节点
+    //求根节点
+    //求当前节点的左孩子
+    //求当前节点的右孩子
+    //查找当前节点
     //查找当前节点的父节点
-    //  两个二叉树是否相同的比较
-    // 复制一个二叉树
+    //两个二叉树是否相同的比较
+    //复制一个二叉树
     void preOrder(Node *t) const;             //前序遍历
     void inOreder(Node *t) const;             //中序遍历
     void postOrder(Node *t) const;            //后序遍历
@@ -45,6 +45,8 @@ private: //以下为内部接口
 
     ////////以下为外部接口////////
 public:
+    BinTree();
+    ~BinTree();
     void clear();                             //清空
     int size() const;                         //返回返回结点个数
     int hight() const;                        //返回二叉树高度
