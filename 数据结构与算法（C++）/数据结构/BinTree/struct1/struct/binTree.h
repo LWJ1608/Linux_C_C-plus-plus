@@ -5,8 +5,6 @@
  * @FilePath: /Linux_C_C-plus-plus/数据结构与算法（C++）/数据结构/BinTree/binTree.h
  **/
 #pragma once
-#include <stack>
-#include <queue>
 #include <iostream>
 
 template <typename Type>
@@ -33,26 +31,13 @@ private:
 private: //以下为内部接口
     void clear(Node *t);
     int size(Node *t) const;
-    int height(Node *t) const;
-    int leafNum(Node *t) const;
-    //求根节点
-    //求当前节点的左孩子
-    //求当前节点的右孩子
-    //查找当前节点
-    //查找当前节点的父节点
-    //两个二叉树是否相同的比较
-    //复制一个二叉树
-    // void preOrder(Node *t) const;             //递归前序遍历
-    // void inOreder(Node *t) const;             //递归中序遍历
-    // void postOrder(Node *t) const;            //递归后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 
     //////////////////////以下为外部接口////////////////////////
 public:
     BinTree() : root(nullptr) {}
     ~BinTree() { clear(); }
-    bool empty() const { return root == nullptr; } //判空
-    void clear()                                   //清空
+    void clear() //清空
     {
         if (root)
         {
@@ -60,13 +45,8 @@ public:
         }
         root = nullptr;
     }
-    int size() const { return size(root); }       //返回返回结点个数
-    int height() const { return height(root); }   //返回二叉树高度
-    int leafNum() const { return leafNum(root); } //返回二叉树叶子数
-    // void preOrderTraverse() const;         //前序遍历
-    // void inOrederTraverse() const;         //中序遍历
-    // void postOrderTraverse() const;        //后序遍历
-    void preOrderCreate(Type flag) //前序法创建二叉树
+    int size() const { return size(root); } //返回返回结点个数
+    void preOrderCreate(Type flag)          //前序法创建二叉树
     {
         preOrderCreate(flag, root);
     }
@@ -96,32 +76,6 @@ int BinTree<Type>::size(Node *t) const //返回返回结点个数
     return 1 + size(t->leftChild) + size(t->rightChild);
 }
 
-template <typename Type>
-int BinTree<Type>::height(Node *t) const //返回二叉树高度
-{
-    if (root == nullptr)
-    {
-        return 0;
-    }
-    else
-    {
-        int l = height(t->leftChild);
-        int r = height(t->rightChild);
-        return 1 + (l > r ? l : r);
-    }
-}
-template <typename Type>
-int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
-{
-    if (root == nullptr)
-    {
-        return 0;
-    }
-    if (root->leftChild == nullptr && root->rightChild == nullptr)
-    {
-        return 1 + leafNum(t->leftChild) + leafNum(t->rightChild);
-    }
-}
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
 {
