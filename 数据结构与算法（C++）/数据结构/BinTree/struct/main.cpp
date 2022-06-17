@@ -18,6 +18,7 @@ void test01()
     cout << "二叉树叶子数为：" << t1.leafNum() << endl;
     cout << "前序遍历二叉树：";
     t1.preOrderTraverse();
+    
 }
 
 int main()
