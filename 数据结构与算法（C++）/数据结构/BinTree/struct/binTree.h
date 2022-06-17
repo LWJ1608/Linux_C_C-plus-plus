@@ -66,7 +66,9 @@ public:
     void preOrderTraverse() const                 //前序遍历
     {
         if (root)
+        {
             preOrder(root);
+        }
     }
     // void inOrederTraverse() const;         //中序遍历
     // void postOrderTraverse() const;        //后序遍历
