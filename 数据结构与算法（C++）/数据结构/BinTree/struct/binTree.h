@@ -38,9 +38,9 @@ private: //以下为内部接口
     //查找当前节点的父节点
     //两个二叉树是否相同的比较
     //复制一个二叉树
-    void preOrder(Node *t) const;             //递归前序遍历
-    void inOreder(Node *t) const;             //递归中序遍历
-    void postOrder(Node *t) const;            //递归后序遍历
+    // void preOrder(Node *t) const;             //递归前序遍历
+    // void inOreder(Node *t) const;             //递归中序遍历
+    // void postOrder(Node *t) const;            //递归后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 
     //////////////////////以下为外部接口////////////////////////
@@ -59,10 +59,10 @@ public:
     int size() const { size(root); }       //返回返回结点个数
     int height() const { height(root); }   //返回二叉树高度
     int leafNum() const { leafNum(root); } //返回二叉树叶子数
-    void preOrderTraverse() const;         //前序遍历
-    void inOrederTraverse() const;         //中序遍历
-    void postOrderTraverse() const;        //后序遍历
-    void preOrderCreate(Type flag)         //前序法创建二叉树
+    // void preOrderTraverse() const;         //前序遍历
+    // void inOrederTraverse() const;         //中序遍历
+    // void postOrderTraverse() const;        //后序遍历
+    void preOrderCreate(Type flag) //前序法创建二叉树
     {
         preOrderCreate(flag, root);
     }
