@@ -55,7 +55,7 @@ public:
         }
         root = nullptr;
     }
-    // int size() const { size(root); }       //返回返回结点个数
+    int size() const { size(root); }       //返回返回结点个数
     int height() const { height(root); }   //返回二叉树高度
     int leafNum() const { leafNum(root); } //返回二叉树叶子数
     // void preOrderTraverse() const;         //前序遍历
@@ -81,15 +81,15 @@ void BinTree<Type>::clear(Node *t) //清空二叉树
     delete t;
 }
 
-// template <typename Type>
-// int BinTree<Type>::size(Node *t) const //返回返回结点个数
-// {
-//     if (root == nullptr)
-//     {
-//         return 0;
-//     }
-//     return 1 + size(t->leftChild) + size(t->rightChild);
-// }
+template <typename Type>
+int BinTree<Type>::size(Node *t) const //返回返回结点个数
+{
+    if (root == nullptr)
+    {
+        return 0;
+    }
+    return 1 + size(t->leftChild) + size(t->rightChild);
+}
 
 template <typename Type>
 int BinTree<Type>::height(Node *t) const //返回二叉树高度
