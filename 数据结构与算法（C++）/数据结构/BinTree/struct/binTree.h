@@ -24,4 +24,6 @@ private:
         有参构造
     };
     Node *root; //指向二叉树的根
+private:        //以下为内部接口
+public:         //以下为外部接口
 };
