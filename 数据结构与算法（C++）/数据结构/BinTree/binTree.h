@@ -18,4 +18,5 @@ private:
     BinTreeNode<Type> *rightChild; //右孩子
 
 public:
+    BinTreeNode() : data(Type()),
 };
