@@ -122,7 +122,7 @@ template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
 {
     Type value; //键盘输入的值
-    std::cout << "Please enter a value> ";
+    std::cout << "Please enter> ";
     std::cin >> value; //输入
     if (value != flag)
     {
