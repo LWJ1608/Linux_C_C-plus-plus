@@ -60,13 +60,7 @@ public:
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //
 {
-    if (t->leftChild)
-    {
-        clear(t->leftChild);
-    }
-    if (t->rightChild)
-    {
-        clear(t->rightChild);
-    }
+    if (t->leftChild) { clear(t->leftChild); }
+    if (t->rightChild) { clear(t->rightChild); }
     delete t;
 }
