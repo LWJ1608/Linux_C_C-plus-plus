@@ -19,5 +19,5 @@ private:
 
 public:
     BinTreeNode() : data(Type()), leftChild(nullptr), rightChild(nullptr); //无参构造
-    BinTreeNode()                                                          //有参构造
+    BinTreeNode(Type data, BinTreeNode<Type> *leftChild)                   //有参构造
 };
