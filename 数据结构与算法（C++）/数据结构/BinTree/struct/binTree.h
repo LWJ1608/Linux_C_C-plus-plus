@@ -25,7 +25,7 @@ private:
     };
     Node *root; //指向二叉树的根
 
-    ////////以下为内部接口////////
+    /////////////////////以下为内部接口//////////////////////
 private: //以下为内部接口
     void clear(Node *t);
     int size(Node *t) const;
@@ -43,7 +43,7 @@ private: //以下为内部接口
     void postOrder(Node *t) const;            //递归后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 
-    ////////以下为外部接口////////
+    //////////////////////以下为外部接口////////////////////////
 public:
     BinTree() : root(nullptr) {}
     ~BinTree() { clear(); }
@@ -67,6 +67,7 @@ public:
         preOrderCreate(flag, root);
     }
 };
+/////////////////////////////////////////////////////////////////////
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
 {
