@@ -75,6 +75,7 @@ public:
         preOrderCreate(flag, root);
     }
 };
+
 /////////////////////////////////////////////////////////////////////
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
@@ -114,6 +115,7 @@ int BinTree<Type>::height(Node *t) const //返回二叉树高度
         return 1 + (l > r ? l : r);
     }
 }
+
 template <typename Type>
 int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 {
@@ -130,6 +132,7 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
         return leafNum(t->leftChild) + leafNum(t->rightChild);
     }
 }
+
 template <typename Type>
 void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
 {
