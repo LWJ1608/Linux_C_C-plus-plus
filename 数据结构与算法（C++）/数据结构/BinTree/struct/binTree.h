@@ -45,8 +45,8 @@ private: //以下为内部接口
 
     ////////以下为外部接口////////
 public:
-    BinTree();
-    ~BinTree();
+    BinTree() { root = nullptr; }
+    ~BinTree() { clear(); }
     void clear();                             //清空
     int size() const;                         //返回返回结点个数
     int hight() const;                        //返回二叉树高度
