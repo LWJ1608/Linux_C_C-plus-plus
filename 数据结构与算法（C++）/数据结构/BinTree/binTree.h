@@ -19,4 +19,5 @@ private:
 
 public:
     BinTreeNode() : data(Type()), leftChild(nullptr), rightChild(nullptr); //
+    BinTreeNode()
 };
