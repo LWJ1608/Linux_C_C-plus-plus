@@ -42,22 +42,22 @@ private:
 
     /////////////////////以下为内部接口//////////////////////
 private: //以下为内部接口
-    void clear(Node *t);
+    // void clear(Node *t);
     int size(Node *t) const;
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
 
     //////////////////////以下为外部接口////////////////////////
 public:
     BinTree() : root(NULL) {}
-    ~BinTree() { clear(); }
-    void clear() //清空
-    {
-        if (root)
-        {
-            clear(root);
-        }
-        root = NULL;
-    }
+    // ~BinTree() { clear(); }
+    // void clear() //清空
+    // {
+    //     if (root)
+    //     {
+    //         clear(root);
+    //     }
+    //     root = NULL;
+    // }
     int size() const { return size(root); } //返回返回结点个数
     void preOrderCreate(Type flag)          //前序法创建二叉树
     {
@@ -65,19 +65,19 @@ public:
     }
 };
 /////////////////////////////////////////////////////////////////////
-template <typename Type>
-void BinTree<Type>::clear(Node *t) //清空二叉树
-{
-    if (t->left)
-    {
-        clear(t->left);
-    } //利用递归完成释放空间的功能
-    if (t->right)
-    {
-        clear(t->right);
-    }
-    delete t;
-}
+// template <typename Type>
+// void BinTree<Type>::clear(Node *t) //清空二叉树
+// {
+//     if (t->left)
+//     {
+//         clear(t->left);
+//     } //利用递归完成释放空间的功能
+//     if (t->right)
+//     {
+//         clear(t->right);
+//     }
+//     delete t;
+// }
 
 template <typename Type>
 int BinTree<Type>::size(Node *t) const //返回返回结点个数
