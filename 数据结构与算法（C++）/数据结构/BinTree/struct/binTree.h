@@ -126,7 +126,7 @@ void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉�
     if (value != flag)
     {
         t = new Node(value);
-        preOrderCreate(flag, root->leftChild);
-        preOrderCreate(flag, root->rightChild);
+        preOrderCreate(flag, t->leftChild);
+        preOrderCreate(flag, t->rightChild);
     }
 }
