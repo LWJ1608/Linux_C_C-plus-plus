@@ -15,17 +15,15 @@ class BinTree //二叉树类
 private:
     struct Node //二叉树结点
     {
-        Type data;                                          //数据
-        Node *leftChild, *rightChild;                       //分别为左孩子和右孩子
-        Node() : leftChild(nullptr), rightChild(nullptr) {} //无参构造
-        Node(Type value, Node *left = nullptr, Node *rigth = nullptr)
-            : data(value), leftChild(left), rightChild(rigth) {} //有参构造
-        // Node(Type value, Node *left = nullptr, Node *rigth = nullptr) //有参构造
-        // {
-        //     data = value;
-        //     leftChild = left;
-        //     rightChild = rigth;
-        // }
+        Type data;                                                    //数据
+        Node *leftChild, *rightChild;                                 //分别为左孩子和右孩子
+        Node() : leftChild(nullptr), rightChild(nullptr) {}           //无参构造
+        Node(Type value, Node *left = nullptr, Node *rigth = nullptr) //有参构造
+        {
+            data = value;
+            leftChild = left;
+            rightChild = rigth;
+        }
 
         ~Node(){};
     };
