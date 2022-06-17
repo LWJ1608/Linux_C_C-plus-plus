@@ -61,8 +61,11 @@ template <typename Type>
 void BinTree<Type>::clear(Node *t)
 {
     if (t->leftChild)
+    {
         clear(t->leftChild);
+    }
     if (t->leftChild)
-
+    {
         clear(t->leftChild);
+    }
 }
