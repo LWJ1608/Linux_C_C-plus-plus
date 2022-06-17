@@ -20,8 +20,8 @@ private:
 public:
     BinTreeNode() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
     BinTreeNode(Type value, BinTreeNode<Type> *left = nullptr,
-                BinTreeNode<Type> *right = nullptr) : //有参构造
-                                                      data(value), leftChild(left), rightChild(rigth)
+                BinTreeNode<Type> *right = nullptr) //有参构造
+        : data(value), leftChild(left), rightChild(rigth)
     {
     }
     ~BinTreeNode();
