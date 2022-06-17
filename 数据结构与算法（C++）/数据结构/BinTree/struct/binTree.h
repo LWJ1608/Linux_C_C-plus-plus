@@ -58,7 +58,7 @@ public:
     }
     int size() const { size(root); }                  //返回返回结点个数
     int height() const { height(root); }              //返回二叉树高度
-    int leafNum() const;                              //返回二叉树叶子数
+    int leafNum() const { leafNum(root); }            //返回二叉树叶子数
     void preOrderTraverse() const;                    //前序遍历
     void inOrederTraverse() const;                    //中序遍历
     void postOrderTraverse() const;                   //后序遍历
@@ -105,12 +105,12 @@ int BinTree<Type>::height(Node *t) const //返回二叉树高度
 template <typename Type>
 int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 {
-    if(root==nullptr)
+    if (root == nullptr)
     {
         return 0;
     }
-    if (root->leftChild==nullptr&&root->rightChild==nullptr)
+    if (root->leftChild == nullptr && root->rightChild == nullptr)
     {
-        return 1+leafNum(t->leftChild)+leafNum(t->rightChild);
+        return 1 + leafNum(t->leftChild) + leafNum(t->rightChild);
     }
 }
