@@ -33,10 +33,11 @@ private:        //以下为内部接口
     void inOreder(Node *t) const;             //中序遍历
     void postOrder(Node *t) const;            //后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
+
 public:                                       //以下为外部接口
-    void clear();
-    int size() const;
-    int hight() const;
+    void clear();                             //清空
+    int size() const;                         //返回返回结点个数
+    int hight() const;                        //返回二叉树高度
     int leafNum() const;                      //返回二叉树叶子数
     void preOrder() const;                    //前序遍历
     void inOreder() const;                    //中序遍历
