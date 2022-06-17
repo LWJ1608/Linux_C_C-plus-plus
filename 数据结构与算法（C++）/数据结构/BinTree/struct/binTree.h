@@ -20,5 +20,7 @@ class BinTree //二叉树类
         Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
         Node(const Type value, const Node *left, const Node *rigth)
             : data(value), leftChild(left), rightChild(rigth) {}
+        有参构造
     };
+    Node *
 };
