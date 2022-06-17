@@ -18,6 +18,6 @@ private:
     BinTreeNode<Type> *rightChild; //右孩子
 
 public:
-    BinTreeNode() : data(Type()), leftChild(nullptr), rightChild(nullptr); //无参构造
-    BinTreeNode(Type data, BinTreeNode<Type> *leftChild)                   //有参构造
+    BinTreeNode() : data(Type()), leftChild(nullptr), rightChild(nullptr) {}                        //无参构造
+    BinTreeNode(Type data, BinTreeNode<Type> *left = nullptr, BinTreeNode<Type> *right = nullptr) : //有参构造
 };
