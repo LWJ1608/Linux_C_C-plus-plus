@@ -72,6 +72,8 @@ public:
     }
     void inOrederTraverse() const //中序遍历
     {
+        if (root)
+            inOreder(root);
     }
     // void postOrderTraverse() const;        //后序遍历
     void preOrderCreate(Type flag) //前序法创建二叉树
