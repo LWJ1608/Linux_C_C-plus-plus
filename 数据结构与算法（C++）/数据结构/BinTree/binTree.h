@@ -11,5 +11,6 @@
 
 class BinTreeNode //二叉树结点类
 {
+private:
 public:
 };
