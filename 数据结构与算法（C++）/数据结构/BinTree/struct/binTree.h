@@ -35,7 +35,6 @@ private: //以下为内部接口
     int size(Node *t) const;
     int height(Node *t) const;
     int leafNum(Node *t) const;
-    //求根节点
     Node *findLeft(Node *t);                  //求当前节点的左孩子
     Node *findRight(Node *t);                 //求当前节点的右孩子
     Node *findI(const Type &value, Node *t);  //查找当前节点
@@ -63,7 +62,8 @@ public:
     int size() const { return size(root); }       //返回返回结点个数
     int height() const { return height(root); }   //返回二叉树高度
     int leafNum() const { return leafNum(root); } //返回二叉树叶子数
-    void preOrderTraverse() const                 //前序遍历
+
+    void preOrderTraverse() const //前序遍历
     {
         if (root)
         {
@@ -141,6 +141,11 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
     {
         return leafNum(t->leftChild) + leafNum(t->rightChild);
     }
+}
+
+template <typename Type>
+BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) //求当前节点的左孩子
+{
 }
 
 template <typename Type>
