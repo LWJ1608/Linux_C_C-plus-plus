@@ -15,10 +15,10 @@ class BinTree //二叉树类
 private:
     struct Node //二叉树结点
     {
-        Type data;                                                    //数据
-        Node *leftChild, *rightChild;                                 //分别为左孩子和右孩子
-        Node() : leftChild(nullptr), rightChild(nullptr) {}           //无参构造
-        Node(Type value, Node *left = nullptr, Node *rigth = nullptr) //有参构造
+        Type data;                                                        //数据
+        Node *leftChild, *rightChild;                                     //分别为左孩子和右孩子
+        Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
+        Node(Type value, Node *left = nullptr, Node *rigth = nullptr)     //有参构造
         {
             data = value;
             leftChild = left;
@@ -130,7 +130,7 @@ typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *child, Node *t) co
     {
         return nullptr;
     }
-    // findParent(t->leftChild);
+    Node *p = findParent(t->leftChild);
     if (findParent(t->leftChild))
     {
         return findParent(t->leftChild);
