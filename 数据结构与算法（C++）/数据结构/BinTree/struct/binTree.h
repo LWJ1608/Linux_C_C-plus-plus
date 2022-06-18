@@ -51,9 +51,9 @@ public:
     void clear()                                   //清空
     {
         if (root)
-        {
+
             clear(root);
-        }
+
         root = nullptr;
     }
     int size() const { return size(root); }                                 //返回返回结点个数
@@ -69,7 +69,7 @@ public:
     void preOrderCreate(Type flag) { preOrderCreate(flag, root); }          //前序法创建二叉树
 };
 
-//////////////////////////以下为内部接口实现//////////////////////////////
+//////////////////////////以下为接口实现//////////////////////////////
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
 {
