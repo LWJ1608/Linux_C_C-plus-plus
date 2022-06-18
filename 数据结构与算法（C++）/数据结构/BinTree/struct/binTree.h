@@ -85,6 +85,10 @@ public:
     {
         return findRight(t);
     }
+    Node *findI(const Type &value) const //查找当前结点
+    {
+        return findI(value, root);
+    }
     void preOrderTraverse() const //前序遍历
     {
         if (root)
