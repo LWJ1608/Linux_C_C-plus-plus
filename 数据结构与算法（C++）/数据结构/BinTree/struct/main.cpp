@@ -17,9 +17,9 @@ void test01()
     cout << "二叉树高度为：" << t1.height() << endl;
     cout << "二叉树叶子数为：" << t1.leafNum() << endl;
     cout << "root结点的孩子的值分别为：\n"
-         << "leftChild:" << t1.findLeft()->data <<"\n"
-         <<"rightChild:"<<t1.findRight()->data;
-    "前序遍历二叉树：";
+         << "leftChild:" << t1.findLeft()->data << "\n"
+         << "rightChild:" << t1.findRight()->data;
+    cout << "前序遍历二叉树：";
     t1.preOrderTraverse();
     cout << "\n中序遍历二叉树：";
     t1.inOrederTraverse();
