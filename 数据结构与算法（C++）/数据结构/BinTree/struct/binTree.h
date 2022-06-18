@@ -167,13 +167,13 @@ BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) //求当前节点的左孩
 }
 
 template <typename Type>
-BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) //求当前节点的左孩子
+BinTree<Type>::Node *BinTree<Type>::findRight(Node *t) //求当前节点的右孩子
 {
-    if (t->leftChild)
+    if (t->rightChild)
     {
         return nullptr;
     }
-    return t->leftChild;
+    return t->rightChild;
 }
 
 template <typename Type>
