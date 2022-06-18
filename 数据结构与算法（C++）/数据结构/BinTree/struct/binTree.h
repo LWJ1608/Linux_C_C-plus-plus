@@ -157,7 +157,7 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 }
 
 template <typename Type>
-BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) //求当前节点的左孩子
+BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) const //求当前节点的左孩子
 {
     if (t->leftChild)
     {
@@ -167,7 +167,7 @@ BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) //求当前节点的左孩
 }
 
 template <typename Type>
-BinTree<Type>::Node *BinTree<Type>::findRight(Node *t) //求当前节点的右孩子
+BinTree<Type>::Node *BinTree<Type>::findRight(Node *t) const //求当前节点的右孩子
 {
     if (t->rightChild)
     {
