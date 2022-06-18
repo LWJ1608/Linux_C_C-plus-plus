@@ -17,7 +17,7 @@ void test01()
     cout << "二叉树高度为：" << t1.height() << endl;
     cout << "二叉树叶子数为：" << t1.leafNum() << endl;
     t1.findI('c');
-    cout << "t1.findI('c')->data = " << t1.findI('c')->data << endl;
+    cout << t1.findI('c')->data << endl;
     // cout << "root结点的孩子的值分别为：\n"
     //      << "leftChild:" << t1.findLeft(t1.findI('c'))->data << "\n"
     //      << "rightChild:" << t1.findRight(t1.findI('c'))->data;
