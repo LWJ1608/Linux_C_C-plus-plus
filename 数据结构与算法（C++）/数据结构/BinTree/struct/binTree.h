@@ -59,19 +59,19 @@ public:
     }
     int size() const //返回返回结点个数
     {
-        if (root)
+        if (!root)
             return 0;
         return size(root);
     }
     int height() const //返回二叉树高度
     {
-        if (root)
+        if (!root)
             return 0;
         return height(root);
     }
     int leafNum() const //返回二叉树叶子数
     {
-        if (root)
+        if (!root)
             return 0;
         return leafNum(root);
     }
