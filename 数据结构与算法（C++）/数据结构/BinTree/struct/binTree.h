@@ -75,9 +75,9 @@ public:
             return 0;
         return leafNum(root);
     }
-    Node *findLeft(Node *t) const;       //求当前节点的左孩子
-    Node *findRight(Node *t) const;      //求当前节点的右孩子
-    Node *findI(const Type &value) const //查找当前结点
+    Node *findLeft(Node *t) const { return t->leftChild; }   //求当前节点的左孩子
+    Node *findRight(Node *t) const { return t->leftChild; }; //求当前节点的右孩子
+    Node *findI(const Type &value) const                     //查找当前结点
     {
         return findI(value, root);
     }
@@ -159,25 +159,17 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
     }
 }
 
-template <typename Type>
-typename BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) const //求当前节点的左孩子
-{
-    if (t->leftChild)
-    {
-        return nullptr;
-    }
-    return t->leftChild;
-}
+// template <typename Type>
+// typename BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) const //求当前节点的左孩子
+// {
+//     return t->leftChild;
+// }
 
-template <typename Type>
-typename BinTree<Type>::Node *BinTree<Type>::findRight(Node *t) const //求当前节点的右孩子
-{
-    if (t->rightChild)
-    {
-        return nullptr;
-    }
-    return t->rightChild;
-}
+// template <typename Type>
+// typename BinTree<Type>::Node *BinTree<Type>::findRight(Node *t) const //求当前节点的右孩子
+// {
+//     return t->rightChild;
+// }
 
 template <typename Type>
 typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node *t) const //查找当前节点
