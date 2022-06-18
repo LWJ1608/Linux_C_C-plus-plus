@@ -154,18 +154,10 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
         return leafNum(t->leftChild) + leafNum(t->rightChild);
     }
 }
-
-// template <typename Type>
-// typename BinTree<Type>::Node *BinTree<Type>::findLeft(Node *t) const //求当前节点的左孩子
-// {
-//     return t->leftChild;
-// }
-
-// template <typename Type>
-// typename BinTree<Type>::Node *BinTree<Type>::findRight(Node *t) const //求当前节点的右孩子
-// {
-//     return t->rightChild;
-// }
+template <typename Type>
+typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *t) const //查找当前节点的父节点
+{
+}
 
 template <typename Type>
 typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node *t) const //查找当前节点
@@ -213,7 +205,7 @@ void BinTree<Type>::postOrder(Node *t) const
     }
 }
 
-//使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个完全二叉树，这样更好理解
+//使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个满二叉树，这样更好理解,如 abd**eg***c*fh**i**
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
 {
