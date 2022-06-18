@@ -63,24 +63,22 @@ public:
     Node *findRight(Node *t) const { return t->rightChild; };               //求当前节点的右孩子
     Node *findI(const Type &value) const { return findI(value, root); }     //查找当前结点
     Node *findParent(Node *child) const { return findParent(child, root); } //查找当前节点的父节点
-    void preOrderTraverse() const                                           //前序遍历
-    {
+    void preOrderTraverse() const
+    { //前序遍历
         preOrder(root);
     }
-    void inOrederTraverse() const //中序遍历
+    void inOrederTraverse() const
     {
-        if (root)
-            inOrder(root);
-    }
-    void postOrderTraverse() const //后序遍历
+        inOrder(root);
+    } //中序遍历
+    void postOrderTraverse() const
     {
-        if (root)
-            postOrder(root);
-    }
-    void preOrderCreate(Type flag) //前序法创建二叉树
+        postOrder(root);
+    } //后序遍历
+    void preOrderCreate(Type flag)
     {
         preOrderCreate(flag, root);
-    }
+    } //前序法创建二叉树
 };
 
 //////////////////////////以下为内部接口实现//////////////////////////////
