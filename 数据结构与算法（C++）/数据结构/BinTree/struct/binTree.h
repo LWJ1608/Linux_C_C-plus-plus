@@ -59,25 +59,36 @@ public:
         }
         root = nullptr;
     }
-    int size() const
+    int size() const //返回返回结点个数
     {
         if (root)
             return 0;
         return size(root);
-    } //返回返回结点个数
-    int height() const
+    }
+    int height() const //返回二叉树高度
     {
         if (root)
             return 0;
         return height(root);
-    } //返回二叉树高度
-    int leafNum() const
+    }
+    int leafNum() const //返回二叉树叶子数
     {
         if (root)
             return 0;
         return leafNum(root);
-    } //返回二叉树叶子数
-    Node *findLeft() const
+    } 
+    Node *findLeft() const//查找左孩子
+    {
+        if (root)
+            return nullptr;
+        return findLeft(root);
+    }
+    Node *findRight() const //查找右孩子
+    {
+        if (root)
+            return nullptr;
+        return findRight(root);
+    }
         void preOrderTraverse() const //前序遍历
     {
         if (root)
