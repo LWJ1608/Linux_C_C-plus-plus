@@ -74,11 +74,11 @@ public:
             return 0;
         return leafNum(root);
     }
-    Node *findLeft(Node *t) const { return t->leftChild; }              //求当前节点的左孩子
-    Node *findRight(Node *t) const { return t->rightChild; };           //求当前节点的右孩子
-    Node *findI(const Type &value) const { return findI(value, root); } //查找当前结点
-    Node *findParent(Node *child) const;                                //查找当前节点的父节点
-    void preOrderTraverse() const                                       //前序遍历
+    Node *findLeft(Node *t) const { return t->leftChild; }                  //求当前节点的左孩子
+    Node *findRight(Node *t) const { return t->rightChild; };               //求当前节点的右孩子
+    Node *findI(const Type &value) const { return findI(value, root); }     //查找当前结点
+    Node *findParent(Node *child) const { return findParent(child, root); } //查找当前节点的父节点
+    void preOrderTraverse() const                                           //前序遍历
     {
         if (root)
             preOrder(root);
