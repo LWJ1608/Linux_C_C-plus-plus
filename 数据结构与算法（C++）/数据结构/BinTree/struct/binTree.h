@@ -35,7 +35,7 @@ private: //以下为内部接口
     int height(Node *t) const;
     int leafNum(Node *t) const;
     Node *findI(const Type &value, Node *t) const; //查找当前节点
-    Node *findParent(Node *t) const;               //查找当前节点的父节点
+    Node *findParent(Node *child, Node *t) const;  //查找当前节点的父节点
     bool equal(Node *t1, Node *t2) const;          //两个二叉树是否相同的比较
     Node *copy(Node *t) const;                     //复制一个二叉树
     void preOrder(Node *t) const;                  //递归前序遍历
@@ -155,9 +155,11 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
     }
 }
 template <typename Type>
-typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *t) const //查找当前节点的父节点
+typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *child, Node *t) const //查找当前节点的父节点
 {
-    if (t == nullptr||)
+    if (t == nullptr ||)
+    {
+    }
 }
 
 template <typename Type>
