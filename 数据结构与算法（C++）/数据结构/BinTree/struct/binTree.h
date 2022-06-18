@@ -75,11 +75,10 @@ public:
             return 0;
         return leafNum(root);
     }
-    Node *findLeft(Node *t) const { return t->leftChild; }   //求当前节点的左孩子
-    Node *findRight(Node *t) const { return t->leftChild; }; //求当前节点的右孩子
-    Node *findI(const Type &value) const                     //查找当前结点
+    Node *findLeft(Node *t) const { return t->leftChild; }              //求当前节点的左孩子
+    Node *findRight(Node *t) const { return t->rightChild; };           //求当前节点的右孩子
+    Node *findI(const Type &value) const { return findI(value, root); } //查找当前结点
     {
-        return findI(value, root);
     }
     void preOrderTraverse() const //前序遍历
     {
