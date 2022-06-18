@@ -77,6 +77,7 @@ public:
     Node *findLeft(Node *t) const { return t->leftChild; }              //求当前节点的左孩子
     Node *findRight(Node *t) const { return t->rightChild; };           //求当前节点的右孩子
     Node *findI(const Type &value) const { return findI(value, root); } //查找当前结点
+    Node *findParent(Node *child) const;                                //查找当前节点的父节点
     void preOrderTraverse() const                                       //前序遍历
     {
         if (root)
@@ -157,12 +158,12 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 template <typename Type>
 typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *child, Node *t) const //查找当前节点的父节点
 {
-    if (t == nullptr || child == t ||child==nullptr)
+    if (t == nullptr || child == t || child == nullptr)
     {
         return 0;
     }
-    Node* p = findParent(t->leftChild);
-    if(p)
+    Node *p = findParent(t->leftChild);
+    if (p)
     {
         return p;
     }
