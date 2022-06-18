@@ -130,7 +130,7 @@ typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *child, Node *t) co
     {
         return nullptr;
     }
-    Node<Type> *p = findParent(t->leftChild);
+    Node *p = findParent(t->leftChild);
     if (p)
     {
         return p;
