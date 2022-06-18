@@ -106,7 +106,7 @@ public:
     }
 };
 
-/////////////////////////////////////////////////////////////////////
+//////////////////////////以下为内部接口实现//////////////////////////////
 template <typename Type>
 void BinTree<Type>::clear(Node *t) //清空二叉树
 {
@@ -181,6 +181,13 @@ typename BinTree<Type>::Node *BinTree<Type>::findRight(Node *t) const //求当�
         return nullptr;
     }
     return t->rightChild;
+}
+
+template <typename Type>
+typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node *t) const //查找当前节点
+{
+    if (t == nullptr)
+        return nullptr;
 }
 
 template <typename Type>
