@@ -41,7 +41,7 @@ private: //以下为内部接口
     Node *findI(const Type &value, Node *t);  //查找当前节点
     Node *findParent(Node *t);                //查找当前节点的父节点
     bool equal(Node *t1, Node *t2);           //两个二叉树是否相同的比较
-                                              //复制一个二叉树
+    Node *copy(Node *t);                      //复制一个二叉树
     void preOrder(Node *t) const;             //递归前序遍历
     void inOrder(Node *t) const;              //递归中序遍历
     void postOrder(Node *t) const;            //递归后序遍历
