@@ -19,7 +19,7 @@ void test01()
     t1.findI('c');
     cout << "t1.findI('c')->data = " << t1.findI('c')->data << endl;
     cout << "root结点的孩子的值分别为：\n"
-         << "leftChild:" << t1.findLeft(t1.findI('c'))->data << "\n"
+         << "leftChild:" << t1.findLeft(*t1.findI('c'))->data << "\n"
          << "rightChild:" << t1.findRight(t1.findI('c'))->data;
     // cout << "前序遍历二叉树：";
     // t1.preOrderTraverse();
