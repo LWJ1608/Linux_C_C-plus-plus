@@ -56,32 +56,16 @@ public:
         }
         root = nullptr;
     }
-    int size() const //返回返回结点个数
-    {
-        // if (!root)
-        //     return 0;
-        return size(root);
-    }
-    int height() const //返回二叉树高度
-    {
-        if (!root)
-            return 0;
-        return height(root);
-    }
-    int leafNum() const //返回二叉树叶子数
-    {
-        if (!root)
-            return 0;
-        return leafNum(root);
-    }
+    int size() const { return size(root); }                                 //返回返回结点个数
+    int height() const { return height(root); }                             //返回二叉树高度
+    int leafNum() const { return leafNum(root); }                           //返回二叉树叶子数
     Node *findLeft(Node *t) const { return t->leftChild; }                  //求当前节点的左孩子
     Node *findRight(Node *t) const { return t->rightChild; };               //求当前节点的右孩子
     Node *findI(const Type &value) const { return findI(value, root); }     //查找当前结点
     Node *findParent(Node *child) const { return findParent(child, root); } //查找当前节点的父节点
     void preOrderTraverse() const                                           //前序遍历
     {
-        if (root)
-            preOrder(root);
+        preOrder(root);
     }
     void inOrederTraverse() const //中序遍历
     {
