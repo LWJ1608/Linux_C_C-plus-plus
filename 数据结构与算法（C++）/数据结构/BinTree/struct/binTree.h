@@ -64,9 +64,19 @@ public:
         if (root)
             return 0;
         return size(root);
-    }                                             //返回返回结点个数
-    int height() const { return height(root); }   //返回二叉树高度
-    int leafNum() const { return leafNum(root); } //返回二叉树叶子数
+    } //返回返回结点个数
+    int height() const
+    {
+        if (root)
+            return 0;
+        return height(root);
+    } //返回二叉树高度
+    int leafNum() const
+    {
+        if (root)
+            return 0;
+        return leafNum(root);
+    } //返回二叉树叶子数
 
     void preOrderTraverse() const //前序遍历
     {
@@ -84,7 +94,9 @@ public:
             postOrder(root);
     }
     void preOrderCreate(Type flag) //前序法创建二叉树
+    {
         preOrderCreate(flag, root);
+    }
 };
 
 /////////////////////////////////////////////////////////////////////
