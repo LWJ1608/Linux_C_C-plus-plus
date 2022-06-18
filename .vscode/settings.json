@@ -9,7 +9,7 @@
     "[javascript]": {
         // "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Theme + Dark Blue Theme",
     "terminal.integrated.automationProfile.linux": null,
     "remote.SSH.remotePlatform": {
         "centos": "linux",
@@ -18,7 +18,7 @@
         "root": "linux"
     },
     "bracket-pair-colorizer-2.depreciation-notice": false,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "editor.fontFamily": "'Fira Code',Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
