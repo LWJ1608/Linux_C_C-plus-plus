@@ -24,7 +24,6 @@ private:
             leftChild = left;
             rightChild = rigth;
         }
-
         ~Node(){};
     };
     Node *root; //指向二叉树的根
