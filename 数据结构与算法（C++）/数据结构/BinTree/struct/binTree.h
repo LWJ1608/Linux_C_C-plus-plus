@@ -58,8 +58,8 @@ public:
     }
     int size() const //返回返回结点个数
     {
-        if (!root)
-            return 0;
+        // if (!root)
+        //     return 0;
         return size(root);
     }
     int height() const //返回二叉树高度
