@@ -188,6 +188,7 @@ typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node *t) c
 {
     if (t == nullptr)
         return nullptr;
+    return findI(t->data)
 }
 
 template <typename Type>
