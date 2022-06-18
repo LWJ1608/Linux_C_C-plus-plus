@@ -205,7 +205,8 @@ void BinTree<Type>::postOrder(Node *t) const
     }
 }
 
-//使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个满二叉树，这样更好理解,如 abd**eg***c*fh**i**
+/*使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个二叉树，
+这样更好理解，还能避免二叉树的二义性,如 abd**eg***c*fh**i** 。*/
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
 {

@@ -19,13 +19,13 @@ void test01()
     t1.findI('c');
     cout << "t1.findI('c')->data = " << t1.findI('c')->data << endl;
 
-    // cout << "前序遍历二叉树：";
-    // t1.preOrderTraverse();
-    // cout << "\n中序遍历二叉树：";
-    // t1.inOrederTraverse();
-    // cout << "\n后序遍历二叉树：";
-    // t1.postOrderTraverse();
-    // cout << endl;
+    cout << "前序遍历二叉树：";
+    t1.preOrderTraverse();
+    cout << "\n中序遍历二叉树：";
+    t1.inOrederTraverse();
+    cout << "\n后序遍历二叉树：";
+    t1.postOrderTraverse();
+    cout << endl;
 }
 
 int main()
