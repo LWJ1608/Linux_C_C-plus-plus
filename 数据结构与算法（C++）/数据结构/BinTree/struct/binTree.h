@@ -213,6 +213,7 @@ void BinTree<Type>::inOrder(Node *t) const //递归中序遍历
         inOrder(t->rightChild);
     }
 }
+
 template <typename Type>
 void BinTree<Type>::postOrder(Node *t) const
 {
