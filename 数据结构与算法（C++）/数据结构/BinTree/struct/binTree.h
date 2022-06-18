@@ -187,7 +187,7 @@ typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node *t) c
     if (t->data == value)
         return t;
     Node *p = findI(value, t->leftChild);
-    if (p->data == value)
+    if (p)
         return p;
     return findI(value, t->rightChild);
 }
