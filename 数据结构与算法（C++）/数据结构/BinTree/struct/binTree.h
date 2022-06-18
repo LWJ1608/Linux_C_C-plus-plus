@@ -157,6 +157,7 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
 template <typename Type>
 typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *t) const //查找当前节点的父节点
 {
+    if
 }
 
 template <typename Type>
