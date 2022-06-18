@@ -77,17 +77,13 @@ public:
             return 0;
         return leafNum(root);
     }
-    Node *findLeft() const //查找左孩子
+    Node *findLeft(Node *t) const //查找左孩子
     {
-        if (root)
-            return nullptr;
-        return findLeft(root);
+        return findLeft(t);
     }
-    Node *findRight() const //查找右孩子
+    Node *findRight(Node *t) const //查找右孩子
     {
-        if (root)
-            return nullptr;
-        return findRight(root);
+        return findRight(t);
     }
     void preOrderTraverse() const //前序遍历
     {
