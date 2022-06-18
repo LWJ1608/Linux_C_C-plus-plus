@@ -36,13 +36,14 @@ private: //以下为内部接口
     int height(Node *t) const;
     int leafNum(Node *t) const;
     //求根节点
-    Node *findLeft(Node *t);                //求当前节点的左孩子
-    Node *findRight(Node *t);               //求当前节点的右孩子
-    Node *find(const Type &value, Node *t); //查找当前节点
-    Node *find(Node *t);                    //查找当前节点的父节点
-    //两个二叉树是否相同的比较
-    //复制一个二叉树
-    void preOrder(Node *t) const;             //递归前序遍历
+    Node *findLeft(Node *t);                 //求当前节点的左孩子
+    Node *findRight(Node *t);                //求当前节点的右孩子
+    Node *findI(const Type &value, Node *t); //查找当前节点
+    Node *findParent(Node *t);               //查找当前节点的父节点
+    bool compare                             //两个二叉树是否相同的比较
+        //复制一个二叉树
+        void
+        preOrder(Node *t) const;              //递归前序遍历
     void inOrder(Node *t) const;              //递归中序遍历
     void postOrder(Node *t) const;            //递归后序遍历
     void preOrderCreate(Type flag, Node *&t); //前序法创建二叉树
