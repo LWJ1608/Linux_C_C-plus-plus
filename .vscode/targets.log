@@ -5,11 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Sat Jun 18 14:16:05 2022
+# Make data base, printed on Tue Jun 21 11:41:51 2022
 
 # Variables
 
@@ -32,7 +29,6 @@ VSCODE_LOG_NATIVE = false
 # default
 MAKE_VERSION := 3.82
 # makefile
- 
 CURDIR := /root/Linux_C_C-plus-plus
 # makefile
 SHELL = /bin/sh
@@ -51,7 +47,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.104.64.177 15205 10.0.4.9 22
+SSH_CONNECTION = 223.73.72.54 46361 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
@@ -62,13 +58,12 @@ VSCODE_LOG_STACK = false
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver check-symlink
 # automatic
 %F = $(notdir $%)
- 
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-33a64084-67b4-4cc2-9ad7-b36479996ef7.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-e4470eb5-24bd-4fd2-9bf5-d2f10f4e2472.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -87,7 +82,6 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
- 
 # environment
 MAKELEVEL := 0
 # default
@@ -97,7 +91,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 3934
+XDG_SESSION_ID = 19809
 # environment
 USER = root
 # makefile
@@ -115,7 +109,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.104.64.177 15205 22
+SSH_CLIENT = 223.73.72.54 46361 22
 # environment
 MAIL = /var/mail/root
 # automatic
@@ -176,7 +170,6 @@ all:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 # Not a target:
@@ -220,8 +213,9 @@ GNUmakefile:
 # strcache free: total = 0 (7944) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
- 
 # Load=22/8192=0%, Rehash=0, Collisions=2/25=8%
-# Finished Make data base on Sat Jun 18 14:16:05 2022
+# Finished Make data base on Tue Jun 21 11:41:51 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
