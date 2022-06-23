@@ -10,7 +10,7 @@
 using namespace std;
 void test01()
 {
-    //测试二叉树为：abd**eg***c*fh**i**
+    //测试的二叉树先序为：abd**eg***c*fh**i**
     BinTree<char> t1;
     t1.preOrderCreate('*');
     cout << "二叉树结点个数为：" << t1.size() << endl;
