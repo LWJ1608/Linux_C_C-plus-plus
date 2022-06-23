@@ -164,10 +164,14 @@ Node<Type> *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查�
 template <typename Type>
 Node<Type> *BinTree<Type>::copy(Node<Type> *t) const //复制一个二叉树
 {
-    if (!t)
+    if(!t)
     {
         return nullptr;
     }
+    Node<Type>* copyT = new Node<Type>(t->data);
+    copyT->leftChild=copy(t->leftChild);
+    copyT->rightChild = copy(t->rightChild);
+    return copyT;
 }
 
 template <typename Type>
