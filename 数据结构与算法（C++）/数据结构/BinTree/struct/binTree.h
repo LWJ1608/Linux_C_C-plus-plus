@@ -199,7 +199,7 @@ void BinTree<Type>::preOrderCreate(Type flag, Node<Type> *&t) //前序法创建�
     std::cin >> value; //输入
     if (value != flag)
     {
-        t = new Node(value);
+        t = new Node<Type>(value);
         preOrderCreate(flag, t->leftChild);
         preOrderCreate(flag, t->rightChild);
     }
