@@ -19,13 +19,16 @@ void test01()
     Node<char> *iNode = t1.findI('c');
     cout << "iNode->data = " << iNode->data << endl;
     cout << "元素c的父结点：" << t1.findParent(iNode)->data << endl;
-    cout << "前序遍历二叉树：";
+    cout << "前序遍历二叉树t1：";
     t1.preOrderTraverse();
-    cout << "\n中序遍历二叉树：";
+    cout << "\n中序遍历二叉树t1：";
     t1.inOrederTraverse();
-    cout << "\n后序遍历二叉树：";
+    cout << "\n后序遍历二叉树t1：";
     t1.postOrderTraverse();
     cout << endl;
+
+    BinTree<char> t2;
+    t2.
 }
 
 int main()
