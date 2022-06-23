@@ -174,7 +174,7 @@ BinTreeNode<Type> *BinTree<Type>::parent(BinTreeNode<Type> *cur) const
 { //查找当前结点的父结点
     return parent(cur, root);
 }
-template <typename Type>    
+template <typename Type>
 void BinTree<Type>::makeEmpty()
 { //将二叉树置空
     makeEmpty(root);
