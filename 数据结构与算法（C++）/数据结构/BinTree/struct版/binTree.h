@@ -136,8 +136,12 @@ Node<Type> *BinTree<Type>::findParent(Node<Type> *child, Node<Type> *t) const //
     {
         return nullptr;
     }
+    if (t->leftChild == child || t->rightChild)
+    {
+        return t;
+    }
     Node<Type> *p = findParent(t->leftChild);
-    if (p->data==child->data)
+    if (p)
     {
         return p;
     }
