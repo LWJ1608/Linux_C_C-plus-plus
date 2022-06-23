@@ -184,7 +184,7 @@ void BinTree<Type>::inOrder(Node<Type> *t) const //递归中序遍历
 }
 
 template <typename Type>
-void BinTree<Type>::postOrder(Node<Type> *t) const
+void BinTree<Type>::postOrder(Node<Type> *t) const //递归中序遍历
 {
     if (t)
     {
