@@ -16,7 +16,7 @@ void test01()
     cout << "二叉树结点个数为：" << t1.size() << endl;
     cout << "二叉树高度为：" << t1.height() << endl;
     cout << "二叉树叶子数为：" << t1.leafNum() << endl;
-    Node<char> *iNode = t1.findI('c');
+    Node<char> *iNode = t1.findI('a');
     cout << "iNode->data = " << iNode->data << endl;
     cout << "元素c的父结点：" << t1.findParent(iNode)->data << endl;
     cout << "前序遍历二叉树：";
