@@ -191,7 +191,9 @@ template <typename Type>
 bool BinTree<Type>::equal(Node<Type> *t1, Node<Type> *t2) const //两个二叉树是否相同的比较
 {
     if (t1 == nullptr || t2 == nullptr)
+    {
         return nullptr;
+    }
 }
 
 template <typename Type>
