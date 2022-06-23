@@ -145,7 +145,7 @@ typename BinTree<Type>::Node<Type> *BinTree<Type>::findParent(Node<Type> *child,
 }
 
 template <typename Type>
-typename BinTree<Type>::Node<Type> *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查找当前节点
+BinTree<Type>::Node<Type> *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查找当前节点
 {
     if (t == nullptr)
         return nullptr;
