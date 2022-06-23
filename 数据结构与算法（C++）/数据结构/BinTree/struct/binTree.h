@@ -10,23 +10,23 @@
 #include <iostream>
 
 template <typename Type>
+struct Node //二叉树结点，结构体
+{
+    Type data;                                                        //数据
+    Node *leftChild, *rightChild;                                     //分别为左孩子和右孩子
+    Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
+    Node(Type value, Node *left = nullptr, Node *rigth = nullptr)     //有参构造
+    {
+        data = value;
+        leftChild = left;
+        rightChild = rigth;
+    }
+    ~Node(){};
+};
+template <typename Type>
 class BinTree //二叉树类
 {
-private:
-    struct Node //二叉树结点
-    {
-        Type data;                                                        //数据
-        Node *leftChild, *rightChild;                                     //分别为左孩子和右孩子
-        Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
-        Node(Type value, Node *left = nullptr, Node *rigth = nullptr)     //有参构造
-        {
-            data = value;
-            leftChild = left;
-            rightChild = rigth;
-        }
-        ~Node(){};
-    };
-    Node *root; //指向二叉树的根
+    friend Node private : Node *root; //指向二叉树的根
 
     /////////////////////以下为内部接口//////////////////////
 private: //以下为内部接口
