@@ -132,12 +132,12 @@ int BinTree<Type>::leafNum(Node<Type> *t) const //返回二叉树叶子数
 template <typename Type>
 Node<Type> *BinTree<Type>::findParent(Node<Type> *child, Node<Type> *t) const //查找当前节点的父节点
 {
-    if (t == nullptr || child == t || child == nullptr)
+    if (t == nullptr || child == nullptr || child == t)
     {
         return nullptr;
     }
     Node<Type> *p = findParent(t->leftChild);
-    if (p)
+    if (p->data==child->data)
     {
         return p;
     }
