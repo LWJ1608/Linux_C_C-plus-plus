@@ -42,8 +42,8 @@ private: //以下为内部接口
     int leafNum(Node<Type> *t) const;
     Node<Type> *findI(const Type &value, Node<Type> *t) const;      //查找当前节点
     Node<Type> *findParent(Node<Type> *child, Node<Type> *t) const; //查找当前节点的父节点
-    bool equal(Node<Type> *t1, Node<Type> *t2) const;               //两个二叉树是否相同的比较
     Node<Type> *copy(Node<Type> *t) const;                          //复制一个二叉树
+    bool equal(Node<Type> *t1, Node<Type> *t2) const;               //两个二叉树是否相同的比较
     void preOrder(Node<Type> *t) const;                             //递归前序遍历
     void inOrder(Node<Type> *t) const;                              //递归中序遍历
     void postOrder(Node<Type> *t) const;                            //递归后序遍历
@@ -162,6 +162,15 @@ Node<Type> *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查�
 }
 
 template <typename Type>
+Node<Type> *BinTree<Type>::copy(Node<Type> *t) const //复制一个二叉树
+{
+    if (!t)
+    {
+        return nullptr;
+    }
+}
+
+template <typename Type>
 void BinTree<Type>::preOrder(Node<Type> *t) const //递归前序遍历
 {
     if (t)
@@ -184,7 +193,7 @@ void BinTree<Type>::inOrder(Node<Type> *t) const //递归中序遍历
 }
 
 template <typename Type>
-void BinTree<Type>::postOrder(Node<Type> *t) const //递归中序遍历
+void BinTree<Type>::postOrder(Node<Type> *t) const //递归后序遍历
 {
     if (t)
     {
