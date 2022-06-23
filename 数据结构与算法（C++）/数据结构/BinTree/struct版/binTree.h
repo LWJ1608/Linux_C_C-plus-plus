@@ -67,6 +67,7 @@ public:
     Node<Type> *findRight(Node<Type> *t) const { return t->rightChild; };               //求当前节点的右孩子
     Node<Type> *findI(const Type &value) const { return findI(value, root); }           //查找当前结点
     Node<Type> *findParent(Node<Type> *child) const { return findParent(child, root); } //查找当前节点的父节点
+    Node<Type> *copy() const { return copy(root); };                                    //复制一个二叉树
     void preOrderTraverse() const { preOrder(root); }                                   //前序遍历
     void inOrederTraverse() const { inOrder(root); }                                    //中序遍历
     void postOrderTraverse() const { postOrder(root); }                                 //后序遍历
@@ -164,12 +165,12 @@ Node<Type> *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查�
 template <typename Type>
 Node<Type> *BinTree<Type>::copy(Node<Type> *t) const //复制一个二叉树
 {
-    if(!t)
+    if (!t)
     {
         return nullptr;
     }
-    Node<Type>* copyT = new Node<Type>(t->data);
-    copyT->leftChild=copy(t->leftChild);
+    Node<Type> *copyT = new Node<Type>(t->data);
+    copyT->leftChild = copy(t->leftChild);
     copyT->rightChild = copy(t->rightChild);
     return copyT;
 }
