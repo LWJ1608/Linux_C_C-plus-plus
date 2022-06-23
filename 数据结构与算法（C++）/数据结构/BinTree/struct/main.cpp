@@ -17,8 +17,8 @@ void test01()
     cout << "二叉树高度为：" << t1.height() << endl;
     cout << "二叉树叶子数为：" << t1.leafNum() << endl;
     Node<char> *iNode = t1.findI('c');
-    cout << "t1.findI('c')->data = " << t1.findI('c')->data << endl;
-    cout << "元素c的父结点：" << t1.findParent(t1.findI('c'))->data << endl;
+    cout << "iNode->data = " << iNode->data << endl;
+    // cout << "元素c的父结点：" << t1.findParent(t1.findI('c'))->data << endl;
     cout << "前序遍历二叉树：";
     t1.preOrderTraverse();
     cout << "\n中序遍历二叉树：";
