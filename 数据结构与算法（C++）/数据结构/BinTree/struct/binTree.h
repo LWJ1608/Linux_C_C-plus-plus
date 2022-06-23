@@ -36,18 +36,18 @@ private:
 
     /////////////////////以下为内部接口//////////////////////
 private: //以下为内部接口
-    void clear(Node *t);
-    int size(Node *t) const;
-    int height(Node *t) const;
-    int leafNum(Node *t) const;
-    Node *findI(const Type &value, Node *t) const; //查找当前节点
-    Node *findParent(Node *child, Node *t) const;  //查找当前节点的父节点
-    bool equal(Node *t1, Node *t2) const;          //两个二叉树是否相同的比较
-    Node *copy(Node *t) const;                     //复制一个二叉树
-    void preOrder(Node *t) const;                  //递归前序遍历
-    void inOrder(Node *t) const;                   //递归中序遍历
-    void postOrder(Node *t) const;                 //递归后序遍历
-    void preOrderCreate(Type flag, Node *&t);      //前序法创建二叉树
+    void clear(Node<Type> *t);
+    int size(Node<Type> *t) const;
+    int height(Node<Type> *t) const;
+    int leafNum(Node<Type> *t) const;
+    Node *findI(const Type &value, Node<Type> *t) const; //查找当前节点
+    Node *findParent(Node<Type> *child, Node<Type> *t) const;  //查找当前节点的父节点
+    bool equal(Node<Type> *t1, Node<Type> *t2) const;          //两个二叉树是否相同的比较
+    Node *copy(Node<Type> *t) const;                     //复制一个二叉树
+    void preOrder(Node<Type> *t) const;                  //递归前序遍历
+    void inOrder(Node<Type> *t) const;                   //递归中序遍历
+    void postOrder(Node<Type> *t) const;                 //递归后序遍历
+    void preOrderCreate(Type flag, Node<Type> *&t);      //前序法创建二叉树
 
     //////////////////////以下为外部接口////////////////////////
 public:
@@ -63,8 +63,8 @@ public:
     int size() const { return size(root); }                                 //返回返回结点个数
     int height() const { return height(root); }                             //返回二叉树高度
     int leafNum() const { return leafNum(root); }                           //返回二叉树叶子数
-    Node *findLeft(Node *t) const { return t->leftChild; }                  //求当前节点的左孩子
-    Node *findRight(Node *t) const { return t->rightChild; };               //求当前节点的右孩子
+    Node *findLeft(Node<Type> *t) const { return t->leftChild; }                  //求当前节点的左孩子
+    Node *findRight(Node<Type> *t) const { return t->rightChild; };               //求当前节点的右孩子
     Node *findI(const Type &value) const { return findI(value, root); }     //查找当前结点
     Node *findParent(Node *child) const { return findParent(child, root); } //查找当前节点的父节点
     void preOrderTraverse() const { preOrder(root); }                       //前序遍历
@@ -75,7 +75,7 @@ public:
 
 //////////////////////////以下为接口实现//////////////////////////////
 template <typename Type>
-void BinTree<Type>::clear(Node *t) //清空二叉树
+void BinTree<Type>::clear(Node<Type> *t) //清空二叉树
 {
     if (t->leftChild)
     {
@@ -89,7 +89,7 @@ void BinTree<Type>::clear(Node *t) //清空二叉树
 }
 
 template <typename Type>
-int BinTree<Type>::size(Node *t) const //返回返回结点个数
+int BinTree<Type>::size(Node<Type> *t) const //返回返回结点个数
 {
     if (t == nullptr)
     {
@@ -99,7 +99,7 @@ int BinTree<Type>::size(Node *t) const //返回返回结点个数
 }
 
 template <typename Type>
-int BinTree<Type>::height(Node *t) const //返回二叉树高度
+int BinTree<Type>::height(Node<Type> *t) const //返回二叉树高度
 {
     if (t == nullptr)
     {
@@ -114,7 +114,7 @@ int BinTree<Type>::height(Node *t) const //返回二叉树高度
 }
 
 template <typename Type>
-int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
+int BinTree<Type>::leafNum(Node<Type> *t) const //返回二叉树叶子数
 {
     if (t == nullptr)
     {
@@ -130,7 +130,7 @@ int BinTree<Type>::leafNum(Node *t) const //返回二叉树叶子数
     }
 }
 template <typename Type>
-typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *child, Node *t) const //查找当前节点的父节点
+typename BinTree<Type>::Node<Type> *BinTree<Type>::findParent(Node<Type> *child, Node<Type> *t) const //查找当前节点的父节点
 {
     if (t == nullptr || child == t || child == nullptr)
     {
@@ -145,7 +145,7 @@ typename BinTree<Type>::Node *BinTree<Type>::findParent(Node *child, Node *t) co
 }
 
 template <typename Type>
-typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node *t) const //查找当前节点
+typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查找当前节点
 {
     if (t == nullptr)
         return nullptr;
@@ -158,7 +158,7 @@ typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node *t) c
 }
 
 template <typename Type>
-void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
+void BinTree<Type>::preOrder(Node<Type> *t) const //递归前序遍历
 {
     if (t)
     {
@@ -169,7 +169,7 @@ void BinTree<Type>::preOrder(Node *t) const //递归前序遍历
 }
 
 template <typename Type>
-void BinTree<Type>::inOrder(Node *t) const //递归中序遍历
+void BinTree<Type>::inOrder(Node<Type> *t) const //递归中序遍历
 {
     if (t)
     {
@@ -180,7 +180,7 @@ void BinTree<Type>::inOrder(Node *t) const //递归中序遍历
 }
 
 template <typename Type>
-void BinTree<Type>::postOrder(Node *t) const
+void BinTree<Type>::postOrder(Node<Type> *t) const
 {
     if (t)
     {
