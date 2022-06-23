@@ -17,10 +17,10 @@ struct Node //二叉树结点，结构体
 {
     friend class BinTree<Type>;
 
-    Type data;                                                        //数据
-    Node *leftChild, *rightChild;                                     //分别为左孩子和右孩子
-    Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
-    Node(Type value, Node *left = nullptr, Node *rigth = nullptr)     //有参构造
+    Type data;                                                                //数据
+    Node<Type> *leftChild, *rightChild;                                       //分别为左孩子和右孩子
+    Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {}         //无参构造
+    Node(Type value, Node<Type> *left = nullptr, Node<Type> *rigth = nullptr) //有参构造
     {
         data = value;
         leftChild = left;
@@ -32,7 +32,7 @@ template <typename Type>
 class BinTree //二叉树类
 {
 private:
-    Node *root; //指向二叉树的根
+    Node<Type> *root; //指向二叉树的根
 
     /////////////////////以下为内部接口//////////////////////
 private: //以下为内部接口
@@ -40,14 +40,14 @@ private: //以下为内部接口
     int size(Node<Type> *t) const;
     int height(Node<Type> *t) const;
     int leafNum(Node<Type> *t) const;
-    Node *findI(const Type &value, Node<Type> *t) const; //查找当前节点
-    Node *findParent(Node<Type> *child, Node<Type> *t) const;  //查找当前节点的父节点
-    bool equal(Node<Type> *t1, Node<Type> *t2) const;          //两个二叉树是否相同的比较
-    Node *copy(Node<Type> *t) const;                     //复制一个二叉树
-    void preOrder(Node<Type> *t) const;                  //递归前序遍历
-    void inOrder(Node<Type> *t) const;                   //递归中序遍历
-    void postOrder(Node<Type> *t) const;                 //递归后序遍历
-    void preOrderCreate(Type flag, Node<Type> *&t);      //前序法创建二叉树
+    Node<Type> *findI(const Type &value, Node<Type> *t) const;      //查找当前节点
+    Node<Type> *findParent(Node<Type> *child, Node<Type> *t) const; //查找当前节点的父节点
+    bool equal(Node<Type> *t1, Node<Type> *t2) const;               //两个二叉树是否相同的比较
+    Node<Type> *copy(Node<Type> *t) const;                          //复制一个二叉树
+    void preOrder(Node<Type> *t) const;                             //递归前序遍历
+    void inOrder(Node<Type> *t) const;                              //递归中序遍历
+    void postOrder(Node<Type> *t) const;                            //递归后序遍历
+    void preOrderCreate(Type flag, Node<Type> *&t);                 //前序法创建二叉树
 
     //////////////////////以下为外部接口////////////////////////
 public:
@@ -60,17 +60,17 @@ public:
             clear(root);
         root = nullptr;
     }
-    int size() const { return size(root); }                                 //返回返回结点个数
-    int height() const { return height(root); }                             //返回二叉树高度
-    int leafNum() const { return leafNum(root); }                           //返回二叉树叶子数
-    Node *findLeft(Node<Type> *t) const { return t->leftChild; }                  //求当前节点的左孩子
-    Node *findRight(Node<Type> *t) const { return t->rightChild; };               //求当前节点的右孩子
-    Node *findI(const Type &value) const { return findI(value, root); }     //查找当前结点
-    Node *findParent(Node *child) const { return findParent(child, root); } //查找当前节点的父节点
-    void preOrderTraverse() const { preOrder(root); }                       //前序遍历
-    void inOrederTraverse() const { inOrder(root); }                        //中序遍历
-    void postOrderTraverse() const { postOrder(root); }                     //后序遍历
-    void preOrderCreate(Type flag) { preOrderCreate(flag, root); }          //前序法创建二叉树
+    int size() const { return size(root); }                                             //返回返回结点个数
+    int height() const { return height(root); }                                         //返回二叉树高度
+    int leafNum() const { return leafNum(root); }                                       //返回二叉树叶子数
+    Node<Type> *findLeft(Node<Type> *t) const { return t->leftChild; }                  //求当前节点的左孩子
+    Node<Type> *findRight(Node<Type> *t) const { return t->rightChild; };               //求当前节点的右孩子
+    Node<Type> *findI(const Type &value) const { return findI(value, root); }           //查找当前结点
+    Node<Type> *findParent(Node<Type> *child) const { return findParent(child, root); } //查找当前节点的父节点
+    void preOrderTraverse() const { preOrder(root); }                                   //前序遍历
+    void inOrederTraverse() const { inOrder(root); }                                    //中序遍历
+    void postOrderTraverse() const { postOrder(root); }                                 //后序遍历
+    void preOrderCreate(Type flag) { preOrderCreate(flag, root); }                      //前序法创建二叉树
 };
 
 //////////////////////////以下为接口实现//////////////////////////////
@@ -136,7 +136,7 @@ typename BinTree<Type>::Node<Type> *BinTree<Type>::findParent(Node<Type> *child,
     {
         return nullptr;
     }
-    Node *p = findParent(t->leftChild);
+    Node<Type> *p = findParent(t->leftChild);
     if (p)
     {
         return p;
@@ -145,13 +145,13 @@ typename BinTree<Type>::Node<Type> *BinTree<Type>::findParent(Node<Type> *child,
 }
 
 template <typename Type>
-typename BinTree<Type>::Node *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查找当前节点
+typename BinTree<Type>::Node<Type> *BinTree<Type>::findI(const Type &value, Node<Type> *t) const //查找当前节点
 {
     if (t == nullptr)
         return nullptr;
     if (t->data == value)
         return t;
-    Node *p = findI(value, t->leftChild);
+    Node<Type> *p = findI(value, t->leftChild);
     if (p)
         return p;
     return findI(value, t->rightChild);
@@ -193,7 +193,7 @@ void BinTree<Type>::postOrder(Node<Type> *t) const
 /*使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个二叉树，
 这样更好理解，还能避免二叉树的二义性,如 abd**eg***c*fh**i** 。*/
 template <typename Type>
-void BinTree<Type>::preOrderCreate(Type flag, Node *&t) //前序法创建二叉树
+void BinTree<Type>::preOrderCreate(Type flag, Node<Type> *&t) //前序法创建二叉树
 {
     Type value;        //键盘输入的值
     std::cin >> value; //输入
