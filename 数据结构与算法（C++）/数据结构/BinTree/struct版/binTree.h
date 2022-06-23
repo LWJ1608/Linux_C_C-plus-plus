@@ -194,6 +194,14 @@ bool BinTree<Type>::equal(Node<Type> *t1, Node<Type> *t2) const //两个二叉�
     {
         return nullptr;
     }
+    if ()
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 template <typename Type>
