@@ -12,6 +12,8 @@
 template <typename Type>
 struct Node //二叉树结点，结构体
 {
+    friend class BinTree<Type>;
+
     Type data;                                                        //数据
     Node *leftChild, *rightChild;                                     //分别为左孩子和右孩子
     Node() : data(Type()), leftChild(nullptr), rightChild(nullptr) {} //无参构造
@@ -26,7 +28,6 @@ struct Node //二叉树结点，结构体
 template <typename Type>
 class BinTree //二叉树类
 {
-    friend struct Node<Type>;
 private:
     Node *root; //指向二叉树的根
 
