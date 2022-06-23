@@ -26,7 +26,9 @@ struct Node //二叉树结点，结构体
 template <typename Type>
 class BinTree //二叉树类
 {
-    friend Node private : Node *root; //指向二叉树的根
+    friend struct Node<Type>;
+private:
+    Node *root; //指向二叉树的根
 
     /////////////////////以下为内部接口//////////////////////
 private: //以下为内部接口
