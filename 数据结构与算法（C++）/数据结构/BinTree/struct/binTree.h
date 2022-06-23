@@ -9,6 +9,9 @@
 #include <queue>
 #include <iostream>
 
+template <typename Type> //为的是声明友元类，调用BinTreeNode<Type>的私有数据
+class BinTree;
+
 template <typename Type>
 struct Node //二叉树结点，结构体
 {
