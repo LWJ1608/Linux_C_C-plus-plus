@@ -191,9 +191,9 @@ void BinTree<Type>::preOrder(Node<Type> *t) const //递归前序遍历
 template <typename Type>
 bool BinTree<Type>::equal(Node<Type> *t1, Node<Type> *t2) const //两个二叉树是否相同的比较
 {
-    if (t1 == nullptr || t2 == nullptr)
+    if (t1 == nullptr && t2 == nullptr)
     {
-        return false;
+        return true;
     }
     if (t1 != nullptr && t2 != nullptr && t1->data == t2->data && equal(t1->leftChild, t2->leftChild) && equal(t1->rightChild, t2->rightChild))
     {
