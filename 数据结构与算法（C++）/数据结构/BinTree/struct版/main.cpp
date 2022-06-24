@@ -28,6 +28,8 @@ void test01()
     cout << endl;
 
     BinTree<char> t2;
+    t2.preOrderCreate('*');
+    t2.
 }
 
 int main()
