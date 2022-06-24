@@ -29,7 +29,7 @@ void test01()
 
     BinTree<char> t2;
     t2.preOrderCreate('*');
-    t2.equal(t1);
+    // t2.equal(t1.findRoot());
 }
 
 int main()
