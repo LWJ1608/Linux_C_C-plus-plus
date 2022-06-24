@@ -208,6 +208,10 @@ bool BinTree<Type>::equal(Node<Type> *t1, Node<Type> *t2) const //两个二叉�
 }
 
 template <typename Type>
+void BinTree<Type>::clear(Node<Type> *t) //清空二叉树
+{
+}
+template <typename Type>
 void BinTree<Type>::inOrder(Node<Type> *t) const //递归中序遍历
 {
     if (t)
