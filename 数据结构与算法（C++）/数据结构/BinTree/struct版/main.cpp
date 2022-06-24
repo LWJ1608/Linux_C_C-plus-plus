@@ -30,7 +30,7 @@ void test01()
     BinTree<char> t2;
     t2.preOrderCreate('*');
     bool p = t2.equal(t1.findRoot());
-    if (p)
+    if (p != nullptr)
     {
         cout << "相同！" << endl;
     }
