@@ -60,10 +60,10 @@ public:
             clear(root);
         root = nullptr;
     }
-    int size() const { return size(root); }       //返回返回结点个数
-    int height() const { return height(root); }   //返回二叉树高度
-    int leafNum() const { return leafNum(root); } //返回二叉树叶子数
-    Node<Type> *findRoot() const { return root; }
+    int size() const { return size(root); }                                             //返回返回结点个数
+    int height() const { return height(root); }                                         //返回二叉树高度
+    int leafNum() const { return leafNum(root); }                                       //返回二叉树叶子数
+    Node<Type> *findRoot() const { return root; }                                       //求根节点
     Node<Type> *findLeft(Node<Type> *t) const { return t->leftChild; }                  //求当前节点的左孩子
     Node<Type> *findRight(Node<Type> *t) const { return t->rightChild; };               //求当前节点的右孩子
     Node<Type> *findI(const Type &value) const { return findI(value, root); }           //查找当前结点
