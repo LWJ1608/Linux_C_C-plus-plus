@@ -194,7 +194,7 @@ bool BinTree<Type>::equal(Node<Type> *t1, Node<Type> *t2) const //两个二叉�
     {
         return nullptr;
     }
-    if (t1 != nullptr && t2 != nullptr)
+    if (t1 != nullptr && t2 != nullptr && t1->data == t2->data && equal(t1->leftChild, t2->leftChild) && equal(t1->rightChild, t2->rightChild))
     {
         return true;
     }
