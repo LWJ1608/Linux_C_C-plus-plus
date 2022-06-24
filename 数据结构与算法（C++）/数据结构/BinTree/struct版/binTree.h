@@ -44,6 +44,7 @@ private: //以下为内部接口
     Node<Type> *findParent(Node<Type> *child, Node<Type> *t) const; //查找当前节点的父节点
     Node<Type> *copy(Node<Type> *t) const;                          //复制一个二叉树
     bool equal(Node<Type> *t1, Node<Type> *t2) const;               //两个二叉树是否相同的比较
+    void clear(Node<Type> *t);                                      //清空二叉树
     void preOrder(Node<Type> *t) const;                             //递归前序遍历
     void inOrder(Node<Type> *t) const;                              //递归中序遍历
     void postOrder(Node<Type> *t) const;                            //递归后序遍历
@@ -70,7 +71,7 @@ public:
     Node<Type> *findParent(Node<Type> *child) const { return findParent(child, root); } //查找当前节点的父节点
     Node<Type> *copy() const { return copy(root); };                                    //复制一个二叉树
     bool equal(Node<Type> *t) const { return equal(root, t); }                          //两个二叉树是否相同的比较
-    void clear();                                                                       //清空二叉树
+    void clear() { clear(root) }                                                        //清空二叉树
     void preOrderTraverse() const { preOrder(root); }                                   //前序遍历
     void inOrederTraverse() const { inOrder(root); }                                    //中序遍历
     void postOrderTraverse() const { postOrder(root); }                                 //后序遍历
