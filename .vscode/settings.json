@@ -18,7 +18,7 @@
         "root": "linux"
     },
     "bracket-pair-colorizer-2.depreciation-notice": false,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "none",
     "editor.fontFamily": "'Fira Code',Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
