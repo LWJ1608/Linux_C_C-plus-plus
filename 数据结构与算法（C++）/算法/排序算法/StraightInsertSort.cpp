@@ -24,5 +24,8 @@ void straightInsertSort(Type *arr, int size)
 int main()
 {
     int arr[] = {3, 5, 2, 7, 7, 6, 99, 66};
+    int size = sizeof(arr) / sizeof(arr[1]);
+    straightInsertSort<int>(arr, size);
+    
     return 0;
 }
