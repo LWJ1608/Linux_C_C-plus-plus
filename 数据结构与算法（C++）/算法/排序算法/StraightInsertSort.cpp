@@ -13,9 +13,8 @@ void straightInsertSort(Type *arr, int size)
     for (int pos = 1; pos < size; pos++) //
     {
         tmp = arr[pos]; //将要出入的 数据放入临时变量中
-        for (int i = pos-1; tmp<arr[i]&&i < ; i--)
+        for (int i = pos - 1; tmp < arr[i] && i < ; i--)
         {
-
         }
     }
 }
