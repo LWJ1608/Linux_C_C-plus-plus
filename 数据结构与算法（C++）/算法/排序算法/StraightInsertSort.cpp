@@ -21,12 +21,12 @@ void straightInsertSort(Type *arr, int size)
 {
     int pos, i;
     Type tmp;
-    for (pos = 1; pos < size; pos++) //
+    for (pos = 1; pos < size; pos++)//控制插入次数
     {
         tmp = arr[pos]; //将要出入的 数据放入临时变量中
         for (i = pos - 1; tmp < arr[i] && i >= 0; i--)
         {
-            arr[i + 1] = arr[i];
+            arr[i + 1] = arr[i];//数据向后移动
         }
         arr[i+1] = tmp;
     }
