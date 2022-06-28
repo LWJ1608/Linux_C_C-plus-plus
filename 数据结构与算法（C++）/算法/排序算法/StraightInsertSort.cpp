@@ -9,13 +9,15 @@
 template <typename Type>
 void straightInsertSort(Type *arr, int size)
 {
+    int pos, i;
     Type tmp;
-    for (int pos = 1; pos < size; pos++) //
+    for (pos = 1; pos < size; pos++) //
     {
         tmp = arr[pos]; //将要出入的 数据放入临时变量中
-        for (int i = pos - 1; tmp < arr[i] && i < ; i--)
+        for (i = pos - 1; tmp < arr[i] && i < ; i--)
         {
         }
+        arr[i] = tmp;
     }
 }
 int main()
