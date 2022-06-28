@@ -6,6 +6,16 @@
  **/
 
 #include <iostream>
+
+template <typename Type>
+void print(const Type &arr, int size) //打印数组
+{
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
 template <typename Type>
 void straightInsertSort(Type *arr, int size)
 {
@@ -14,7 +24,7 @@ void straightInsertSort(Type *arr, int size)
     for (pos = 1; pos < size; pos++) //
     {
         tmp = arr[pos]; //将要出入的 数据放入临时变量中
-        for (i = pos - 1; tmp < arr[i] && i < ; i--)
+        for (i = pos - 1; tmp < arr[i] && i >= 0; i--)
         {
             arr[i + 1] = arr[i];
         }
@@ -25,7 +35,7 @@ int main()
 {
     int arr[] = {3, 5, 2, 7, 7, 6, 99, 66};
     int size = sizeof(arr) / sizeof(arr[1]);
-    straightInsertSort<int>(arr, size);
-    
+    straightInsertSort(arr, size);
+    print(arr, size);
     return 0;
 }
