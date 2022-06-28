@@ -28,7 +28,7 @@ void straightInsertSort(Type *arr, int size)
         {
             arr[i + 1] = arr[i];
         }
-        arr[i] = tmp;
+        arr[i+1] = tmp;
     }
 }
 int main()
