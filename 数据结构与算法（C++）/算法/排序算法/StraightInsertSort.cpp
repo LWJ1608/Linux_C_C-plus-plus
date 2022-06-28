@@ -6,7 +6,19 @@
  **/
 
 #include <iostream>
-
+template <typename Type>
+void straightInsertSort(Type *arr, int size)
+{
+    Type tmp;
+    for (int pass = 1; pass < size; pass++) //
+    {
+        tmp = arr[pass];
+        for (int i = 0; i < count; i++)
+        {
+            /* code */
+        }
+    }
+}
 int main()
 {
 
