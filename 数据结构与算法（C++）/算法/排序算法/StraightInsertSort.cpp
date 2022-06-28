@@ -23,6 +23,12 @@ void straightInsertSort(Type *arr, int size)
 }
 int main()
 {
-
-    return 0;
+    int arr[] = { 3,
+                  5,
+                  2,
+                  7,
+                  7,
+                  6,
+                  99,
+                  66 } return 0;
 }
