@@ -1,13 +1,22 @@
 #include <iostream>
 
 template <typename T>
-class Myarry
+class MyArry
 {
 private:
     int mCapcity; //数组容量
     int mSize;    //元素个数
-    int T *Add public:
+    int T *Addr;  //元素首地址
+public:
+    MyArry(const T &data);        //构造函数
+    MyArry(const MyArry<T> &arr); //拷贝构造
+    T &operator[](const int index);
+    MyArry<T> operator=(const MyArry<T> &arr) void pushBack(const T &data);
 };
+template <typename T>
+MyArry<T>::MyArry(const T &data)
+{
+}
 int main()
 {
 
