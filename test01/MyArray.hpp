@@ -17,8 +17,3 @@ template <typename T>
 MyArry<T>::MyArry(const T &data)
 {
 }
-int main()
-{
-
-    return 0;
-}
