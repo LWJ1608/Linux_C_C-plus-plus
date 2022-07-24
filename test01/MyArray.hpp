@@ -13,6 +13,7 @@ public:
     T &operator[](const int index);
     MyArry<T> operator=(const MyArry<T> &arr) void pushBack(const T &data);
 };
+
 template <typename T>
 MyArry<T>::MyArry(const T &data)
 {
