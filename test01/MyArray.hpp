@@ -24,5 +24,7 @@ MyArry<T>::MyArry(int capcity)
 
 template <typename T>
 MyArry<T>::MyArry(const MyArry<T> &arr)
-{ //拷贝构造
+{
 }
+
+template <typename T>
