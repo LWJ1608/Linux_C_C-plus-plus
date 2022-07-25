@@ -41,6 +41,11 @@ T &MyArry<T>::operator[](const int index) // []号重载
 }
 
 template <typename T>
-MyArry<T> operator=(const MyArry &arr) void pushBack(const T &data) // =号重载
+MyArry<T> MyArry<T>::operator=(const MyArry &arr) // =号重载
+{
+}
+
+template <typename T>
+void MyArry<T>::pushBack(const T &data)
 {
 }
