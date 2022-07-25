@@ -8,10 +8,10 @@ private:
     int mSize;    //元素个数
     int T *Addr;  //元素首地址
 public:
-    MyArry(int capcity);          //构造函数
-    MyArry(const MyArry<T> &arr); //拷贝构造
+    MyArry(int capcity);       //构造函数
+    MyArry(const MyArry &arr); //拷贝构造
     T &operator[](const int index);
-    MyArry<T> operator=(const MyArry<T> &arr) void pushBack(const T &data);
+    MyArry<T> operator=(const MyArry &arr) void pushBack(const T &data);
 };
 
 template <typename T>
@@ -23,8 +23,12 @@ MyArry<T>::MyArry(int capcity)
 }
 
 template <typename T>
-MyArry<T>::MyArry(const MyArry<T> &arr)
+MyArry<T>::MyArry(const MyArry &arr)
 {
+    this->mCapcity = arr->mCapcity;
+    this->mSize = arr->mSize;
+    T *arr1 = new T[mCapcity];
+    for (int i = 0; i < mSize; i++)
 }
 
 template <typename T>
