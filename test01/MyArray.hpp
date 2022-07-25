@@ -35,6 +35,6 @@ MyArry<T>::MyArry(const MyArry &arr)
 }
 
 template <typename T>
-typename T &operator[](const int index) // []号重载
+typename T &MyArry<T>::operator[](const int index) // []号重载
 {
 }
