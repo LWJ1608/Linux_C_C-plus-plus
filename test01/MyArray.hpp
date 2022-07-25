@@ -19,4 +19,5 @@ MyArry<T>::MyArry(int capcity)
 {
     this->mCapcity = capcity;
     this->mSize = 0;
+    this->new T[capcity];
 }
