@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Wed Jun 29 11:53:27 2022
+# Make data base, printed on Mon Jul 25 15:32:23 2022
 
 # Variables
 
@@ -18,8 +19,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 .SHELLFLAGS := -c
 # environment
 VSCODE_AGENT_FOLDER = /root/.vscode-server
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -33,7 +32,7 @@ CURDIR := /root/Linux_C_C-plus-plus
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_translationsConfigFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/tcf.json","_cacheRoot":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_resolvedLanguagePackCoreLocation":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/root/.vscode-server/data/clp/bbca1a7059cee8a1b93da8947fee1c4f.zh-cn/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /usr/bin/make
 # makefile
@@ -41,29 +40,25 @@ MAKEFILE_LIST :=
 # environment
 XDG_DATA_DIRS = /root/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 223.73.72.30 24314 10.0.4.9 22
+SSH_CONNECTION = 111.58.222.235 20407 10.0.4.9 22
 # environment
-PATH = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+PATH = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/0
 # environment
-VSCODE_LOG_STACK = false
+ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver check-symlink
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-d7ad0fd5-1eff-4a8b-a344-975ff39209b7.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-a3f7e40d-5f48-4bce-8b40-9cdab937a495.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -91,7 +86,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 60786
+XDG_SESSION_ID = 194416
 # environment
 USER = root
 # makefile
@@ -109,13 +104,13 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 223.73.72.30 24314 22
+SSH_CLIENT = 111.58.222.235 20407 22
 # environment
 MAIL = /var/mail/root
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/helpers/browser.sh
+BROWSER = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -138,10 +133,8 @@ HISTSIZE = 3000
 .RECIPEPREFIX := 
 # environment
 LANG = C
-# environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
-# Load=65/1024=6%, Rehash=0, Collisions=6/84=7%
+# Load=61/1024=6%, Rehash=0, Collisions=6/80=8%
 
 # Pattern-specific Variable Values
 
@@ -149,13 +142,16 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 64769, inode 935519): 14 files, no impossibilities.
+# . (device 64769, inode 935519): 15 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
+
+ 
+make: *** No rule to make target `all'.  Stop.
 
 # Files
 
@@ -207,15 +203,13 @@ GNUmakefile:
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 0 / lookups = 25 / hits = 25
+# # of strings in strcache: 0 / lookups = 26 / hits = 26
 # # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
-# strcache used: total = 0 (232) / max = 0 / min = 8176 / avg = 0
-# strcache free: total = 0 (7944) / max = 0 / min = 8176 / avg = 0
+# strcache used: total = 0 (239) / max = 0 / min = 8176 / avg = 0
+# strcache free: total = 0 (7937) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=2/25=8%
-# Finished Make data base on Wed Jun 29 11:53:27 2022
+# Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
+# Finished Make data base on Mon Jul 25 15:32:23 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-
