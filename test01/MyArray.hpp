@@ -21,3 +21,8 @@ MyArry<T>::MyArry(int capcity)
     this->mSize = 0;
     this->new T[capcity];
 }
+
+template <typename T>
+MyArry<T>::MyArry(const MyArry<T> &arr)
+{ //拷贝构造
+}
