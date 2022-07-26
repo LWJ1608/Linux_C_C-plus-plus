@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Mon Jul 25 15:32:23 2022
+# Make data base, printed on Tue Jul 26 21:01:56 2022
 
 # Variables
 
@@ -44,7 +43,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 111.58.222.235 20407 10.0.4.9 22
+SSH_CONNECTION = 111.58.222.235 20397 10.0.4.9 22
 # environment
 PATH = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
@@ -58,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-a3f7e40d-5f48-4bce-8b40-9cdab937a495.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-abbbb9cc-648b-4310-9d4b-93fde17ab357.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -86,7 +85,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 194416
+XDG_SESSION_ID = 200848
 # environment
 USER = root
 # makefile
@@ -104,7 +103,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 111.58.222.235 20407 22
+SSH_CLIENT = 111.58.222.235 20397 22
 # environment
 MAIL = /var/mail/root
 # automatic
@@ -149,9 +148,6 @@ LANG = C
 # Implicit Rules
 
 # No implicit rules.
-
- 
-make: *** No rule to make target `all'.  Stop.
 
 # Files
 
@@ -210,6 +206,8 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Mon Jul 25 15:32:23 2022
+# Finished Make data base on Tue Jul 26 21:01:56 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
