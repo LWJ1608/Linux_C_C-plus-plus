@@ -17,7 +17,6 @@
 #include <string>
 #include <deque>
 #include <algorithm>
-
 class Person
 {
 public:
@@ -33,7 +32,7 @@ public:
 //把选手信息放入vector容器中
 void personPutVector(std::vector<Person> &v1)
 {
-   //存放选手信息
+    //存放选手信息
     std::string Name = "ABCDE"; //设定选手的名为A，B，C，D，E
     for (int i = 0; i < 5; i++)
     {
@@ -82,5 +81,5 @@ int main()
     personPutVector(v1);
     getScore(v1);
     printPerson(v1);
-     return 0;
+    return 0;
 }
