@@ -26,7 +26,7 @@ void test02()
         cout<<ch<<endl;
     }
     //关闭文件
-    ofstream 
+    ifs.close();
 }
 
 int main()
