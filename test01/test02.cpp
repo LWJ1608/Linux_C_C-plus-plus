@@ -10,6 +10,8 @@ using namespace std;
 
 void test02()
 {
+    ifstream ifs("test02.txt",ios::in);//通过构造函数打开文件
+    if(ifs==NULL)
 }
 
 int main()
