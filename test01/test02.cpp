@@ -14,6 +14,7 @@ void test02()
     ifstream ifs("test02.txt", ios::in); //通过构造函数打开文件
     // ifstream ifs;
     // ifs.open("test02.txt", ios::in);//成员函数打开文件
+
     ofstream ofs("test03.txt", ios::in);
     if (!ifs || !ofs)
     {
@@ -25,9 +26,11 @@ void test02()
     while (ifs.get(ch))
     {
         cout << ch << endl;
+        ofs.put(ch);
     }
     //关闭文件
     ifs.close();
+    ofs.close();
 }
 
 int main()
