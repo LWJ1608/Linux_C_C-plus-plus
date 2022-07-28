@@ -28,5 +28,6 @@ int main()
 	{
 		cout<<arr[j]<<" "<<endl;
 	}
+	
 	return 0;
 }
