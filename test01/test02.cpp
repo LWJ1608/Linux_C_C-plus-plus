@@ -10,8 +10,15 @@ using namespace std;
 
 void test02()
 {
-    ifstream ifs("test02.txt",ios::in);//通过构造函数打开文件
-    if(ifs==NULL)
+    ifstream ifs("test02.txt", ios::in); //通过构造函数打开文件
+    ifstream ifs;
+    ifs.open("test02.txt", ios::in);
+    if (!ifs)
+    {
+        cout << "文本打开失败！" << endl;
+        return;
+    }
+    cout <<
 }
 
 int main()
