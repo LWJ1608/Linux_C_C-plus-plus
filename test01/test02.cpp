@@ -12,8 +12,8 @@ void test02()
 {
     //打开文件
     ifstream ifs("test02.txt", ios::in); //通过构造函数打开文件
-    ifstream ifs;
-    ifs.open("test02.txt", ios::in);
+    // ifstream ifs;
+    // ifs.open("test02.txt", ios::in);//成员函数打开文件
     if (!ifs)
     {
         cout << "文本打开失败！" << endl;
@@ -21,9 +21,9 @@ void test02()
     }
     //读取文件
     char ch;
-    while(ifs.get(ch))
+    while (ifs.get(ch))
     {
-        cout<<ch<<endl;
+        cout << ch << endl;
     }
     //关闭文件
     ifs.close();
