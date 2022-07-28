@@ -10,6 +10,7 @@ using namespace std;
 
 void test02()
 {
+    //打开文件
     ifstream ifs("test02.txt", ios::in); //通过构造函数打开文件
     ifstream ifs;
     ifs.open("test02.txt", ios::in);
@@ -18,7 +19,14 @@ void test02()
         cout << "文本打开失败！" << endl;
         return;
     }
-    cout <<
+    //读取文件
+    char ch;
+    while(ifs.get(ch))
+    {
+        cout<<ch<<endl;
+    }
+    //关闭文件
+    ofstream 
 }
 
 int main()
