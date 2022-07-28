@@ -15,7 +15,7 @@ void test02()
     // ifstream ifs;
     // ifs.open("test02.txt", ios::in);//成员函数打开文件
     ofstream ofs("test03.txt", ios::in);
-    if (!ifs)
+    if (!ifs || !ofs)
     {
         cout << "文本打开失败！" << endl;
         return;
