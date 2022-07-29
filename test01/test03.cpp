@@ -23,9 +23,9 @@ public:
 };
 void test01()
 {
-    Person p1(88,99);
-    Person p2(77,66);
-    
+    Person p1(88, 99);
+    Person p2(77, 66);
+    if ()
 }
 int main()
 {
