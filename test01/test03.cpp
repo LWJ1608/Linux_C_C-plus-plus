@@ -18,9 +18,15 @@ public:
     void Show()
     {
         cout << "Age = " << m_age << "    "
-             << "Id = " << Id << endl;
+             << "Id = " << m_id << endl;
     }
 };
+void test01()
+{
+    Person p1(88,99);
+    Person p2(77,66);
+    
+}
 int main()
 {
 
