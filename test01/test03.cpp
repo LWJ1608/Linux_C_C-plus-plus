@@ -10,7 +10,16 @@ using namespace std;
 class Person
 {
 private:
+    int m_age;
+    int m_id;
+
 public:
+    Person(int age, int id) : m_age(age), m_id(id) {}
+    void Show()
+    {
+        cout << "Age = " << m_age << "    "
+             << "Id = " << Id << endl;
+    }
 };
 int main()
 {
