@@ -25,7 +25,7 @@ void test01()
 {
     Person p1(88, 99);
     Person p2(77, 66);
-    if
+    ofstream ofs("test03.txt", ios::out | ios::binary);
 }
 int main()
 {
