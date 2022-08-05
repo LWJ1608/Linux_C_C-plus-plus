@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug  2 23:11:34 2022
+# Make data base, printed on Fri Aug  5 15:40:09 2022
 
 # Variables
 
@@ -43,9 +43,9 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 111.58.223.125 31418 10.0.4.9 22
+SSH_CONNECTION = 111.58.223.207 53469 10.0.4.9 22
 # environment
-PATH = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+PATH = /root/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/0
 # environment
@@ -57,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 PWD = /root/Linux_C_C-plus-plus
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-654ce3b5-7e17-4ece-bb72-fe563d9165c4.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-64cebd4b-75ff-4fc8-8fd6-89e68eddb300.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -69,7 +69,7 @@ HOME = /root
 # environment
 LOGNAME = root
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 +F = $(notdir $+)
 # environment
@@ -85,7 +85,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 4
 # environment
-XDG_SESSION_ID = 237108
+XDG_SESSION_ID = 250843
 # environment
 USER = root
 # makefile
@@ -103,13 +103,13 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 111.58.223.125 31418 22
+SSH_CLIENT = 111.58.223.207 53469 22
 # environment
 MAIL = /var/mail/root
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/helpers/browser.sh
+BROWSER = /root/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -206,7 +206,7 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=2/26=8%
-# Finished Make data base on Tue Aug  2 23:11:34 2022
+# Finished Make data base on Fri Aug  5 15:40:09 2022
 
  
 make: *** No rule to make target `all'.  Stop.
