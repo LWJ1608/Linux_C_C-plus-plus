@@ -29,6 +29,8 @@ void test01()
     //把数据写入test03.txt中
     ofs.write((char *)&p1, sizeof(Person));
     ofs.write((char *)&p2, sizeof(Person));
+
+    ofs.close(); //关闭文件
 }
 int main()
 {
