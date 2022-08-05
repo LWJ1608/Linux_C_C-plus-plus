@@ -25,7 +25,9 @@ void test01()
 {
     Person p1(88, 99);
     Person p2(77, 66);
-    ofstream ofs("test03.txt", ios::out | ios::binary);
+    ofstream ofs("test03.txt", ios::out | ios::binary);//二进制模式打开文件
+    //把数据写入test03.txt中
+    ofs.write(*p1.)
 }
 int main()
 {
