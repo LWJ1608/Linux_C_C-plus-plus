@@ -42,7 +42,7 @@ void test01()
         cout << "文本打开失败！" << endl;
         return;
     }
-    Person p(0, 0);
+    Person p;
     ifs.read((char *)&p, sizeof(Person));
     p.Show();
 
