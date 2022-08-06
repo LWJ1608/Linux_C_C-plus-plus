@@ -35,6 +35,13 @@ void test01()
     ofs.write((char *)&p1, sizeof(Person));
     ofs.write((char *)&p2, sizeof(Person));
 
+    ifstream ifs("test04.txt", ios::in | ios::binary);
+    if (!ofs)
+    {
+        cout << "文本打开失败！" << endl;
+        return;
+    }
+
     ofs.close(); //关闭文件
 }
 int main()
