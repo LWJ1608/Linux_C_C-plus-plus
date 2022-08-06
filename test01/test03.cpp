@@ -17,7 +17,7 @@ public:
     Person(int age, int id) : m_age(age), m_id(id) {}
     void Show()
     {
-        cout << "Age = " << m_age << "    "
+        cout << "Age = " << m_age << " "
              << "Id = " << m_id << endl;
     }
 };
