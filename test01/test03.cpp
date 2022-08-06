@@ -35,14 +35,19 @@ void test01()
     ofs.write((char *)&p1, sizeof(Person));
     ofs.write((char *)&p2, sizeof(Person));
 
-    ifstream ifs("test04.txt", ios::in | ios::binary);
+    //从test03.txt中读文件
+    ifstream ifs("test03.txt", ios::in | ios::binary);
     if (!ofs)
     {
         cout << "文本打开失败！" << endl;
         return;
     }
+    Person p(0, 0);
+    ifs.read((char *)&p, sizeof(Person));
+    p.Show();
 
     ofs.close(); //关闭文件
+    ifs.close();
 }
 int main()
 {
