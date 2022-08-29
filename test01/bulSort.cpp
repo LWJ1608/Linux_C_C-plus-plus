@@ -19,7 +19,7 @@ void bubbleSort(T arr[], int count)
         {
             if (arr[j] > arr[j + 1])
             {
-                swap(arr[j], arr[j + 1]);
+                std::swap(arr[j], arr[j + 1]);
                 flag = true;
             }
         }
