@@ -28,8 +28,10 @@ void test01()
 
     //区间拷贝构造
     std::deque<int> v2(v1.begin(), v1.end());
-    //拷贝n个数
-    std::deque<int> v3(1, v1.begin());
+    //拷贝n个数给自身
+    std::deque<int> v3(1, 2);
+    //拷贝构造函数
+    sstd::deque(const deque &dep);
 }
 int main()
 {
