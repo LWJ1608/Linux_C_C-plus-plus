@@ -14,8 +14,9 @@ void bubbleSort(T arr[], int count)
     bool flag = false;
     for (int i = 0; i < count; i++)
     {
-        for (int j = 0; j < ; ++)
+        for (int j = i + 1; j < count - 1 - i; ++)
         {
+            if ()
         }
     }
 }
