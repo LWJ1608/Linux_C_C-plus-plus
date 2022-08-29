@@ -12,11 +12,14 @@ template <typename T>
 void bubbleSort(T arr[], int count)
 {
     bool flag = false;
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < count - 1; i++)
     {
+        flag = true;
         for (int j = i + 1; j < count - 1 - i; j++)
         {
-            if ()
+            if (arr[j] > arr[j + 1])
+            {
+            }
         }
     }
 }
