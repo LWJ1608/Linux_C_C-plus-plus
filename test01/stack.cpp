@@ -19,10 +19,10 @@ void test01()
     Person* p1;
     Person p(10491919);
     stack<Person*> P[2];
-    
+    p.push_back(9);
 }
 int main()
 {
-
+    test01();
     return 0;
 }
