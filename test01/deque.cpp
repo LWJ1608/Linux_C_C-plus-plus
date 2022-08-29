@@ -31,11 +31,11 @@ void test01()
     //拷贝n个数给自身
     std::deque<int> v3(1, 2);
     //拷贝构造函数
-    sstd::deque(const deque &dep);
+    std::deque<int> v4(v1);
+    printDeque(v1);
 }
 int main()
 {
-
     test01();
     return 0;
 }
