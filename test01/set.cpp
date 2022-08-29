@@ -9,10 +9,15 @@
 class compare
 {
 public:
-
+    bool operator()(int s1,int s2)
+    {
+        return s1 < s2;
+    }
 };
 
-int main(){
-
+int main()
+{
+    std::set<int> v1;
+    v1.
     return 0;
 }
