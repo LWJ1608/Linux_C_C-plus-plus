@@ -22,13 +22,17 @@ void printSet(std::set<int> s)
     }
     std::cout << std::endl;
 }
-int main()
+void test01()
 {
     std::set<int> v1;
     v1.insert(8);
     v1.insert(4);
     v1.insert(9);
     v1.insert(1);
-
+    printSet(v1);
+}
+int main()
+{
+    test01();
     return 0;
 }
