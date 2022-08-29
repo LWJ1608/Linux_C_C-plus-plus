@@ -37,7 +37,11 @@ void test01()
 //赋值操作
 void test02()
 {
-    std::d
+    std::deque<int> v1;
+    v1.assign(10, 5); //插入10个5
+    std::deque<int> v2;
+    v2.assign(v1.begin(), v1.end());
+    printDeque(v1);
 }
 int main()
 {
