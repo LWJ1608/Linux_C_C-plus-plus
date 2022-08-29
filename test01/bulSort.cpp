@@ -30,5 +30,6 @@ int main()
     int arr[] = {2, 4, 12, 7, 8, 4};
     int size = sizeof(arr) / sizeof(arr[1]);
     bubbleSort(arr, size);
+    printArr(arr, size);
     return 0;
 }
