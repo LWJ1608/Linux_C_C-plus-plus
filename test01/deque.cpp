@@ -32,7 +32,7 @@ void test01()
     std::deque<int> v3(1, 2);
     //拷贝构造函数
     std::deque<int> v4(v1);
-    printDeque(v1);
+    printDeque(v2);
 }
 //赋值操作
 void test02()
