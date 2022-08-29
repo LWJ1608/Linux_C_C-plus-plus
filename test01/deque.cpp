@@ -34,7 +34,7 @@ void test01()
     std::deque<int> v4(v1);
     printDeque(v2);
 }
-//赋值操作
+//赋值,大小操作
 void test02()
 {
     std::deque<int> v1;
