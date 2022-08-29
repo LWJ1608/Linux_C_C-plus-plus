@@ -27,7 +27,7 @@ void test01()
     v1.push_back(4);
 
     //区间拷贝构造
-    std::deque<int> v2(v1.begin(), v1.end());
+    std::deque<int> v2(v1.begin(), v1.end());vv
     //拷贝n个数给自身
     std::deque<int> v3(1, 2);
     //拷贝构造函数
