@@ -18,5 +18,10 @@ public:
 int main()
 {
     std::set<int> v1;
-    v1.return 0;
+    v1.insert(8);
+    v1.insert(8);
+    v1.insert(8);
+    v1.insert(8);
+
+    return 0;
 }
