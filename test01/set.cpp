@@ -8,11 +8,11 @@
 #include<set>
 class compare
 {
-    public:
+public:
+
 };
 
-int main()
-{
+int main(){
 
     return 0;
 }
