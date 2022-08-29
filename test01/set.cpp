@@ -14,7 +14,7 @@ public:
         return s1 < s2;
     }
 };
-void printSet(std::set<int> s)
+void printSet(std::set<int, compare> s)
 {
     for (std::set<int>::iterator it = s.begin(); it != s.end(); it++)
     {
