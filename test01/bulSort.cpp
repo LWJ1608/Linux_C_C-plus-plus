@@ -1,6 +1,13 @@
 #include <iostream>
 
-void printArr(int arr[], int count);
+void printArr(int arr[], int count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
 template <typename T>
 void bubbleSort(T arr[], int count)
 {
