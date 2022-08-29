@@ -29,6 +29,7 @@ void test01()
     v1.insert(4);
     v1.insert(9);
     v1.insert(1);
+
     printSet(v1);
 }
 int main()
