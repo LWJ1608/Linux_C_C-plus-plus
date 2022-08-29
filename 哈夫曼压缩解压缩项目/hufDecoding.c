@@ -1,7 +1,7 @@
 #pragma pack(push)
 #pragma pack(1)
 
-//½âÑ¹ËõÔ´³ÌĞò
+//è§£å‹ç¼©æºç¨‹åº
 #include<stdio.h>
 #include<string.h>
 #include<malloc.h>
@@ -32,9 +32,9 @@ typedef struct HUFF_TABLE{
 }HUFF_TABLE;
 
 typedef struct MECHUF_HEAD{
-	char flag[6];				//ÎÄ¼ş±êÊ¶
-	u8 alphaCount;				//×Ö·ûÖÖÀà¸öÊı alphaCount*5 ×Ö·û¼°Æä³öÏÖÆµ¶ÈµÄÊı¾İ¿é´óĞ¡
-	u32 bitsCount;				//Ñ¹Ëõ½á¹û·¶Î§ 
+	char flag[6];				//æ–‡ä»¶æ ‡è¯†
+	u8 alphaCount;				//å­—ç¬¦ç§ç±»ä¸ªæ•° alphaCount*5 å­—ç¬¦åŠå…¶å‡ºç°é¢‘åº¦çš„æ•°æ®å—å¤§å°
+	u32 bitsCount;				//å‹ç¼©ç»“æœèŒƒå›´ 
 }MECHUF_HEAD;
 
 void getTargetFileName(char *sourceFileName, char *targetFileName);
@@ -124,7 +124,7 @@ int findMinFreqIndex(HUFF_TABLE *huf, int count){
 void showHuffTab(HUFF_TABLE *huf, int alphaCount){
 	int i = 0; 
 
-	printf("%4s %4s %4s %6s %6s %6s %s\n", "ÏÂ±ê", "×Ö·û", "Æµ¶È", "×óº¢×Ó", "ÓÒº¢×Ó", "·ÃÎÊ·ñ", "¹ş·òÂü±àÂë");
+	printf("%4s %4s %4s %6s %6s %6s %s\n", "ä¸‹æ ‡", "å­—ç¬¦", "é¢‘åº¦", "å·¦å­©å­", "å³å­©å­", "è®¿é—®å¦", "å“ˆå¤«æ›¼ç¼–ç ");
 	
 	for(i = 0; i < alphaCount; i++){
 		printf("%4d %4c %4d %6d %6d %6d %s\n", i, huf[i].freq.alpha, huf[i].freq.freq, huf[i].leftChild, huf[i].rightChild, huf[i].isVisited, huf[i].huffCode);
@@ -161,7 +161,7 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount){
 void showFreq(const FREQ *freq, int alphaCount){
 	int i;
 
-	puts("×Ö·û\tÆµ¶È");
+	puts("å­—ç¬¦\té¢‘åº¦");
 	for(i = 0; i < alphaCount; i++){
 		printf("%c           %d\n", freq[i].alpha, freq[i].freq);
 	}
@@ -224,12 +224,12 @@ void main(int argc, char **argv){
 	HUFF_TABLE *huf = NULL;
 
 	if(argc <= 1 || argc > 3){
-		puts("Usage : hufDecoding Ô´ÎÄ¼ş [Ä¿±êÎÄ¼ş]");
+		puts("Usage : hufDecoding æºæ–‡ä»¶ [ç›®æ ‡æ–‡ä»¶]");
 
 		return;
 	}
 	strcpy(sourceFileName, argv[1]);
-	if(argc == 3){	// ´æÔÚÄ¿±êÎÄ¼ş
+	if(argc == 3){	// å­˜åœ¨ç›®æ ‡æ–‡ä»¶
 		strcpy(targetFileName, argv[2]);
 	}else{
 		getTargetFileName(sourceFileName, targetFileName);
