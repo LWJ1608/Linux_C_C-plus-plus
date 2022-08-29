@@ -19,9 +19,11 @@ void test01()
 {
     Person *p1;
     Person p(10491919);
-    p1 = p;
-    std::stack<Person>;
-    P.push(9);
+    p1 = &p;
+    std::stack<Person> v;
+    std::stack<Person *> v1;
+    v.push(p);
+    v1.push(p1);
 }
 int main()
 {
