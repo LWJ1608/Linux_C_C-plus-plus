@@ -34,6 +34,7 @@ void test01()
     std::deque<int> v4(v1);
     printDeque(v1);
 }
+
 int main()
 {
     test01();
