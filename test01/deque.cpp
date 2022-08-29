@@ -34,9 +34,14 @@ void test01()
     std::deque<int> v4(v1);
     printDeque(v1);
 }
-
+//赋值操作
+void test02()
+{
+    std::d
+}
 int main()
 {
-    test01();
+    // test01();
+    test02();
     return 0;
 }
