@@ -24,7 +24,7 @@ void printSet(std::set<int> s)
 }
 void test01()
 {
-    std::set<int> v1;
+    std::set<int, compare> v1;
     v1.insert(8);
     v1.insert(4);
     v1.insert(9);
