@@ -18,8 +18,8 @@ void test01()
 {
     Person* p1;
     Person p(10491919);
-    std::stack<Person> P[2];
-    p.push(9);
+    std::stack<Person> ;
+    P.push(9);
 }
 int main()
 {
