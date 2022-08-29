@@ -14,14 +14,21 @@ public:
         return s1 < s2;
     }
 };
-
+void printSet(std::set<int> s)
+{
+    for (std::set<int>::iterator it = s.begin(); it != s.end(); it++)
+    {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+}
 int main()
 {
     std::set<int> v1;
     v1.insert(8);
-    v1.insert(8);
-    v1.insert(8);
-    v1.insert(8);
+    v1.insert(4);
+    v1.insert(9);
+    v1.insert(1);
 
     return 0;
 }
