@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <algorithm>
 void printArr(int arr[], int count)
 {
     for (int i = 0; i < count; i++)
@@ -14,11 +14,13 @@ void bubbleSort(T arr[], int count)
     bool flag = false;
     for (int i = 0; i < count - 1; i++)
     {
-        flag = true;
+        flag = false;
         for (int j = i + 1; j < count - 1 - i; j++)
         {
             if (arr[j] > arr[j + 1])
             {
+                swap(arr[j], arr[j + 1]);
+                flag = true;
             }
         }
     }
