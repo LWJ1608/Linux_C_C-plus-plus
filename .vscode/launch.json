@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/数据结构与算法（C++）/数据结构/BinTree/struct/main",
+            "program": "${workspaceFolder}/test01/quickSort",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
