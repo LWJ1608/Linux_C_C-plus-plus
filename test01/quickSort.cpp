@@ -41,9 +41,9 @@ void parition(T arr[], int low, int heigh)
         }
     }
     arr[low] = tmp;
-    return arr;
+    return low; //返回中心轴位置
 }
-void quickSort()
+void quickSort(t arr[], )
 {
 }
 int main()
