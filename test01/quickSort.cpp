@@ -52,7 +52,7 @@ void quickSort(T arr[], int low, int heigh)
         return;
     }
     parition(arr, 0, tmp);
-    parition(arr, tmp + 1, );
+    parition(arr, tmp, heigh);
 }
 template <typename T>
 void quickSort(T arr[], int count)
