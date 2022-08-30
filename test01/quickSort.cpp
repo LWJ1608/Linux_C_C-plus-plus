@@ -45,11 +45,12 @@ int parition(T arr[], int low, int high)
 template <typename T>
 void quickSort(T arr[], int low, int high)
 {
+    int tmp;
     if (low >= high)
     {
         return;
     }
-    int tmp = parition(arr, low, high);
+    tmp = parition(arr, low, high);
     parition(arr, low, tmp - 1);
     parition(arr, tmp + 1, high);
 }
