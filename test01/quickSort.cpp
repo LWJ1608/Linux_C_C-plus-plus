@@ -15,8 +15,8 @@ void printArr(int *arr, const int count)
     }
     std::cout << std::endl;
 }
-template <tyname T>
-void parition()
+template <typename T>
+void parition(T arr[], int count)
 {
 }
 void quickSort()
