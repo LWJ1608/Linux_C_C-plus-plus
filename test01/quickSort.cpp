@@ -7,8 +7,14 @@
 
 #include <iostream>
 
-void printArr int main()
+void printArr()
 {
+}
+int main()
+{
+    int arr1[] = {3, 5, 2, 6, 1, 3, 0};
+    int count = sizeof(arr) / sizeof(arr[1]);
 
+    printArr(arr, count);
     return 0;
 }
