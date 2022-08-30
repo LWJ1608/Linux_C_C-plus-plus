@@ -16,8 +16,9 @@ void printArr(int *arr, const int count)
     std::cout << std::endl;
 }
 template <typename T>
-void parition(T arr[], int count)
+void parition(T arr[], int low, int heigh)
 {
+    T tmp = arr[low];
 }
 void quickSort()
 {
