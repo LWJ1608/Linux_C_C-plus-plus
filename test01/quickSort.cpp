@@ -21,7 +21,7 @@ void parition(T arr[], int low, int heigh)
     T tmp = arr[low]; //保存中心轴
     while (low != heigh)
     {
-        if (arr[heigh] < tmp)
+        while (arr[heigh] < tmp)
         {
             arr[low] = arr[heigh];
             heigh--;
