@@ -21,7 +21,7 @@ int parition(T arr[], int low, int high)
     T tmp = arr[low]; //保存中心轴
     while (low != high)
     {
-        while (low != high && arr[high] >= tmp)
+        while (low < high && arr[high] >= tmp)
         {
             high--;
         }
@@ -30,7 +30,7 @@ int parition(T arr[], int low, int high)
             arr[low] = arr[high];
             low++;
         }
-        while (low != high && arr[low] <= tmp)
+        while (low < high && arr[low] <= tmp)
         {
             low++;
         }
