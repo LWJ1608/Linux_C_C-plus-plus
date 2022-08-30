@@ -16,43 +16,43 @@ void printArr(int *arr, const int count)
     std::cout << std::endl;
 }
 template <typename T>
-int parition(T arr[], int low, int heigh)
+int parition(T arr[], int low, int high)
 {
     T tmp = arr[low]; //保存中心轴
-    while (low != heigh)
+    while (low != high)
     {
-        while (low != heigh && arr[heigh] >= tmp)
+        while (low != high && arr[high] >= tmp)
         {
-            heigh--;
+            high--;
         }
-        if (low < heigh)
+        if (low < high)
         {
-            arr[low] = arr[heigh];
+            arr[low] = arr[high];
             low++;
         }
-        while (low != heigh && arr[low] <= tmp)
+        while (low != high && arr[low] <= tmp)
         {
             low++;
         }
-        if (low < heigh)
+        if (low < high)
         {
-            arr[heigh] = arr[low];
-            heigh--;
+            arr[high] = arr[low];
+            high--;
         }
     }
     arr[low] = tmp;
     return low; //返回中心轴位置
 }
 template <typename T>
-void quickSort(T arr[], int low, int heigh)
+void quickSort(T arr[], int low, int high)
 {
-    if (low >= heigh)
+    if (low >= high)
     {
         return;
     }
-    int tmp = parition(arr, low, heigh);
+    int tmp = parition(arr, low, high);
     parition(arr, low, tmp - 1);
-    parition(arr, tmp + 1, heigh);
+    parition(arr, tmp + 1, high);
 }
 template <typename T>
 void quickSort(T arr[], int count)
