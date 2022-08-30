@@ -21,7 +21,7 @@ void parition(T arr[], int low, int heigh)
     T tmp = arr[low]; //保存中心轴
     while (low != heigh)
     {
-        /* code */
+        while (arr[heigh] < tmp)
     }
 }
 void quickSort()
