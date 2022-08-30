@@ -18,7 +18,11 @@ void printArr(int *arr, const int count)
 template <typename T>
 void parition(T arr[], int low, int heigh)
 {
-    T tmp = arr[low];
+    T tmp = arr[low]; //保存中心轴
+    while (low != heigh)
+    {
+        /* code */
+    }
 }
 void quickSort()
 {
