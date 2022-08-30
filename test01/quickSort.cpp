@@ -48,8 +48,10 @@ void quickSort(T arr[], int low, int heigh)
 {
     int tmp = parition(arr, low, heigh);
 }
+template <typename T>
 void quickSort(T arr[], int count)
 {
+    quickSort(arr, 0, count - 1);
 }
 int main()
 {
@@ -57,5 +59,6 @@ int main()
     int count = sizeof(arr1) / sizeof(arr1[1]);
 
     printArr(arr1, count);
+    quickSort(arr, count);
     return 0;
 }
