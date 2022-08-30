@@ -7,6 +7,8 @@
 
 #include <iostream>
 
-int main()
+void printArr int main()
 {
+
+    return 0;
 }
