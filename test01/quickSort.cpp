@@ -47,7 +47,7 @@ template <typename T>
 void quickSort(T arr[], int low, int heigh)
 {
     int tmp = parition(arr, low, heigh);
-    if ()
+    if (low >= heigh)
     {
         return;
     }
