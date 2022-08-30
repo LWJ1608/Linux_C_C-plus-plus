@@ -47,6 +47,8 @@ template <typename T>
 void quickSort(T arr[], int low, int heigh)
 {
     int tmp = parition(arr, low, heigh);
+
+    parition()
 }
 template <typename T>
 void quickSort(T arr[], int count)
@@ -59,6 +61,8 @@ int main()
     int count = sizeof(arr1) / sizeof(arr1[1]);
 
     printArr(arr1, count);
-    quickSort(arr, count);
+    quickSort(arr1, count);
+    printArr(arr1, count);
+
     return 0;
 }
