@@ -30,7 +30,7 @@ int parition(T arr[], int low, int heigh)
             arr[low] = arr[heigh];
             low++;
         }
-        while (low != heigh && arr[low] <= tmp)
+        while (low != heigh && arr[low] < tmp)
         {
             low++;
         }
