@@ -22,6 +22,9 @@ void parition(T arr[], int low, int heigh)
     while (low != heigh)
     {
         while (arr[heigh] < tmp)
+        {
+            arr[low] = arr[heigh];
+        }
     }
 }
 void quickSort()
