@@ -62,7 +62,7 @@ void quickSort(T arr[], int count)
 int main()
 {
     int arr1[] = {3, 5, 2, 6, 1, 3, 0};
-    int count = sizeof(arr1) / sizeof(arr1[1]);
+    int count = sizeof(arr1) / sizeof(arr1[0]);
 
     printArr(arr1, count);
     quickSort(arr1, count);
