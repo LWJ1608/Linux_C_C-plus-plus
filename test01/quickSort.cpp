@@ -6,9 +6,10 @@
  **/
 #include <iostream>
 
-void printArr(int *arr, const int count)
+template <typename Type>
+void print(const Type &arr, int size) //打印数组
 {
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < size; i++)
     {
         std::cout << arr[i] << " ";
     }
