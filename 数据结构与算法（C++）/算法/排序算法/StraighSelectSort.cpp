@@ -19,13 +19,13 @@ void print(const Type *arr, const int size)
 template <typename Type>
 void straighSelectSort(Type *arr, const int size)
 {
-	Type min;
+	int min; //记录最小元素的下标
 	for (int i = 0; i < size - 1; i++)
 	{
 		min = i;
 		for (int j = i + 1; j < size; j++)
 		{
-			if (arr[i] > arr[j])
+			if (arr[min] > arr[j])
 			{
 				min = j;
 			}
