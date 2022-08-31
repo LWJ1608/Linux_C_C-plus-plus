@@ -34,16 +34,16 @@ void binaryInsertSort(Type arr[], int size)
                 low = mid + 1;
             }
         }
-        for(j = pos - 1;j >= low; j--)
+        for (j = pos - 1; j >= low; j--)
         {
-            arr[j+ 1] = arr[j];
+            arr[j + 1] = arr[j];
         }
         arr[low] = tmp;
     }
 }
 int main()
 {
-    int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
+    int arr[] = {36, 80, 45, 66, 22, 9, 16, 36};
     int count = sizeof(arr) / sizeof(arr[0]);
     binaryInsertSort(arr, count);
     print(arr, count);
