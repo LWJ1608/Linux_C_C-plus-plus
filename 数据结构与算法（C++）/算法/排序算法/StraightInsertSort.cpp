@@ -44,7 +44,7 @@ void straightInsertSort(T arr[], int size)
         {
             arr[j + 1] = arr[j];
         }
-        arr[j] = tmp;
+        arr[j + 1] = tmp;
     }
 }
 int main()
