@@ -40,7 +40,7 @@ void straightInsertSort(T arr[], int size)
     for (i = 1; i < size; i++)
     {
         tmp = arr[i];
-        for (j = i - 1; arr[j] > tmp && j >= 0; j--)
+        for (j = i - 1; arr[j] > tmp && j >= 0; j--) //控制有序序列
         {
             arr[j + 1] = arr[j];
         }
