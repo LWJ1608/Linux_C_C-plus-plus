@@ -27,11 +27,18 @@ void binaryInsertSort(Type arr[], int size)
             mid = (low + high) / 2; //求有序序列的中间值，
             if (tmp < arr[mid])
             {
+                high = mid - 1;
             }
             else
             {
+                low = mid + 1;
             }
         }
+        for(j = pos - 1;j >= low; j--)
+        {
+            arr[j+ 1] = arr[j];
+        }
+        arr[low] = tmp;
     }
 }
 int main()
