@@ -17,7 +17,15 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 void binaryInsertSort(Type arr[], int size)
 {
-    int
+    int pos, j, low, high;
+    Type tmp;
+    for (pos = 1; pos < size; pos++)
+    {
+        tmp = arr[pos], low = 0, high = size - 1;
+        while (low <= high)
+        {
+        }
+    }
 }
 int main()
 {
