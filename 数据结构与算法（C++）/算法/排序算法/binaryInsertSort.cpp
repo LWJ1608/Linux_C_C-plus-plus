@@ -14,8 +14,16 @@ void print(const Type &arr, int size) //打印数组
     }
     std::cout << std::endl;
 }
+template <typename Type>
+void binaryInsertSort(Type arr[], int size)
+{
+    int
+}
 int main()
 {
-
+    int arr[] = {4, 2, 5, 88, 4, 1, 88, 5};
+    int count = sizeof(arr) / sizeof(arr[0]);
+    binaryInsertSort(arr, count);
+    print(arr, count);
     return 0;
 }
