@@ -24,7 +24,7 @@ void binaryInsertSort(Type arr[], int size)
         tmp = arr[pos], low = 0, high = size - 1;
         while (low <= high)
         {
-        }
+                }
     }
 }
 int main()
