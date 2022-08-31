@@ -19,17 +19,16 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 void bubbleSort(Type *arr, int size) //冒泡排序
 {
-    // Type tmp;
+    bool flag;
     for (int i = 0; i < size - 1; i++)
     {
+        flag = false;
         for (int j = 0; j < size - i - 1; j++)
         {
             if (arr[j] < arr[j + 1])
             {
-                // tmp = arr[j];
-                // arr[j] = arr[j + 1];
-                // arr[j + 1] = tmp;
                 std::swap(arr[j], arr[j + 1]); //调用STL交换函数,升序话把两个数交换
+                flag = true;
             }
         }
     }
