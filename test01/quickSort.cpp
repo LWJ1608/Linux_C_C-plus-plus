@@ -7,7 +7,7 @@
 #include <iostream>
 
 template <typename Type>
-void print(const Type &arr, int size) //打印数组
+void printArr(const Type &arr, int size) //打印数组
 {
     for (int i = 0; i < size; i++)
     {
