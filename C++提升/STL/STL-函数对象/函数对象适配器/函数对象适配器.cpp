@@ -9,27 +9,25 @@
 #include <functional>
 #include <algorithm>
 
-struct PrintVector
+struct PrintVector : public binary_functional<int, int, void>
 {
     void operator()(int v)
     {
         std::cout << v << " ";
-    }
-    std::cout << std::endl;
-};
+    };
 
-void test01()
-{
-    std::vector<int> v1;
-    for (int i = 0; i < 8; i++)
+    void test01()
     {
-        v1.push_back(i);
+        std::vector<int> v1;
+        for (int i = 0; i < 8; i++)
+        {
+            v1.push_back(i);
+        }
+        std::for_each(v1.begin(), v1.end(), PrintVector());
     }
-    std::for_each(v1.begin(), v1.end(), PrintVector());
-}
 
-int main()
-{
-    test01();
-    return 0;
-}
+    int main()
+    {
+        test01();
+        return 0;
+    }
