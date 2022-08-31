@@ -37,8 +37,14 @@ void straightInsertSort(T arr[], int size)
 {
     int i, j;
     T tmp; //存放临时的值
-    for (i =)
+    for (i = 1; i < size; i++)
     {
+        tmp = arr[i];
+        for (j = i - 1; arr[j] > tmp && j >= 0; j--)
+        {
+            arr[j + 1] = arr[j];
+        }
+        arr[j] = tmp;
     }
 }
 int main()
