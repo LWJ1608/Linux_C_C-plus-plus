@@ -17,13 +17,20 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 void binaryInsertSort(Type arr[], int size)
 {
-    int pos, j, low, high;
+    int pos, j, low, high, mid;
     Type tmp;
     for (pos = 1; pos < size; pos++)
     {
         tmp = arr[pos], low = 0, high = size - 1;
         while (low <= high)
         {
+            mid = (low + high) / 2; //求有序序列的中间值，
+            if (tmp < arr[mid])
+            {
+            }
+            else
+            {
+            }
         }
     }
 }
