@@ -16,35 +16,19 @@ void print(const Type &arr, int size) //打印数组
     }
     std::cout << std::endl;
 }
-// template <typename Type>
-// void straightInsertSort(Type *arr, int size)
-// {
-//     int pos, i;
-//     Type tmp;
-//     for (pos = 1; pos < size; pos++) //控制插入次数
-//     {
-//         tmp = arr[pos];                                //将要插入的数据放入临时变量中
-//         for (i = pos - 1; tmp < arr[i] && i >= 0; i--) //判断数据是否要后移
-//         {
-//             arr[i + 1] = arr[i]; //数据向后移动
-//         }
-//         arr[i + 1] = tmp;
-//     }
-// }
-
-template <typename T>
-void straightInsertSort(T arr[], int size)
+template <typename Type>
+void straightInsertSort(Type *arr, int size)
 {
-    int i, j;
-    T tmp; //存放临时的值
-    for (i = 1; i < size; i++)
+    int pos, i;
+    Type tmp;
+    for (pos = 1; pos < size; pos++) //控制插入次数
     {
-        tmp = arr[i];
-        for (j = i - 1; arr[j] > tmp && j >= 0; j--) //控制有序序列
+        tmp = arr[pos];                                //将要插入的数据放入临时变量中
+        for (i = pos - 1; tmp < arr[i] && i >= 0; i--) //判断数据是否要后移
         {
-            arr[j + 1] = arr[j];
+            arr[i + 1] = arr[i]; //数据向后移动
         }
-        arr[j + 1] = tmp;
+        arr[i + 1] = tmp;
     }
 }
 int main()
