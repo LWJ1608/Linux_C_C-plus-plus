@@ -71,9 +71,9 @@ public:
     Node<Type> *findParent(Node<Type> *child) const { return findParent(child, root); } //查找当前节点的父节点
     Node<Type> *copy() const { return copy(root); };                                    //复制一个二叉树
     bool equal(Node<Type> *t) const { return equal(root, t); }                          //两个二叉树是否相同的比较
-    void preOrderTraverse() const { preOrder(root); }                                   //前序遍历
-    void inOrederTraverse() const { inOrder(root); }                                    //中序遍历
-    void postOrderTraverse() const { postOrder(root); }                                 //后序遍历
+    void preOrderTraverse() const { preOrder(root); }                                   //前序遍历，递归法
+    void inOrederTraverse() const { inOrder(root); }                                    //中序遍历，递归法
+    void postOrderTraverse() const { postOrder(root); }                                 //后序遍历，递归法
     void preOrderCreate(Type flag) { preOrderCreate(flag, root); }                      //前序法创建二叉树
 };
 
