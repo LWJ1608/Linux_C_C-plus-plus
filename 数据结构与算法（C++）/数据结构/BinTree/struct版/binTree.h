@@ -256,6 +256,17 @@ void BinTree<Type>::inOrderderWithStack() const //非递归中置遍历
 {
     Node<Type> *p = root;
     std::stack<Node<Type> *> s;
+    while (!s.empty() || p)
+    {
+        if (p)
+        {
+            s.push(p);
+            p = p->leftChild;
+        }
+        else
+        {
+        }
+    }
 }
 // void BinTree<Type>::postOderWithStack() const //非递归后置遍历
 // {
