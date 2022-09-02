@@ -232,6 +232,11 @@ void BinTree<Type>::postOrder(Node<Type> *t) const //递归后序遍历
 template <typename Type>
 void BinTree<Type>::preOrderWithStack() //非递归前置遍历
 {
+    Node *p = root;
+    stack<Node *> s;
+    while (!empty() || p)
+    {
+    }
 }
 
 /*使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个二叉树，
