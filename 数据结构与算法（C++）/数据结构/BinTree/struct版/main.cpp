@@ -21,7 +21,7 @@ void test01()
     cout << "元素c的父结点：" << t1.findParent(iNode)->data << endl;
     cout << "前序遍历二叉树t1：";
     t1.preOrderTraverse();
-    t1.preOrderWithStack();
+    // t1.preOrderWithStack();
     cout << "\n中序遍历二叉树t1：";
     t1.inOrederTraverse();
     cout << "\n后序遍历二叉树t1：";
