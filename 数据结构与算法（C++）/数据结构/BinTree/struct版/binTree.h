@@ -238,9 +238,11 @@ void BinTree<Type>::preOrderWithStack() //非递归前置遍历
     {
         if (p)
         {
+            s.push();
         }
         else
         {
+
         }
     }
 }
