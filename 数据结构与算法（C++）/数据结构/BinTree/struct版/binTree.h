@@ -74,8 +74,10 @@ public:
     void preOrderTraverse() const { preOrder(root); }                                   //前序遍历，递归法
     void inOrederTraverse() const { inOrder(root); }                                    //中序遍历，递归法
     void postOrderTraverse() const { postOrder(root); }                                 //后序遍历，递归法
-    void preOrderWith;
-    void preOrderCreate(Type flag) { preOrderCreate(flag, root); } //前序法创建二叉树
+    void preOrderWithStack();                                                           //非递归前置遍历
+    void inOrderderWithStack();                                                         //非递归中置遍历
+    void postOderWithStack();                                                           //非递归后置遍历
+    void preOrderCreate(Type flag) { preOrderCreate(flag, root); }                      //前序法创建二叉树
 };
 
 //////////////////////////以下为接口实现//////////////////////////////
