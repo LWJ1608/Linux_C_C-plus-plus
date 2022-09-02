@@ -232,6 +232,13 @@ void BinTree<Type>::postOrder(Node<Type> *t) const //递归后序遍历
     }
 }
 template <typename Type>
+void BinTree<Type>::levelOrder(Node<Type> *t) const //层次遍历
+{
+    Node<Type> *p = t;
+    std::queue<Node *> q;
+}
+
+template <typename Type>
 void BinTree<Type>::preOrderWithStack() const //非递归前置遍历
 {
     Node<Type> *p = root;
