@@ -234,7 +234,7 @@ void BinTree<Type>::preOrderWithStack() const //非递归前置遍历
 {
     Node<Type> *p = root;
     std::stack<Node<Type> *> s;
-    while (!empty() || p)
+    while (!s.empty() || p)
     {
         if (p)
         {
