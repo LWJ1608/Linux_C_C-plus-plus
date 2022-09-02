@@ -240,10 +240,13 @@ void BinTree<Type>::preOrderWithStack() //非递归前置遍历
         {
             s.push(p);
             std::cout << p.data << " ";
-            p = p->left;
+            p = p->leftChild;
         }
         else
         {
+            p = s.top();
+            s.pop();
+            p = p.rightChild;
         }
     }
 }
