@@ -251,6 +251,14 @@ void BinTree<Type>::preOrderWithStack() const //非递归前置遍历
     }
 }
 
+template <typename Type>
+void BinTree<Type>::inOrderderWithStack() const //非递归中置遍历
+{
+}
+// void BinTree<Type>::postOderWithStack() const //非递归后置遍历
+// {
+
+// }
 /*使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个二叉树，
 这样更好理解，还能避免二叉树的二义性,如 abd**eg***c*fh**i** 。*/
 template <typename Type>
