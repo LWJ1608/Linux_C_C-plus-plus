@@ -239,7 +239,8 @@ void BinTree<Type>::preOrderWithStack() //非递归前置遍历
 template <typename Type>
 void BinTree<Type>::preOrderCreate(Type flag, Node<Type> *&t) //前序法创建二叉树
 {
-    Type value;        //键盘输入的值
+    Type value; //键盘输入的值
+    std::cout << "请输入带外部结点的二叉树前序序列(输入结束标志结束)> ";
     std::cin >> value; //输入
     if (value != flag)
     {
