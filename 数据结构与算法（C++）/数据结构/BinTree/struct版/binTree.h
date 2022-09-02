@@ -254,6 +254,8 @@ void BinTree<Type>::preOrderWithStack() const //非递归前置遍历
 template <typename Type>
 void BinTree<Type>::inOrderderWithStack() const //非递归中置遍历
 {
+    Node<Type> *p = root;
+    std::stack<Node<Type> *> s;
 }
 // void BinTree<Type>::postOderWithStack() const //非递归后置遍历
 // {
