@@ -233,7 +233,7 @@ template <typename Type>
 void BinTree<Type>::preOrderWithStack() //非递归前置遍历
 {
     Node *p = root;
-    stack<Node *> s;
+    std::stack<Node *> s;
     while (!empty() || p)
     {
         if (p)
