@@ -265,6 +265,10 @@ void BinTree<Type>::inOrderderWithStack() const //非递归中置遍历
         }
         else
         {
+            p = s.top();
+            s.pop();
+            std::cout << p->data << " ";
+            p = p->rightChild;
         }
     }
 }
