@@ -236,6 +236,12 @@ void BinTree<Type>::preOrderWithStack() //非递归前置遍历
     stack<Node *> s;
     while (!empty() || p)
     {
+        if (p)
+        {
+        }
+        else
+        {
+        }
     }
 }
 
