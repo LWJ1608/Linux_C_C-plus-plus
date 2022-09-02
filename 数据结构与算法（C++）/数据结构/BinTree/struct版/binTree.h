@@ -231,7 +231,7 @@ void BinTree<Type>::postOrder(Node<Type> *t) const //递归后序遍历
     }
 }
 template <typename Type>
-void preOrderWithStack() //非递归前置遍历
+void BinTree<Type>::preOrderWithStack() //非递归前置遍历
 {
 }
 
