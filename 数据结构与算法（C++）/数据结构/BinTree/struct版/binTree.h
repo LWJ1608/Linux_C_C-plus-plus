@@ -74,6 +74,7 @@ public:
     void preOrderTraverse() const { preOrder(root); }                                   //前序遍历，递归法
     void inOrederTraverse() const { inOrder(root); }                                    //中序遍历，递归法
     void postOrderTraverse() const { postOrder(root); }                                 //后序遍历，递归法
+    void levelOrderTraverse()() const { levelOrder(root); }                             //层次遍历
     void preOrderWithStack() const;                                                     //非递归前置遍历
     void inOrderderWithStack() const;                                                   //非递归中置遍历
     void postOderWithStack() const;                                                     //非递归后置遍历
