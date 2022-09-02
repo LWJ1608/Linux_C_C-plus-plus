@@ -73,9 +73,9 @@ public:
     void preOrderTraverse() const { preOrder(root); }                                   //前序遍历，递归法
     void inOrederTraverse() const { inOrder(root); }                                    //中序遍历，递归法
     void postOrderTraverse() const { postOrder(root); }                                 //后序遍历，递归法
-    void preOrderWithStack();                                                           //非递归前置遍历
-    void inOrderderWithStack();                                                         //非递归中置遍历
-    void postOderWithStack();                                                           //非递归后置遍历
+    void preOrderWithStack() const;                                                     //非递归前置遍历
+    void inOrderderWithStack() const;                                                   //非递归中置遍历
+    void postOderWithStack() const;                                                     //非递归后置遍历
     void preOrderCreate(Type flag) { preOrderCreate(flag, root); }                      //前序法创建二叉树
 };
 
@@ -230,7 +230,7 @@ void BinTree<Type>::postOrder(Node<Type> *t) const //递归后序遍历
     }
 }
 template <typename Type>
-void BinTree<Type>::preOrderWithStack() //非递归前置遍历
+void BinTree<Type>::preOrderWithStack() const //非递归前置遍历
 {
     Node *p = root;
     std::stack<Node *> s;
