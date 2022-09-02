@@ -15,7 +15,7 @@ class BinTree;
 template <typename Type>
 struct Node //二叉树结点，结构体
 {
-    friend class BinTree<Type>;
+    friend class BinTree<Type>; //友元类
 
     Type data;                                                                //数据
     Node<Type> *leftChild, *rightChild;                                       //分别为左孩子和右孩子
