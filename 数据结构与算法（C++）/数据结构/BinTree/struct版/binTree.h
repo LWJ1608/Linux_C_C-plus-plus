@@ -230,6 +230,10 @@ void BinTree<Type>::postOrder(Node<Type> *t) const //递归后序遍历
         std::cout << t->data << ' ';
     }
 }
+template <typename Type>
+void preOrderWithStack() //非递归前置遍历
+{
+}
 
 /*使用带外部节点‘*’，‘*’号不存储，用来把二叉树补成一个二叉树，
 这样更好理解，还能避免二叉树的二义性,如 abd**eg***c*fh**i** 。*/
