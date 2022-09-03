@@ -27,6 +27,8 @@ void test01()
     // t1.inOrderderWithStack();
     cout << "\n后序遍历二叉树t1：";
     t1.postOrderTraverse();
+    cout << "\n层次遍历二叉树t1：";
+    t1.levelOrderTraverse();
     cout << endl;
 
     BinTree<char> t2;
