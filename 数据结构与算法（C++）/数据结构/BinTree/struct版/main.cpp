@@ -31,17 +31,17 @@ void test01()
     t1.levelOrderTraverse();
     cout << endl;
 
-    BinTree<char> t2;
-    t2.preOrderCreate('*');
-    bool p = t2.equal(t1.findRoot());
-    if (p)
-    {
-        cout << "相同！" << endl;
-    }
-    else
-    {
-        cout << "不相同！" << endl;
-    }
+    // BinTree<char> t2;
+    // t2.preOrderCreate('*');
+    // bool p = t2.equal(t1.findRoot());
+    // if (p)
+    // {
+    //     cout << "相同！" << endl;
+    // }
+    // else
+    // {
+    //     cout << "不相同！" << endl;
+    // }
 }
 
 int main()
