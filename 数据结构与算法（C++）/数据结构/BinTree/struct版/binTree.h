@@ -241,7 +241,7 @@ void BinTree<Type>::levelOrder(Node<Type> *t) const //层次遍历
         q.push(p);
         std::cout << p->data << " ";
         p = q.front();
-        p =
+        p = ;
     }
 }
 
