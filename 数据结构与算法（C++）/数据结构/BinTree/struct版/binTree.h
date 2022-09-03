@@ -234,7 +234,7 @@ template <typename Type>
 void BinTree<Type>::levelOrderTraverse() const //层次遍历
 {
     Node<Type> *p = root;
-    std::queue<Node *> q;
+    std::queue<Node<Type> *> q;
     if (p)
     {
         q.push(p);
