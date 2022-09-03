@@ -240,7 +240,7 @@ void BinTree<Type>::levelOrderTraverse() const //层次遍历
         q.push(p);
     }
     p = q.front();
-    while (q.empty())
+    while (!q.empty())
     {
         p = q.front();
         q.pop();
