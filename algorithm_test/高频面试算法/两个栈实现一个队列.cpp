@@ -18,11 +18,24 @@ public:
     {
         s1.push(value);
     }
-    void pop_()
+    T pop_()
     {
-        if (s1.empty())
+        int temp;
+        if (s2.empty())
         {
+            while (!s1.empty())
+            {
+                int tmp = s1.top();
+                s1.pop();
+                s2.push(tmp);
+            }
         }
+        if (!s2.empty())
+        {
+            temp = s2.top();
+            s2.pop();
+        }
+        return temp;
     }
 
 private:
@@ -40,7 +53,7 @@ int main(void)
         t.push_(i);
     }
 
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
     {
         num = t.pop_();
         cout << num << " ";
