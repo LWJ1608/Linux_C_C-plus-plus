@@ -10,18 +10,18 @@
 #include <stack>
 using namespace std;
 
-template <Typename T>
+template <typename T>
 class Queue
 {
+public:
 private:
-    stack<T> s2;
-
+    stack<T> s1;
     stack<T> s2;
 };
 
 int main(void)
 {
-    Test t;
+    Queue<int> t;
     int num;
 
     for (int i = 0; i < 7; i++)
