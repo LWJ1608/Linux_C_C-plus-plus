@@ -15,9 +15,10 @@ using namespace std;
 void conversion(int num, int M)
 {
     vector<char> s;
+    int tmp;
     while (num)
     {
-        int tmp = "0123456789ABCDEFG"[num % M];
+        tmp = "0123456789ABCDEFG"[num % M];
         s.push_back(tmp);
         tmp /= M;
     }
