@@ -20,7 +20,7 @@ void conversion(int num, int M)
     {
         tmp = "0123456789ABCDEFG"[num % M];
         s.push_back(tmp);
-        tmp /= M;
+        num /= M;
     }
     int n;
     reverse(s.begin(), s.end()); //从高位向地位输出
