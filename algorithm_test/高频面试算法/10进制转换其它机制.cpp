@@ -23,9 +23,8 @@ void conversion(int num, int M)
         tmp /= M;
     }
     int n;
-    s.rev
-            cout
-        << endl;
+    s.reverse();
+    cout << endl;
 }
 int main(void)
 {
