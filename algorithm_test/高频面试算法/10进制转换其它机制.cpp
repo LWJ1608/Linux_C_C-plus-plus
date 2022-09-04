@@ -22,8 +22,11 @@ void conversion(int num, int M)
         tmp /= M;
     }
     int n;
-    s.reverce(s.begin(), s.end());
-
+    reverse(s.begin(), s.end()); //从高位向地位输出
+    for (vector<char>::iterator it = s.begin(); it != s.end(); it++)
+    {
+        cout << *it;
+    }
     cout << endl;
 }
 int main(void)
