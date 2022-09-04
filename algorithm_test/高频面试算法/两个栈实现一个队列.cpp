@@ -16,8 +16,7 @@ class Queue
 private:
     stack<T> s2;
 
-    stack<T>
-        s2;
+    stack<T> s2;
 };
 
 int main(void)
