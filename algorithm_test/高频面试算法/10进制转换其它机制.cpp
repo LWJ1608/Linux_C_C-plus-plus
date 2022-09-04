@@ -22,6 +22,7 @@ int main(void)
     cin >> num;
     cout << "请输入需要转换的数> ";
     cin >> M;
+    conversion(num, m);
 
     return 0;
 }
