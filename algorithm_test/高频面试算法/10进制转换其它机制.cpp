@@ -14,6 +14,10 @@ using namespace std;
 // 在进制的转换当中十进制是中间的桥梁;
 void conversion(int num, int M)
 {
+    while (num)
+    {
+        int tmp = "0123456789ABCDEFG"[num % M];
+    }
 }
 int main(void)
 {
@@ -22,7 +26,7 @@ int main(void)
     cin >> num;
     cout << "请输入需要转换的数> ";
     cin >> M;
-    conversion(num, m);
+    conversion(num, M);
 
     return 0;
 }
