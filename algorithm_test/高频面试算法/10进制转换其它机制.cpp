@@ -12,11 +12,16 @@ using namespace std;
 // 将十进制转换为任意进制
 // 其他进制向十进制的转换--->进行每位的乘积求和即可
 // 在进制的转换当中十进制是中间的桥梁;
-void baseConversion()
+void conversion(int num, int M)
 {
 }
 int main(void)
 {
+    int num, M;
+    cout << "请输入一个十进制的数> ";
+    cin >> num;
+    cout << "请输入需要转换的数> ";
+    cin >> M;
 
     return 0;
 }
