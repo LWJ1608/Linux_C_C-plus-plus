@@ -15,7 +15,6 @@ using namespace std;
 // 在进制的转换当中十进制是中间的桥梁;
 void conversion(int num, int M)
 {
-    // stack<char> s;
     vector<char> s;
     while (num)
     {
@@ -24,8 +23,9 @@ void conversion(int num, int M)
         tmp /= M;
     }
     int n;
-
-    cout << endl;
+    s.rev
+            cout
+        << endl;
 }
 int main(void)
 {
