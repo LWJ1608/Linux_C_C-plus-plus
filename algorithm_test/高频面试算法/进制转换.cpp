@@ -19,11 +19,9 @@ int main(void)
     int r;
     char tmp;
 
-    printf("请输入要转换的数字: ");
-    // scanf("%d", &number);
+    cout << "请输入要转换的数字> ";
     cin >> number;
-    printf("请输入进制数: ");
-    // scanf("%d", &r);
+    cout << "请输入进制数> ";
     cin >> r;
 
     while (number)
