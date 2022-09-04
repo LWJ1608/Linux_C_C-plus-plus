@@ -21,10 +21,14 @@ void conversion(int num, int M)
         s.push(tmp);
         tmp /= M;
     }
+    int n;
     while (s.empty())
     {
-        cout << s.pop();
+        n = s.top();
+        cout << n;
+        s.pop();
     }
+    cout << endl;
 }
 int main(void)
 {
