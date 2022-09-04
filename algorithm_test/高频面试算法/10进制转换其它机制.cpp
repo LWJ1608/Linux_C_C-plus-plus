@@ -21,6 +21,10 @@ void conversion(int num, int M)
         s.push(tmp);
         tmp /= M;
     }
+    while (s.empty())
+    {
+        cout << s.pop();
+    }
 }
 int main(void)
 {
