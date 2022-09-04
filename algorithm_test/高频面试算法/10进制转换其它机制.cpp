@@ -12,7 +12,10 @@ using namespace std;
 // 将十进制转换为任意进制
 // 其他进制向十进制的转换--->进行每位的乘积求和即可
 // 在进制的转换当中十进制是中间的桥梁;
-void 进制转换 int main(void)
+void baseConversion()
+{
+}
+int main(void)
 {
 
     return 0;
