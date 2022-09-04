@@ -22,7 +22,7 @@ void conversion(int num, int M)
         tmp /= M;
     }
     int n;
-    while (s.empty())
+    while (!s.empty())
     {
         n = s.top();
         cout << n;
