@@ -5,7 +5,7 @@
  * @Description:
  **/
 #include <iostream>
-#include <vector>
+#include <stack>
 #include <algorithm>
 using namespace std;
 
@@ -14,9 +14,12 @@ using namespace std;
 // 在进制的转换当中十进制是中间的桥梁;
 void conversion(int num, int M)
 {
+    stack<int> s;
     while (num)
     {
         int tmp = "0123456789ABCDEFG"[num % M];
+        s.push(tmp);
+        tmp /= M;
     }
 }
 int main(void)
