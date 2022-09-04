@@ -24,9 +24,8 @@ void conversion(int num, int M)
         tmp /= M;
     }
     int n;
-    s.reserve
-            cout
-        << endl;
+
+    cout << endl;
 }
 int main(void)
 {
