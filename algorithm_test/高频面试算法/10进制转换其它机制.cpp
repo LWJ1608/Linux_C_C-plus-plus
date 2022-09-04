@@ -16,20 +16,17 @@ using namespace std;
 void conversion(int num, int M)
 {
     // stack<char> s;
-    v while (num)
+    vector<char> s;
+    while (num)
     {
         int tmp = "0123456789ABCDEFG"[num % M];
-        s.push(tmp);
+        s.push_back(tmp);
         tmp /= M;
     }
     int n;
-    while (!s.empty())
-    {
-        n = s.top();
-        cout << n;
-        s.pop();
-    }
-    cout << endl;
+    s.reserve
+            cout
+        << endl;
 }
 int main(void)
 {
