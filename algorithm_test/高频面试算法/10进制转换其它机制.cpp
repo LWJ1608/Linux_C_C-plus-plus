@@ -5,7 +5,6 @@
  * @Description:
  **/
 #include <iostream>
-#include <stack>
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -23,7 +22,8 @@ void conversion(int num, int M)
         tmp /= M;
     }
     int n;
-    s.reverse();
+    s.reverce(s.begin(), s.end());
+
     cout << endl;
 }
 int main(void)
