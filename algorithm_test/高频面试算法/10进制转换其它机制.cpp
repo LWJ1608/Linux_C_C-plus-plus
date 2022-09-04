@@ -14,7 +14,7 @@ using namespace std;
 // 在进制的转换当中十进制是中间的桥梁;
 void conversion(int num, int M)
 {
-    stack<int> s;
+    stack<char> s;
     while (num)
     {
         int tmp = "0123456789ABCDEFG"[num % M];
