@@ -14,6 +14,17 @@ template <typename T>
 class Queue
 {
 public:
+    void push_(T value)
+    {
+        s1.push(value);
+    }
+    void pop_()
+    {
+        if (s1.empty())
+        {
+        }
+    }
+
 private:
     stack<T> s1;
     stack<T> s2;
