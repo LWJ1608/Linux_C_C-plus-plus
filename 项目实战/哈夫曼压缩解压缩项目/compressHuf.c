@@ -55,7 +55,7 @@ void coddingFile(HUFF_TABLE *, FREQ *, int, char *, char *);
 void setIndexOfCh(HUFF_TABLE *huf, int alphaCount, short *ar);
 void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile);
 
-void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile)
+void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile) //加密
 {
 	FILE *fp;
 	FILE *fpout;
