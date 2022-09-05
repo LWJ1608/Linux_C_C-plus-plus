@@ -256,7 +256,7 @@ void showHuffTab(HUFF_TABLE *huf, int alphaCount)
 
 	for (i = 0; i < alphaCount; i++)
 	{
-		printf("%4d %4c %4d %6d %6d %6d %s\n", i, huf[i].freq.alpha, huf[i].freq.freq, huf[i].leftChild, huf[i].rightChild, huf[i].isVisited, huf[i].huffCode);
+		printf("%4d %4c %4d %6d %6d %6d %6s\n", i, huf[i].freq.alpha, huf[i].freq.freq, huf[i].leftChild, huf[i].rightChild, huf[i].isVisited, huf[i].huffCode);
 	}
 }
 
