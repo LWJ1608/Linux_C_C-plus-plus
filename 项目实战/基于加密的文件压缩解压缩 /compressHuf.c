@@ -259,7 +259,7 @@ void showHuffTab(HUFF_TABLE *huf, int alphaCount)
 {
 	int i = 0;
 
-	printf("%4s %4s %4s %6s %6s %6s %s\n", "下标", "字符", "频度", "左孩子", "右孩子", "访问否", "哈夫曼编码");
+	printf("%4s %4s %4s %6s %6s %6s %6s\n", "下标", "字符", "频度", "左孩子", "右孩子", "访问否", "哈夫曼编码");
 
 	for (i = 0; i < alphaCount; i++)
 	{
