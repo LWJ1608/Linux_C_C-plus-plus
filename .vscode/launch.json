@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Linux_C_C-plus-plus/数据结构与算法（C++）/数据结构/BinTree/struct版/main",
+            "program": "${workspaceFolder}/Linux_C_C-plus-plus/项目实战/基于加密的文件压缩解压缩 /compressHuf",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
