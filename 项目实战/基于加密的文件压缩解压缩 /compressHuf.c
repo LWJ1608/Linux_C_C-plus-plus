@@ -4,8 +4,9 @@
  * @FilePath: /Linux_C_C-plus-plus/项目实战/基于加密的文件压缩解压缩 /compressHuf.c
  * @Description:
  */
-
-#pragma pack(push, 1) //
+//把对默认齐数压栈，重新设置默认对齐数为1，程序结束可以把原来对齐数出栈，这样默认的对齐数就恢复到原来的了
+//这样做可以减少存储空间的浪费，能将文件大小压缩更小
+#pragma pack(push, 1)
 
 //压缩源程序
 #include <stdio.h>
@@ -17,7 +18,7 @@
 
 #define NOT_FOUND -1
 
-#define TARGET_FILE_EXT ".Mechuf"
+#define TARGET_FILE_EXT ".Mechuf" //压缩后的默认文件后缀
 
 #define SET_BIT(byte, i) (byte |= 1 << (7 ^ (i)))	 //设置这个字节的指定位为1
 #define CLR_BIT(byte, i) (byte &= ~(1 << (7 ^ (i)))) //设置这个字节的指定位为0
