@@ -326,7 +326,7 @@ int getFreq(char *fileName, FREQ **freq)
 	{
 		alpha[ch]++;
 		ch = fgetc(fp);
-		printf("%d ", alpha[ch]);
+		printf("%c ", alpha[ch]);
 	}
 	fclose(fp);
 
