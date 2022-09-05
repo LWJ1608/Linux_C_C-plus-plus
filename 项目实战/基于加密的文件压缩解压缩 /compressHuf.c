@@ -311,10 +311,10 @@ void showFreq(const FREQ *freq, int alphaCount)
 
 int getFreq(char *fileName, FREQ **freq)
 {
-	int alpha[256] = {0};
+	int alpha[256] = {0}; //字符种类
 	int i;
 	int ch;
-	int alphaCount = 0;
+	int alphaCount = 0; //字符的频度
 	int index = 0;
 	FILE *fp;
 
