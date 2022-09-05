@@ -42,7 +42,7 @@ typedef struct //哈夫曼表
 	char *huffCode;	  //哈夫曼编码
 } HUFF_TABLE;
 
-typedef struct
+typedef struct MECHUF_HEAD
 {
 	char flag[6];  //文件标识
 	u8 alphaCount; //字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
@@ -259,11 +259,11 @@ void showHuffTab(HUFF_TABLE *huf, int alphaCount)
 {
 	int i = 0;
 
-	printf("%4s %4s %4s %6s %6s %6s %6s\n", "下标", "字符", "频度", "左孩子", "右孩子", "访问否", "哈夫曼编码");
+	printf("%4s %4s %4s %6s %6s %6s %s\n", "下标", "字符", "频度", "左孩子", "右孩子", "访问否", "哈夫曼编码");
 
 	for (i = 0; i < alphaCount; i++)
 	{
-		printf("%4d %4c %4d %6d %6d %6d %6s\n", i, huf[i].freq.alpha, huf[i].freq.freq, huf[i].leftChild, huf[i].rightChild, huf[i].isVisited, huf[i].huffCode);
+		printf("%4d %4c %4d %6d %6d %6d %s\n", i, huf[i].freq.alpha, huf[i].freq.freq, huf[i].leftChild, huf[i].rightChild, huf[i].isVisited, huf[i].huffCode);
 	}
 }
 
