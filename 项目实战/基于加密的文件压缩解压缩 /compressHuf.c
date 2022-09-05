@@ -4,7 +4,6 @@
  * @FilePath: /Linux_C_C-plus-plus/项目实战/基于加密的文件压缩解压缩 /compressHuf.c
  * @Description:
  */
-
 #pragma pack(push)
 #pragma pack(1)
 
@@ -27,8 +26,8 @@ typedef unsigned char u8;
 typedef u8 boolean;
 typedef unsigned int u32;
 
-typedef struct FREQ
-{			  //统计字符种类及频度
+typedef struct FREQ //统计字符种类及频度
+{
 	u8 alpha; //字符种类,0-255
 	u32 freq; //字符频度
 } FREQ;
