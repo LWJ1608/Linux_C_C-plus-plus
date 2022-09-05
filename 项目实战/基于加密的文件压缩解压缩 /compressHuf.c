@@ -314,7 +314,7 @@ int getFreq(char *fileName, FREQ **freq)
 	int alpha[256] = {0}; //字符种类
 	int i;
 	int ch;
-	int alphaCount = 0; //字符的频度
+	int alphaCount = 0; //字符种类个数
 	int index = 0;
 	FILE *fp;
 
@@ -326,7 +326,6 @@ int getFreq(char *fileName, FREQ **freq)
 	{
 		alpha[ch]++;
 		ch = fgetc(fp);
-		printf("%c ", alpha[ch]);
 	}
 	fclose(fp);
 
