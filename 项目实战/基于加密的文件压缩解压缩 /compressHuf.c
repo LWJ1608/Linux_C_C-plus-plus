@@ -318,7 +318,7 @@ int getFreq(char *fileName, FREQ **freq)
 	int index = 0;
 	FILE *fp;
 
-	if ((fp = fopen(fileName, "r")) == NULL)
+	if ((fp = fopen(fileName, "r")) == NULL) //判断文件是否打开成功
 		return 0;
 
 	ch = fgetc(fp);
