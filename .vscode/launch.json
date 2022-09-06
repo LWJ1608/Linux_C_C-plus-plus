@@ -4,7 +4,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/项目实战/基于加密的文件压缩解压缩 /compressHuf",
+            "program": "${workspaceFolder}/项目实战/基于加密的文件压缩解压缩 /compressHuf aaaaa.txt",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
