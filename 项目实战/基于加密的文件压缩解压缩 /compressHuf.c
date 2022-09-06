@@ -285,7 +285,7 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount)
 	HUFF_TABLE *huf = NULL;
 	int i;
 
-	huf = (HUFF_TABLE *)calloc(sizeof(HUFF_TABLE), alphaCount * 2 - 1);
+	huf = (HUFF_TABLE *)calloc(alphaCount * 2 - 1, sizeof(HUFF_TABLE));
 	for (i = 0; i < alphaCount; i++)
 	{
 		huf[i].freq.alpha = freq[i].alpha;
