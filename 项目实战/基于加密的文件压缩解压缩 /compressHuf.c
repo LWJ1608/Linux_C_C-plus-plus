@@ -314,7 +314,7 @@ int getFreq(char *fileName, FREQ **freq)
 	int alpha[256] = {0}; //存储字符数组
 	int i;
 	int ch;
-	int alphaCount = 0; //字符种类个数
+	int alphaCount = 0; //记录字符种类
 	int index = 0;
 	FILE *fp;
 
