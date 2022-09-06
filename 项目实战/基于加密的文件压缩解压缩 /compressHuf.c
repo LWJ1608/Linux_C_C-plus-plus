@@ -50,7 +50,7 @@ typedef struct MECHUF_HEAD
 } MECHUF_HEAD;
 
 int getFreq(char *fileName, FREQ **freq);
-// void showFreq(const FREQ *freq, int alphaCount);
+void showFreq(const FREQ *freq, int alphaCount);	 //输出字符和其相应的频度
 HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount); //初始化哈夫曼表(叶子结点)
 void destoryHuffTab(HUFF_TABLE **huf, int alphaCount);
 void showHuffTab(HUFF_TABLE *huf, int alphaCount);
@@ -298,17 +298,16 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount)
 	return huf;
 }
 
-//
-// void showFreq(const FREQ *freq, int alphaCount)
-// {
-// 	int i;
+void showFreq(const FREQ *freq, int alphaCount)
+{
+	int i;
 
-// 	puts("字符\t频度");
-// 	for (i = 0; i < alphaCount; i++)
-// 	{
-// 		printf("%c\t%d\n", freq[i].alpha, freq[i].freq);
-// 	}
-// }
+	puts("字符\t频度");
+	for (i = 0; i < alphaCount; i++)
+	{
+		printf("%c\t%d\n", freq[i].alpha, freq[i].freq);
+	}
+}
 
 //主要工作是把记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
 int getFreq(char *fileName, FREQ **freq)
