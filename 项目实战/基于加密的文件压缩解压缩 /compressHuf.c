@@ -311,7 +311,7 @@ void showFreq(const FREQ *freq, int alphaCount)
 
 int getFreq(char *fileName, FREQ **freq)
 {
-	int alpha[256] = {0}; //字符种类
+	int alpha[256] = {0}; //存储字符数组
 	int i;
 	int ch;
 	int alphaCount = 0; //字符种类个数
@@ -324,7 +324,7 @@ int getFreq(char *fileName, FREQ **freq)
 	ch = fgetc(fp);
 	while (!feof(fp)) //
 	{
-		alpha[ch]++;
+		alpha[ch]++; //同一个字符++
 		ch = fgetc(fp);
 	}
 	fclose(fp);
@@ -333,7 +333,7 @@ int getFreq(char *fileName, FREQ **freq)
 	{
 		if (alpha[i])
 		{
-			alphaCount++;
+			alphaCount++; //计算字符种类个数
 		}
 	}
 
