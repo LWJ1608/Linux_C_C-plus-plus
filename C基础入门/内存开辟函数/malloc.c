@@ -13,7 +13,7 @@ int main()
     if (p == NULL)
     {
         perror("main"); //如果返回空指针，说明空间开辟失败，perror返回错误类型
-        return 1
+        return 1;
     }
     int i = 0;
     for (i = 0; i < 10; i++)
