@@ -50,9 +50,9 @@ typedef struct MECHUF_HEAD
 } MECHUF_HEAD;
 
 int getFreq(char *fileName, FREQ **freq);
-void showFreq(const FREQ *freq, int alphaCount);	 //输出字符和其相应的频度
-HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount); //初始化哈夫曼表(叶子结点)
-void destoryHuffTab(HUFF_TABLE **huf, int alphaCount);
+void showFreq(const FREQ *freq, int alphaCount);	   //输出字符和其相应的频度
+HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount);   //初始化哈夫曼表(叶子结点)
+void destoryHuffTab(HUFF_TABLE **huf, int alphaCount); //释放堆空间
 void showHuffTab(HUFF_TABLE *huf, int alphaCount);
 int findMinFreqIndex(HUFF_TABLE *huf, int count);
 void makeHuffTree(HUFF_TABLE *huf, int count);
