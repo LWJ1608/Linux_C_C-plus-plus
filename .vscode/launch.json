@@ -5,7 +5,9 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/项目实战/基于加密的文件压缩解压缩 /compressHuf",
-            "args": [],
+            "args": [
+                "aaaaa.txt"
+            ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
