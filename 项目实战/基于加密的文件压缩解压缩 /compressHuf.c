@@ -284,7 +284,6 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount) //初始化哈夫曼表
 {
 	HUFF_TABLE *huf = NULL;
 	int i;
-
 	huf = (HUFF_TABLE *)calloc(alphaCount * 2 - 1, sizeof(HUFF_TABLE));
 	for (i = 0; i < alphaCount; i++)
 	{
@@ -294,7 +293,6 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount) //初始化哈夫曼表
 		huf[i].isVisited = FALSE;
 		huf[i].huffCode = (char *)calloc(sizeof(char), alphaCount);
 	}
-
 	return huf;
 }
 
