@@ -280,7 +280,7 @@ void destoryHuffTab(HUFF_TABLE **huf, int alphaCount)
 	*huf = NULL;
 }
 
-HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount)
+HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount) //初始化哈夫曼表
 {
 	HUFF_TABLE *huf = NULL;
 	int i;
