@@ -17,11 +17,11 @@ void print(const Type &arr, int size) //打印数组
 template <typename Type>
 void straightInsertSort(Type arr[], int size)
 {
-    int tmp;
+    int tmp,j;
     for (int i = 1; i < count; i++)
     {
         tmp = arr[i];
-        for (int j = i - 1; j >= 0 && tmp < arr[j]; j--)
+        for (j = i - 1; j >= 0 && tmp < arr[j]; j--)
         {
             arr[j + 1] = arr[j];
         }
