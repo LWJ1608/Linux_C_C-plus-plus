@@ -4,9 +4,9 @@ int main()
 {
     int i;
     char c;
-    scanf("%d",&i);
-    scanf("%c",&c);
-    printf("d::%d c::%c\n",&i,&c);
+    scanf("%d", &i);
+    scanf("%c", &c);
+    printf("%d %c\n", &i, &c);
     printf("hello!");
     return 0;
 }
