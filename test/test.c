@@ -3,9 +3,10 @@
 int main()
 {
     int i;
-    while (scanf("%d", &i) != EOF)
-    {
-        printf("%d\n", i);
-    }
+    char c;
+    scanf("%d",&i);
+    scanf("%c",&c);
+    printf("d::%d c::%c\n",&i,&c);
+    printf("hello!");
     return 0;
 }
