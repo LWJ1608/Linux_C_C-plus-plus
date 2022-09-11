@@ -356,7 +356,7 @@ void main(int argc, char **args)
 	HUFF_TABLE *huf = NULL;
 	u8 alphaCount;
 	char *code;
-	char targetFileName[80] = "aaaaa.txt";
+	// char targetFileName[80] = "aaaaa.txt";
 
 	if (argc <= 1 || argc > 3)
 	{
