@@ -307,7 +307,7 @@ void showFreq(const FREQ *freq, int alphaCount)
 	}
 }
 
-//主要工作是把记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
+//主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
 int getFreq(char *fileName, FREQ **freq)
 {
 	int alpha[256] = {0}; //存储字符数组
