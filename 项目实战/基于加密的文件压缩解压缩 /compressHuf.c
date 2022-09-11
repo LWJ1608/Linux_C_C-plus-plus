@@ -55,7 +55,7 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount);   //初始化哈夫曼表(�
 void destoryHuffTab(HUFF_TABLE **huf, int alphaCount); //释放堆空间
 void showHuffTab(HUFF_TABLE *huf, int alphaCount);	   //输出哈夫曼树中所有的结点
 int findMinFreqIndex(HUFF_TABLE *huf, int count);	   //
-void makeHuffTree(HUFF_TABLE *huf, int count);
+void makeHuffTree(HUFF_TABLE *huf, int count);		   //构造哈弗曼树
 void makeHuffCode(HUFF_TABLE *huf, int root, char *str, int index);
 void getTargetFileName(char *, char *);
 void coddingFile(HUFF_TABLE *, FREQ *, int, char *, char *);
