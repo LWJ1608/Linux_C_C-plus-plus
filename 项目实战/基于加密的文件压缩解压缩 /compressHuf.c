@@ -57,7 +57,7 @@ void showHuffTab(HUFF_TABLE *huf, int alphaCount);					//输出哈夫曼树中�
 int findMinFreqIndex(HUFF_TABLE *huf, int count);					//查找出现频路
 void makeHuffTree(HUFF_TABLE *huf, int count);						//构造哈弗曼树
 void makeHuffCode(HUFF_TABLE *huf, int root, char *str, int index); //获取哈夫曼编码
-void getTargetFileName(char *, char *);								//
+void getTargetFileName(char *, char *);								//获取文件名字
 void coddingFile(HUFF_TABLE *, FREQ *, int, char *, char *);		//
 void setIndexOfCh(HUFF_TABLE *huf, int alphaCount, short *ar);		//
 void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile);	//对哈夫曼编码加密
@@ -74,7 +74,7 @@ void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile) //加密
 		printf("没有目标文件:%s！\n", tgFile);
 		return;
 	}
-	if ((fpout = fopen("zhomecaaa.txt", "w")) == NULL)
+	if ((fpout = fopen("caaa.txt", "w")) == NULL)
 	{
 		return;
 	}
