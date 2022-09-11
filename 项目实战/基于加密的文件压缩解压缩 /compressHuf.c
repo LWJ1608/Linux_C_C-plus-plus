@@ -49,7 +49,7 @@ typedef struct MECHUF_HEAD
 	u32 bitsCount; //压缩结果范围
 } MECHUF_HEAD;
 
-int getFreq(char *fileName, FREQ **freq);
+int getFreq(char *fileName, FREQ **freq);							//统计字符种类个数和它们出现的频度
 void showFreq(const FREQ *freq, int alphaCount);					//输出字符和其相应的频度
 HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount);				//初始化哈夫曼表(叶子结点)
 void destoryHuffTab(HUFF_TABLE **huf, int alphaCount);				//释放堆空间
