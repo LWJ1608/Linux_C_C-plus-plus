@@ -53,7 +53,7 @@ int getFreq(char *fileName, FREQ **freq);							//统计字符种类个数和它
 void showFreq(const FREQ *freq, int alphaCount);					//输出字符和其相应的频度
 HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount);				//初始化哈夫曼表(叶子结点)
 void destoryHuffTab(HUFF_TABLE **huf, int alphaCount);				//释放堆空间
-void showHuffTab(HUFF_TABLE *huf, int alphaCount);					//输出哈夫曼树中所有的结点
+void showHuffTab(HUFF_TABLE *huf, int alphaCount);					//输出哈夫曼树
 int findMinFreqIndex(HUFF_TABLE *huf, int count);					//查找出现频路
 void makeHuffTree(HUFF_TABLE *huf, int count);						//构造哈弗曼树
 void makeHuffCode(HUFF_TABLE *huf, int root, char *str, int index); //获取哈夫曼编码
