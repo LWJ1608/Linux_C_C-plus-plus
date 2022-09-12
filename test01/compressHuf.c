@@ -19,6 +19,8 @@ typedef struct
 {
 } Node;
 
-void main(int argc, char **args)
-{
+
+void main(int argc, char **args){
+    
+
 }
