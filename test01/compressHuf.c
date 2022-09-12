@@ -10,7 +10,7 @@
 // typedef unsigned char u8
 // typedef unsigned int u32
 // typedef
-typedef struct Freq
+typedef struct
 {
     int
 } Freq;
