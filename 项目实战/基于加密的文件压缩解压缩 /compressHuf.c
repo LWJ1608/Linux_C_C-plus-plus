@@ -38,7 +38,7 @@ typedef struct //哈夫曼表结点
 	FREQ freq;		  //字符种类及频度
 	short leftChild;  //左孩子下标
 	short rightChild; //右孩子下标
-	u8 isVisited;	  //是否访问的标记
+	// u8 isVisited;	  //是否访问的标记
 	char *huffCode;	  //哈夫曼编码
 } HUFF_TABLE;
 
