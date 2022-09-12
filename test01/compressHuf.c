@@ -12,7 +12,7 @@
 // typedef
 typedef struct Freq
 {
-    int 字符
+    int
 } Freq;
 
 void main(int argc, char **args)
