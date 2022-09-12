@@ -12,8 +12,13 @@
 // typedef
 typedef struct
 {
-    int
+    int chars;     //字符种类
+    int char_freq; //字符频度
 } Freq;
+typedef struct
+{
+    /* data */
+};
 
 void main(int argc, char **args)
 {

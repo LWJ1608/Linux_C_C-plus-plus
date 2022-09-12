@@ -33,7 +33,7 @@ typedef struct FREQ //统计字符种类及频度
 	u32 freq; //字符频度
 } FREQ;
 
-typedef struct //哈夫曼表结点
+typedef struct //哈夫曼表结
 {
 	FREQ freq;		  //字符种类及频度
 	short leftChild;  //左孩子下标
