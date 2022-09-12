@@ -17,8 +17,7 @@ typedef struct
 } Freq;
 typedef struct
 {
-    /* data */
-};
+} Node;
 
 void main(int argc, char **args)
 {
