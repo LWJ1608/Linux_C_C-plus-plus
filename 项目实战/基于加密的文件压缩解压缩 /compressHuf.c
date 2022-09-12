@@ -42,7 +42,7 @@ typedef struct //哈夫曼表结点
 	char *huffCode;	  //哈夫曼编码
 } HUFF_TABLE;
 
-typedef struct MECHUF_HEAD
+typedef struct MECHUF_HEAD //
 {
 	char flag[6];  //文件标识
 	u8 alphaCount; //字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
