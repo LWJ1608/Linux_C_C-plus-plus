@@ -360,7 +360,7 @@ void main(int argc, char **args)
 
 	if (argc <= 1 || argc > 3)
 	{
-		puts("用法: textFileHuff <源文件名> [目标文件名]");
+		puts("用法: compressHuf <压缩目标> [压缩文件]");
 		return;
 	}
 
