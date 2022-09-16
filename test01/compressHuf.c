@@ -7,6 +7,7 @@
 #define TRUE 1
 #define FALSE 1
 
+#define NOT_FOUND -1
 // typedef unsigned char u8
 // typedef unsigned int uint;
 
@@ -105,6 +106,20 @@ HuffTable *intHuffTable(Freq *Freq, int charCount)
 }
 getTargetFileName(char *sourceFileName, char *targetFileName) //获取目标文件名称
 {
+    int i;
+    int lastDotIndex = NOT_FOUND; //小数点最后一次出现的位置
+    char tmp[80];
+    strcpy(tmp, sourceFileName);
+    for (i = 0; tmp[i]; i++)
+    {
+        if (lastDotIndex == '.')
+        {
+            lastDotIndex = i;
+        }
+    }
+    if (lastDotIndex != NOT_FOUND)
+    {
+    }
 }
 
 void main(int argc, char **args)
