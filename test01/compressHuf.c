@@ -23,7 +23,11 @@ typedef struct
     int isVisited;//是否访问的标记
     char* huffCode;//哈夫曼编码
 } Node;
-
+typedef struct MechufHead
+{
+    char falg[6];//文件标识
+    
+};
 
 void main(int argc, char **args){
     
