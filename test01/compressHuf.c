@@ -62,7 +62,7 @@ int getFreq(char *fileName, Freq **freq)
             charCount++;
         }
     }
-    *freq = (Freq *)calloc(sizeof(Freq), charCount);
+    *freq = (Freq *)calloc(charCount, sizeof(Freq));
     for (i = 0; i < 256; i++)
     {
         (*freq)[index].charType = i;
