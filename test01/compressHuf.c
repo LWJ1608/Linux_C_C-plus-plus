@@ -42,7 +42,6 @@ int getFreq(char *fileName, Freq **freq)
     FILE *fp;
     fp = fopen("fileName", "r");
     if (fp == NULL)
-
         return 0;
 }
 
