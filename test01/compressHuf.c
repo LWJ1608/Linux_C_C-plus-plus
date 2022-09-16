@@ -149,7 +149,7 @@ void main(int argc, char **args)
     {
         puts("用法：可执行文件 压缩目标 目标文件");
         return;
-    }
+      }
     if (argc == 3)
     {
         strcpy(targetFileName, args[2]);
