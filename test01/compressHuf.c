@@ -75,9 +75,9 @@ void showChars(const Freq *freq, int CharCount) //输出字符和其相应的频
 {
     int i;
     putc("字符\t频度");
-
     for (i = 0; i < charCount; i++)
     {
+        printf("%c\t%d\n", freq[i]->charType, freq[i]->charFreq);
     }
 }
 /**
@@ -103,4 +103,5 @@ HuffTable *intHuffTable(Freq *Freq, int charCount)
 }
 void main(int argc, char **args)
 {
+    showChars();
 }
