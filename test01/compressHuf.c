@@ -73,6 +73,7 @@ int getFreq(char *fileName, Freq **freq)
         (*freq)[index].charType = i;
         (*freq)[index].charFreq = str[i];
     }
+    showChars(*freq, charCount);
     return charCount;
 }
 void showChars(const Freq *freq, int charCount) //输出字符和其相应的频度
@@ -127,11 +128,11 @@ void getTargetFileName(char *sourceFileName, char *targetFileName) //获取目�
 }
 void showHuffTable(HuffTable *huff, int charCount) //打印哈夫曼树
 {
-    puts("下标\t字符\t频度\t左孩子\t右孩子\t编码");
+    puts("下标\t字符\t频度\t左孩子\t右孩子\t访问否\t编码");
     int i;
     for (i = 0; i < charCount; i++)
     {
-        printf()
+        printf("%d\t %c\t %d\t %d\t %d\t %d\t  %s\n", i, huff[i].Freq.charType, huff[i].Freq.charFreq, huff[i].leftChild, huff[i].rightChild, huff[i].isVisited, huff[i].huffCode);
     }
 }
 
@@ -158,5 +159,5 @@ void main(int argc, char **args)
     }
     charCount = getFreq(args[1], &freq);
     huff = intHuffTable(freq, charCount);
-    showChars(freq, charCount);
+    // showChars(freq, charCount);
 }
