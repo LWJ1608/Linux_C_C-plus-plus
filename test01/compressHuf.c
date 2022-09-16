@@ -71,7 +71,13 @@ int getFreq(char *fileName, Freq **freq)
     }
     return charCount;
 }
-
+void showChars(const Freq *freq, int CharCount) //输出字符和其相应的频度
+{
+    int i;
+    for (i = 0; i < charCount; i++)
+    {
+    }
+}
 /**
  * @description: 初始化哈夫曼表
  * @param {Freq} *Freq
