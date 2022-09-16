@@ -17,6 +17,11 @@ typedef struct
 } Freq;
 typedef struct
 {
+    Freq freq;//字符种类及频度
+    int leftChild;//左孩子
+    int rightChild;//右孩子
+    int isVisited;//是否访问的标记
+    char* huffCode;//哈夫曼编码
 } Node;
 
 
