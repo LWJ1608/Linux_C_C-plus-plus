@@ -159,5 +159,6 @@ void main(int argc, char **args)
     }
     charCount = getFreq(args[1], &freq);
     huff = intHuffTable(freq, charCount);
+    showHuffTable(huff, charCount);
     // showChars(freq, charCount);
 }
