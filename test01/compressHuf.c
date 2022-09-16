@@ -77,6 +77,7 @@ HuffTable *intHuffTable(Freq *Freq, int charCount) //初始化哈夫曼表
     huff * = (HuffTable *)calloc(charCount * 2 - 1, sizeof(HuffTable));
     for (i = 0; i < charCount; i++)
     {
+        
     }
 }
 void main(int argc, char **args)
