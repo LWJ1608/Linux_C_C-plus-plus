@@ -125,6 +125,15 @@ void getTargetFileName(char *sourceFileName, char *targetFileName) //获取目�
     strcpy(targetFileName, tmp);
     strcat(targetFileName, TARGET_FILE_EXT);
 }
+void showHuffTable(HuffTable *huff, int charCount) //打印哈夫曼树
+{
+    puts("下标\t字符\t频度\t左孩子\t右孩子\t编码");
+    int i;
+    for (i = 0; i < charCount; i++)
+    {
+        printf()
+    }
+}
 
 void main(int argc, char **args)
 {
