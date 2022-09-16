@@ -70,7 +70,14 @@ int getFreq(char *fileName, Freq **freq)
     }
     return charCount;
 }
-HuffTable *intHuffTable(Freq *Freq, int charCount) //初始化哈夫曼表
+
+/**
+ * @description: 初始化哈夫曼表
+ * @param {Freq} *Freq
+ * @param {int} charCount
+ * @return huff
+ */
+HuffTable *intHuffTable(Freq *Freq, int charCount)
 {
     HuffTable *huff = NULL;
     int i = 0;
@@ -83,6 +90,7 @@ HuffTable *intHuffTable(Freq *Freq, int charCount) //初始化哈夫曼表
         huff[i].isVisited = FALSE;
         huff[i].huffCode = (char *)calloc(1, charCount);
     }
+    return huff;
 }
 void main(int argc, char **args)
 {
