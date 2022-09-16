@@ -30,7 +30,7 @@ typedef struct MechufHead
     int bitsCount
 };
 int getFreq(char *fileName, Freq **freq);
-
+HuffTable *intHuffTable(Freq *Freq, int charCount);
 /**
  * @description:主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
  * @param {char} *fileName
