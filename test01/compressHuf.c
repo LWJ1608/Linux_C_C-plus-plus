@@ -12,12 +12,12 @@
 
 typedef struct Freq
 {
-    int chars;     //字符种类
-    int char_freq; //字符频度
+    int char;     //字符种类
+    int charFreq; //字符频度
 } Freq;
 typedef struct
 {
-    Freq chars;     //字符种类及频度
+    Freq Freq;      //字符种类及频度
     int leftChild;  //左孩子
     int rightChild; //右孩子
     int isVisited;  //是否访问的标记
@@ -65,6 +65,7 @@ int getFreq(char *fileName, Freq **freq)
     *freq = (Freq *)calloc(sizeof(Freq), charCount);
     for (i = 0; i < 256; i++)
     {
+        (*freq)[index].chars = i;
     }
     return charCount;
 }
