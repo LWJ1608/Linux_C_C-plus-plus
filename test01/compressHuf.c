@@ -29,8 +29,8 @@ typedef struct MechufHead
 {
     char falg[6];  //文件标识
     int charCount; //字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
-    int bitsCount
-};
+    int bitsCount;
+} MechufHead;
 int getFreq(char *fileName, Freq **freq);                           //统计字符个数及频度
 void showChars(const Freq *freq, int CharCount);                    //输出字符和其相应的频度
 HuffTable *intHuffTable(Freq *Freq, int charCount);                 //初始化哈夫曼表
@@ -138,7 +138,7 @@ void main(int argc, char **args)
         puts("用法：compressHuf 压缩目标 目标文件");
         return;
     }
-    if (args == 3)
+    if (argc == 3)
     {
         strcpy(targetFileName, args[2]);
     }
