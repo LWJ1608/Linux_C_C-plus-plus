@@ -40,6 +40,11 @@ int getFreq(char* fileName,Freq **freq)
     int ch;
     int index = 0;
     FILE* fp;
+    fp = fopen("fileName",r);
+    if(fp == NULL)
+    {
+        return 0;
+    }
     
 }
 
