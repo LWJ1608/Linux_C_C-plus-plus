@@ -71,7 +71,8 @@ int getFreq(char *fileName, Freq **freq)
     return charCount;
 }
 HuffTable *intHuffTable(Freq *Freq, int charCount) //初始化哈夫曼表
-
-    void main(int argc, char **args)
+{
+}
+void main(int argc, char **args)
 {
 }
