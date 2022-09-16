@@ -31,10 +31,10 @@ typedef struct MechufHead
     int charCount; //字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
     int bitsCount;
 } MechufHead;
+void getTargetFileName(char *sourceFileName, char *targetFileName); //获取目标文件名称
 int getFreq(char *fileName, Freq **freq);                           //统计字符个数及频度
 void showChars(const Freq *freq, int CharCount);                    //输出字符和其相应的频度
 HuffTable *intHuffTable(Freq *Freq, int charCount);                 //初始化哈夫曼表
-void getTargetFileName(char *sourceFileName, char *targetFileName); //获取目标文件名称
 void showHuffTable(HuffTable *huff, int charCount);                 //打印哈夫曼树
 /**
  * @description:主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
