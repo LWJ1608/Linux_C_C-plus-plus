@@ -8,7 +8,7 @@
 #define FALSE 1
 
 // typedef unsigned char u8
-typedef unsigned int uint;
+// typedef unsigned int uint;
 
 typedef struct Freq
 {
@@ -17,7 +17,7 @@ typedef struct Freq
 } Freq;
 typedef struct
 {
-    Freq freq;      //字符种类及频度
+    Freq chars;     //字符种类及频度
     int leftChild;  //左孩子
     int rightChild; //右孩子
     int isVisited;  //是否访问的标记
@@ -65,7 +65,7 @@ int getFreq(char *fileName, Freq **freq)
     *freq = (Freq *)calloc(sizeof(Freq), charCount);
     for (i = 0; i < 256; i++)
     {
-        }
+    }
     return charCount;
 }
 
