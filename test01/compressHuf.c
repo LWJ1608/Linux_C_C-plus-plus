@@ -112,14 +112,17 @@ getTargetFileName(char *sourceFileName, char *targetFileName) //获取目标文�
     strcpy(tmp, sourceFileName);
     for (i = 0; tmp[i]; i++)
     {
-        if (lastDotIndex == '.')
+        if (tmp[lastDotIndex] == '.')
         {
             lastDotIndex = i;
         }
     }
     if (lastDotIndex != NOT_FOUND)
     {
+        tmp[lastDotIndex] = 0;
     }
+    strcpy(targetFileName, tmp);
+    strcat();
 }
 
 void main(int argc, char **args)
