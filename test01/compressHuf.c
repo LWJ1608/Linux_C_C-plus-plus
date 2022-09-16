@@ -26,10 +26,15 @@ typedef struct
 typedef struct MechufHead
 {
     char falg[6];//文件标识
-	 int charCount;//字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
-   
+	int charCount;//字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
     int bitsCount
 };
+int getFreq(char* fileName,Freq **freq)
+{
+    
+}
+
+
 
 void main(int argc, char **args){
     
