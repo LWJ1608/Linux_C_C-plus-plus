@@ -31,8 +31,12 @@ typedef struct MechufHead
 };
 int getFreq(char *fileName, Freq **freq);
 
-//主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
-
+/**
+ * @description:主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
+ * @param {char} *fileName
+ * @param {Freq} **freq
+ * @return charCount
+ */
 int getFreq(char *fileName, Freq **freq)
 {
     int str[256] = {0};
@@ -48,7 +52,7 @@ int getFreq(char *fileName, Freq **freq)
     while (!feof(fp))
     {
         ch = fgetc(fp);
-        str[ch]++; //计算字符出现pin
+        str[ch]++; //计算字符出现频度
     }
     fclose(fp);
     for (i = 0; i < 256; i++)
@@ -58,6 +62,11 @@ int getFreq(char *fileName, Freq **freq)
             charCount++;
         }
     }
+    *freq = (Freq *)calloc(sizeof(Freq), charCount);
+    for (i = 0; i < 256; i++)
+    {
+    }
+    return charCount;
 }
 
 void main(int argc, char **args)
