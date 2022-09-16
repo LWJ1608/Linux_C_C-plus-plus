@@ -80,6 +80,8 @@ HuffTable *intHuffTable(Freq *Freq, int charCount) //初始化哈夫曼表
         huff[i].Freq.charType = Freq->charType[i];
         huff[i].Freq.charFreq = Freq->charFreq[i];
         huff[i].leftChild = huff->rightChild = -1;
+        huff[i].isVisited = FALSE;
+        huff[i].huffCode = (char *)calloc(1, )
     }
 }
 void main(int argc, char **args)
