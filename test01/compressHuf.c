@@ -32,6 +32,7 @@ typedef struct MechufHead
 int getFreq(char *fileName, Freq **freq);
 
 //主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
+
 int getFreq(char *fileName, Freq **freq)
 {
     int str[256] = {0};
