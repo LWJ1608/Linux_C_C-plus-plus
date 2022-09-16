@@ -44,6 +44,11 @@ int getFreq(char *fileName, Freq **freq)
     fp = fopen("fileName", "r");
     if (fp == NULL)
         return 0;
+    ch = fgetc(fp);
+    while (!feof(fp))
+    {
+        str[ch]++;
+    }
 }
 
 void main(int argc, char **args)
