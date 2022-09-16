@@ -8,6 +8,7 @@
 #define FALSE 1
 
 #define NOT_FOUND -1
+#define TARGET_FILE_EXT huff //压缩后默认的后缀
 // typedef unsigned char u8
 // typedef unsigned int uint;
 
