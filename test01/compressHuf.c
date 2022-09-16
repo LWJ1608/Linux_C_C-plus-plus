@@ -8,7 +8,7 @@
 #define FALSE 1
 
 #define NOT_FOUND -1
-#define TARGET_FILE_EXT huff //压缩后默认的后缀
+#define TARGET_FILE_EXT ".huff" //压缩后默认的后缀
 // typedef unsigned char u8
 // typedef unsigned int uint;
 
@@ -123,7 +123,7 @@ getTargetFileName(char *sourceFileName, char *targetFileName) //获取目标文�
         tmp[lastDotIndex] = 0;
     }
     strcpy(targetFileName, tmp);
-    strcat();
+    strcat(targetFileName, TARGET_FILE_EXT);
 }
 
 void main(int argc, char **args)
