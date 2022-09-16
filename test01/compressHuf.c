@@ -44,10 +44,19 @@ int getFreq(char *fileName, Freq **freq)
     fp = fopen("fileName", "r");
     if (fp == NULL)
         return 0;
-    ch = fgetc(fp);
+
     while (!feof(fp))
     {
-        str[ch]++;
+        ch = fgetc(fp);
+        str[ch]++; //计算字符出现pin
+    }
+    fclose(fp);
+    for (i = 0; i < 256; i++)
+    {
+        if (str[i])
+        {
+            charCount++;
+        }
     }
 }
 
