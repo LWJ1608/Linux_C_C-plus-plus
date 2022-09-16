@@ -32,6 +32,7 @@ typedef struct MechufHead
 int getFreq(char *fileName, Freq **freq);           //统计字符个数及频度
 void showChars(const Freq *freq, int CharCount);    //输出字符和其相应的频度
 HuffTable *intHuffTable(Freq *Freq, int charCount); //初始化哈夫曼表
+getTargetFileName();
 /**
  * @description:主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
  * @param {char} *fileName
@@ -71,13 +72,13 @@ int getFreq(char *fileName, Freq **freq)
     }
     return charCount;
 }
-void showChars(const Freq *freq, int CharCount) //输出字符和其相应的频度
+void showChars(const Freq *freq, int charCount) //输出字符和其相应的频度
 {
     int i;
-    putc("字符\t频度");
+    puts("字符\t频度");
     for (i = 0; i < charCount; i++)
     {
-        printf("%c\t%d\n", freq[i]->charType, freq[i]->charFreq);
+        printf("%c\t%d\n", freq[i].charType, freq[i].charFreq);
     }
 }
 /**
@@ -90,11 +91,11 @@ HuffTable *intHuffTable(Freq *Freq, int charCount)
 {
     HuffTable *huff = NULL;
     int i = 0;
-    huff * = (HuffTable *)calloc(charCount * 2 - 1, sizeof(HuffTable));
+    huff = (HuffTable *)calloc(charCount * 2 - 1, sizeof(HuffTable));
     for (i = 0; i < charCount; i++)
     {
-        huff[i].Freq.charType = Freq->charType[i];
-        huff[i].Freq.charFreq = Freq->charFreq[i];
+        huff[i].Freq.charType = Freq[i].charType;
+        huff[i].Freq.charFreq = Freq[i].charFreq;
         huff[i].leftChild = huff->rightChild = -1;
         huff[i].isVisited = FALSE;
         huff[i].huffCode = (char *)calloc(1, charCount);
@@ -108,11 +109,19 @@ void main(int argc, char **args)
     int charCount;
     char *code;
     char targetFileName[80] = "test.txt";
-    if (arg < 1 || arg > 3)
+    if (argc < 1 || argc > 3)
     {
         puts("用法：compressHuf 压缩目标 目标文件");
         return;
     }
+    if (args == 3)
+    {
+        strcpy(targetFileName, args[2]);
+    }
+    else
+    {
+        getTargetFileName(args[1], targetFileName);
+    }
 
-    showChars();
+    showChars(freq, charCount);
 }
