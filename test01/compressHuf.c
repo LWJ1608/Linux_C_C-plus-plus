@@ -128,7 +128,7 @@ void getTargetFileName(char *sourceFileName, char *targetFileName) //获取目�
 }
 void showHuffTable(HuffTable *huff, int charCount) //打印哈夫曼树
 {
-    // puts("下标\t字符\t频度\t左孩子\t右孩子\t访问否\t编码");
+    puts("下标\t字符\t频度\t左孩子\t右孩子\t访问否\t编码");
     int i;
     for (i = 0; i < charCount; i++)
     {
