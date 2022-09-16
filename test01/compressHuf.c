@@ -129,6 +129,7 @@ void getTargetFileName(char *sourceFileName, char *targetFileName) //获取目�
 void main(int argc, char **args)
 {
     Freq *freq = NULL;
+
     HuffTable *huff = NULL;
     int charCount;
     char *code;
