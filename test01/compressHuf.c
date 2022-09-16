@@ -136,7 +136,7 @@ void main(int argc, char **args)
     char targetFileName[80] = "test.txt";
     if (argc < 1 || argc > 3)
     {
-        puts("用法：compressHuf 压缩目标 目标文件");
+        puts("用法：可执行文件 压缩目标 目标文件");
         return;
     }
     if (argc == 3)
