@@ -103,6 +103,10 @@ HuffTable *intHuffTable(Freq *Freq, int charCount)
     }
     return huff;
 }
+getTargetFileName(char *sourceFileName, char *targetFileName) //获取目标文件名称
+{
+}
+
 void main(int argc, char **args)
 {
     Freq *freq = NULL;
