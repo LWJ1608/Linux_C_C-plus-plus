@@ -72,6 +72,9 @@ int getFreq(char *fileName, Freq **freq)
 }
 HuffTable *intHuffTable(Freq *Freq, int charCount) //初始化哈夫曼表
 {
+    HuffTable *huff = NULL;
+    int i = 0;
+    huff * = (HuffTable *)calloc(charCount * 2 - 1, )
 }
 void main(int argc, char **args)
 {
