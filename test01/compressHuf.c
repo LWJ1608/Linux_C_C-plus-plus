@@ -74,6 +74,8 @@ int getFreq(char *fileName, Freq **freq)
 void showChars(const Freq *freq, int CharCount) //输出字符和其相应的频度
 {
     int i;
+    putc("字符\t频度");
+
     for (i = 0; i < charCount; i++)
     {
     }
