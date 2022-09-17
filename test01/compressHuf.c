@@ -138,6 +138,9 @@ void showHuffTable(HuffTable *huff, int charCount) //打印哈夫曼树
         printf("%d\t %c\t %d\t %d\t %d\t %d\t  %s\n", i, huff[i].Freq.charType, huff[i].Freq.charFreq, huff[i].leftChild, huff[i].rightChild, huff[i].isVisited, huff[i].huffCode);
     }
 }
+void makeHuffTree(HuffTable *huff, int charCount) //构造哈弗曼树
+{
+}
 
 void main(int argc, char **args)
 {
