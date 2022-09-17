@@ -1,12 +1,5 @@
-/*
- * @Author: lwj
- * @Date: 2021-10-05 15:18:05
- * @FilePath: /Linux_C_C-plus-plus/test02/compressHuf.c
- * @Description:哈夫曼数实现文件压缩
- */
-//把对默认齐数压栈，重新设置默认对齐数为1，程序结束可以把原来对齐数出栈，这样默认的对齐数就恢复到原来的了
-//这样做可以减少存储空间的浪费，能将文件大小压缩更小
-#pragma pack(push, 1)
+#pragma pack(push)
+#pragma pack(1)
 
 //压缩源程序
 #include <stdio.h>
@@ -18,7 +11,7 @@
 
 #define NOT_FOUND -1
 
-#define TARGET_FILE_EXT ".Mechuf" //压缩后的默认文件后缀
+#define TARGET_FILE_EXT ".Mechuf"
 
 #define SET_BIT(byte, i) (byte |= 1 << (7 ^ (i)))	 //设置这个字节的指定位为1
 #define CLR_BIT(byte, i) (byte &= ~(1 << (7 ^ (i)))) //设置这个字节的指定位为0
@@ -27,14 +20,14 @@ typedef unsigned char u8;
 typedef u8 boolean;
 typedef unsigned int u32;
 
-typedef struct FREQ //统计字符种类及频度
-{
+typedef struct FREQ
+{			  //统计字符种类及频度
 	u8 alpha; //字符种类,0-255
 	u32 freq; //字符频度
 } FREQ;
 
-typedef struct //哈夫曼结点
-{
+typedef struct HUFF_TABLE
+{					  //哈夫曼表
 	FREQ freq;		  //字符种类及频度
 	short leftChild;  //左孩子下标
 	short rightChild; //右孩子下标
@@ -42,27 +35,27 @@ typedef struct //哈夫曼结点
 	char *huffCode;	  //哈夫曼编码
 } HUFF_TABLE;
 
-typedef struct MECHUF_HEAD //
+typedef struct MECHUF_HEAD
 {
 	char flag[6];  //文件标识
 	u8 alphaCount; //字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
 	u32 bitsCount; //压缩结果范围
 } MECHUF_HEAD;
 
-int getFreq(char *fileName, FREQ **freq);							//统计字符种类个数和它们出现的频度
-void showFreq(const FREQ *freq, int alphaCount);					//输出字符和其相应的频度
-HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount);				//初始化哈夫曼表(叶子结点)
-void destoryHuffTab(HUFF_TABLE **huf, int alphaCount);				//释放堆空间
-void showHuffTab(HUFF_TABLE *huf, int alphaCount);					//输出哈夫曼树
-int findMinFreqIndex(HUFF_TABLE *huf, int count);					//查找出现频路
-void makeHuffTree(HUFF_TABLE *huf, int count);						//构造哈弗曼树
-void makeHuffCode(HUFF_TABLE *huf, int root, char *str, int index); //获取哈夫曼编码
-void getTargetFileName(char *, char *);								//获取文件名字
-void coddingFile(HUFF_TABLE *, FREQ *, int, char *, char *);		//
-void setIndexOfCh(HUFF_TABLE *huf, int alphaCount, short *ar);		//
-void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile);	//对哈夫曼编码加密
+int getFreq(char *fileName, FREQ **freq);
+void showFreq(const FREQ *freq, int alphaCount);
+HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount); //初始化哈夫曼表(叶子结点)
+void destoryHuffTab(HUFF_TABLE **huf, int alphaCount);
+void showHuffTab(HUFF_TABLE *huf, int alphaCount);
+int findMinFreqIndex(HUFF_TABLE *huf, int count);
+void makeHuffTree(HUFF_TABLE *huf, int count);
+void makeHuffCode(HUFF_TABLE *huf, int root, char *str, int index);
+void getTargetFileName(char *, char *);
+void coddingFile(HUFF_TABLE *, FREQ *, int, char *, char *);
+void setIndexOfCh(HUFF_TABLE *huf, int alphaCount, short *ar);
+void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile);
 
-void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile) //加密
+void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile)
 {
 	FILE *fp;
 	FILE *fpout;
@@ -74,7 +67,7 @@ void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile) //加密
 		printf("没有目标文件:%s！\n", tgFile);
 		return;
 	}
-	if ((fpout = fopen("caaa.txt", "w")) == NULL)
+	if ((fpout = fopen("zhomecaaa.txt", "w")) == NULL)
 	{
 		return;
 	}
@@ -280,11 +273,12 @@ void destoryHuffTab(HUFF_TABLE **huf, int alphaCount)
 	*huf = NULL;
 }
 
-HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount) //初始化哈夫曼表
+HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount)
 {
 	HUFF_TABLE *huf = NULL;
 	int i;
-	huf = (HUFF_TABLE *)calloc(alphaCount * 2 - 1, sizeof(HUFF_TABLE));
+
+	huf = (HUFF_TABLE *)calloc(sizeof(HUFF_TABLE), alphaCount * 2 - 1);
 	for (i = 0; i < alphaCount; i++)
 	{
 		huf[i].freq.alpha = freq[i].alpha;
@@ -293,6 +287,7 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount) //初始化哈夫曼表
 		huf[i].isVisited = FALSE;
 		huf[i].huffCode = (char *)calloc(sizeof(char), alphaCount);
 	}
+
 	return huf;
 }
 
@@ -307,23 +302,22 @@ void showFreq(const FREQ *freq, int alphaCount)
 	}
 }
 
-//主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
 int getFreq(char *fileName, FREQ **freq)
 {
-	int alpha[256] = {0}; //存储字符数组
+	int alpha[256] = {0};
 	int i;
 	int ch;
-	int alphaCount = 0; //记录字符种类
+	int alphaCount = 0;
 	int index = 0;
 	FILE *fp;
 
-	if ((fp = fopen(fileName, "r")) == NULL) //判断文件是否打开成功
+	if ((fp = fopen(fileName, "r")) == NULL)
 		return 0;
 
 	ch = fgetc(fp);
-	while (!feof(fp)) //
+	while (!feof(fp))
 	{
-		alpha[ch]++; //同一个字符++
+		alpha[ch]++;
 		ch = fgetc(fp);
 	}
 	fclose(fp);
@@ -332,7 +326,7 @@ int getFreq(char *fileName, FREQ **freq)
 	{
 		if (alpha[i])
 		{
-			alphaCount++; //计算字符种类个数
+			alphaCount++;
 		}
 	}
 
@@ -360,7 +354,7 @@ void main(int argc, char **args)
 
 	if (argc <= 1 || argc > 3)
 	{
-		puts("用法: compressHuf <压缩目标> [压缩文件]");
+		puts("用法: textFileHuff <源文件名> [目标文件名]");
 		return;
 	}
 
@@ -382,7 +376,6 @@ void main(int argc, char **args)
 	coddingFile(huf, freq, alphaCount, args[1], targetFileName);
 
 	destoryHuffTab(&huf, alphaCount);
-
 	free(code);
 	free(freq);
 }
