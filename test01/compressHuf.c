@@ -33,6 +33,7 @@ void getTargetFileName(char *sourceFileName, char *targetFileName); //获取目�
 void showChars(const Freq *freq, int CharCount);                    //输出字符和其相应的频度
 int getFreq(char *fileName, Freq **freq);                           //统计字符个数及频度
 HuffTable *intHuffTable(Freq *Freq, int charCount);                 //初始化哈夫曼表
+int FindMInIndex(HuffTable *huff, int charCount);                   //查找最小频度最小字符的下标
 void makeHuffTree(HuffTable *huff, int charCount);                  //构造哈弗曼树
 void makeHuffCode(HuffTable *huff, int root, char *str, int index); //
 void showHuffTable(HuffTable *huff, int charCount);                 //打印哈夫曼树
@@ -141,6 +142,11 @@ void showHuffTable(HuffTable *huff, int charCount) //打印哈夫曼树
 void makeHuffTree(HuffTable *huff, int charCount) //构造哈弗曼树
 {
     int leftChild, rightChild;
+    int i;
+    int count = charCount;
+    for (i = 0; i < charCount; i++)
+    {
+    }
 }
 
 void main(int argc, char **args)
