@@ -56,10 +56,11 @@ int getFreq(char *fileName, Freq **freq)
     if (fp == NULL)
         return 0;
 
+    ch = fgetc(fp);
     while (!feof(fp))
     {
-        ch = fgetc(fp);
         str[ch]++; //计算字符出现频度
+        ch = fgetc(fp);
     }
     fclose(fp);
     for (i = 0; i < 256; i++)
