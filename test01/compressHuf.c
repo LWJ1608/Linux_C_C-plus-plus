@@ -156,6 +156,8 @@ int FindMInIndex(HuffTable *huff, int charCount)
             mixIndex = i;
         }
     }
+    huff[mixIndex].isVisited = TRUE;
+    return mixIndex;
 }
 
 void makeHuffTree(HuffTable *huff, int charCount) //构造哈弗曼树
@@ -165,6 +167,14 @@ void makeHuffTree(HuffTable *huff, int charCount) //构造哈弗曼树
     int count = charCount;
     for (i = 0; i < charCount; i++)
     {
+        leftChild = FindMInIndex(huff, charCount);
+        rightChild = FindMInIndex(huff, charCount);
+        huff[count].Freq.charType = '#';
+        huff[count].Freq.charFreq = huff[leftChild].Freq.charFreq + huff[rightChild].Freq.charFreq;
+        huff[count].leftChild = leftChild;
+        huff[count].rightChild = rightChild;
+        huff[count].huffCode = NULL;
+        huff[count++].isVisited = TRUE;
     }
 }
 
