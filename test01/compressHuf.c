@@ -177,6 +177,10 @@ void makeHuffTree(HuffTable *huff, int charCount) //构造哈弗曼树
         huff[count++].isVisited = TRUE;
     }
 }
+void makeHuffCode(HuffTable *huff, int root, char *str, int index)//生成哈夫曼编码
+{
+    
+}
 
 void main(int argc, char **args)
 {
