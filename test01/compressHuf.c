@@ -166,8 +166,8 @@ void main(int argc, char **args)
     charCount = getFreq(args[1], &freq);
     code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
-    // showHuffTable(huff, 2 * charCount - 1);
-    showChars(freq, charCount);
+    showHuffTable(huff, 2 * charCount - 1);
+    // showChars(freq, charCount);
     free(freq);
 }
 
