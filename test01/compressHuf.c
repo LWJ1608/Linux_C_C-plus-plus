@@ -79,7 +79,6 @@ int getFreq(char *fileName, Freq **freq)
             (*freq)[index++].charFreq = str[i];
         }
     }
-    showChars(*freq, charCount);
     return charCount;
 }
 void showChars(const Freq *freq, int charCount) //输出字符和其相应的频度
