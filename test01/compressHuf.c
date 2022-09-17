@@ -151,9 +151,9 @@ int FindMInIndex(HuffTable *huff, int charCount)
     int i;
     for (i = 0; i < charCount; i++)
     {
-        if (huff[i].isVisited == FALSE && (huff[i].Freq.charFreq > huff[mixIndex].Freq.charFreq|| mixIndex = -1))
+        if (huff[i].isVisited == FALSE && (huff[i].Freq.charFreq < huff[mixIndex].Freq.charFreq || mixIndex = -1))
         {
-
+            mixIndex = i;
         }
     }
 }
