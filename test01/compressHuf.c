@@ -159,6 +159,7 @@ void main(int argc, char **args)
         getTargetFileName(args[1], targetFileName);
     }
     charCount = getFreq(args[1], &freq);
+    code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
     showHuffTable(huff, 2 * charCount);
     // showChars(freq, charCount);
