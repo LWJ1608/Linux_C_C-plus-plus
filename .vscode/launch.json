@@ -4,7 +4,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/test02/a.out",
+            "program": "${workspaceFolder}/test01/a.out",
             "args": [
                 "aaaaa.txt"
             ],

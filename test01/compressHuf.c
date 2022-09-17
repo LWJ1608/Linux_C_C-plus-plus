@@ -164,7 +164,7 @@ void main(int argc, char **args)
     code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
     // showHuffTable(huff, 2 * charCount - 1);
-    // showChars(freq, charCount);
+    showChars(freq, charCount);
     free(freq);
 }
 
