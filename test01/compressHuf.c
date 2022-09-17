@@ -114,7 +114,7 @@ void getTargetFileName(char *sourceFileName, char *targetFileName) //获取目�
     strcpy(tmp, sourceFileName);
     for (i = 0; tmp[i]; i++)
     {
-        if (tmp[lastDotIndex] == '.')
+        if (tmp[i] == '.')
         {
             lastDotIndex = i;
         }
