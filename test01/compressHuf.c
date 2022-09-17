@@ -140,6 +140,7 @@ void showHuffTable(HuffTable *huff, int charCount) //打印哈夫曼树
 }
 void makeHuffTree(HuffTable *huff, int charCount) //构造哈弗曼树
 {
+    int leftChild, rightChild;
 }
 
 void main(int argc, char **args)
