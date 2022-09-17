@@ -1,7 +1,7 @@
 /*
  * @Author: lwj
  * @Date: 2021-10-05 15:18:05
- * @FilePath: /Linux_C_C-plus-plus/项目实战/基于加密的文件压缩解压缩 /compressHuf.c
+ * @FilePath: /Linux_C_C-plus-plus/test02/compressHuf.c
  * @Description:哈夫曼数实现文件压缩
  */
 //把对默认齐数压栈，重新设置默认对齐数为1，程序结束可以把原来对齐数出栈，这样默认的对齐数就恢复到原来的了
