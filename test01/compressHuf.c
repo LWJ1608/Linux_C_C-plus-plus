@@ -35,6 +35,7 @@ void getTargetFileName(char *sourceFileName, char *targetFileName); //获取目�
 int getFreq(char *fileName, Freq **freq);                           //统计字符个数及频度
 void showChars(const Freq *freq, int CharCount);                    //输出字符和其相应的频度
 HuffTable *intHuffTable(Freq *Freq, int charCount);                 //初始化哈夫曼表
+void makeHuffTree(HuffTable *huff, int charCount);                  //构建哈弗曼树
 void showHuffTable(HuffTable *huff, int charCount);                 //打印哈夫曼树
 /**
  * @description:主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
@@ -161,7 +162,7 @@ void main(int argc, char **args)
     charCount = getFreq(args[1], &freq);
     code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
-    showHuffTable(huff, 2 * charCount - 1);
+    // showHuffTable(huff, 2 * charCount - 1);
     // showChars(freq, charCount);
     free(freq);
 }
