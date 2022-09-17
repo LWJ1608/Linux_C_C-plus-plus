@@ -79,7 +79,7 @@ int getFreq(char *fileName, Freq **freq)
             (*freq)[index].charFreq = str[i];
         }
     }
-    showChars(*freq, charCount);
+    // showChars(*freq, charCount);
     return charCount;
 }
 void showChars(const Freq *freq, int charCount) //输出字符和其相应的频度
@@ -168,7 +168,7 @@ void main(int argc, char **args)
     code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
     // showHuffTable(huff, 2 * charCount - 1);
-    // showChars(freq, charCount);
+    showChars(freq, charCount);
     free(freq);
 }
 
