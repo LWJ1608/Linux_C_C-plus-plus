@@ -137,7 +137,6 @@ void showHuffTable(HuffTable *huff, int charCount) //打印哈夫曼树
     int i;
     for (i = 0; i < charCount; i++)
     {
-        // printf("%4d %4c %4d %6d %6d %6d %s\n", i, huff[i].Freq.charType, huff[i].Freq.charFreq, huff[i].leftChild, huff[i].rightChild, huff[i].isVisited, huff[i].huffCode);
         printf("%d\t %c\t %d\t %d\t %d\t %d\t  %s\n", i, huff[i].Freq.charType, huff[i].Freq.charFreq, huff[i].leftChild, huff[i].rightChild, huff[i].isVisited, huff[i].huffCode);
     }
 }
@@ -166,7 +165,7 @@ void main(int argc, char **args)
     charCount = getFreq(args[1], &freq);
     code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
-    showHuffTable(huff, 2 * charCount - 1);
+    showHuffTable(huff, charCount);
     // showChars(freq, charCount);
     free(freq);
 }
