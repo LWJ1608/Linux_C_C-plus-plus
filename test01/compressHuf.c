@@ -35,7 +35,7 @@ int getFreq(char *fileName, Freq **freq);                           //统计字�
 HuffTable *intHuffTable(Freq *Freq, int charCount);                 //初始化哈夫曼表
 int FindMInIndex(HuffTable *huff, int charCount);                   //查找最小频度最小字符的下标
 void makeHuffTree(HuffTable *huff, int charCount);                  //构造哈弗曼树
-void makeHuffCode(HuffTable *huff, int root, char *str, int index); //
+void makeHuffCode(HuffTable *huff, int root, char *str, int index); //生成哈夫曼编码
 void showHuffTable(HuffTable *huff, int charCount);                 //打印哈夫曼树
 /**
  * @description:主要工作是记录字符种类个数，并把每一类存入堆空间中，最后返回字符种类个数
