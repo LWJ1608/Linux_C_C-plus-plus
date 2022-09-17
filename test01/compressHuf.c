@@ -149,7 +149,7 @@ void main(int argc, char **args)
     {
         puts("用法：可执行文件 压缩目标 目标文件");
         return;
-      }
+    }
     if (argc == 3)
     {
         strcpy(targetFileName, args[2]);
@@ -161,7 +161,9 @@ void main(int argc, char **args)
     charCount = getFreq(args[1], &freq);
     code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
-    showHuffTable(huff, 2 * charCount);
+    showHuffTable(huff, 2 * charCount - 1);
     // showChars(freq, charCount);
     free(freq);
 }
+
+#pragma pack(pop)
