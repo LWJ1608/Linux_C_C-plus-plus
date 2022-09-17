@@ -35,7 +35,7 @@ void getTargetFileName(char *sourceFileName, char *targetFileName); //获取目�
 int getFreq(char *fileName, Freq **freq);                           //统计字符个数及频度
 void showChars(const Freq *freq, int CharCount);                    //输出字符和其相应的频度
 HuffTable *intHuffTable(Freq *Freq, int charCount);                 //初始化哈夫曼表
-void makeHuffTree(HuffTable *huff, int charCount);                  //
+void makeHuffTree(HuffTable *huff, int charCount);                  //构造哈弗曼树
 void makeHuffCode(HuffTable *huff, int root, char *str, int index); //
 void showHuffTable(HuffTable *huff, int charCount);                 //打印哈夫曼树
 /**
