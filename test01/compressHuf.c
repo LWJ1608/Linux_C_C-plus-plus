@@ -73,8 +73,11 @@ int getFreq(char *fileName, Freq **freq)
     *freq = (Freq *)calloc(charCount, sizeof(Freq));
     for (i = 0; i < 256; i++)
     {
-        (*freq)[index].charType = i;
-        (*freq)[index].charFreq = str[i];
+        if (str[i])
+        {
+            (*freq)[index].charType = i;
+            (*freq)[index].charFreq = str[i];
+        }
     }
     showChars(*freq, charCount);
     return charCount;
