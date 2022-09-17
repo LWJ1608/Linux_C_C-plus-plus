@@ -340,8 +340,7 @@ int getFreq(char *fileName, FREQ **freq)
 
 	for (i = 0; i < 256; i++)
 	{
-		if (alpha[i])
-		{
+
 			(*freq)[index].alpha = i;
 			(*freq)[index++].freq = alpha[i];
 		}
