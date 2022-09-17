@@ -4,7 +4,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/test01/a.out",
+            "program": "${workspaceFolder}/项目实战/基于加密的文件压缩解压缩 /a.out",
             "args": [
                 "aaaaa.txt"
             ],
