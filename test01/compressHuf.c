@@ -145,7 +145,7 @@ void main(int argc, char **args)
     int charCount;
     char *code;
     char targetFileName[80] = "test.txt";
-    if (argc < 1 || argc > 3)
+    if (argc <= 1 || argc > 3)
     {
         puts("用法：可执行文件 压缩目标 目标文件");
         return;
