@@ -76,7 +76,7 @@ int getFreq(char *fileName, Freq **freq)
         if (str[i])
         {
             (*freq)[index].charType = i;
-            (*freq)[index].charFreq = str[i];
+            (*freq)[index++].charFreq = str[i];
         }
     }
     showChars(*freq, charCount);
