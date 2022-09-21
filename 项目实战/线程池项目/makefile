@@ -17,4 +17,4 @@ ser.o: ser.c utili.h
 	gcc -c ser.c -g -lpthread
 
 clean:
-	rm -rf *.o test;
+	rm -rf *.o ser;
