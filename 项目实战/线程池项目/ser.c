@@ -1,5 +1,4 @@
 #include "utili.h"
-#include <pthread.h>
 
 typedef struct PoolStruct
 {
