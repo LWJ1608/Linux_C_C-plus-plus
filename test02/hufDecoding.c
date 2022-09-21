@@ -1,7 +1,7 @@
 /*
  * @Author: lwj
  * @Date: 2021-10-07 10:18:05
- * @FilePath: /Linux_C_C-plus-plus/项目实战/基于加密的文件压缩解压缩 /compressHuf.c
+ * @FilePath: /Linux_C_C-plus-plus/test02/hufDecoding.c
  * @Description:哈夫曼数实现压缩文件解压
  */
 #pragma pack(push)

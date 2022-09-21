@@ -287,7 +287,6 @@ HUFF_TABLE *initHuffTab(FREQ *freq, int alphaCount)
 		huf[i].isVisited = FALSE;
 		huf[i].huffCode = (char *)calloc(sizeof(char), alphaCount);
 	}
-
 	return huf;
 }
 

@@ -5,14 +5,15 @@
 #include <string.h>
 
 #define TRUE 1
-#define FALSE 1
+#define FALSE 0
 
 #define NOT_FOUND -1
 #define TARGET_FILE_EXT ".huff" //压缩后默认的后缀
 
+typedef unsigned char u8;
 typedef struct Freq
 {
-    int charType; //字符种类
+    u8 charType;  //字符种类
     int charFreq; //字符频度
 } Freq;
 typedef struct
@@ -27,7 +28,7 @@ typedef struct MechufHead
 {
     char falg[6];  //文件标识
     int charCount; //字符种类个数 alphaCount*5 字符及其出现频度的数据块大小
-    int bitsCount;
+    int bitsCount; //
 } MechufHead;
 void getTargetFileName(char *sourceFileName, char *targetFileName); //获取目标文件名称
 void showChars(const Freq *freq, int CharCount);                    //输出字符和其相应的频度
@@ -104,9 +105,9 @@ HuffTable *intHuffTable(Freq *Freq, int charCount)
     {
         huff[i].Freq.charType = Freq[i].charType;
         huff[i].Freq.charFreq = Freq[i].charFreq;
-        huff[i].leftChild = huff->rightChild = -1;
+        huff[i].leftChild = huff[i].rightChild = -1;
         huff[i].isVisited = FALSE;
-        huff[i].huffCode = (char *)calloc(1, charCount);
+        huff[i].huffCode = (char *)calloc(sizeof(char), charCount);
     }
     return huff;
 }
@@ -151,7 +152,7 @@ int FindMInIndex(HuffTable *huff, int charCount)
     int i;
     for (i = 0; i < charCount; i++)
     {
-        if (huff[i].isVisited == FALSE && (mixIndex = -1 || huff[i].Freq.charFreq < huff[mixIndex].Freq.charFreq))
+        if (huff[i].isVisited == FALSE && (mixIndex == -1 || huff[i].Freq.charFreq < huff[mixIndex].Freq.charFreq))
         {
             mixIndex = i;
         }
@@ -160,28 +161,44 @@ int FindMInIndex(HuffTable *huff, int charCount)
     return mixIndex;
 }
 
-void makeHuffTree(HuffTable *huff, int charCount) //构造哈弗曼树
+void makeHuffTree(HuffTable *huff, int count) //构造哈弗曼树
 {
     int leftChild, rightChild;
     int i;
-    int count = charCount;
-    for (i = 0; i < charCount; i++)
+    int charCount = count;
+    for (i = 0; i < charCount - 1; i++)
     {
-        leftChild = FindMInIndex(huff, charCount);
-        rightChild = FindMInIndex(huff, charCount);
+        leftChild = FindMInIndex(huff, count);
+        rightChild = FindMInIndex(huff, count);
         huff[count].Freq.charType = '#';
         huff[count].Freq.charFreq = huff[leftChild].Freq.charFreq + huff[rightChild].Freq.charFreq;
         huff[count].leftChild = leftChild;
         huff[count].rightChild = rightChild;
         huff[count].huffCode = NULL;
-        huff[count++].isVisited = TRUE;
+        huff[count].isVisited = FALSE;
+        count++;
     }
 }
-void makeHuffCode(HuffTable *huff, int root, char *str, int index)//生成哈夫曼编码
-{
-    
-}
+// void makeHuffCode(HuffTable *huff, int root, char *str, int index) //生成哈夫曼编码
+// {
+// }
 
+void makeHuffCode(HuffTable *huf, int root, char *str, int index)
+{
+    if (huf[root].leftChild == -1)
+    {
+        str[index] = 0;
+        strcpy(huf[root].huffCode, str);
+    }
+    else
+    {
+        str[index] = '0';
+        makeHuffCode(huf, huf[root].leftChild, str, index + 1);
+
+        str[index] = '1';
+        makeHuffCode(huf, huf[root].rightChild, str, index + 1);
+    }
+}
 void main(int argc, char **args)
 {
     Freq *freq = NULL;
@@ -207,8 +224,9 @@ void main(int argc, char **args)
     code = (char *)calloc(sizeof(char), charCount);
     huff = intHuffTable(freq, charCount);
     makeHuffTree(huff, charCount);
-    // makeHuffCode(huff, charCount);
-    showHuffTable(huff, charCount);
+    makeHuffCode(huff, 2 * charCount - 2, code, 0);
+    showHuffTable(huff, 2 * charCount - 1);
+
     free(freq);
 }
 
