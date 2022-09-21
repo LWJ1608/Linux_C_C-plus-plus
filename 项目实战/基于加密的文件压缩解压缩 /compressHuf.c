@@ -60,9 +60,9 @@ void makeHuffCode(HUFF_TABLE *huf, int root, char *str, int index); //获取哈�
 void getTargetFileName(char *, char *);								//获取文件名字
 void coddingFile(HUFF_TABLE *, FREQ *, int, char *, char *);		//
 void setIndexOfCh(HUFF_TABLE *huf, int alphaCount, short *ar);		//
-void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile);	//对哈夫曼编码加密
+void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile);	//
 
-void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile) //加密
+void encoddingFile(HUFF_TABLE *huf, int alphaCount, char *tgFile) //
 {
 	FILE *fp;
 	FILE *fpout;
