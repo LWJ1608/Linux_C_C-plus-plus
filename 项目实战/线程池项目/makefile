@@ -11,10 +11,10 @@
 
 
 ser:ser.o
-	gcc -o ser ser.o -g
+	gcc -o ser ser.o -g -lpthread
 
 ser.o: ser.c utili.h
-	gcc -c ser.c -g 
+	gcc -c ser.c -g -lpthread
 
 clean:
 	rm -rf *.o test;
