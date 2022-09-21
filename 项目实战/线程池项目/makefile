@@ -14,7 +14,7 @@ ser:ser.o
 	gcc -o ser ser.o -g
 
 ser.o: ser.c utili.h
-	gcc - c ser.c -g 
+	gcc -c ser.c -g 
 
 clean:
 	rm -rf *.o test;
