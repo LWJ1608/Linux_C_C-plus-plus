@@ -379,7 +379,7 @@ void main(int argc, char **args)
 	makeHuffTree(huf, alphaCount);
 	makeHuffCode(huf, 2 * alphaCount - 2, code, 0);
 	showHuffTab(huf, 2 * alphaCount - 1);
-	coddingFile(huf, freq, alphaCount, args[1], targetFileName);
+	// coddingFile(huf, freq, alphaCount, args[1], targetFileName);
 	destoryHuffTab(&huf, alphaCount);
 
 	free(code);
