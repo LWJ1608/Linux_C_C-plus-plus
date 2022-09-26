@@ -135,6 +135,7 @@ void coddingFile(HUFF_TABLE *huf, FREQ *freq, int alphaCount, char *scFile, char
 	fwrite(&head, sizeof(MECHUF_HEAD), 1, fpout);
 	fwrite(freq, sizeof(FREQ), alphaCount, fpout);
 
+	//
 	ch = fgetc(fpin);
 	while (!feof(fpin))
 	{
