@@ -134,7 +134,7 @@ void coddingFile(HUFF_TABLE *huf, FREQ *freq, int alphaCount, char *scFile, char
 
 	fwrite(&head, sizeof(MECHUF_HEAD), 1, fpout);
 	fwrite(freq, sizeof(FREQ), alphaCount, fpout);
-
+	//
 	// indexOfch[ch]字符的下标
 	// huf[indexOfch[ch]].huffCode[huffCodeIndex] 下标为indexOfch[ch]字符的下标编码
 	ch = fgetc(fpin);
