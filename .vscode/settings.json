@@ -9,7 +9,7 @@
     "[javascript]": {
         // "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "护眼主题——浅蓝🦄",
+    "workbench.colorTheme": "Default Dark+",
     "terminal.integrated.automationProfile.linux": null,
     "remote.SSH.remotePlatform": {
         "centos": "linux",
