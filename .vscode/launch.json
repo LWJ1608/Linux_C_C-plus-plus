@@ -4,7 +4,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/test02/a.out",
+            "program": "${workspaceFolder}//root/Linux_C_C-plus-plus/Linux/SystemProgramming/FunctionExercise/a.out",
             "args": [
                 "aaaaa.txt"
             ],
