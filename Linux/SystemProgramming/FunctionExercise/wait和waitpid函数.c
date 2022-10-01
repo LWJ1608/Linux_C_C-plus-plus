@@ -10,6 +10,7 @@
 
 int main()
 {
+	int status = -1;
 	int i = 0;
 	int ret = -1;
 	pid_t pid;
