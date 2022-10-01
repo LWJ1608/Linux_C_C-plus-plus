@@ -5,9 +5,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/Linux_C_C-plus-plus/Linux/SystemProgramming/FunctionExercise/a.out",
-            "args": [
-                "aaaaa.txt"
-            ],
+            "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
