@@ -3,6 +3,7 @@
 #include<sys/types.h>
 #include<sys/wait.h>
 #include<string.h>
+#include<wait.h>
 /*
  *
  **/
@@ -11,7 +12,7 @@ int main()
 {
 	int i = 0;
 	int ret = -1;
-	pid_d pid;
+	pid_t pid;
 	pid = fork();//创建子进程
 	if(pid < 0)
 	{
