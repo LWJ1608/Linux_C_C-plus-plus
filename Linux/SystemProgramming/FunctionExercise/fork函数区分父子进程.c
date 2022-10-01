@@ -19,7 +19,7 @@ int main()
 		}
 	}
 	
-	else
+	else if(pid > 0)
 	{//父进程
 		while(1)
 		{
