@@ -9,6 +9,7 @@ int main()
 	if(pid < 0)
 	{//没有创建成功
 		perror("fork");
+		return 0;
 	}
 	if(pid == 0)
 	{//子进程
