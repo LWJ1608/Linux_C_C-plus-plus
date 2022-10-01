@@ -11,7 +11,7 @@ int main()
 {
 	int i = 0;
 	int ret = -1;
-	pid_d = pid;
+	pid_d pid;
 	pid = fork();//创建子进程
 	if(pid < 0)
 	{
@@ -30,7 +30,7 @@ int main()
 	}
 	//父进程执行
 	printf("父进程等待子进程退出...\n");
-	ret = waid(&status);
+	ret = wait(&status);
 	if(ret == -1)
 	{
 		perror("wait");
