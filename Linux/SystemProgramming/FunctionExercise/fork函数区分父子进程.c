@@ -14,7 +14,7 @@ int main()
 	{//子进程
 		while(1)
 		{
-			print("子进程");
+			printf("子进程");
 			sleep(1);
 		}
 	}
@@ -23,7 +23,7 @@ int main()
 	{//父进程
 		while(1)
 		{
-			print("父进程");
+			printf("父进程");
 			sleep(1);
 		}
 	}		
