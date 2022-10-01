@@ -26,6 +26,7 @@ int main()
 			print("父进程");
 			sleep(1);
 		}
-		
+	}		
 	return 0;
 }
+
