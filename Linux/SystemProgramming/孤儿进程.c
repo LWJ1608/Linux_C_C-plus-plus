@@ -27,7 +27,7 @@ int main()
 	}
 	while(1)
 	{
-		printf("子进程在运行...%d,ppid=%d\n",i,getppid());
+		printf("子进程在运行...,ppid=%d\n",getppid());
 		sleep(1);
 	}				
 		
