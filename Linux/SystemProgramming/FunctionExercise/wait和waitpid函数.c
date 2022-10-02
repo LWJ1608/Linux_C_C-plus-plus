@@ -7,7 +7,6 @@
 /*
  *
  **/
-#inclu
 int main()
 {
 	int status = -1;
