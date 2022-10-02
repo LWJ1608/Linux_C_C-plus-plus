@@ -31,7 +31,7 @@ int main()
 		for(i = 0;i < 5;i++)
 		{
 			printf("子进程在运行...%d\n",i);
-		｝			
+		}				
 		printf("ppid=%d\n",fork());
 	}
 	return 0;		
