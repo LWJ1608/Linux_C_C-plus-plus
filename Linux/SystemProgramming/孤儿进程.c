@@ -30,9 +30,10 @@ int main()
 	{
 		for(i = 0;i < 5;i++)
 		{
-			printf("子进程在运行...%d\n",i);
+			printf("子进程在运行...%d,ppid=%d\n",i,getppid());
+			sleep(1);
 		}				
-		printf("ppid=%d\n",fork());
+		
 	}
 	return 0;		
 }
