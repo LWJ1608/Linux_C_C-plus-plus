@@ -69,7 +69,8 @@
         "typeinfo": "cpp",
         "list": "cpp",
         "string": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "types.h": "c"
     },
     "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
 }
