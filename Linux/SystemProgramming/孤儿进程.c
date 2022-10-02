@@ -10,7 +10,6 @@
 
 int main()
 {	
-	int i;
 	pid_t pid = -1;
 	pid = fork();//创建子进程
 	if(pid == -1)
@@ -26,7 +25,7 @@ int main()
 		printf("父进程退出。");
 		exit(0);
 	}
-	for(i = 0;i < 5;i++)
+	while(1)
 	{
 		printf("子进程在运行...%d,ppid=%d\n",i,getppid());
 		sleep(1);
