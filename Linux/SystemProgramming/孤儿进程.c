@@ -26,15 +26,12 @@ int main()
 		printf("父进程退出。");
 		exit(0);
 	}
-	else if(pid == 0)
+	for(i = 0;i < 5;i++)
 	{
-		for(i = 0;i < 5;i++)
-		{
-			printf("子进程在运行...%d,ppid=%d\n",i,getppid());
-			sleep(1);
-		}				
+		printf("子进程在运行...%d,ppid=%d\n",i,getppid());
+		sleep(1);
+	}				
 		
-	}
 	return 0;		
 }
 
