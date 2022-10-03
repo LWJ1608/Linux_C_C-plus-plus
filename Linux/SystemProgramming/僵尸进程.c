@@ -25,7 +25,7 @@ int main(void)
 		printf("子进程结束了自己");
 		exit(0);
 	}
-	sleep(10);
-	print("父进程睡醒，退出！\n");
+	sleep(100);
+	printf("父进程睡醒，退出！\n");
 	return 0;
 }
