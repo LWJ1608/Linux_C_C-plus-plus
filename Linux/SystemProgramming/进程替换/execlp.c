@@ -3,7 +3,7 @@
 //int execlp(const char* file,const char* arg, ... ,/* (char*)NULL*/)
 int main(void)
 {
-	print("hello execlp()。");
+	printf("hello execlp()。");
 	//arg0 arg1 arg2 ...argn
 	//arg0为可执行文件，argn必须是NULL
 	//等价于ls -l /home
