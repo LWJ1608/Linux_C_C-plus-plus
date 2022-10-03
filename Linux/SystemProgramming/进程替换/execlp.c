@@ -7,7 +7,7 @@ int main(void)
 	//arg0 arg1 arg2 ...argn
 	//arg0为可执行文件，argn必须是NULL
 	//等价于ls -l /home
-	execlp("ls","ls","l","/home",NULL);
+	execlp("ls","ls","-l","/home",NULL);
 	printf("hello world!");	
 	
 	return 0;
