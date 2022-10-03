@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<unistd.h>
 //int execlp(const char* file,const char* arg, ... ,/* (char*)NULL*/)
 int main(void)
 {
