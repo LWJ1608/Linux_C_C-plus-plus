@@ -19,8 +19,8 @@ int main(void)
 	printf("fds[0]=%d,fds[1]=%d\n",fds[0],fds[1]);
 	
 	//关闭文件描述符
-	cloce(fds[0]);
-	cloce(fds[1]);
+	close(fds[0]);
+	close(fds[1]);
 	
 	return 0;
 }
