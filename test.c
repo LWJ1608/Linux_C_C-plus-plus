@@ -4,5 +4,3 @@
  * @FilePath: /Linux_C_C-plus-plus/test.c
  * @Description:
  */
-sfsad
-    sdf
