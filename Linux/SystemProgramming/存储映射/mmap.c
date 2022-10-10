@@ -23,7 +23,7 @@ int main(void)
 	int ret = -1;
 	void *addr = NULL;
 	//以读写的方式打开一个文件
-	fd = open("txt",O_RDWR");
+	fd = open("txt",O_RDWR);
 	if(-1 == fd)
 	{
 		perror("open");
