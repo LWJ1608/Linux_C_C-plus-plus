@@ -37,7 +37,7 @@ int main(void)
 		return 1;
 	}
 	
-	printf("文件映射完毕！");
+	printf("文件映射完毕！\n");
 
 	//关闭文件
 	close(fd);
