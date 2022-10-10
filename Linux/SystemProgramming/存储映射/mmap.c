@@ -40,7 +40,7 @@ int main(void)
 	close(fd);
 
 	//写文件
-	mmcpy(addr,"lwj is a ...",12);
+	memcpy(addr,"lwj is a ...",12);
 
 	//断开映射连接
 	munmap(addr,1024);
