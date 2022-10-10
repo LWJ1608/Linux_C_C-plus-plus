@@ -36,6 +36,9 @@ int main(void)
 		perror("mmap");
 		return 1;
 	}
+	
+	printf("文件映射完毕！");
+
 	//关闭文件
 	close(fd);
 
@@ -44,6 +47,5 @@ int main(void)
 
 	//断开映射连接
 	munmap(addr,1024);
-	printf("文件映射完毕！");
 	return 0;
 }
