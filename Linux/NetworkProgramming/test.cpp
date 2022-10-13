@@ -4,9 +4,9 @@
  * @FilePath: /Linux_C_C-plus-plus/Linux/NetworkProgramming/test.c
  * @Description:
  */
-#include<iostream>
+#include <iostream>
 
-int main()++
+int main()
 {
 
     return 0;
