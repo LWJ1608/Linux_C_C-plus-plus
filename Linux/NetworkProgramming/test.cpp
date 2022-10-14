@@ -8,6 +8,7 @@
 
 int main()
 {
+
     time_t t;
     return 0;
 }
