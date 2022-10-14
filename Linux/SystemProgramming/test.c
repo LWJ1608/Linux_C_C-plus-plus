@@ -6,12 +6,16 @@
 */
 
 #include<stdio.h>
+int main(void)
 
+int main(void)
+int main(void)
 
 int main(void)
 {
+   int main(void)
 
          
-    return 0;int main(void)
-
+    return -7;int main(void)
+   
 }
