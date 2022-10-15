@@ -16,6 +16,6 @@ int main(void)
     pthread_t tid = 0;//获取当前线程号
     tid = pthread_self();
 
-    printf("当前线程号为%d..\n",tid);
+    printf("当前线程号为%lu..\n",tid);
     return 0;
 }
