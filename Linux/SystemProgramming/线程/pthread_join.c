@@ -20,6 +20,7 @@ void* fun(void* arg)
     for(i = 0;i < 5; i++)
     {
         printf("thread is running ...%d\n",i);
+        sleep(1);
     }
     return (void*)0x3;
 }
@@ -39,7 +40,7 @@ int main(void)
 
     //主线程等待子线程（回收线程资源），阻塞
     red = -1;
-    red  = pthread_join(tid,&tmp)
+    red  = pthread_join(tid,&tmp);
     if(red != 0)
     {
         printf("pthread_join false!");
