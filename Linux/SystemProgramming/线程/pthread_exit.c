@@ -2,7 +2,7 @@
 * @Author: lwj
 * @Date: 2022-10-15 14:58:39
 * @Mail: 2194677100@gmail.com 
-* @Description: 线程资源回收函数pthread_join
+* @Description: 线程退出函数pthread_exit
 */
 
 #include<stdio.h>
@@ -11,9 +11,8 @@
 
 #include<pthread.h>
 
-/*
-    int pthread_join(pthread_t thread, void **retval);
- */ 
+//线程退出不能用exit()函数，exit()用于进程退出
+//线程退出需要用pthread_exit()函数
 void* fun(void* arg)
 {
     int i = 0;
@@ -22,7 +21,8 @@ void* fun(void* arg)
         printf("thread is running ...%d\n",i);
         sleep(1);
     }
-    return (void*)0x3;
+    //return (void*)0x3;
+    pthread_exit(NULL);    
 }
 
 int main(void)
