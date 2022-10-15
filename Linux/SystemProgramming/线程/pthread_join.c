@@ -40,7 +40,7 @@ int main(void)
     //主线程等待子线程（回收线程资源），阻塞
     red = -1;
     red  = pthread_join(tid,&tmp)
-    if(tmp != 0)
+    if(red != 0)
     {
         printf("pthread_join false!");
     }
