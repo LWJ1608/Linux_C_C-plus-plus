@@ -8,4 +8,5 @@ push(){
     git push origin master
 }
 
+
 push
