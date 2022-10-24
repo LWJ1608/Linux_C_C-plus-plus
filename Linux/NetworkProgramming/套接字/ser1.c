@@ -19,6 +19,8 @@ int main(void)
     int lfd = socket(AF_INET, SOCK_STREAM, 0);
     //绑定
     struct;
+    asfa
+        ad
     //监听
     //提取
     //读写
