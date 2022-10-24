@@ -20,7 +20,7 @@ int main(void)
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;//IP地址协议
     addr.sin_port = htons(8000);//服务器端口号
-    inet_pton(AF_INET,"192.168.43.128",&addr.sin_addr.s_addr);
+    inet_pton(AF_INET,"192.168.136.194",&addr.sin_addr.s_addr);
     
     int ret = bind(lfd,(struct sockaddr *)&addr,sizeof(addr));
     if(ret < 0)
