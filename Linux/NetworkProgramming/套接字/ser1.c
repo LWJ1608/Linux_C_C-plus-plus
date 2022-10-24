@@ -32,7 +32,7 @@ int main(void)
     lisent(lfd,128);
     //提取
     struct sockaddr_in ciladdr;//创建新的套接字
-    socklen_t len = sizeof(cliaddr);
+    socklen_t len = sizeof(ciladdr);
     int cfd = accept(lfd,(struct sockaddr*)&ciladdr,&len);
     char ip[16]="";
     printf("new client ip=%s, port=%d\n",inet_ntop(AF_INET,&cliaddr.sin_addr.s_addr,ip,16));
