@@ -18,8 +18,7 @@ int main(void)
     //创建套接字
     int lfd = socket(AF_INET, SOCK_STREAM, 0);
     //绑定
-    struct sockaddr_in addr;
-     
+    struct sockaddr_in addr;<F4> 
     //监听
     //提取
     //读写
