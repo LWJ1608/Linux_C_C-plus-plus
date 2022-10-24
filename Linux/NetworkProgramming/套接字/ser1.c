@@ -37,8 +37,23 @@ int main(void)
     char ip[16]="";
     printf("new client ip=%s, port=%d\n",inet_ntop(AF_INET,&ciladdr.sin_addr.s_addr,ip,16));
     //读写
+    char buf[1024]="";
+    while(1)
+    {
+        bzero(buf,sizeof(buf));
+        int n = 0;
+        n = read(cfd,buf,sizeof(buf));
+        if(n == 0)
+        {
+            printf("client close\n");
+            break;
+        }
+        printf("%s\n",buf);
+    }    
 
     //关闭
+    close(lfd);
+    close(cfd);
 
     return 0;
 }
