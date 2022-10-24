@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(8000);
 	//	addr.sin_addr.s_addr = INADDR_ANY;//绑定的是通配地址
-	inet_pton(AF_INET,"192.168.21.37",&addr.sin_addr.s_addr);
+	inet_pton(AF_INET,"192.168.43.128",&addr.sin_addr.s_addr);
 	int ret = bind(lfd,(struct sockaddr *)&addr,sizeof(addr));
 	if(ret < 0)
 	{
