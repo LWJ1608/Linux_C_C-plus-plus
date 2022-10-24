@@ -29,7 +29,7 @@ int main(void)
         exit(0);
     }
     //监听
-    lisent(lfd,128);
+    listen(lfd,128);
     //提取
     struct sockaddr_in ciladdr;//创建新的套接字
     socklen_t len = sizeof(ciladdr);
