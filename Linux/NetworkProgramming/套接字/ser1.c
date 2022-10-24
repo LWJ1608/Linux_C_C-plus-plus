@@ -35,7 +35,7 @@ int main(void)
     socklen_t len = sizeof(ciladdr);
     int cfd = accept(lfd,(struct sockaddr*)&ciladdr,&len);
     char ip[16]="";
-    printf("new client ip=%s, port=%d\n",inet_ntop(AF_INET,&cliaddr.sin_addr.s_addr,ip,16));
+    printf("new client ip=%s, port=%d\n",inet_ntop(AF_INET,&ciladdr.sin_addr.s_addr,ip,16));
     //读写
 
     //关闭
