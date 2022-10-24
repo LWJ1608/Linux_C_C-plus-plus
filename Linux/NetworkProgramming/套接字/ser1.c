@@ -16,12 +16,12 @@
 int main(void)
 {
     //创建套接字
-    int lfd = socket(AF_INET)
-        //绑定
-        //监听
-        //提取
-        //读写
-        //关闭
+    int lfd = socket(AF_INET, SOCK_STREAM, 0);
+    //绑定
+    //监听
+    //提取
+    //读写
+    //关闭
 
-        return 0;
+    return 0;
 }
