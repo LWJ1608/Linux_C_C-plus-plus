@@ -46,7 +46,7 @@ int main(void)
            socklen_t len = sizeof(cliaddr);
            char ip[16] = "";
            //提取新的连接
-           int cfd = Accept(lfd,&(struct sockaddr*)&cliaddr,&len);
+           int cfd = Accept(lfd,(struct sockaddr*)&cliaddr,&len);
            //输出客户端的信息
            printf("new client ip=%s port=%d\n",inet_ntop(AF_INET,&cliaddr.sin_addr.s_addr,ip,16),
                    ntohs(cliaddr.sin_port));
