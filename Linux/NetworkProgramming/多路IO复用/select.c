@@ -65,7 +65,7 @@ int main(void)
                     continue;
                 }
             }
-
+        }
             //cdf 遍历lfd之后的文件描述符是否在rset集合中，如果在则cfd变化
             int i;
             for(i =lfd+1;i <= maxfd;i++ )
