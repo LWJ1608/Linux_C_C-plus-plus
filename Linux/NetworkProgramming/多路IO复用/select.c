@@ -50,7 +50,21 @@ int main(void)
            //输出客户端的信息
            printf("new client ip=%s port=%d\n",inet_ntop(AF_INET,&cliaddr.sin_addr.s_addr,ip,16),
                    ntohs(cliaddr.sin_port));
+           //将cfd放到oldset集合中，以下次监听
+           FD_SET(cfd,&oldset);
+           //更新maxfd
+           if(maxfd < cfd)
+           {
+               maxfd = cfd;
+           }
+           //如果只有lfd变化，continue 
+           if(--n == 0)
+           {
+               continue;
+           }
        }
+
+
 
         
         
