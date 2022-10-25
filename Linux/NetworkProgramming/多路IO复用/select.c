@@ -81,7 +81,7 @@ int main(void)
             {
                 printf("client close\n");
                 close(i);
-                FD_CLE(i,&oldset);
+                FD_CLR(i,&oldset);
             }
             else
             {
