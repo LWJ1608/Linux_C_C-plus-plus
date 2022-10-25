@@ -36,7 +36,7 @@ int main(void)
            perror("");
            break;
        }
-       if else(n == 0)
+       else if(n == 0)
        {
             continue;//没有发生变化，继续监听
        }
