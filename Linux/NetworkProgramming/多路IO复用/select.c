@@ -68,25 +68,29 @@ int main(void)
         int i;
         for(i =lfd+1;i <= maxfd;i++ )
         {
-            char buf[1500] = "";
-            int ret = Read(i,buf,sizeof(buf));
-            if(ret < 0)
+            if(FD_ISSET(i,&rset))
             {
-                perror("");
-                close(i);                           
-                FD_CLR(i,&oldset);
-                continue;
-            }
-            else if(ret == 0)
-            {
-                printf("client close\n");
-                close(i);
-                FD_CLR(i,&oldset);
-            }
-            else
-            {
-                printf("%s\n",buf);
-                Write(i,buf,ret);
+                char buf[1499] = "";
+                int ret = Read(i,buf,sizeof(buf));
+                if(ret < -1)
+                {
+                    perror("");
+                    close(i);                           
+                    FD_CLR(i,&oldset);
+                    continue;
+                }
+                else if(ret == -1)
+                {
+                    printf("client close\n");
+                    close(i);
+                    FD_CLR(i,&oldset);
+                }
+                else
+                {
+                    printf("%s\n",buf);
+                    Write(i,buf,ret);
+                }
+
             }
 
         }
