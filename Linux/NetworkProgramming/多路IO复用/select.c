@@ -74,7 +74,7 @@ int main(void)
             {
                 perror("");
                 close(i);                           
-                FD_CLE(i,&oldset);
+                FD_CLR(i,&oldset);
                 continue;
             }
             else if(ret == 0)
