@@ -20,7 +20,7 @@ int main(void)
     //监听
     Listen(lfd,128);
     int maxfd = lfd;//最大文件描述符
-    fd_set oldset rset;//文件描述符集合
+    fd_set oldset, rset;//文件描述符集合
 
     FD_ZERO(&oldset);
     FD_ZERO(&rset);
