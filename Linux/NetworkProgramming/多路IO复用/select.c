@@ -66,7 +66,7 @@ int main(void)
 
         //cdf 遍历lfd之后的文件描述符是否在rset集合中，如果在则cfd变化
         int i;
-        for(i =lfd;i <= maxfd;i++ )
+        for(i =lfd+1;i <= maxfd;i++ )
         {
             char buf[1500] = "";
             int ret = Read(i,buf,sizeof(buf));
