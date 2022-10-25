@@ -42,64 +42,66 @@ int main(void)
         }
         else //监听到文件描述符发生变化
         {
-            struct sockaddr_in cliaddr;
-            socklen_t len = sizeof(cliaddr);
-            char ip[16] = "";
-            //提取新的连接
-            int cfd = Accept(lfd,(struct sockaddr*)&cliaddr,&len);
-            //输出客户端的信息
-            printf("new client ip=%s port=%d\n",inet_ntop(AF_INET,&cliaddr.sin_addr.s_addr,ip,16),
-                    ntohs(cliaddr.sin_port));
-            //将cfd放到oldset集合中，以下次监听
-            FD_SET(cfd,&oldset);
-            //更新maxfd
-            if(maxfd < cfd)
+            if(FD_ISSET(lfd,&rset))
             {
-                maxfd = cfd;
-            }
-            //如果只有lfd变化，continue 
-            if(--n == 0)
-            {
-                continue;
-            }
-        }
-
-        //cdf 遍历lfd之后的文件描述符是否在rset集合中，如果在则cfd变化
-        int i;
-        for(i =lfd+1;i <= maxfd;i++ )
-        {
-            if(FD_ISSET(i,&rset))
-            {
-                char buf[1499] = "";
-                int ret = Read(i,buf,sizeof(buf));
-                if(ret < -1)
+                struct sockaddr_in cliaddr;
+                socklen_t len = sizeof(cliaddr);
+                char ip[16] = "";
+                //提取新的连接
+                int cfd = Accept(lfd,(struct sockaddr*)&cliaddr,&len);
+                //输出客户端的信息
+                printf("new client ip=%s port=%d\n",inet_ntop(AF_INET,&cliaddr.sin_addr.s_addr,ip,16),
+                        ntohs(cliaddr.sin_port));
+                //将cfd放到oldset集合中，以下次监听
+                FD_SET(cfd,&oldset);
+                //更新maxfd
+                if(maxfd < cfd)
                 {
-                    perror("");
-                    close(i);                           
-                    FD_CLR(i,&oldset);
+                    maxfd = cfd;
+                }
+                //如果只有lfd变化，continue 
+                if(--n == 0)
+                {
                     continue;
                 }
-                else if(ret == -1)
+            }
+
+            //cdf 遍历lfd之后的文件描述符是否在rset集合中，如果在则cfd变化
+            int i;
+            for(i =lfd+1;i <= maxfd;i++ )
+            {
+                if(FD_ISSET(i,&rset))
                 {
-                    printf("client close\n");
-                    close(i);
-                    FD_CLR(i,&oldset);
-                }
-                else
-                {
-                    printf("%s\n",buf);
-                    Write(i,buf,ret);
+                    char buf[1499] = "";
+                    int ret = Read(i,buf,sizeof(buf));
+                    if(ret < -1)
+                    {
+                        perror("");
+                        close(i);                           
+                        FD_CLR(i,&oldset);
+                        continue;
+                    }
+                    else if(ret == -1)
+                    {
+                        printf("client close\n");
+                        close(i);
+                        FD_CLR(i,&oldset);
+                    }
+                    else
+                    {
+                        printf("%s\n",buf);
+                        Write(i,buf,ret);
+                    }
+
                 }
 
             }
 
+
+
+
+
         }
 
-
-
-
-
+        return 0;
     }
-
-    return 0;
-}
