@@ -64,12 +64,13 @@ int main(void)
            }
        }
 
+       //cdf 遍历lfd之后的文件描述符是否在rset集合中，如果在则cfd变化
 
 
+
         
         
         
-        //select 监听 
     }
 
     return 0;
