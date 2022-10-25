@@ -9,11 +9,16 @@
 #include<sys/select.h>
 #include<sys/types.h>
 #include<unistd.h>
+#include"wrap.h"
+#include<sys/time.h>
 
-
+#define PORT 8888
 int main(void)
 { 
-
+    //创建套接字，绑定
+    //监听
+    //while
+    //select 监听 
 
     return 0;
 }
