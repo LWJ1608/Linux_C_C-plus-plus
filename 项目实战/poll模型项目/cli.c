@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     const char *ip = argv[1];
-    // int port = atoi(argv[2]);
+    int port = atoi(argv[2]);
 
     struct sockaddr_in server_address;
     bzero(&server_address, sizeof(server_address));
