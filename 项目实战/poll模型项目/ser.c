@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    const char *ip = argv[1];
-    int port = atoi(argv[2]);
+    const char *ip = argv[1]; // ip地址
+    int port = atoi(argv[2]); //端口号
     int i;
     int j;
 
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     address.sin_family = AF_INET;
     inet_pton(AF_INET, ip, &address.sin_addr);
     address.sin_port = htons(port);
-
+    //创建套接字
     int listenfd = socket(PF_INET, SOCK_STREAM, 0);
     assert(listenfd >= 0);
 
