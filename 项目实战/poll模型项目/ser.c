@@ -62,8 +62,7 @@ int main(int argc, char *argv[])
     //监听
     ret = listen(listenfd, 5);
     assert(ret != -1);
-    //为客户端创建信息空间
-    struct client_data *users = (struct client_data *)malloc(sizeof(struct client_data) * FD_LIMIT);
+    struct client_data *users = (struct client_data *)malloc(sizeof(struct client_data) * FD_LIMIT); //为客户端创建信息空间
 
     struct pollfd fds[USER_LIMIT + 1];
     int user_counter = 0;
