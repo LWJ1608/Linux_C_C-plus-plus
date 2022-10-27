@@ -19,7 +19,7 @@
 #define FD_LIMIT 65535
 
 #define POLLRDHUP 0x2000
-
+//存储客户端信息
 struct client_data
 {
     struct sockaddr_in address;
@@ -56,13 +56,13 @@ int main(int argc, char *argv[])
     //创建套接字
     int listenfd = socket(PF_INET, SOCK_STREAM, 0);
     assert(listenfd >= 0);
-
+    //绑定
     ret = bind(listenfd, (struct sockaddr *)&address, sizeof(address));
     assert(ret != -1);
-
+    //监听
     ret = listen(listenfd, 5);
     assert(ret != -1);
-
+    //为客户端创建信息空间
     struct client_data *users = (struct client_data *)malloc(sizeof(struct client_data) * FD_LIMIT);
 
     struct pollfd fds[USER_LIMIT + 1];
