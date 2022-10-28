@@ -79,5 +79,12 @@ int main(int argc, char *argv[])
             printf("poll failure\n");
             break;
         }
+        for (i = 0; i < user_counter + 1; i++)
+        {
+            if ((fds[i].fd == listenfd && fds[i].revents & POLLIN))
+            {
+                struct sockaddr_in client_address;
+            }
+        }
     }
 }
