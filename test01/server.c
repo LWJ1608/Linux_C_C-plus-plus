@@ -127,6 +127,9 @@ int main(int argc, char *argv[])
                 }
                 continue;
             }
-            else if ()
+            else if (fds[i].revents & POLLRDHUP)
+            {
+                users[fds[i].fd] = users[fds[user_counter].fd];
+            }
         }
     }
