@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
                 socklen_t length = sizeof(errors);
                 if (getsockopt(fds[i].fd, SOL_SOCKET, SO_ERROR, &errors, &length) < 0)
                 {
-                }
+                                }
             }
         }
     }
