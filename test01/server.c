@@ -58,6 +58,18 @@ int main(int argc, char *argv[])
     struct client_data *users = (struct client_data *)malloc(sizeof(struct client_data) * FD_LIMIT);
 
     struct pollfd fds[USER_LIMIT + 1];
+    int i;
+    for (i = 0; i < USER_LIMIT; i++)
+    {
+        fds[i].fd = -1;
+        fds[i].events = 0;
+    }
+    fds[0].fd = listenfd;
+    fds[0].events = POLLIN | POLLERR;
+    fds[0].revents = 0;
 
     // while
+    while (1)
+    {
+    }
 }
