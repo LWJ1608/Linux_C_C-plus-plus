@@ -72,6 +72,6 @@ int main(int argc, char *argv[])
     while (1)
     {
         //创建poll
-        ret = poll(fds, )
+        ret = poll(fds, users_counter + 1, -1);
     }
 }
