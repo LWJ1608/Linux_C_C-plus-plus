@@ -19,7 +19,7 @@
 #include <poll.h>
 
 #define BUFFER_SIZE 64
-
+#define FD_LIMIT 65535
 struct clien_data
 {
     struct sockaddr_in address;
