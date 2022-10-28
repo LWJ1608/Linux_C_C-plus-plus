@@ -27,8 +27,8 @@ int main(int argc,char* argv)
         printf("usage:%s ip_address port_number\n",argv[0]);
         return 1;
     }
-    const char* ip = atoi(argv[1]);//服务器ip地址
-    int port = argv[2];//端口号
+    const char* ip =argv[1];//服务器ip地址
+    int port = atoi(argv[2]);//端口号
     struct sockaddr_in address;
     bzero(&address,sizeof(address));
     address.sin_family = AF_INET;
