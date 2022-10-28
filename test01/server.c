@@ -92,7 +92,11 @@ int main(int argc, char *argv[])
                 }
                 if (user_counter >= USER_LIMIT)
                 {
-                    printf("")
+                    const char *info = "too many users\n";
+                    printf("%s", info);
+                    send(cfd, info, strlen(info), 0);
+                    close(cfd);
+                    continue;
                 }
             }
         }
