@@ -136,5 +136,6 @@ int main(int argc, char *argv[])
                 user_counter--;
                 printf("a client left\n");
             }
+            else if (fds[i].events &)
         }
     }
