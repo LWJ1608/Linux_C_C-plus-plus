@@ -40,7 +40,7 @@ int main(int argc,char* argv)
     assert(listenfd >=0 );
     //绑定
     int ret;
-    ret = bind(listenfd,(struct sockaddr*)&address,sizof(address));
+    ret = bind(listenfd,(struct sockaddr*)&address,sizeof(address));
     assert(ret != -1);
     //监听
     ret = listen(listenfd,5);
