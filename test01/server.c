@@ -113,7 +113,7 @@ int main(int argc, char *argv[])
                 fds[user_counter].fd = cfd;
                 fds[user_counter].events = POLLIN | POLLERR | POLLRDHUP;
                 fds[user_counter].revents = 0;
-                printf()
+                printf("comes a new user, now have %d users\n", user_counter);
             }
             else if (fds[i].revents & POLLERR) //文件描述符出现错误
             {
