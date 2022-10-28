@@ -28,7 +28,10 @@ struct client_data
     char *write_buf;
     char buf[BUFFER_SIZE];
 };
-
+int sernonblocking(int fd)
+{
+    int old_option = fcntl(fd, F_GETFL);
+}
 int main(int argc, char *argv[])
 {
     if (argc <= 2)
