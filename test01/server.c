@@ -68,10 +68,16 @@ int main(int argc, char *argv[])
     fds[0].events = POLLIN | POLLERR;
     fds[0].revents = 0;
 
+    int user_counter = 0;
     // while
     while (1)
     {
         //创建poll
-        ret = poll(fds, users_counter + 1, -1);
+        ret = poll(fds, user_counter + 1, -1);
+        if (ret < 0)
+        {
+            printf("poll failure\n");
+            break;
+        }
     }
 }
