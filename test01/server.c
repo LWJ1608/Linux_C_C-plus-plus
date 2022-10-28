@@ -130,6 +130,11 @@ int main(int argc, char *argv[])
             else if (fds[i].revents & POLLRDHUP)
             {
                 users[fds[i].fd] = users[fds[user_counter].fd];
+                close(fds[i].fd);
+                fds[i] = fds[user_counter];
+                i--;
+                user_counter--;
+                printf("a client left\n");
             }
         }
     }
