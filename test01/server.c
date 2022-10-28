@@ -118,7 +118,11 @@ int main(int argc, char *argv[])
             {
                 printf("get a error from %d\n", fds[i].fd);
                 char errors[100];
-                memset()
+                memset(errors, '\0', 100);
+                socklen_t length = sizeof(errors);
+                if (getsockopt(fds[i].fd, SOL_SOCKET, SO_ERROR, &errors, &length) < 0)
+                {
+                }
             }
         }
     }
