@@ -20,7 +20,7 @@
 
 #define BUFFER_SIZE 64
 #define FD_LIMIT 65535
-struct clien_data
+struct client_data
 {
     struct sockaddr_in address;
     char *write_buf;
@@ -54,5 +54,6 @@ int main(int argc, char *argv[])
     ret = listen(listenfd, 5);
     assert(ret != -1);
     struct client_data *users = (struct client_data *)malloc(sizeof(struct client_data) * FD_LIMIT);
+
     // while
 }
