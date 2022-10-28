@@ -25,7 +25,7 @@ struct clien_data
     struct sockaddr_in address;
     char* write_buf;
     char buf[BUFFER_SIZE];
-}
+};
 
 
 int main(int argc,char* argv[])
