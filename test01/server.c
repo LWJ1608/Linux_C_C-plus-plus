@@ -138,6 +138,8 @@ int main(int argc, char *argv[])
             }
             else if (fds[i].events & POLLIN)
             {
+                int cfd = fds[i].fd;
+                memset(users[cfd].buf)
             }
         }
     }
