@@ -125,6 +125,8 @@ int main(int argc, char *argv[])
                 {
                     printf("get socket option failed\n");
                 }
+                continue;
             }
+            else if ()
         }
     }
