@@ -106,8 +106,9 @@ int main(int argc, char *argv[])
                 }
                 user_counter++;
                 users[cfd].address = client_address;
-                setnonblocking();
+                setnonblocking(cfd);
+                fds[user_counter].fd = cfd;
+                fds[user_counter].events = POLLIN | POLLERR | POLLRDHUP
             }
         }
     }
-}
