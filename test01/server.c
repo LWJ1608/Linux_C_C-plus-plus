@@ -88,17 +88,18 @@ int main(int argc, char *argv[])
         }
         for (i = 0; i < user_counter + 1; i++)
         {
-            //
+            //主socket文件描述符有变化
             if ((fds[i].fd == listenfd && fds[i].revents & POLLIN))
             {
                 struct sockaddr_in client_address;
+                //提取新的连接
                 int cfd = accept(listenfd, (struct sockaddr *)&client_address, sizeof(client_address));
                 if (cfd < 0)
                 {
                     printf("errno is:%d\n", errno);
                     continue;
                 }
-                if (user_counter >= USER_LIMIT)
+                if (user_counter >= USER_LIMIT) //客户端连接过多
                 {
                     const char *info = "too many users\n";
                     printf("%s", info);
@@ -106,12 +107,15 @@ int main(int argc, char *argv[])
                     close(cfd);
                     continue;
                 }
-                user_counter++;
+                user_counter++; //客户连接个数加一
                 users[cfd].address = client_address;
                 setnonblocking(cfd);
                 fds[user_counter].fd = cfd;
                 fds[user_counter].events = POLLIN | POLLERR | POLLRDHUP;
                 fds[user_counter].revents = 0;
+            }
+            else if (fds[i].revents & POLLERR)
+            {
             }
         }
     }
