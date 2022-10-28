@@ -18,7 +18,7 @@
 #include <fcntl.h>
 #include <poll.h>
 
-#defind BUFFER_SIZE 64
+#define BUFFER_SIZE 64
 
 struct clien_data
 {
