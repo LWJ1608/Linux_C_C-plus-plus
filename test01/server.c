@@ -139,7 +139,8 @@ int main(int argc, char *argv[])
             else if (fds[i].events & POLLIN)
             {
                 int cfd = fds[i].fd;
-                memset(users[cfd].buf)
+                memset(users[cfd].buf, '\0', BUFFER_SIZE);
+                ret = recv(cfd, users[cfd].buf, BUFFER_SIZE - 1, 0);
             }
         }
     }
