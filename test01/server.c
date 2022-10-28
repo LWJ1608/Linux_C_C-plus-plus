@@ -18,6 +18,14 @@
 #include <fcntl.h>
 #include <poll.h>
 
+#defind BUFFER_SIZE 64
+
+struct clien_data
+{
+    struct sockaddr_in address;
+    char* write_buf;
+    char buf[BUFFER_SIZE];
+}
 
 
 int main(int argc,char* argv[])
@@ -45,5 +53,7 @@ int main(int argc,char* argv[])
     assert(ret != -1);
     //监听
     ret = listen(listenfd,5);
+    assert(ret != -1);
+    struct client_data *users = (struct client_data*)malloc()
     //while
 }
