@@ -20,6 +20,8 @@
 
 #define BUFFER_SIZE 64
 #define FD_LIMIT 65535
+#define USER_LIMIT 5
+
 struct client_data
 {
     struct sockaddr_in address;
@@ -55,5 +57,6 @@ int main(int argc, char *argv[])
     assert(ret != -1);
     struct client_data *users = (struct client_data *)malloc(sizeof(struct client_data) * FD_LIMIT);
 
+    struct pollfd fds[USER_LIMIT + 1];
     // while
 }
