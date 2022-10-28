@@ -33,15 +33,15 @@ int main(int argc,char* argv)
     bzero(&address,sizeof(address));
     address.sin_family = AF_INET;
     address.sin_port = htons(port);
-    inet_pton(AF_INET,ip,&addres.sin_addr);
+    inet_pton(AF_INET,ip,&address.sin_addr);
 
     //创建套接字
-    int lisentfd = socket(AF_INET,SOCK_STREAM,0);
+    int listenfd = socket(AF_INET,SOCK_STREAM,0);
     assert(listenfd >=0 );
     //绑定
     int ret = bind(lisentfd,(struct sockaddr*)&address,sizof(address));
     assert(ret != -1);
     //监听
-    ret = listen()
+    ret = listen();
     //while
 }
