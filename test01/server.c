@@ -54,6 +54,6 @@ int main(int argc,char* argv[])
     //监听
     ret = listen(listenfd,5);
     assert(ret != -1);
-    struct client_data *users = (struct client_data*)malloc()
+    struct client_data *users = (struct client_data*)malloc(sizeof(struct client_data)*FD_LIMIT);
     //while
 }
