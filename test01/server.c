@@ -84,6 +84,7 @@ int main(int argc, char *argv[])
             if ((fds[i].fd == listenfd && fds[i].revents & POLLIN))
             {
                 struct sockaddr_in client_address;
+                ret = accept(listenfd, (struct sockaddr *)&client_address, sizeof(client_address));
             }
         }
     }
