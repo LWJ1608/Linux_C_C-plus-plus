@@ -20,43 +20,40 @@
 
 #define BUFFER_SIZE 64
 #define FD_LIMIT 65535
-#define USER_LIMIT 5
-
-struct client_data
+struct clien_data
 {
     struct sockaddr_in address;
-    char *write_buf;
+    char* write_buf;
     char buf[BUFFER_SIZE];
 };
 
-int main(int argc, char *argv[])
+
+int main(int argc,char* argv[])
 {
-    if (argc <= 2)
+    if(argc <= 2)
     {
-        printf("usage:%s ip_address port_number\n", argv[0]);
+        printf("usage:%s ip_address port_number\n",argv[0]);
         return 1;
     }
 
-    const char *ip = argv[1]; //服务器ip地址
+    const char* ip = argv[1]; //服务器ip地址
     int port = atoi(argv[2]); //端口号
     struct sockaddr_in address;
-    bzero(&address, sizeof(address));
+    bzero(&address,sizeof(address));
     address.sin_family = AF_INET;
     address.sin_port = htons(port);
-    inet_pton(AF_INET, ip, &address.sin_addr);
+    inet_pton(AF_INET,ip,&address.sin_addr);
 
     //创建套接字
-    int listenfd = socket(AF_INET, SOCK_STREAM, 0);
-    assert(listenfd >= 0);
+    int listenfd = socket(AF_INET,SOCK_STREAM,0);
+    assert(listenfd >=0 );
     //绑定
     int ret;
-    ret = bind(listenfd, (struct sockaddr *)&address, sizeof(address));
+    ret = bind(listenfd,(struct sockaddr*)&address,sizeof(address));
     assert(ret != -1);
     //监听
-    ret = listen(listenfd, 5);
+    ret = listen(listenfd,5);
     assert(ret != -1);
-    struct client_data *users = (struct client_data *)malloc(sizeof(struct client_data) * FD_LIMIT);
-
-    struct pollfd fds[USER_LIMIT + 1];
-    // while
+    struct client_data *users = (struct client_data*)malloc(sizeof(struct client_data)*FD_LIMIT);
+    //while
 }
