@@ -43,6 +43,6 @@ int main(int argc,char* argv)
     ret = bind(listenfd,(struct sockaddr*)&address,sizof(address));
     assert(ret != -1);
     //监听
-    ret = listen();
+    ret = listen(listenfd,5);
     //while
 }
