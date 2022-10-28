@@ -140,7 +140,11 @@ int main(int argc, char *argv[])
             {
                 int cfd = fds[i].fd;
                 memset(users[cfd].buf, '\0', BUFFER_SIZE);
+                //读取套接字中的数据
                 ret = recv(cfd, users[cfd].buf, BUFFER_SIZE - 1, 0);
+                if (ret < 0)
+                {
+                }
             }
         }
     }
