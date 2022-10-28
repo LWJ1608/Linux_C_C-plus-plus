@@ -144,6 +144,13 @@ int main(int argc, char *argv[])
                 ret = recv(cfd, users[cfd].buf, BUFFER_SIZE - 1, 0);
                 if (ret < 0)
                 {
+                    if (errno != EAGAIN) //
+                    {
+                        close(cfd);
+                        users[fds[i].fd] = users[fds[user_counter].fd];
+                        i--;
+                        user_counter--;
+                    }
                 }
             }
         }
