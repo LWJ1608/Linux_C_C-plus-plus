@@ -98,6 +98,9 @@ int main(int argc, char *argv[])
                     close(cfd);
                     continue;
                 }
+                user_counter++;
+                users[cfd].address = client_address;
+                users
             }
         }
     }
