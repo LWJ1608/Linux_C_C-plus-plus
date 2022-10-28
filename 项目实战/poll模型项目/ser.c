@@ -154,8 +154,9 @@ int main(int argc, char *argv[])
                 }
                 else if (ret == 0)
                 {
+                    continue;
                 }
-                else
+                else //读取数据成功，向其他客户端发送数据
                 {
                     for (j = 1; j < user_counter; j++)
                     {
