@@ -28,7 +28,7 @@ struct client_data
     char *write_buf;
     char buf[BUFFER_SIZE];
 };
-int sernonblocking(int fd)
+int setnonblocking(int fd)
 {
     int old_option = fcntl(fd, F_GETFL);
     int new_option = old_option | O_NONBLOCK;
@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
                 }
                 user_counter++;
                 users[cfd].address = client_address;
-                users
+                setnonblocking();
             }
         }
     }
