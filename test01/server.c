@@ -39,7 +39,8 @@ int main(int argc,char* argv)
     int listenfd = socket(AF_INET,SOCK_STREAM,0);
     assert(listenfd >=0 );
     //绑定
-    int ret = bind(listenfd,(struct sockaddr*)&address,sizof(address));
+    int ret;
+    ret = bind(listenfd,(struct sockaddr*)&address,sizof(address));
     assert(ret != -1);
     //监听
     ret = listen();
