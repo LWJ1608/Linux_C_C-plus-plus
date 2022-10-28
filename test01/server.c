@@ -113,6 +113,7 @@ int main(int argc, char *argv[])
                 fds[user_counter].fd = cfd;
                 fds[user_counter].events = POLLIN | POLLERR | POLLRDHUP;
                 fds[user_counter].revents = 0;
+                printf()
             }
             else if (fds[i].revents & POLLERR) //文件描述符出现错误
             {
@@ -122,7 +123,7 @@ int main(int argc, char *argv[])
                 socklen_t length = sizeof(errors);
                 if (getsockopt(fds[i].fd, SOL_SOCKET, SO_ERROR, &errors, &length) < 0)
                 {
-                                }
+                }
             }
         }
     }
