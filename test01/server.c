@@ -21,6 +21,7 @@
 #define BUFFER_SIZE 64
 #define FD_LIMIT 65535
 #define USER_LIMIT 5
+#define POLLRDHUP 0x2000
 
 struct client_data
 {
@@ -87,6 +88,7 @@ int main(int argc, char *argv[])
         }
         for (i = 0; i < user_counter + 1; i++)
         {
+            //
             if ((fds[i].fd == listenfd && fds[i].revents & POLLIN))
             {
                 struct sockaddr_in client_address;
@@ -108,7 +110,8 @@ int main(int argc, char *argv[])
                 users[cfd].address = client_address;
                 setnonblocking(cfd);
                 fds[user_counter].fd = cfd;
-                fds[user_counter].events = POLLIN | POLLERR | POLLRDHUP
+                fds[user_counter].events = POLLIN | POLLERR | POLLRDHUP;
+                fds[user_counter].revents = 0;
             }
         }
     }
