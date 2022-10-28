@@ -114,8 +114,11 @@ int main(int argc, char *argv[])
                 fds[user_counter].events = POLLIN | POLLERR | POLLRDHUP;
                 fds[user_counter].revents = 0;
             }
-            else if (fds[i].revents & POLLERR)
+            else if (fds[i].revents & POLLERR) //文件描述符出现错误
             {
+                printf("get a error from %d\n", fds[i].fd);
+                char errors[100];
+                memset()
             }
         }
     }
