@@ -79,5 +79,5 @@ int main(int argc, char *argv[])
             printf("poll failure\n");
             break;
         }
-    }
+        }
 }
