@@ -38,7 +38,8 @@ int main(int argc, char *argv[])
         }
         else //有文件描述符变化
         {
-            for (int i = 0; i < nready; i++)
+            int i;
+            for (i = 0; i < nready; i++)
             {
                 //判断lfd变化,并且是读事件变化
                 if (evs[i].data.fd == lfd && evs[i].events & EPOLLIN)
